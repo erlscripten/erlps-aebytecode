@@ -1,0 +1,3 @@
+[submodule "aebytecode"]
+	path = aebytecode
+	url = git@github.com:aeternity/aebytecode
