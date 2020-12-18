@@ -58,394 +58,435 @@ erlps__opcode__1 [(ErlangInt num_0)]
 erlps__opcode__1 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 9))) =
   (ErlangInt (DBI.fromInt 9))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1 args = (erlps__opcode__1__p1 args)
+
+erlps__opcode__1__p1 :: ErlangFun
+erlps__opcode__1__p1 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 10))) =
   (ErlangInt (DBI.fromInt 10))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p1 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 11))) =
   (ErlangInt (DBI.fromInt 11))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p1 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 16))) =
   (ErlangInt (DBI.fromInt 16))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p1 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 17))) =
   (ErlangInt (DBI.fromInt 17))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p1 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 18))) =
   (ErlangInt (DBI.fromInt 18))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p1 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 19))) =
   (ErlangInt (DBI.fromInt 19))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p1 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 20))) =
   (ErlangInt (DBI.fromInt 20))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p1 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 21))) =
   (ErlangInt (DBI.fromInt 21))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p1 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 22))) =
   (ErlangInt (DBI.fromInt 22))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p1 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 23))) =
   (ErlangInt (DBI.fromInt 23))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p1 args = (erlps__opcode__1__p2 args)
+
+erlps__opcode__1__p2 :: ErlangFun
+erlps__opcode__1__p2 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 24))) =
   (ErlangInt (DBI.fromInt 24))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p2 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 25))) =
   (ErlangInt (DBI.fromInt 25))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p2 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 26))) =
   (ErlangInt (DBI.fromInt 26))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p2 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 27))) =
   (ErlangInt (DBI.fromInt 27))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p2 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 28))) =
   (ErlangInt (DBI.fromInt 28))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p2 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 29))) =
   (ErlangInt (DBI.fromInt 29))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p2 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 32))) =
   (ErlangInt (DBI.fromInt 32))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p2 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 47))) =
   (ErlangInt (DBI.fromInt 47))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p2 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 48))) =
   (ErlangInt (DBI.fromInt 48))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p2 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 49))) =
   (ErlangInt (DBI.fromInt 49))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p2 args = (erlps__opcode__1__p3 args)
+
+erlps__opcode__1__p3 :: ErlangFun
+erlps__opcode__1__p3 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 50))) =
   (ErlangInt (DBI.fromInt 50))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p3 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 51))) =
   (ErlangInt (DBI.fromInt 51))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p3 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 52))) =
   (ErlangInt (DBI.fromInt 52))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p3 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 53))) =
   (ErlangInt (DBI.fromInt 53))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p3 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 54))) =
   (ErlangInt (DBI.fromInt 54))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p3 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 55))) =
   (ErlangInt (DBI.fromInt 55))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p3 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 56))) =
   (ErlangInt (DBI.fromInt 56))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p3 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 57))) =
   (ErlangInt (DBI.fromInt 57))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p3 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 58))) =
   (ErlangInt (DBI.fromInt 58))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p3 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 59))) =
   (ErlangInt (DBI.fromInt 59))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p3 args = (erlps__opcode__1__p4 args)
+
+erlps__opcode__1__p4 :: ErlangFun
+erlps__opcode__1__p4 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 60))) =
   (ErlangInt (DBI.fromInt 60))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p4 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 61))) =
   (ErlangInt (DBI.fromInt 61))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p4 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 62))) =
   (ErlangInt (DBI.fromInt 62))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p4 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 64))) =
   (ErlangInt (DBI.fromInt 64))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p4 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 65))) =
   (ErlangInt (DBI.fromInt 65))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p4 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 66))) =
   (ErlangInt (DBI.fromInt 66))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p4 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 67))) =
   (ErlangInt (DBI.fromInt 67))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p4 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 68))) =
   (ErlangInt (DBI.fromInt 68))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p4 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 69))) =
   (ErlangInt (DBI.fromInt 69))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p4 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 80))) =
   (ErlangInt (DBI.fromInt 80))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p4 args = (erlps__opcode__1__p5 args)
+
+erlps__opcode__1__p5 :: ErlangFun
+erlps__opcode__1__p5 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 81))) =
   (ErlangInt (DBI.fromInt 81))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p5 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 82))) =
   (ErlangInt (DBI.fromInt 82))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p5 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 83))) =
   (ErlangInt (DBI.fromInt 83))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p5 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 84))) =
   (ErlangInt (DBI.fromInt 84))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p5 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 85))) =
   (ErlangInt (DBI.fromInt 85))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p5 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 86))) =
   (ErlangInt (DBI.fromInt 86))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p5 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 87))) =
   (ErlangInt (DBI.fromInt 87))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p5 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 88))) =
   (ErlangInt (DBI.fromInt 88))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p5 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 89))) =
   (ErlangInt (DBI.fromInt 89))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p5 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 90))) =
   (ErlangInt (DBI.fromInt 90))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p5 args = (erlps__opcode__1__p6 args)
+
+erlps__opcode__1__p6 :: ErlangFun
+erlps__opcode__1__p6 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 91))) =
   (ErlangInt (DBI.fromInt 91))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p6 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 96))) =
   (ErlangInt (DBI.fromInt 96))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p6 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 97))) =
   (ErlangInt (DBI.fromInt 97))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p6 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 98))) =
   (ErlangInt (DBI.fromInt 98))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p6 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 99))) =
   (ErlangInt (DBI.fromInt 99))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p6 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 100))) =
   (ErlangInt (DBI.fromInt 100))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p6 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 101))) =
   (ErlangInt (DBI.fromInt 101))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p6 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 102))) =
   (ErlangInt (DBI.fromInt 102))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p6 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 103))) =
   (ErlangInt (DBI.fromInt 103))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p6 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 104))) =
   (ErlangInt (DBI.fromInt 104))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p6 args = (erlps__opcode__1__p7 args)
+
+erlps__opcode__1__p7 :: ErlangFun
+erlps__opcode__1__p7 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 105))) =
   (ErlangInt (DBI.fromInt 105))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p7 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 106))) =
   (ErlangInt (DBI.fromInt 106))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p7 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 107))) =
   (ErlangInt (DBI.fromInt 107))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p7 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 108))) =
   (ErlangInt (DBI.fromInt 108))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p7 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 109))) =
   (ErlangInt (DBI.fromInt 109))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p7 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 110))) =
   (ErlangInt (DBI.fromInt 110))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p7 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 111))) =
   (ErlangInt (DBI.fromInt 111))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p7 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 112))) =
   (ErlangInt (DBI.fromInt 112))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p7 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 113))) =
   (ErlangInt (DBI.fromInt 113))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p7 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 114))) =
   (ErlangInt (DBI.fromInt 114))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p7 args = (erlps__opcode__1__p8 args)
+
+erlps__opcode__1__p8 :: ErlangFun
+erlps__opcode__1__p8 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 115))) =
   (ErlangInt (DBI.fromInt 115))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p8 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 116))) =
   (ErlangInt (DBI.fromInt 116))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p8 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 117))) =
   (ErlangInt (DBI.fromInt 117))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p8 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 118))) =
   (ErlangInt (DBI.fromInt 118))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p8 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 119))) =
   (ErlangInt (DBI.fromInt 119))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p8 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 120))) =
   (ErlangInt (DBI.fromInt 120))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p8 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 121))) =
   (ErlangInt (DBI.fromInt 121))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p8 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 122))) =
   (ErlangInt (DBI.fromInt 122))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p8 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 123))) =
   (ErlangInt (DBI.fromInt 123))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p8 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 124))) =
   (ErlangInt (DBI.fromInt 124))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p8 args = (erlps__opcode__1__p9 args)
+
+erlps__opcode__1__p9 :: ErlangFun
+erlps__opcode__1__p9 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 125))) =
   (ErlangInt (DBI.fromInt 125))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p9 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 126))) =
   (ErlangInt (DBI.fromInt 126))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p9 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 127))) =
   (ErlangInt (DBI.fromInt 127))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p9 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 128))) =
   (ErlangInt (DBI.fromInt 128))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p9 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 129))) =
   (ErlangInt (DBI.fromInt 129))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p9 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 130))) =
   (ErlangInt (DBI.fromInt 130))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p9 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 131))) =
   (ErlangInt (DBI.fromInt 131))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p9 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 132))) =
   (ErlangInt (DBI.fromInt 132))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p9 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 133))) =
   (ErlangInt (DBI.fromInt 133))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p9 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 134))) =
   (ErlangInt (DBI.fromInt 134))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p9 args = (erlps__opcode__1__p10 args)
+
+erlps__opcode__1__p10 :: ErlangFun
+erlps__opcode__1__p10 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 135))) =
   (ErlangInt (DBI.fromInt 135))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p10 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 136))) =
   (ErlangInt (DBI.fromInt 136))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p10 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 137))) =
   (ErlangInt (DBI.fromInt 137))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p10 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 138))) =
   (ErlangInt (DBI.fromInt 138))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p10 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 139))) =
   (ErlangInt (DBI.fromInt 139))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p10 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 140))) =
   (ErlangInt (DBI.fromInt 140))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p10 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 141))) =
   (ErlangInt (DBI.fromInt 141))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p10 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 142))) =
   (ErlangInt (DBI.fromInt 142))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p10 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 143))) =
   (ErlangInt (DBI.fromInt 143))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p10 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 144))) =
   (ErlangInt (DBI.fromInt 144))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p10 args = (erlps__opcode__1__p11 args)
+
+erlps__opcode__1__p11 :: ErlangFun
+erlps__opcode__1__p11 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 145))) =
   (ErlangInt (DBI.fromInt 145))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p11 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 146))) =
   (ErlangInt (DBI.fromInt 146))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p11 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 147))) =
   (ErlangInt (DBI.fromInt 147))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p11 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 148))) =
   (ErlangInt (DBI.fromInt 148))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p11 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 149))) =
   (ErlangInt (DBI.fromInt 149))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p11 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 150))) =
   (ErlangInt (DBI.fromInt 150))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p11 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 151))) =
   (ErlangInt (DBI.fromInt 151))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p11 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 152))) =
   (ErlangInt (DBI.fromInt 152))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p11 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 153))) =
   (ErlangInt (DBI.fromInt 153))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p11 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 154))) =
   (ErlangInt (DBI.fromInt 154))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p11 args = (erlps__opcode__1__p12 args)
+
+erlps__opcode__1__p12 :: ErlangFun
+erlps__opcode__1__p12 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 155))) =
   (ErlangInt (DBI.fromInt 155))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p12 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 156))) =
   (ErlangInt (DBI.fromInt 156))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p12 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 157))) =
   (ErlangInt (DBI.fromInt 157))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p12 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 158))) =
   (ErlangInt (DBI.fromInt 158))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p12 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 159))) =
   (ErlangInt (DBI.fromInt 159))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p12 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 160))) =
   (ErlangInt (DBI.fromInt 160))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p12 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 161))) =
   (ErlangInt (DBI.fromInt 161))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p12 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 162))) =
   (ErlangInt (DBI.fromInt 162))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p12 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 163))) =
   (ErlangInt (DBI.fromInt 163))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p12 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 164))) =
   (ErlangInt (DBI.fromInt 164))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p12 args = (erlps__opcode__1__p13 args)
+
+erlps__opcode__1__p13 :: ErlangFun
+erlps__opcode__1__p13 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 240))) =
   (ErlangInt (DBI.fromInt 240))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p13 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 241))) =
   (ErlangInt (DBI.fromInt 241))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p13 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 242))) =
   (ErlangInt (DBI.fromInt 242))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p13 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 243))) =
   (ErlangInt (DBI.fromInt 243))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p13 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 244))) =
   (ErlangInt (DBI.fromInt 244))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p13 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 250))) =
   (ErlangInt (DBI.fromInt 250))
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p13 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 253))) =
   (ErlangInt (DBI.fromInt 253))
-erlps__opcode__1 [(ErlangTuple [(ErlangAtom "comment"), x_0])] =
+erlps__opcode__1__p13 [(ErlangTuple [(ErlangAtom "comment"),
+                                     x_0])]
+  =
   (ErlangTuple [(ErlangAtom "comment"), x_0])
-erlps__opcode__1 [(ErlangInt num_0)]
+erlps__opcode__1__p13 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 255))) =
   (ErlangInt (DBI.fromInt 255))
-erlps__opcode__1 [arg_1] = (EXC.function_clause unit)
-erlps__opcode__1 args =
+erlps__opcode__1__p13 [arg_1] = (EXC.function_clause unit)
+erlps__opcode__1__p13 args =
   (EXC.badarity
      (ErlangFun 1 (\ _ -> (ErlangAtom "purs_tco_sucks"))) args)
 
@@ -480,394 +521,435 @@ erlps__mnemonic__1 [(ErlangInt num_0)]
 erlps__mnemonic__1 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 9))) =
   (ErlangAtom "MULMOD")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1 args = (erlps__mnemonic__1__p1 args)
+
+erlps__mnemonic__1__p1 :: ErlangFun
+erlps__mnemonic__1__p1 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 10))) =
   (ErlangAtom "EXP")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p1 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 11))) =
   (ErlangAtom "SIGNEXTEND")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p1 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 16))) =
   (ErlangAtom "LT")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p1 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 17))) =
   (ErlangAtom "GT")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p1 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 18))) =
   (ErlangAtom "SLT")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p1 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 19))) =
   (ErlangAtom "SGT")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p1 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 20))) =
   (ErlangAtom "EQ")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p1 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 21))) =
   (ErlangAtom "ISZERO")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p1 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 22))) =
   (ErlangAtom "AND")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p1 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 23))) =
   (ErlangAtom "OR")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p1 args = (erlps__mnemonic__1__p2 args)
+
+erlps__mnemonic__1__p2 :: ErlangFun
+erlps__mnemonic__1__p2 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 24))) =
   (ErlangAtom "XOR")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p2 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 25))) =
   (ErlangAtom "NOT")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p2 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 26))) =
   (ErlangAtom "BYTE")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p2 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 27))) =
   (ErlangAtom "SHL")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p2 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 28))) =
   (ErlangAtom "SHR")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p2 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 29))) =
   (ErlangAtom "SAR")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p2 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 32))) =
   (ErlangAtom "SHA3")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p2 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 47))) =
   (ErlangAtom "CREATOR")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p2 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 48))) =
   (ErlangAtom "ADDRESS")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p2 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 49))) =
   (ErlangAtom "BALANCE")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p2 args = (erlps__mnemonic__1__p3 args)
+
+erlps__mnemonic__1__p3 :: ErlangFun
+erlps__mnemonic__1__p3 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 50))) =
   (ErlangAtom "ORIGIN")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p3 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 51))) =
   (ErlangAtom "CALLER")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p3 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 52))) =
   (ErlangAtom "CALLVALUE")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p3 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 53))) =
   (ErlangAtom "CALLDATALOAD")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p3 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 54))) =
   (ErlangAtom "CALLDATASIZE")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p3 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 55))) =
   (ErlangAtom "CALLDATACOPY")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p3 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 56))) =
   (ErlangAtom "CODESIZE")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p3 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 57))) =
   (ErlangAtom "CODECOPY")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p3 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 58))) =
   (ErlangAtom "GASPRICE")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p3 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 59))) =
   (ErlangAtom "EXTCODESIZE")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p3 args = (erlps__mnemonic__1__p4 args)
+
+erlps__mnemonic__1__p4 :: ErlangFun
+erlps__mnemonic__1__p4 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 60))) =
   (ErlangAtom "EXTCODECOPY")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p4 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 61))) =
   (ErlangAtom "RETURNDATASIZE")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p4 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 62))) =
   (ErlangAtom "RETURNDATACOPY")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p4 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 64))) =
   (ErlangAtom "BLOCKHASH")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p4 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 65))) =
   (ErlangAtom "COINBASE")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p4 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 66))) =
   (ErlangAtom "TIMESTAMP")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p4 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 67))) =
   (ErlangAtom "NUMBER")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p4 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 68))) =
   (ErlangAtom "DIFFICULTY")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p4 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 69))) =
   (ErlangAtom "GASLIMIT")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p4 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 80))) =
   (ErlangAtom "POP")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p4 args = (erlps__mnemonic__1__p5 args)
+
+erlps__mnemonic__1__p5 :: ErlangFun
+erlps__mnemonic__1__p5 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 81))) =
   (ErlangAtom "MLOAD")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p5 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 82))) =
   (ErlangAtom "MSTORE")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p5 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 83))) =
   (ErlangAtom "MSTORE8")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p5 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 84))) =
   (ErlangAtom "SLOAD")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p5 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 85))) =
   (ErlangAtom "SSTORE")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p5 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 86))) =
   (ErlangAtom "JUMP")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p5 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 87))) =
   (ErlangAtom "JUMPI")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p5 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 88))) =
   (ErlangAtom "PC")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p5 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 89))) =
   (ErlangAtom "MSIZE")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p5 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 90))) =
   (ErlangAtom "GAS")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p5 args = (erlps__mnemonic__1__p6 args)
+
+erlps__mnemonic__1__p6 :: ErlangFun
+erlps__mnemonic__1__p6 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 91))) =
   (ErlangAtom "JUMPDEST")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p6 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 96))) =
   (ErlangAtom "PUSH1")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p6 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 97))) =
   (ErlangAtom "PUSH2")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p6 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 98))) =
   (ErlangAtom "PUSH3")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p6 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 99))) =
   (ErlangAtom "PUSH4")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p6 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 100))) =
   (ErlangAtom "PUSH5")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p6 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 101))) =
   (ErlangAtom "PUSH6")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p6 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 102))) =
   (ErlangAtom "PUSH7")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p6 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 103))) =
   (ErlangAtom "PUSH8")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p6 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 104))) =
   (ErlangAtom "PUSH9")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p6 args = (erlps__mnemonic__1__p7 args)
+
+erlps__mnemonic__1__p7 :: ErlangFun
+erlps__mnemonic__1__p7 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 105))) =
   (ErlangAtom "PUSH10")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p7 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 106))) =
   (ErlangAtom "PUSH11")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p7 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 107))) =
   (ErlangAtom "PUSH12")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p7 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 108))) =
   (ErlangAtom "PUSH13")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p7 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 109))) =
   (ErlangAtom "PUSH14")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p7 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 110))) =
   (ErlangAtom "PUSH15")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p7 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 111))) =
   (ErlangAtom "PUSH16")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p7 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 112))) =
   (ErlangAtom "PUSH17")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p7 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 113))) =
   (ErlangAtom "PUSH18")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p7 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 114))) =
   (ErlangAtom "PUSH19")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p7 args = (erlps__mnemonic__1__p8 args)
+
+erlps__mnemonic__1__p8 :: ErlangFun
+erlps__mnemonic__1__p8 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 115))) =
   (ErlangAtom "PUSH20")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p8 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 116))) =
   (ErlangAtom "PUSH21")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p8 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 117))) =
   (ErlangAtom "PUSH22")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p8 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 118))) =
   (ErlangAtom "PUSH23")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p8 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 119))) =
   (ErlangAtom "PUSH24")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p8 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 120))) =
   (ErlangAtom "PUSH25")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p8 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 121))) =
   (ErlangAtom "PUSH26")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p8 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 122))) =
   (ErlangAtom "PUSH27")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p8 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 123))) =
   (ErlangAtom "PUSH28")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p8 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 124))) =
   (ErlangAtom "PUSH29")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p8 args = (erlps__mnemonic__1__p9 args)
+
+erlps__mnemonic__1__p9 :: ErlangFun
+erlps__mnemonic__1__p9 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 125))) =
   (ErlangAtom "PUSH30")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p9 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 126))) =
   (ErlangAtom "PUSH31")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p9 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 127))) =
   (ErlangAtom "PUSH32")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p9 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 128))) =
   (ErlangAtom "DUP1")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p9 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 129))) =
   (ErlangAtom "DUP2")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p9 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 130))) =
   (ErlangAtom "DUP3")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p9 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 131))) =
   (ErlangAtom "DUP4")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p9 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 132))) =
   (ErlangAtom "DUP5")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p9 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 133))) =
   (ErlangAtom "DUP6")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p9 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 134))) =
   (ErlangAtom "DUP7")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p9 args = (erlps__mnemonic__1__p10 args)
+
+erlps__mnemonic__1__p10 :: ErlangFun
+erlps__mnemonic__1__p10 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 135))) =
   (ErlangAtom "DUP8")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p10 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 136))) =
   (ErlangAtom "DUP9")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p10 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 137))) =
   (ErlangAtom "DUP10")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p10 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 138))) =
   (ErlangAtom "DUP11")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p10 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 139))) =
   (ErlangAtom "DUP12")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p10 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 140))) =
   (ErlangAtom "DUP13")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p10 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 141))) =
   (ErlangAtom "DUP14")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p10 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 142))) =
   (ErlangAtom "DUP15")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p10 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 143))) =
   (ErlangAtom "DUP16")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p10 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 144))) =
   (ErlangAtom "SWAP1")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p10 args = (erlps__mnemonic__1__p11 args)
+
+erlps__mnemonic__1__p11 :: ErlangFun
+erlps__mnemonic__1__p11 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 145))) =
   (ErlangAtom "SWAP2")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p11 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 146))) =
   (ErlangAtom "SWAP3")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p11 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 147))) =
   (ErlangAtom "SWAP4")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p11 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 148))) =
   (ErlangAtom "SWAP5")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p11 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 149))) =
   (ErlangAtom "SWAP6")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p11 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 150))) =
   (ErlangAtom "SWAP7")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p11 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 151))) =
   (ErlangAtom "SWAP8")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p11 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 152))) =
   (ErlangAtom "SWAP9")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p11 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 153))) =
   (ErlangAtom "SWAP10")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p11 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 154))) =
   (ErlangAtom "SWAP11")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p11 args = (erlps__mnemonic__1__p12 args)
+
+erlps__mnemonic__1__p12 :: ErlangFun
+erlps__mnemonic__1__p12 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 155))) =
   (ErlangAtom "SWAP12")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p12 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 156))) =
   (ErlangAtom "SWAP13")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p12 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 157))) =
   (ErlangAtom "SWAP14")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p12 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 158))) =
   (ErlangAtom "SWAP15")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p12 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 159))) =
   (ErlangAtom "SWAP16")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p12 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 160))) =
   (ErlangAtom "LOG0")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p12 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 161))) =
   (ErlangAtom "LOG1")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p12 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 162))) =
   (ErlangAtom "LOG2")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p12 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 163))) =
   (ErlangAtom "LOG3")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p12 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 164))) =
   (ErlangAtom "LOG4")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p12 args = (erlps__mnemonic__1__p13 args)
+
+erlps__mnemonic__1__p13 :: ErlangFun
+erlps__mnemonic__1__p13 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 240))) =
   (ErlangAtom "CREATE")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p13 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 241))) =
   (ErlangAtom "CALL")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p13 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 242))) =
   (ErlangAtom "CALLCODE")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p13 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 243))) =
   (ErlangAtom "RETURN")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p13 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 244))) =
   (ErlangAtom "DELEGATECALL")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p13 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 250))) =
   (ErlangAtom "STATICCALL")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p13 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 253))) =
   (ErlangAtom "REVERT")
-erlps__mnemonic__1 [(ErlangTuple [(ErlangAtom "comment"), _])] =
+erlps__mnemonic__1__p13 [(ErlangTuple [(ErlangAtom "comment"),
+                                       _])]
+  =
   (ErlangAtom "COMMENT")
-erlps__mnemonic__1 [(ErlangInt num_0)]
+erlps__mnemonic__1__p13 [(ErlangInt num_0)]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 255))) =
   (ErlangAtom "SUICIDE")
-erlps__mnemonic__1 [arg_1] = (EXC.function_clause unit)
-erlps__mnemonic__1 args =
+erlps__mnemonic__1__p13 [arg_1] = (EXC.function_clause unit)
+erlps__mnemonic__1__p13 args =
   (EXC.badarity
      (ErlangFun 1 (\ _ -> (ErlangAtom "purs_tco_sucks"))) args)
 

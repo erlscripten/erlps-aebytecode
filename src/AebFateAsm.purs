@@ -496,25 +496,29 @@ erlps__to_bytecode__5 [(ErlangCons (ErlangTuple [(ErlangAtom "stack"),
   in
     (erlps__to_bytecode__5
        [rest_1, address_2, env_3, (ErlangCons head_10 code_4), opts_5])
-erlps__to_bytecode__5 [(ErlangCons (ErlangTuple [(ErlangAtom "int"),
-                                                 _line_0, int_1]) rest_2),
-                       address_3, env_4, code_5, opts_6]
+erlps__to_bytecode__5 args = (erlps__to_bytecode__5__p1 args)
+
+erlps__to_bytecode__5__p1 :: ErlangFun
+erlps__to_bytecode__5__p1 [(ErlangCons (ErlangTuple [(ErlangAtom "int"),
+                                                     _line_0, int_1]) rest_2),
+                           address_3, env_4, code_5, opts_6]
   =
   let head_11 = (ErlangTuple [(ErlangAtom "immediate"), int_1])
   in
     (erlps__to_bytecode__5
        [rest_2, address_3, env_4, (ErlangCons head_11 code_5), opts_6])
-erlps__to_bytecode__5 [(ErlangCons (ErlangTuple [(ErlangAtom "boolean"),
-                                                 _line_0, bool_1]) rest_2),
-                       address_3, env_4, code_5, opts_6]
+erlps__to_bytecode__5__p1 [(ErlangCons (ErlangTuple [(ErlangAtom "boolean"),
+                                                     _line_0, bool_1]) rest_2),
+                           address_3, env_4, code_5, opts_6]
   =
   let head_11 = (ErlangTuple [(ErlangAtom "immediate"), bool_1])
   in
     (erlps__to_bytecode__5
        [rest_2, address_3, env_4, (ErlangCons head_11 code_5), opts_6])
-erlps__to_bytecode__5 [(ErlangCons (ErlangTuple [(ErlangAtom "string"),
-                                                 _line_0, string_1]) rest_2),
-                       address_3, env_4, code_5, opts_6]
+erlps__to_bytecode__5__p1 [(ErlangCons (ErlangTuple [(ErlangAtom "string"),
+                                                     _line_0,
+                                                     string_1]) rest_2),
+                           address_3, env_4, code_5, opts_6]
   =
   let   
     tup_el_13 =
@@ -525,11 +529,11 @@ erlps__to_bytecode__5 [(ErlangCons (ErlangTuple [(ErlangAtom "string"),
   in
     (erlps__to_bytecode__5
        [rest_2, address_3, env_4, (ErlangCons head_11 code_5), opts_6])
-erlps__to_bytecode__5 [(ErlangCons (ErlangTuple [(ErlangAtom "object"),
-                                                 _line_0,
-                                                 (ErlangTuple [(ErlangAtom "address"),
-                                                               value_1])]) rest_2),
-                       address_3, env_4, code_5, opts_6]
+erlps__to_bytecode__5__p1 [(ErlangCons (ErlangTuple [(ErlangAtom "object"),
+                                                     _line_0,
+                                                     (ErlangTuple [(ErlangAtom "address"),
+                                                                   value_1])]) rest_2),
+                           address_3, env_4, code_5, opts_6]
   =
   let   
     tup_el_13 =
@@ -540,11 +544,11 @@ erlps__to_bytecode__5 [(ErlangCons (ErlangTuple [(ErlangAtom "object"),
   in
     (erlps__to_bytecode__5
        [rest_2, address_3, env_4, (ErlangCons head_11 code_5), opts_6])
-erlps__to_bytecode__5 [(ErlangCons (ErlangTuple [(ErlangAtom "object"),
-                                                 _line_0,
-                                                 (ErlangTuple [(ErlangAtom "contract"),
-                                                               value_1])]) rest_2),
-                       address_3, env_4, code_5, opts_6]
+erlps__to_bytecode__5__p1 [(ErlangCons (ErlangTuple [(ErlangAtom "object"),
+                                                     _line_0,
+                                                     (ErlangTuple [(ErlangAtom "contract"),
+                                                                   value_1])]) rest_2),
+                           address_3, env_4, code_5, opts_6]
   =
   let   
     tup_el_13 =
@@ -555,10 +559,11 @@ erlps__to_bytecode__5 [(ErlangCons (ErlangTuple [(ErlangAtom "object"),
   in
     (erlps__to_bytecode__5
        [rest_2, address_3, env_4, (ErlangCons head_11 code_5), opts_6])
-erlps__to_bytecode__5 args = (erlps__to_bytecode__5__p1 args)
+erlps__to_bytecode__5__p1 args =
+  (erlps__to_bytecode__5__p2 args)
 
-erlps__to_bytecode__5__p1 :: ErlangFun
-erlps__to_bytecode__5__p1 [(ErlangCons (ErlangTuple [(ErlangAtom "object"),
+erlps__to_bytecode__5__p2 :: ErlangFun
+erlps__to_bytecode__5__p2 [(ErlangCons (ErlangTuple [(ErlangAtom "object"),
                                                      _line_0,
                                                      (ErlangTuple [(ErlangAtom "oracle"),
                                                                    value_1])]) rest_2),
@@ -573,7 +578,7 @@ erlps__to_bytecode__5__p1 [(ErlangCons (ErlangTuple [(ErlangAtom "object"),
   in
     (erlps__to_bytecode__5
        [rest_2, address_3, env_4, (ErlangCons head_11 code_5), opts_6])
-erlps__to_bytecode__5__p1 [(ErlangCons (ErlangTuple [(ErlangAtom "object"),
+erlps__to_bytecode__5__p2 [(ErlangCons (ErlangTuple [(ErlangAtom "object"),
                                                      _line_0,
                                                      (ErlangTuple [(ErlangAtom "oracle_query"),
                                                                    value_1])]) rest_2),
@@ -588,7 +593,7 @@ erlps__to_bytecode__5__p1 [(ErlangCons (ErlangTuple [(ErlangAtom "object"),
   in
     (erlps__to_bytecode__5
        [rest_2, address_3, env_4, (ErlangCons head_11 code_5), opts_6])
-erlps__to_bytecode__5__p1 [(ErlangCons (ErlangTuple [(ErlangAtom "object"),
+erlps__to_bytecode__5__p2 [(ErlangCons (ErlangTuple [(ErlangAtom "object"),
                                                      _line_0,
                                                      (ErlangTuple [(ErlangAtom "channel"),
                                                                    value_1])]) rest_2),
@@ -603,7 +608,7 @@ erlps__to_bytecode__5__p1 [(ErlangCons (ErlangTuple [(ErlangAtom "object"),
   in
     (erlps__to_bytecode__5
        [rest_2, address_3, env_4, (ErlangCons head_11 code_5), opts_6])
-erlps__to_bytecode__5__p1 [(ErlangCons (ErlangTuple [(ErlangAtom "bytes"),
+erlps__to_bytecode__5__p2 [(ErlangCons (ErlangTuple [(ErlangAtom "bytes"),
                                                      _line_0, value_1]) rest_2),
                            address_3, env_4, code_5, opts_6]
   =
@@ -616,7 +621,7 @@ erlps__to_bytecode__5__p1 [(ErlangCons (ErlangTuple [(ErlangAtom "bytes"),
   in
     (erlps__to_bytecode__5
        [rest_2, address_3, env_4, (ErlangCons head_11 code_5), opts_6])
-erlps__to_bytecode__5__p1 [(ErlangCons (ErlangTuple [(ErlangAtom "id"),
+erlps__to_bytecode__5__p2 [(ErlangCons (ErlangTuple [(ErlangAtom "id"),
                                                      _line_0, id_1]) rest_2),
                            address_3, env_4, code_5, opts_6]
   =
@@ -631,7 +636,11 @@ erlps__to_bytecode__5__p1 [(ErlangCons (ErlangTuple [(ErlangAtom "id"),
              [rest_2, address_3, env2_10, (ErlangCons head_17 code_5),
               opts_6])
       _ -> (EXC.badmatch match_expr_12)
-erlps__to_bytecode__5__p1 [(ErlangCons (ErlangTuple [(ErlangAtom "{"),
+erlps__to_bytecode__5__p2 args =
+  (erlps__to_bytecode__5__p3 args)
+
+erlps__to_bytecode__5__p3 :: ErlangFun
+erlps__to_bytecode__5__p3 [(ErlangCons (ErlangTuple [(ErlangAtom "{"),
                                                      _line_0]) rest_1),
                            address_2, env_3, code_4, opts_5]
   =
@@ -644,7 +653,7 @@ erlps__to_bytecode__5__p1 [(ErlangCons (ErlangTuple [(ErlangAtom "{"),
           (erlps__to_bytecode__5
              [rest2_8, address_2, env_3, (ErlangCons head_14 code_4), opts_5])
       _ -> (EXC.badmatch match_expr_9)
-erlps__to_bytecode__5__p1 [(ErlangCons (ErlangTuple [(ErlangAtom "["),
+erlps__to_bytecode__5__p3 [(ErlangCons (ErlangTuple [(ErlangAtom "["),
                                                      _line_0]) rest_1),
                            address_2, env_3, code_4, opts_5]
   =
@@ -657,7 +666,7 @@ erlps__to_bytecode__5__p1 [(ErlangCons (ErlangTuple [(ErlangAtom "["),
           (erlps__to_bytecode__5
              [rest2_8, address_2, env_3, (ErlangCons head_14 code_4), opts_5])
       _ -> (EXC.badmatch match_expr_9)
-erlps__to_bytecode__5__p1 [(ErlangCons (ErlangTuple [(ErlangAtom "("),
+erlps__to_bytecode__5__p3 [(ErlangCons (ErlangTuple [(ErlangAtom "("),
                                                      _line_0]) rest_1),
                            address_2, env_3, code_4, opts_5]
   =
@@ -676,7 +685,7 @@ erlps__to_bytecode__5__p1 [(ErlangCons (ErlangTuple [(ErlangAtom "("),
           (erlps__to_bytecode__5
              [rest2_8, address_2, env_3, (ErlangCons head_17 code_4), opts_5])
       _ -> (EXC.badmatch match_expr_9)
-erlps__to_bytecode__5__p1 [tokens_1@(ErlangCons (ErlangTuple [(ErlangAtom "start_variant"),
+erlps__to_bytecode__5__p3 [tokens_1@(ErlangCons (ErlangTuple [(ErlangAtom "start_variant"),
                                                               _line_0]) _),
                            address_2, env_3, code_4, opts_5]
   =
@@ -694,7 +703,7 @@ erlps__to_bytecode__5__p1 [tokens_1@(ErlangCons (ErlangTuple [(ErlangAtom "start
           (erlps__to_bytecode__5
              [rest_10, address_2, env_3, (ErlangCons head_20 code_4), opts_5])
       _ -> (EXC.badmatch match_expr_11)
-erlps__to_bytecode__5__p1 [(ErlangCons (ErlangTuple [(ErlangAtom "typerep"),
+erlps__to_bytecode__5__p3 [(ErlangCons (ErlangTuple [(ErlangAtom "typerep"),
                                                      _line_0]) rest_1),
                            address_2, env_3, code_4, opts_5]
   =
@@ -712,11 +721,11 @@ erlps__to_bytecode__5__p1 [(ErlangCons (ErlangTuple [(ErlangAtom "typerep"),
           (erlps__to_bytecode__5
              [rest1_8, address_2, env_3, (ErlangCons head_16 code_4), opts_5])
       _ -> (EXC.badmatch match_expr_9)
-erlps__to_bytecode__5__p1 args =
-  (erlps__to_bytecode__5__p2 args)
+erlps__to_bytecode__5__p3 args =
+  (erlps__to_bytecode__5__p4 args)
 
-erlps__to_bytecode__5__p2 :: ErlangFun
-erlps__to_bytecode__5__p2 [(ErlangCons (ErlangTuple [(ErlangAtom "bits"),
+erlps__to_bytecode__5__p4 :: ErlangFun
+erlps__to_bytecode__5__p4 [(ErlangCons (ErlangTuple [(ErlangAtom "bits"),
                                                      _line_0, bits_1]) rest_2),
                            address_3, env_4, code_5, opts_6]
   =
@@ -729,7 +738,7 @@ erlps__to_bytecode__5__p2 [(ErlangCons (ErlangTuple [(ErlangAtom "bits"),
   in
     (erlps__to_bytecode__5
        [rest_2, address_3, env_4, (ErlangCons head_11 code_5), opts_6])
-erlps__to_bytecode__5__p2 [(ErlangCons (ErlangTuple [(ErlangAtom "comment"),
+erlps__to_bytecode__5__p4 [(ErlangCons (ErlangTuple [(ErlangAtom "comment"),
                                                      line_0,
                                                      comment_1]) rest_2),
                            address_3, env_4, code_5, opts_6]
@@ -741,13 +750,13 @@ erlps__to_bytecode__5__p2 [(ErlangCons (ErlangTuple [(ErlangAtom "comment"),
   in
     (erlps__to_bytecode__5
        [rest_2, address_3, env2_11, code_5, opts_6])
-erlps__to_bytecode__5__p2 [(ErlangEmptyList), address_0, env_1,
+erlps__to_bytecode__5__p4 [(ErlangEmptyList), address_0, env_1,
                            code_2, _opts_3]
   =
   (erlps__insert_fun__3 [address_0, code_2, env_1])
-erlps__to_bytecode__5__p2 [arg_7, arg_8, arg_9, arg_10, arg_11] =
+erlps__to_bytecode__5__p4 [arg_7, arg_8, arg_9, arg_10, arg_11] =
   (EXC.function_clause unit)
-erlps__to_bytecode__5__p2 args =
+erlps__to_bytecode__5__p4 args =
   (EXC.badarity
      (ErlangFun 5 (\ _ -> (ErlangAtom "purs_tco_sucks"))) args)
 
