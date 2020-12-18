@@ -7,7 +7,7 @@ transpile: $(ERLANG_PROJECT) libs
 	spago build
 
 test: $(ERLANG_PROJECT) libs
-	./erlscripten -p $(ERLANG_PROJECT) -o . --omit aebytecode/_build/default/lib/enacl --omit aebytecode/_build/default/lib/eblake2  -S "10:aeb_fate_pp:format_op" -S "10:aeb_asm_scan:yystate" -S "10:aeb_fate_asm:to_bytecode"
+	./erlscripten -p $(ERLANG_PROJECT) -o . --omit aebytecode/_build/default/lib/enacl --omit aebytecode/_build/default/lib/aeserialization --omit aebytecode/_build/default/lib/eblake2 --omit aebytecode/_build/default/lib/base58 -S "10:aeb_fate_pp:format_op" -S "10:aeb_asm_scan:yystate" -S "10:aeb_fate_asm:to_bytecode" -S "10:aeb_opcodes:m_to_op" -S "10:aeb_fate_maps:allocate_store_maps" -S "10:aeb_fate_maps:unfold_store_maps" -S "10:aeb_fate_maps:refcount"
 	spago test
 
 $(ERLANG_PROJECT):

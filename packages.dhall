@@ -125,6 +125,14 @@ in  upstream
         , version =
           "master"
         }
+     with purescript-erlps-aeserialization =
+        { dependencies =
+          [ "prelude", "purescript-erlps-core", "purescript-erlps-stdlib" ]
+        , repo =
+          "https://github.com/erlscripten/erlps-aeserialization.git"
+        , version =
+          "main"
+        }
     with base58 =
         { dependencies =
           [ "prelude" ]

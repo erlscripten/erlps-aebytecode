@@ -13,6 +13,7 @@
   , "psci-support"
   , "purescript-erlps-core"
   , "purescript-erlps-stdlib"
+  , "purescript-erlps-aeserialization"
   , "rationals"
   , "b64"
   , "spec"
