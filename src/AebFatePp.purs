@@ -2728,4 +2728,8 @@ erlps__format_op__2__p16 [op_0, _symbols_1] =
   in
     (BIF.do_remote_fun_call "Io.Lib" "erlps__format__2"
        [arg_2, (ErlangCons op_0 ErlangEmptyList)])
-erlps__format_op__2__p16 args = (erlps__format_op__2__p17 args)
+erlps__format_op__2__p16 [arg_6, arg_7] =
+  (EXC.function_clause unit)
+erlps__format_op__2__p16 args =
+  (EXC.badarity
+     (ErlangFun 2 (\ _ -> (ErlangAtom "purs_tco_sucks"))) args)

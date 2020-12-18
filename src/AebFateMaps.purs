@@ -75,31 +75,34 @@ erlps__allocate_store_maps__3 [used_0,
                                maps_2]
   =
   (ErlangTuple [used_0, val_1, maps_2])
-erlps__allocate_store_maps__3 [used_0,
-                               val_1@(ErlangTuple [(ErlangAtom "address"), _]),
-                               maps_2]
-  =
-  (ErlangTuple [used_0, val_1, maps_2])
-erlps__allocate_store_maps__3 [used_0,
-                               val_1@(ErlangTuple [(ErlangAtom "contract"), _]),
-                               maps_2]
-  =
-  (ErlangTuple [used_0, val_1, maps_2])
-erlps__allocate_store_maps__3 [used_0,
-                               val_1@(ErlangTuple [(ErlangAtom "oracle"), _]),
-                               maps_2]
-  =
-  (ErlangTuple [used_0, val_1, maps_2])
-erlps__allocate_store_maps__3 [used_0,
-                               val_1@(ErlangTuple [(ErlangAtom "oracle_query"),
-                                                   _]),
-                               maps_2]
-  =
-  (ErlangTuple [used_0, val_1, maps_2])
 erlps__allocate_store_maps__3 args =
   (erlps__allocate_store_maps__3__p1 args)
 
 erlps__allocate_store_maps__3__p1 :: ErlangFun
+erlps__allocate_store_maps__3__p1 [used_0,
+                                   val_1@(ErlangTuple [(ErlangAtom "address"),
+                                                       _]),
+                                   maps_2]
+  =
+  (ErlangTuple [used_0, val_1, maps_2])
+erlps__allocate_store_maps__3__p1 [used_0,
+                                   val_1@(ErlangTuple [(ErlangAtom "contract"),
+                                                       _]),
+                                   maps_2]
+  =
+  (ErlangTuple [used_0, val_1, maps_2])
+erlps__allocate_store_maps__3__p1 [used_0,
+                                   val_1@(ErlangTuple [(ErlangAtom "oracle"),
+                                                       _]),
+                                   maps_2]
+  =
+  (ErlangTuple [used_0, val_1, maps_2])
+erlps__allocate_store_maps__3__p1 [used_0,
+                                   val_1@(ErlangTuple [(ErlangAtom "oracle_query"),
+                                                       _]),
+                                   maps_2]
+  =
+  (ErlangTuple [used_0, val_1, maps_2])
 erlps__allocate_store_maps__3__p1 [used_0,
                                    val_1@(ErlangTuple [(ErlangAtom "channel"),
                                                        _]),
@@ -112,14 +115,18 @@ erlps__allocate_store_maps__3__p1 [used_0,
                                    maps_2]
   =
   (ErlangTuple [used_0, val_1, maps_2])
-erlps__allocate_store_maps__3__p1 [used_0, val_1, maps_2]
+erlps__allocate_store_maps__3__p1 args =
+  (erlps__allocate_store_maps__3__p2 args)
+
+erlps__allocate_store_maps__3__p2 :: ErlangFun
+erlps__allocate_store_maps__3__p2 [used_0, val_1, maps_2]
   | (isEInt val_1) =
   (ErlangTuple [used_0, val_1, maps_2])
-erlps__allocate_store_maps__3__p1 [used_0, val_1, maps_2]
+erlps__allocate_store_maps__3__p2 [used_0, val_1, maps_2]
   | ((ErlangAtom "true") ==
        (falsifyErrors (\ _ -> (BIF.erlang__is_binary__1 [val_1])))) =
   (ErlangTuple [used_0, val_1, maps_2])
-erlps__allocate_store_maps__3__p1 [used_0,
+erlps__allocate_store_maps__3__p2 [used_0,
                                    (ErlangTuple [(ErlangAtom "tuple"), val_1]),
                                    maps_2]
   =
@@ -135,7 +142,7 @@ erlps__allocate_store_maps__3__p1 [used_0,
           tup_el_12 = (ErlangTuple [(ErlangAtom "tuple"), tup_el_14])
         in (ErlangTuple [used1_7, tup_el_12, maps1_9])
       _ -> (EXC.badmatch match_expr_10)
-erlps__allocate_store_maps__3__p1 [used_0, val_1, maps_2]
+erlps__allocate_store_maps__3__p2 [used_0, val_1, maps_2]
   | (isEList val_1) =
   let
     match_expr_9 =
@@ -145,7 +152,7 @@ erlps__allocate_store_maps__3__p1 [used_0, val_1, maps_2]
       (ErlangTuple [used1_6, vals_7, maps1_8]) ->
         (ErlangTuple [used1_6, vals_7, maps1_8])
       _ -> (EXC.badmatch match_expr_9)
-erlps__allocate_store_maps__3__p1 [used_0,
+erlps__allocate_store_maps__3__p2 [used_0,
                                    (ErlangTuple [(ErlangAtom "variant"),
                                                  arities_1, tag_2, vals_3]),
                                    maps_4]
@@ -164,7 +171,7 @@ erlps__allocate_store_maps__3__p1 [used_0,
                [(ErlangAtom "variant"), arities_1, tag_2, tup_el_18])
         in (ErlangTuple [used1_9, tup_el_14, maps1_11])
       _ -> (EXC.badmatch match_expr_12)
-erlps__allocate_store_maps__3__p1 [used_0, val_1, maps_2]
+erlps__allocate_store_maps__3__p2 [used_0, val_1, maps_2]
   | (isEMap val_1) =
   let
     match_expr_9 =
@@ -200,7 +207,11 @@ erlps__allocate_store_maps__3__p1 [used_0, val_1, maps_2]
                   _ -> (EXC.badmatch match_expr_22)
             something_else -> (EXC.case_clause something_else)
       _ -> (EXC.badmatch match_expr_9)
-erlps__allocate_store_maps__3__p1 [used_0,
+erlps__allocate_store_maps__3__p2 args =
+  (erlps__allocate_store_maps__3__p3 args)
+
+erlps__allocate_store_maps__3__p3 :: ErlangFun
+erlps__allocate_store_maps__3__p3 [used_0,
                                    val_3@(ErlangTuple [(ErlangAtom "store_map"),
                                                        cache_1, _id_2]),
                                    maps_4]
@@ -210,7 +221,7 @@ erlps__allocate_store_maps__3__p1 [used_0,
              let rop_9 = (ErlangMap Map.empty)
              in (BIF.erlang__op_exactEq [cache_1, rop_9])))) =
   (ErlangTuple [used_0, val_3, maps_4])
-erlps__allocate_store_maps__3__p1 [used_0,
+erlps__allocate_store_maps__3__p3 [used_0,
                                    (ErlangTuple [(ErlangAtom "store_map"),
                                                  cache_1, id_2]),
                                    maps_3]
@@ -237,8 +248,11 @@ erlps__allocate_store_maps__3__p1 [used_0,
               in (ErlangTuple [used2_11, tup_el_16, tup_el_20])
             _ -> (EXC.badmatch match_expr_14)
       _ -> (EXC.badmatch match_expr_7)
-erlps__allocate_store_maps__3__p1 args =
-  (erlps__allocate_store_maps__3__p2 args)
+erlps__allocate_store_maps__3__p3 [arg_29, arg_30, arg_31] =
+  (EXC.function_clause unit)
+erlps__allocate_store_maps__3__p3 args =
+  (EXC.badarity
+     (ErlangFun 3 (\ _ -> (ErlangAtom "purs_tco_sucks"))) args)
 
 erlps__allocate_store_maps_l__3 :: ErlangFun
 erlps__allocate_store_maps_l__3 [used_0, (ErlangEmptyList),

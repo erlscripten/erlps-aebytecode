@@ -19,6 +19,7 @@ import Data.String.CodePoints as StrCP
 import Data.String as Str
 import Unsafe.Coerce
 
+import Erlang.Binary as BIN
 import Data.Time.Duration
 import Data.Lazy
 import Data.Either
@@ -33,6 +34,11 @@ import Erlang.Exception
 import Erlang.Builtins as BIF
 import Data.BigInt as DBI
 import Erlang.Invoke
+
+import Aeb.Data.Test
+import Aeb.Serialize.Test
+import Aeb.Fate.Asm.Test
+import Aebytecode.SUITE
 
 -- BEWARE - HERE BE DRAGONS - I've lost too many hours debugging alternative helpers
 -- If you think you can make a better wrapper which does not crash the testing infrastructure then please make a PR
@@ -131,6 +137,31 @@ shouldEqualOk a b = make_ok a `shouldEqual` b
 main :: Effect Unit
 main = unsafePartial $
     launchAff_ $ runSpec [consoleReporter] do
-      describe "AeserApiEncoderTests" do
-        it "xd" do
-          1 `shouldEqual` 1
+      describe "AebDataTest" do
+        it "format_integer_test" do
+          r <- exec_may_throw erlps__format_integer_test__0 []
+          H.make_string "0" `shouldEqualOk` r
+
+      describe "AebSerializeTest" do
+        it "serialize_integer_test" do
+          let exp = ErlangBinary $ BIN.fromFoldable
+                    [111,184,129,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+                     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+                     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+                     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+                     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+                     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+          r <- exec_may_throw erlps__serialize_integer_test__0 []
+          exp `shouldEqualOk` r
+        it "serialize_deserialize_test" do
+          exec_may_throw erlps__serialize_deserialize_test___0 [] >>= assert_ok
+
+      describe "AebFateAsmTest" do
+        it "asm_disasm_idenity_test" do
+          exec_may_throw erlps__asm_disasm_idenity_test__0 [] >>= assert_ok
+        it "asm_disasm_files_test" do
+          exec_may_throw erlps__asm_disasm_files_test___0 [] >>= assert_ok
+
+      describe "AebytecodeSUITE" do
+        it "roundtrip_identy" do
+          exec_may_throw erlps__roundtrip_identy__1 [ErlangEmptyList] >>= assert_ok
