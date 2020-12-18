@@ -974,11 +974,11 @@ erlps__m_to_op__1 [(ErlangAtom "ADDMOD")] =
   (ErlangInt (DBI.fromInt 8))
 erlps__m_to_op__1 [(ErlangAtom "MULMOD")] =
   (ErlangInt (DBI.fromInt 9))
+erlps__m_to_op__1 [(ErlangAtom "EXP")] =
+  (ErlangInt (DBI.fromInt 10))
 erlps__m_to_op__1 args = (erlps__m_to_op__1__p1 args)
 
 erlps__m_to_op__1__p1 :: ErlangFun
-erlps__m_to_op__1__p1 [(ErlangAtom "EXP")] =
-  (ErlangInt (DBI.fromInt 10))
 erlps__m_to_op__1__p1 [(ErlangAtom "SIGNEXTEND")] =
   (ErlangInt (DBI.fromInt 11))
 erlps__m_to_op__1__p1 [(ErlangAtom "LT")] =
@@ -997,13 +997,13 @@ erlps__m_to_op__1__p1 [(ErlangAtom "AND")] =
   (ErlangInt (DBI.fromInt 22))
 erlps__m_to_op__1__p1 [(ErlangAtom "OR")] =
   (ErlangInt (DBI.fromInt 23))
+erlps__m_to_op__1__p1 [(ErlangAtom "XOR")] =
+  (ErlangInt (DBI.fromInt 24))
+erlps__m_to_op__1__p1 [(ErlangAtom "NOT")] =
+  (ErlangInt (DBI.fromInt 25))
 erlps__m_to_op__1__p1 args = (erlps__m_to_op__1__p2 args)
 
 erlps__m_to_op__1__p2 :: ErlangFun
-erlps__m_to_op__1__p2 [(ErlangAtom "XOR")] =
-  (ErlangInt (DBI.fromInt 24))
-erlps__m_to_op__1__p2 [(ErlangAtom "NOT")] =
-  (ErlangInt (DBI.fromInt 25))
 erlps__m_to_op__1__p2 [(ErlangAtom "BYTE")] =
   (ErlangInt (DBI.fromInt 26))
 erlps__m_to_op__1__p2 [(ErlangAtom "SHL")] =
@@ -1020,15 +1020,15 @@ erlps__m_to_op__1__p2 [(ErlangAtom "ADDRESS")] =
   (ErlangInt (DBI.fromInt 48))
 erlps__m_to_op__1__p2 [(ErlangAtom "BALANCE")] =
   (ErlangInt (DBI.fromInt 49))
+erlps__m_to_op__1__p2 [(ErlangAtom "ORIGIN")] =
+  (ErlangInt (DBI.fromInt 50))
+erlps__m_to_op__1__p2 [(ErlangAtom "CALLER")] =
+  (ErlangInt (DBI.fromInt 51))
+erlps__m_to_op__1__p2 [(ErlangAtom "CALLVALUE")] =
+  (ErlangInt (DBI.fromInt 52))
 erlps__m_to_op__1__p2 args = (erlps__m_to_op__1__p3 args)
 
 erlps__m_to_op__1__p3 :: ErlangFun
-erlps__m_to_op__1__p3 [(ErlangAtom "ORIGIN")] =
-  (ErlangInt (DBI.fromInt 50))
-erlps__m_to_op__1__p3 [(ErlangAtom "CALLER")] =
-  (ErlangInt (DBI.fromInt 51))
-erlps__m_to_op__1__p3 [(ErlangAtom "CALLVALUE")] =
-  (ErlangInt (DBI.fromInt 52))
 erlps__m_to_op__1__p3 [(ErlangAtom "CALLDATALOAD")] =
   (ErlangInt (DBI.fromInt 53))
 erlps__m_to_op__1__p3 [(ErlangAtom "CALLDATASIZE")] =
@@ -1043,17 +1043,17 @@ erlps__m_to_op__1__p3 [(ErlangAtom "GASPRICE")] =
   (ErlangInt (DBI.fromInt 58))
 erlps__m_to_op__1__p3 [(ErlangAtom "EXTCODESIZE")] =
   (ErlangInt (DBI.fromInt 59))
+erlps__m_to_op__1__p3 [(ErlangAtom "EXTCODECOPY")] =
+  (ErlangInt (DBI.fromInt 60))
+erlps__m_to_op__1__p3 [(ErlangAtom "RETURNDATASIZE")] =
+  (ErlangInt (DBI.fromInt 61))
+erlps__m_to_op__1__p3 [(ErlangAtom "RETURNDATACOPY")] =
+  (ErlangInt (DBI.fromInt 62))
+erlps__m_to_op__1__p3 [(ErlangAtom "BLOCKHASH")] =
+  (ErlangInt (DBI.fromInt 64))
 erlps__m_to_op__1__p3 args = (erlps__m_to_op__1__p4 args)
 
 erlps__m_to_op__1__p4 :: ErlangFun
-erlps__m_to_op__1__p4 [(ErlangAtom "EXTCODECOPY")] =
-  (ErlangInt (DBI.fromInt 60))
-erlps__m_to_op__1__p4 [(ErlangAtom "RETURNDATASIZE")] =
-  (ErlangInt (DBI.fromInt 61))
-erlps__m_to_op__1__p4 [(ErlangAtom "RETURNDATACOPY")] =
-  (ErlangInt (DBI.fromInt 62))
-erlps__m_to_op__1__p4 [(ErlangAtom "BLOCKHASH")] =
-  (ErlangInt (DBI.fromInt 64))
 erlps__m_to_op__1__p4 [(ErlangAtom "COINBASE")] =
   (ErlangInt (DBI.fromInt 65))
 erlps__m_to_op__1__p4 [(ErlangAtom "TIMESTAMP")] =
@@ -1066,19 +1066,19 @@ erlps__m_to_op__1__p4 [(ErlangAtom "GASLIMIT")] =
   (ErlangInt (DBI.fromInt 69))
 erlps__m_to_op__1__p4 [(ErlangAtom "POP")] =
   (ErlangInt (DBI.fromInt 80))
+erlps__m_to_op__1__p4 [(ErlangAtom "MLOAD")] =
+  (ErlangInt (DBI.fromInt 81))
+erlps__m_to_op__1__p4 [(ErlangAtom "MSTORE")] =
+  (ErlangInt (DBI.fromInt 82))
+erlps__m_to_op__1__p4 [(ErlangAtom "MSTORE8")] =
+  (ErlangInt (DBI.fromInt 83))
+erlps__m_to_op__1__p4 [(ErlangAtom "SLOAD")] =
+  (ErlangInt (DBI.fromInt 84))
+erlps__m_to_op__1__p4 [(ErlangAtom "SSTORE")] =
+  (ErlangInt (DBI.fromInt 85))
 erlps__m_to_op__1__p4 args = (erlps__m_to_op__1__p5 args)
 
 erlps__m_to_op__1__p5 :: ErlangFun
-erlps__m_to_op__1__p5 [(ErlangAtom "MLOAD")] =
-  (ErlangInt (DBI.fromInt 81))
-erlps__m_to_op__1__p5 [(ErlangAtom "MSTORE")] =
-  (ErlangInt (DBI.fromInt 82))
-erlps__m_to_op__1__p5 [(ErlangAtom "MSTORE8")] =
-  (ErlangInt (DBI.fromInt 83))
-erlps__m_to_op__1__p5 [(ErlangAtom "SLOAD")] =
-  (ErlangInt (DBI.fromInt 84))
-erlps__m_to_op__1__p5 [(ErlangAtom "SSTORE")] =
-  (ErlangInt (DBI.fromInt 85))
 erlps__m_to_op__1__p5 [(ErlangAtom "JUMP")] =
   (ErlangInt (DBI.fromInt 86))
 erlps__m_to_op__1__p5 [(ErlangAtom "JUMPI")] =
@@ -1089,21 +1089,21 @@ erlps__m_to_op__1__p5 [(ErlangAtom "MSIZE")] =
   (ErlangInt (DBI.fromInt 89))
 erlps__m_to_op__1__p5 [(ErlangAtom "GAS")] =
   (ErlangInt (DBI.fromInt 90))
+erlps__m_to_op__1__p5 [(ErlangAtom "JUMPDEST")] =
+  (ErlangInt (DBI.fromInt 91))
+erlps__m_to_op__1__p5 [(ErlangAtom "PUSH1")] =
+  (ErlangInt (DBI.fromInt 96))
+erlps__m_to_op__1__p5 [(ErlangAtom "PUSH2")] =
+  (ErlangInt (DBI.fromInt 97))
+erlps__m_to_op__1__p5 [(ErlangAtom "PUSH3")] =
+  (ErlangInt (DBI.fromInt 98))
+erlps__m_to_op__1__p5 [(ErlangAtom "PUSH4")] =
+  (ErlangInt (DBI.fromInt 99))
+erlps__m_to_op__1__p5 [(ErlangAtom "PUSH5")] =
+  (ErlangInt (DBI.fromInt 100))
 erlps__m_to_op__1__p5 args = (erlps__m_to_op__1__p6 args)
 
 erlps__m_to_op__1__p6 :: ErlangFun
-erlps__m_to_op__1__p6 [(ErlangAtom "JUMPDEST")] =
-  (ErlangInt (DBI.fromInt 91))
-erlps__m_to_op__1__p6 [(ErlangAtom "PUSH1")] =
-  (ErlangInt (DBI.fromInt 96))
-erlps__m_to_op__1__p6 [(ErlangAtom "PUSH2")] =
-  (ErlangInt (DBI.fromInt 97))
-erlps__m_to_op__1__p6 [(ErlangAtom "PUSH3")] =
-  (ErlangInt (DBI.fromInt 98))
-erlps__m_to_op__1__p6 [(ErlangAtom "PUSH4")] =
-  (ErlangInt (DBI.fromInt 99))
-erlps__m_to_op__1__p6 [(ErlangAtom "PUSH5")] =
-  (ErlangInt (DBI.fromInt 100))
 erlps__m_to_op__1__p6 [(ErlangAtom "PUSH6")] =
   (ErlangInt (DBI.fromInt 101))
 erlps__m_to_op__1__p6 [(ErlangAtom "PUSH7")] =
@@ -1112,171 +1112,171 @@ erlps__m_to_op__1__p6 [(ErlangAtom "PUSH8")] =
   (ErlangInt (DBI.fromInt 103))
 erlps__m_to_op__1__p6 [(ErlangAtom "PUSH9")] =
   (ErlangInt (DBI.fromInt 104))
+erlps__m_to_op__1__p6 [(ErlangAtom "PUSH10")] =
+  (ErlangInt (DBI.fromInt 105))
+erlps__m_to_op__1__p6 [(ErlangAtom "PUSH11")] =
+  (ErlangInt (DBI.fromInt 106))
+erlps__m_to_op__1__p6 [(ErlangAtom "PUSH12")] =
+  (ErlangInt (DBI.fromInt 107))
+erlps__m_to_op__1__p6 [(ErlangAtom "PUSH13")] =
+  (ErlangInt (DBI.fromInt 108))
+erlps__m_to_op__1__p6 [(ErlangAtom "PUSH14")] =
+  (ErlangInt (DBI.fromInt 109))
+erlps__m_to_op__1__p6 [(ErlangAtom "PUSH15")] =
+  (ErlangInt (DBI.fromInt 110))
+erlps__m_to_op__1__p6 [(ErlangAtom "PUSH16")] =
+  (ErlangInt (DBI.fromInt 111))
 erlps__m_to_op__1__p6 args = (erlps__m_to_op__1__p7 args)
 
 erlps__m_to_op__1__p7 :: ErlangFun
-erlps__m_to_op__1__p7 [(ErlangAtom "PUSH10")] =
-  (ErlangInt (DBI.fromInt 105))
-erlps__m_to_op__1__p7 [(ErlangAtom "PUSH11")] =
-  (ErlangInt (DBI.fromInt 106))
-erlps__m_to_op__1__p7 [(ErlangAtom "PUSH12")] =
-  (ErlangInt (DBI.fromInt 107))
-erlps__m_to_op__1__p7 [(ErlangAtom "PUSH13")] =
-  (ErlangInt (DBI.fromInt 108))
-erlps__m_to_op__1__p7 [(ErlangAtom "PUSH14")] =
-  (ErlangInt (DBI.fromInt 109))
-erlps__m_to_op__1__p7 [(ErlangAtom "PUSH15")] =
-  (ErlangInt (DBI.fromInt 110))
-erlps__m_to_op__1__p7 [(ErlangAtom "PUSH16")] =
-  (ErlangInt (DBI.fromInt 111))
 erlps__m_to_op__1__p7 [(ErlangAtom "PUSH17")] =
   (ErlangInt (DBI.fromInt 112))
 erlps__m_to_op__1__p7 [(ErlangAtom "PUSH18")] =
   (ErlangInt (DBI.fromInt 113))
 erlps__m_to_op__1__p7 [(ErlangAtom "PUSH19")] =
   (ErlangInt (DBI.fromInt 114))
+erlps__m_to_op__1__p7 [(ErlangAtom "PUSH20")] =
+  (ErlangInt (DBI.fromInt 115))
+erlps__m_to_op__1__p7 [(ErlangAtom "PUSH21")] =
+  (ErlangInt (DBI.fromInt 116))
+erlps__m_to_op__1__p7 [(ErlangAtom "PUSH22")] =
+  (ErlangInt (DBI.fromInt 117))
+erlps__m_to_op__1__p7 [(ErlangAtom "PUSH23")] =
+  (ErlangInt (DBI.fromInt 118))
+erlps__m_to_op__1__p7 [(ErlangAtom "PUSH24")] =
+  (ErlangInt (DBI.fromInt 119))
+erlps__m_to_op__1__p7 [(ErlangAtom "PUSH25")] =
+  (ErlangInt (DBI.fromInt 120))
+erlps__m_to_op__1__p7 [(ErlangAtom "PUSH26")] =
+  (ErlangInt (DBI.fromInt 121))
+erlps__m_to_op__1__p7 [(ErlangAtom "PUSH27")] =
+  (ErlangInt (DBI.fromInt 122))
 erlps__m_to_op__1__p7 args = (erlps__m_to_op__1__p8 args)
 
 erlps__m_to_op__1__p8 :: ErlangFun
-erlps__m_to_op__1__p8 [(ErlangAtom "PUSH20")] =
-  (ErlangInt (DBI.fromInt 115))
-erlps__m_to_op__1__p8 [(ErlangAtom "PUSH21")] =
-  (ErlangInt (DBI.fromInt 116))
-erlps__m_to_op__1__p8 [(ErlangAtom "PUSH22")] =
-  (ErlangInt (DBI.fromInt 117))
-erlps__m_to_op__1__p8 [(ErlangAtom "PUSH23")] =
-  (ErlangInt (DBI.fromInt 118))
-erlps__m_to_op__1__p8 [(ErlangAtom "PUSH24")] =
-  (ErlangInt (DBI.fromInt 119))
-erlps__m_to_op__1__p8 [(ErlangAtom "PUSH25")] =
-  (ErlangInt (DBI.fromInt 120))
-erlps__m_to_op__1__p8 [(ErlangAtom "PUSH26")] =
-  (ErlangInt (DBI.fromInt 121))
-erlps__m_to_op__1__p8 [(ErlangAtom "PUSH27")] =
-  (ErlangInt (DBI.fromInt 122))
 erlps__m_to_op__1__p8 [(ErlangAtom "PUSH28")] =
   (ErlangInt (DBI.fromInt 123))
 erlps__m_to_op__1__p8 [(ErlangAtom "PUSH29")] =
   (ErlangInt (DBI.fromInt 124))
+erlps__m_to_op__1__p8 [(ErlangAtom "PUSH30")] =
+  (ErlangInt (DBI.fromInt 125))
+erlps__m_to_op__1__p8 [(ErlangAtom "PUSH31")] =
+  (ErlangInt (DBI.fromInt 126))
+erlps__m_to_op__1__p8 [(ErlangAtom "PUSH32")] =
+  (ErlangInt (DBI.fromInt 127))
+erlps__m_to_op__1__p8 [(ErlangAtom "DUP1")] =
+  (ErlangInt (DBI.fromInt 128))
+erlps__m_to_op__1__p8 [(ErlangAtom "DUP2")] =
+  (ErlangInt (DBI.fromInt 129))
+erlps__m_to_op__1__p8 [(ErlangAtom "DUP3")] =
+  (ErlangInt (DBI.fromInt 130))
+erlps__m_to_op__1__p8 [(ErlangAtom "DUP4")] =
+  (ErlangInt (DBI.fromInt 131))
+erlps__m_to_op__1__p8 [(ErlangAtom "DUP5")] =
+  (ErlangInt (DBI.fromInt 132))
+erlps__m_to_op__1__p8 [(ErlangAtom "DUP6")] =
+  (ErlangInt (DBI.fromInt 133))
 erlps__m_to_op__1__p8 args = (erlps__m_to_op__1__p9 args)
 
 erlps__m_to_op__1__p9 :: ErlangFun
-erlps__m_to_op__1__p9 [(ErlangAtom "PUSH30")] =
-  (ErlangInt (DBI.fromInt 125))
-erlps__m_to_op__1__p9 [(ErlangAtom "PUSH31")] =
-  (ErlangInt (DBI.fromInt 126))
-erlps__m_to_op__1__p9 [(ErlangAtom "PUSH32")] =
-  (ErlangInt (DBI.fromInt 127))
-erlps__m_to_op__1__p9 [(ErlangAtom "DUP1")] =
-  (ErlangInt (DBI.fromInt 128))
-erlps__m_to_op__1__p9 [(ErlangAtom "DUP2")] =
-  (ErlangInt (DBI.fromInt 129))
-erlps__m_to_op__1__p9 [(ErlangAtom "DUP3")] =
-  (ErlangInt (DBI.fromInt 130))
-erlps__m_to_op__1__p9 [(ErlangAtom "DUP4")] =
-  (ErlangInt (DBI.fromInt 131))
-erlps__m_to_op__1__p9 [(ErlangAtom "DUP5")] =
-  (ErlangInt (DBI.fromInt 132))
-erlps__m_to_op__1__p9 [(ErlangAtom "DUP6")] =
-  (ErlangInt (DBI.fromInt 133))
 erlps__m_to_op__1__p9 [(ErlangAtom "DUP7")] =
   (ErlangInt (DBI.fromInt 134))
+erlps__m_to_op__1__p9 [(ErlangAtom "DUP8")] =
+  (ErlangInt (DBI.fromInt 135))
+erlps__m_to_op__1__p9 [(ErlangAtom "DUP9")] =
+  (ErlangInt (DBI.fromInt 136))
+erlps__m_to_op__1__p9 [(ErlangAtom "DUP10")] =
+  (ErlangInt (DBI.fromInt 137))
+erlps__m_to_op__1__p9 [(ErlangAtom "DUP11")] =
+  (ErlangInt (DBI.fromInt 138))
+erlps__m_to_op__1__p9 [(ErlangAtom "DUP12")] =
+  (ErlangInt (DBI.fromInt 139))
+erlps__m_to_op__1__p9 [(ErlangAtom "DUP13")] =
+  (ErlangInt (DBI.fromInt 140))
+erlps__m_to_op__1__p9 [(ErlangAtom "DUP14")] =
+  (ErlangInt (DBI.fromInt 141))
+erlps__m_to_op__1__p9 [(ErlangAtom "DUP15")] =
+  (ErlangInt (DBI.fromInt 142))
+erlps__m_to_op__1__p9 [(ErlangAtom "DUP16")] =
+  (ErlangInt (DBI.fromInt 143))
+erlps__m_to_op__1__p9 [(ErlangAtom "SWAP1")] =
+  (ErlangInt (DBI.fromInt 144))
 erlps__m_to_op__1__p9 args = (erlps__m_to_op__1__p10 args)
 
 erlps__m_to_op__1__p10 :: ErlangFun
-erlps__m_to_op__1__p10 [(ErlangAtom "DUP8")] =
-  (ErlangInt (DBI.fromInt 135))
-erlps__m_to_op__1__p10 [(ErlangAtom "DUP9")] =
-  (ErlangInt (DBI.fromInt 136))
-erlps__m_to_op__1__p10 [(ErlangAtom "DUP10")] =
-  (ErlangInt (DBI.fromInt 137))
-erlps__m_to_op__1__p10 [(ErlangAtom "DUP11")] =
-  (ErlangInt (DBI.fromInt 138))
-erlps__m_to_op__1__p10 [(ErlangAtom "DUP12")] =
-  (ErlangInt (DBI.fromInt 139))
-erlps__m_to_op__1__p10 [(ErlangAtom "DUP13")] =
-  (ErlangInt (DBI.fromInt 140))
-erlps__m_to_op__1__p10 [(ErlangAtom "DUP14")] =
-  (ErlangInt (DBI.fromInt 141))
-erlps__m_to_op__1__p10 [(ErlangAtom "DUP15")] =
-  (ErlangInt (DBI.fromInt 142))
-erlps__m_to_op__1__p10 [(ErlangAtom "DUP16")] =
-  (ErlangInt (DBI.fromInt 143))
-erlps__m_to_op__1__p10 [(ErlangAtom "SWAP1")] =
-  (ErlangInt (DBI.fromInt 144))
+erlps__m_to_op__1__p10 [(ErlangAtom "SWAP2")] =
+  (ErlangInt (DBI.fromInt 145))
+erlps__m_to_op__1__p10 [(ErlangAtom "SWAP3")] =
+  (ErlangInt (DBI.fromInt 146))
+erlps__m_to_op__1__p10 [(ErlangAtom "SWAP4")] =
+  (ErlangInt (DBI.fromInt 147))
+erlps__m_to_op__1__p10 [(ErlangAtom "SWAP5")] =
+  (ErlangInt (DBI.fromInt 148))
+erlps__m_to_op__1__p10 [(ErlangAtom "SWAP6")] =
+  (ErlangInt (DBI.fromInt 149))
+erlps__m_to_op__1__p10 [(ErlangAtom "SWAP7")] =
+  (ErlangInt (DBI.fromInt 150))
+erlps__m_to_op__1__p10 [(ErlangAtom "SWAP8")] =
+  (ErlangInt (DBI.fromInt 151))
+erlps__m_to_op__1__p10 [(ErlangAtom "SWAP9")] =
+  (ErlangInt (DBI.fromInt 152))
+erlps__m_to_op__1__p10 [(ErlangAtom "SWAP10")] =
+  (ErlangInt (DBI.fromInt 153))
+erlps__m_to_op__1__p10 [(ErlangAtom "SWAP11")] =
+  (ErlangInt (DBI.fromInt 154))
+erlps__m_to_op__1__p10 [(ErlangAtom "SWAP12")] =
+  (ErlangInt (DBI.fromInt 155))
 erlps__m_to_op__1__p10 args = (erlps__m_to_op__1__p11 args)
 
 erlps__m_to_op__1__p11 :: ErlangFun
-erlps__m_to_op__1__p11 [(ErlangAtom "SWAP2")] =
-  (ErlangInt (DBI.fromInt 145))
-erlps__m_to_op__1__p11 [(ErlangAtom "SWAP3")] =
-  (ErlangInt (DBI.fromInt 146))
-erlps__m_to_op__1__p11 [(ErlangAtom "SWAP4")] =
-  (ErlangInt (DBI.fromInt 147))
-erlps__m_to_op__1__p11 [(ErlangAtom "SWAP5")] =
-  (ErlangInt (DBI.fromInt 148))
-erlps__m_to_op__1__p11 [(ErlangAtom "SWAP6")] =
-  (ErlangInt (DBI.fromInt 149))
-erlps__m_to_op__1__p11 [(ErlangAtom "SWAP7")] =
-  (ErlangInt (DBI.fromInt 150))
-erlps__m_to_op__1__p11 [(ErlangAtom "SWAP8")] =
-  (ErlangInt (DBI.fromInt 151))
-erlps__m_to_op__1__p11 [(ErlangAtom "SWAP9")] =
-  (ErlangInt (DBI.fromInt 152))
-erlps__m_to_op__1__p11 [(ErlangAtom "SWAP10")] =
-  (ErlangInt (DBI.fromInt 153))
-erlps__m_to_op__1__p11 [(ErlangAtom "SWAP11")] =
-  (ErlangInt (DBI.fromInt 154))
+erlps__m_to_op__1__p11 [(ErlangAtom "SWAP13")] =
+  (ErlangInt (DBI.fromInt 156))
+erlps__m_to_op__1__p11 [(ErlangAtom "SWAP14")] =
+  (ErlangInt (DBI.fromInt 157))
+erlps__m_to_op__1__p11 [(ErlangAtom "SWAP15")] =
+  (ErlangInt (DBI.fromInt 158))
+erlps__m_to_op__1__p11 [(ErlangAtom "SWAP16")] =
+  (ErlangInt (DBI.fromInt 159))
+erlps__m_to_op__1__p11 [(ErlangAtom "LOG0")] =
+  (ErlangInt (DBI.fromInt 160))
+erlps__m_to_op__1__p11 [(ErlangAtom "LOG1")] =
+  (ErlangInt (DBI.fromInt 161))
+erlps__m_to_op__1__p11 [(ErlangAtom "LOG2")] =
+  (ErlangInt (DBI.fromInt 162))
+erlps__m_to_op__1__p11 [(ErlangAtom "LOG3")] =
+  (ErlangInt (DBI.fromInt 163))
+erlps__m_to_op__1__p11 [(ErlangAtom "LOG4")] =
+  (ErlangInt (DBI.fromInt 164))
+erlps__m_to_op__1__p11 [(ErlangAtom "CREATE")] =
+  (ErlangInt (DBI.fromInt 240))
+erlps__m_to_op__1__p11 [(ErlangAtom "CALL")] =
+  (ErlangInt (DBI.fromInt 241))
 erlps__m_to_op__1__p11 args = (erlps__m_to_op__1__p12 args)
 
 erlps__m_to_op__1__p12 :: ErlangFun
-erlps__m_to_op__1__p12 [(ErlangAtom "SWAP12")] =
-  (ErlangInt (DBI.fromInt 155))
-erlps__m_to_op__1__p12 [(ErlangAtom "SWAP13")] =
-  (ErlangInt (DBI.fromInt 156))
-erlps__m_to_op__1__p12 [(ErlangAtom "SWAP14")] =
-  (ErlangInt (DBI.fromInt 157))
-erlps__m_to_op__1__p12 [(ErlangAtom "SWAP15")] =
-  (ErlangInt (DBI.fromInt 158))
-erlps__m_to_op__1__p12 [(ErlangAtom "SWAP16")] =
-  (ErlangInt (DBI.fromInt 159))
-erlps__m_to_op__1__p12 [(ErlangAtom "LOG0")] =
-  (ErlangInt (DBI.fromInt 160))
-erlps__m_to_op__1__p12 [(ErlangAtom "LOG1")] =
-  (ErlangInt (DBI.fromInt 161))
-erlps__m_to_op__1__p12 [(ErlangAtom "LOG2")] =
-  (ErlangInt (DBI.fromInt 162))
-erlps__m_to_op__1__p12 [(ErlangAtom "LOG3")] =
-  (ErlangInt (DBI.fromInt 163))
-erlps__m_to_op__1__p12 [(ErlangAtom "LOG4")] =
-  (ErlangInt (DBI.fromInt 164))
-erlps__m_to_op__1__p12 args = (erlps__m_to_op__1__p13 args)
-
-erlps__m_to_op__1__p13 :: ErlangFun
-erlps__m_to_op__1__p13 [(ErlangAtom "CREATE")] =
-  (ErlangInt (DBI.fromInt 240))
-erlps__m_to_op__1__p13 [(ErlangAtom "CALL")] =
-  (ErlangInt (DBI.fromInt 241))
-erlps__m_to_op__1__p13 [(ErlangAtom "CALLCODE")] =
+erlps__m_to_op__1__p12 [(ErlangAtom "CALLCODE")] =
   (ErlangInt (DBI.fromInt 242))
-erlps__m_to_op__1__p13 [(ErlangAtom "RETURN")] =
+erlps__m_to_op__1__p12 [(ErlangAtom "RETURN")] =
   (ErlangInt (DBI.fromInt 243))
-erlps__m_to_op__1__p13 [(ErlangAtom "DELEGATECALL")] =
+erlps__m_to_op__1__p12 [(ErlangAtom "DELEGATECALL")] =
   (ErlangInt (DBI.fromInt 244))
-erlps__m_to_op__1__p13 [(ErlangAtom "STATICCALL")] =
+erlps__m_to_op__1__p12 [(ErlangAtom "STATICCALL")] =
   (ErlangInt (DBI.fromInt 250))
-erlps__m_to_op__1__p13 [(ErlangAtom "REVERT")] =
+erlps__m_to_op__1__p12 [(ErlangAtom "REVERT")] =
   (ErlangInt (DBI.fromInt 253))
-erlps__m_to_op__1__p13 [(ErlangAtom "COMMENT")] =
+erlps__m_to_op__1__p12 [(ErlangAtom "COMMENT")] =
   let tup_el_1 = (make_string "")
   in (ErlangTuple [(ErlangAtom "comment"), tup_el_1])
-erlps__m_to_op__1__p13 [(ErlangAtom "SUICIDE")] =
+erlps__m_to_op__1__p12 [(ErlangAtom "SUICIDE")] =
   (ErlangInt (DBI.fromInt 255))
-erlps__m_to_op__1__p13 [data_0]
+erlps__m_to_op__1__p12 [data_0]
   | ((weakLeq (ErlangInt (DBI.fromInt 0)) data_0) &&
        (weakLeq data_0 (ErlangInt (DBI.fromInt 255)))) =
   data_0
-erlps__m_to_op__1__p13 args = (erlps__m_to_op__1__p14 args)
+erlps__m_to_op__1__p12 [arg_1] = (EXC.function_clause unit)
+erlps__m_to_op__1__p12 args =
+  (EXC.badarity
+     (ErlangFun 1 (\ _ -> (ErlangAtom "purs_tco_sucks"))) args)
 
 erlps__push__1 :: ErlangFun
 erlps__push__1 [n_0]
