@@ -17,7 +17,7 @@ import Data.Tuple as Tup
 import Data.BigInt as DBI
 import Erlang.Builtins as BIF
 import Erlang.Binary as BIN
-import Erlang.Helpers as H
+import Erlang.Helpers
 import Erlang.Exception as EXC
 import Erlang.Type (ErlangFun, ErlangTerm(..), weakCmp, weakEq,
                     weakNEq, weakLt, weakLeq, weakGeq, weakGt)
@@ -1265,7 +1265,7 @@ erlps__m_to_op__1__p12 [(ErlangAtom "STATICCALL")] =
 erlps__m_to_op__1__p12 [(ErlangAtom "REVERT")] =
   (ErlangInt (DBI.fromInt 253))
 erlps__m_to_op__1__p12 [(ErlangAtom "COMMENT")] =
-  let tup_el_1 = (H.make_string "")
+  let tup_el_1 = (make_string "")
   in (ErlangTuple [(ErlangAtom "comment"), tup_el_1])
 erlps__m_to_op__1__p12 [(ErlangAtom "SUICIDE")] =
   (ErlangInt (DBI.fromInt 255))

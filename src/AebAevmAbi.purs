@@ -23,7 +23,7 @@ import Data.Tuple as Tup
 import Data.BigInt as DBI
 import Erlang.Builtins as BIF
 import Erlang.Binary as BIN
-import Erlang.Helpers as H
+import Erlang.Helpers
 import Erlang.Exception as EXC
 import Erlang.Type (ErlangFun, ErlangTerm(..), weakCmp, weakEq,
                     weakNEq, weakLt, weakLeq, weakGeq, weakGt)
@@ -126,29 +126,29 @@ erlps__check_calldata__4 [hash_0, calldata_1, typeinfo_2,
                    [arg_8, calldata_1]))
            (\ of_16 ->
               case of_16 of
-                (ErlangTuple [(ErlangAtom "ok"), _something_19]) ->
+                (ErlangTuple [(ErlangAtom "ok"), _something_18]) ->
                   let
-                    tup_el_21 =
+                    tup_el_20 =
                       (ErlangTuple
                          [(ErlangAtom "tuple"),
                           (ErlangCons (ErlangAtom "word")
                              (ErlangCons argtype_6 ErlangEmptyList))])
-                  in (ErlangTuple [(ErlangAtom "ok"), tup_el_21, outtype_7])
+                  in (ErlangTuple [(ErlangAtom "ok"), tup_el_20, outtype_7])
                 (ErlangTuple [(ErlangAtom "error"), _]) ->
                   (ErlangTuple
                      [(ErlangAtom "error"), (ErlangAtom "bad_call_data")])
                 something_else -> (EXC.try_clause something_else))
            (\ ex_17 ->
               case ex_17 of
-                (ErlangTuple [_t_31, _e_32, _]) ->
+                (ErlangTuple [_t_30, _e_31, _]) ->
                   (ErlangTuple
                      [(ErlangAtom "error"), (ErlangAtom "bad_call_data")])
-                ex_18 -> (EXC.raise ex_18)))
+                ex_17 -> (EXC.raise ex_17)))
       (ErlangTuple [(ErlangAtom "error"), _]) ->
         (ErlangTuple
            [(ErlangAtom "error"), (ErlangAtom "unknown_function")])
       something_else -> (EXC.case_clause something_else)
-erlps__check_calldata__4 [arg_37, arg_38, arg_39, arg_40] =
+erlps__check_calldata__4 [arg_36, arg_37, arg_38, arg_39] =
   (EXC.function_clause unit)
 erlps__check_calldata__4 args =
   (EXC.badarity
@@ -209,7 +209,7 @@ erlps__function_type_info__4 args =
 erlps__function_type_hash__3 :: ErlangFun
 erlps__function_type_hash__3 [name_0, argtype_1, outtype_2]
   | ((ErlangAtom "true") ==
-       (H.falsifyErrors (\ _ -> (BIF.erlang__is_binary__1 [name_0])))) =
+       (falsifyErrors (\ _ -> (BIF.erlang__is_binary__1 [name_0])))) =
   let   
     head_6 =
       (BIF.do_remote_fun_call "Aeb.Heap" "erlps__to_binary__1"

@@ -16,7 +16,7 @@ import Data.Tuple as Tup
 import Data.BigInt as DBI
 import Erlang.Builtins as BIF
 import Erlang.Binary as BIN
-import Erlang.Helpers as H
+import Erlang.Helpers
 import Erlang.Exception as EXC
 import Erlang.Type (ErlangFun, ErlangTerm(..), weakCmp, weakEq,
                     weakNEq, weakLt, weakLeq, weakGeq, weakGt)
@@ -29,7 +29,7 @@ import Partial.Unsafe (unsafePartial)
 erlps__pp__1 :: ErlangFun
 erlps__pp__1 [asm_0] =
   let    listing_2 = (erlps__format__1 [asm_0])
-  in let arg_3 = (H.make_string "~s~n")
+  in let arg_3 = (make_string "~s~n")
   in
     (BIF.do_remote_fun_call "Erlang.Io" "erlps__format__2"
        [arg_3, (ErlangCons listing_2 ErlangEmptyList)])
@@ -51,8 +51,8 @@ erlps__format__2 [(ErlangCons (ErlangTuple [(ErlangAtom "comment"),
                                             comment_0]) rest_1),
                   address_2]
   =
-  let    lop_3 = (H.make_string ";; ")
-  in let lop_7 = (H.make_string "\n")
+  let    lop_3 = (make_string ";; ")
+  in let lop_7 = (make_string "\n")
   in let rop_8 = (erlps__format__2 [rest_1, address_2])
   in let rop_6 = (BIF.erlang__op_append [lop_7, rop_8])
   in let rop_4 = (BIF.erlang__op_append [comment_0, rop_6])
@@ -85,10 +85,10 @@ erlps__format__2 [(ErlangCons mnemonic_0 rest_1), address_2] =
         in
           case match_expr_19 of
             (ErlangTuple [args_17, code_18]) ->
-              let    lop_20 = (H.make_string "        ")
+              let    lop_20 = (make_string "        ")
               in let lop_22 = (BIF.erlang__atom_to_list__1 [mnemonic_0])
-              in let lop_25 = (H.make_string "        ")
-              in let lop_29 = (H.make_string "\n")
+              in let lop_25 = (make_string "        ")
+              in let lop_29 = (make_string "\n")
               in let lop_33 = (BIF.erlang__op_plus [address_2, arity_14])
               in let
                 arg_32 =
@@ -101,9 +101,9 @@ erlps__format__2 [(ErlangCons mnemonic_0 rest_1), address_2] =
               in (BIF.erlang__op_append [lop_20, rop_21])
             _ -> (EXC.badmatch match_expr_19)
       (ErlangAtom "false") ->
-        let    lop_37 = (H.make_string "        ")
+        let    lop_37 = (make_string "        ")
         in let lop_39 = (BIF.erlang__atom_to_list__1 [mnemonic_0])
-        in let lop_42 = (H.make_string "\n")
+        in let lop_42 = (make_string "\n")
         in let
           arg_45 =
             (BIF.erlang__op_plus [address_2, (ErlangInt (DBI.fromInt 1))])
@@ -131,7 +131,7 @@ erlps__get_args__2 [n_0, (ErlangCons arg_1 code_2)] =
     case match_expr_9 of
       (ErlangTuple [args_7, rest_8]) ->
         let    lop_11 = (BIF.erlang__integer_to_list__1 [arg_1])
-        in let lop_14 = (H.make_string ", ")
+        in let lop_14 = (make_string ", ")
         in let rop_13 = (BIF.erlang__op_append [lop_14, args_7])
         in let tup_el_10 = (BIF.erlang__op_append [lop_11, rop_13])
         in (ErlangTuple [tup_el_10, rest_8])
@@ -166,7 +166,7 @@ erlps__file__2 [filename_0, options_1] =
                   case case_9 of
                     (ErlangTuple [(ErlangAtom "pp_tokens"),
                                   (ErlangAtom "true")]) ->
-                      let arg_12 = (H.make_string "Tokens ~p~n")
+                      let arg_12 = (make_string "Tokens ~p~n")
                       in
                         (BIF.do_remote_fun_call "Erlang.Io" "erlps__format__2"
                            [arg_12, (ErlangCons tokens_7 ErlangEmptyList)])
@@ -187,7 +187,7 @@ erlps__file__2 [filename_0, options_1] =
                   case case_22 of
                     (ErlangTuple [(ErlangAtom "pp_hex_string"),
                                   (ErlangAtom "true")]) ->
-                      let    arg_25 = (H.make_string "Code: ~s~n")
+                      let    arg_25 = (make_string "Code: ~s~n")
                       in let head_27 = (erlps__to_hexstring__1 [bytelist_21])
                       in
                         (BIF.do_remote_fun_call "Erlang.Io" "erlps__format__2"
@@ -204,17 +204,20 @@ erlps__file__2 args =
 
 erlps__to_hexstring__1 :: ErlangFun
 erlps__to_hexstring__1 [bytelist_0] =
-  let    lop_1 = (H.make_string "0x")
+  let    lop_1 = (make_string "0x")
   in let
     arg_3 =
-      (H.flmap
+      (flmap
          (\ lc_6 ->
-            let    arg_8 = (H.make_string "~2.16.0b")
-            in let
-              lc_ret_7 =
-                (BIF.do_remote_fun_call "Io.Lib" "erlps__format__2"
-                   [arg_8, (ErlangCons lc_6 ErlangEmptyList)])
-            in (ErlangCons lc_ret_7 ErlangEmptyList))
+            case lc_6 of
+              x_5 ->
+                let    arg_8 = (make_string "~2.16.0b")
+                in let
+                  lc_ret_7 =
+                    (BIF.do_remote_fun_call "Io.Lib" "erlps__format__2"
+                       [arg_8, (ErlangCons x_5 ErlangEmptyList)])
+                in (ErlangCons lc_ret_7 ErlangEmptyList)
+              _ -> ErlangEmptyList)
          bytelist_0)
   in let
     rop_2 =
@@ -281,7 +284,7 @@ erlps__to_bytecode__5 [(ErlangEmptyList), _address_0, env_1,
     _ =
       case case_4 of
         (ErlangTuple [(ErlangAtom "pp_opcodes"), (ErlangAtom "true")]) ->
-          let    arg_7 = (H.make_string "opcodes ~p~n")
+          let    arg_7 = (make_string "opcodes ~p~n")
           in let
             head_9 =
               (BIF.do_remote_fun_call "Lists" "erlps__reverse__1" [code_2])
@@ -302,7 +305,7 @@ erlps__to_bytecode__5 [(ErlangEmptyList), _address_0, env_1,
       case case_16 of
         (ErlangTuple [(ErlangAtom "pp_patched_code"),
                       (ErlangAtom "true")]) ->
-          let arg_19 = (H.make_string "Patched Code: ~p~n")
+          let arg_19 = (make_string "Patched Code: ~p~n")
           in
             (BIF.do_remote_fun_call "Erlang.Io" "erlps__format__2"
                [arg_19, (ErlangCons patchedcode_15 ErlangEmptyList)])
@@ -352,12 +355,15 @@ erlps__expand_args__1 [(ErlangCons op_0 (ErlangCons arg_1 rest_2))]
   in let
     bin_16 =
       (BIN.concat_erl
-         (H.flmap
+         (flmap
             (\ lc_13 ->
-               let
-                 lc_ret_14 =
-                   (ErlangBinary (BIN.from_int lc_13 bitsize_8 1 BIN.Big))
-               in (ErlangCons lc_ret_14 ErlangEmptyList))
+               case lc_13 of
+                 x_12 ->
+                   let
+                     lc_ret_14 =
+                       (ErlangBinary (BIN.from_int x_12 bitsize_8 1 BIN.Big))
+                   in (ErlangCons lc_ret_14 ErlangEmptyList)
+                 _ -> ErlangEmptyList)
             (ErlangCons arg_1 ErlangEmptyList)))
   in let argbytelist_18 = (BIF.erlang__binary_to_list__1 [bin_16])
   in let rop_22 = (erlps__expand_args__1 [rest_2])

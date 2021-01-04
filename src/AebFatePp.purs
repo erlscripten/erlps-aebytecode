@@ -15,7 +15,7 @@ import Data.Tuple as Tup
 import Data.BigInt as DBI
 import Erlang.Builtins as BIF
 import Erlang.Binary as BIN
-import Erlang.Helpers as H
+import Erlang.Helpers
 import Erlang.Exception as EXC
 import Erlang.Type (ErlangFun, ErlangTerm(..), weakCmp, weakEq,
                     weakNEq, weakLt, weakLeq, weakGeq, weakGt)
@@ -38,14 +38,14 @@ erlps__format_arg__2 [_,
 erlps__format_arg__2 [(ErlangAtom "a"),
                       (ErlangTuple [(ErlangAtom "arg"), n_0])]
   =
-  let arg_1 = (H.make_string "arg~p")
+  let arg_1 = (make_string "arg~p")
   in
     (BIF.do_remote_fun_call "Io.Lib" "erlps__format__2"
        [arg_1, (ErlangCons n_0 ErlangEmptyList)])
 erlps__format_arg__2 [(ErlangAtom "a"),
                       (ErlangTuple [(ErlangAtom "var"), n_0])]
   | (weakLt n_0 (ErlangInt (DBI.fromInt 0))) =
-  let    arg_1 = (H.make_string "store~p")
+  let    arg_1 = (make_string "store~p")
   in let head_3 = (BIF.erlang__op_neg [n_0])
   in
     (BIF.do_remote_fun_call "Io.Lib" "erlps__format__2"
@@ -53,14 +53,14 @@ erlps__format_arg__2 [(ErlangAtom "a"),
 erlps__format_arg__2 [(ErlangAtom "a"),
                       (ErlangTuple [(ErlangAtom "var"), n_0])]
   =
-  let arg_1 = (H.make_string "var~p")
+  let arg_1 = (make_string "var~p")
   in
     (BIF.do_remote_fun_call "Io.Lib" "erlps__format__2"
        [arg_1, (ErlangCons n_0 ErlangEmptyList)])
 erlps__format_arg__2 [(ErlangAtom "a"),
                       (ErlangTuple [(ErlangAtom "stack"), (ErlangInt num_0)])]
   | ((ErlangInt num_0) == (ErlangInt (DBI.fromInt 0))) =
-  (H.make_string "a")
+  (make_string "a")
 erlps__format_arg__2 [arg_1, arg_2] = (EXC.function_clause unit)
 erlps__format_arg__2 args =
   (EXC.badarity
@@ -68,7 +68,7 @@ erlps__format_arg__2 args =
 
 erlps__lookup__2 :: ErlangFun
 erlps__lookup__2 [name_0, symbols_1] =
-  let    arg_5 = (H.make_string "~p")
+  let    arg_5 = (make_string "~p")
   in let
     arg_4 =
       (BIF.do_remote_fun_call "Io.Lib" "erlps__format__2"
@@ -83,19 +83,19 @@ erlps__lookup__2 args =
 
 erlps__format_op__2 :: ErlangFun
 erlps__format_op__2 [(ErlangAtom "RETURN"), _] =
-  let head_0 = (H.make_string "RETURN")
+  let head_0 = (make_string "RETURN")
   in (ErlangCons head_0 ErlangEmptyList)
 erlps__format_op__2 [(ErlangTuple [(ErlangAtom "RETURNR"),
                                    arg0_0]),
                      _]
   =
-  let    head_1 = (H.make_string "RETURNR ")
+  let    head_1 = (make_string "RETURNR ")
   in let head_3 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
   in (ErlangCons head_1 (ErlangCons head_3 ErlangEmptyList))
 erlps__format_op__2 [(ErlangTuple [(ErlangAtom "CALL"), arg0_0]),
                      _]
   =
-  let    head_1 = (H.make_string "CALL ")
+  let    head_1 = (make_string "CALL ")
   in let head_3 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
   in (ErlangCons head_1 (ErlangCons head_3 ErlangEmptyList))
 erlps__format_op__2 [(ErlangTuple [(ErlangAtom "CALL_R"),
@@ -106,17 +106,17 @@ erlps__format_op__2 [(ErlangTuple [(ErlangAtom "CALL_R"),
                                    argtype_2, rettype_3, value_4]),
                      symbols_5]
   =
-  let    head_6 = (H.make_string "CALL_R ")
+  let    head_6 = (make_string "CALL_R ")
   in let head_8 = (erlps__lookup__2 [contract_0, symbols_5])
-  in let head_12 = (H.make_string ".")
+  in let head_12 = (make_string ".")
   in let head_14 = (erlps__lookup__2 [function_1, symbols_5])
-  in let head_18 = (H.make_string " ")
+  in let head_18 = (make_string " ")
   in let
     head_20 = (erlps__format_arg__2 [(ErlangAtom "a"), argtype_2])
-  in let head_24 = (H.make_string " ")
+  in let head_24 = (make_string " ")
   in let
     head_26 = (erlps__format_arg__2 [(ErlangAtom "a"), rettype_3])
-  in let head_30 = (H.make_string " ")
+  in let head_30 = (make_string " ")
   in let
     head_32 = (erlps__format_arg__2 [(ErlangAtom "a"), value_4])
   in
@@ -137,18 +137,18 @@ erlps__format_op__2 [(ErlangTuple [(ErlangAtom "CALL_R"),
                                    argtype_2, rettype_3, value_4]),
                      symbols_5]
   =
-  let    head_6 = (H.make_string "CALL_R ")
+  let    head_6 = (make_string "CALL_R ")
   in let
     head_8 = (erlps__format_arg__2 [(ErlangAtom "a"), contract_0])
-  in let head_12 = (H.make_string ".")
+  in let head_12 = (make_string ".")
   in let head_14 = (erlps__lookup__2 [function_1, symbols_5])
-  in let head_18 = (H.make_string " ")
+  in let head_18 = (make_string " ")
   in let
     head_20 = (erlps__format_arg__2 [(ErlangAtom "a"), argtype_2])
-  in let head_24 = (H.make_string " ")
+  in let head_24 = (make_string " ")
   in let
     head_26 = (erlps__format_arg__2 [(ErlangAtom "a"), rettype_3])
-  in let head_30 = (H.make_string " ")
+  in let head_30 = (make_string " ")
   in let
     head_32 = (erlps__format_arg__2 [(ErlangAtom "a"), value_4])
   in
@@ -166,7 +166,7 @@ erlps__format_op__2 [(ErlangTuple [(ErlangAtom "CALL_T"),
                                    arg0_0]),
                      _]
   =
-  let    head_1 = (H.make_string "CALL_T ")
+  let    head_1 = (make_string "CALL_T ")
   in let head_3 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
   in (ErlangCons head_1 (ErlangCons head_3 ErlangEmptyList))
 erlps__format_op__2 [(ErlangTuple [(ErlangAtom "CALL_GR"),
@@ -177,20 +177,20 @@ erlps__format_op__2 [(ErlangTuple [(ErlangAtom "CALL_GR"),
                                    argtype_2, rettype_3, value_4, gas_5]),
                      symbols_6]
   =
-  let    head_7 = (H.make_string "CALL_GR ")
+  let    head_7 = (make_string "CALL_GR ")
   in let head_9 = (erlps__lookup__2 [contract_0, symbols_6])
-  in let head_13 = (H.make_string ".")
+  in let head_13 = (make_string ".")
   in let head_15 = (erlps__lookup__2 [function_1, symbols_6])
-  in let head_19 = (H.make_string " ")
+  in let head_19 = (make_string " ")
   in let
     head_21 = (erlps__format_arg__2 [(ErlangAtom "a"), argtype_2])
-  in let head_25 = (H.make_string " ")
+  in let head_25 = (make_string " ")
   in let
     head_27 = (erlps__format_arg__2 [(ErlangAtom "a"), rettype_3])
-  in let head_31 = (H.make_string " ")
+  in let head_31 = (make_string " ")
   in let
     head_33 = (erlps__format_arg__2 [(ErlangAtom "a"), value_4])
-  in let head_37 = (H.make_string " ")
+  in let head_37 = (make_string " ")
   in let head_39 = (erlps__format_arg__2 [(ErlangAtom "a"), gas_5])
   in
     (ErlangCons head_7
@@ -213,21 +213,21 @@ erlps__format_op__2 [(ErlangTuple [(ErlangAtom "CALL_GR"),
                                    argtype_2, rettype_3, value_4, gas_5]),
                      symbols_6]
   =
-  let    head_7 = (H.make_string "CALL_GR ")
+  let    head_7 = (make_string "CALL_GR ")
   in let
     head_9 = (erlps__format_arg__2 [(ErlangAtom "a"), contract_0])
-  in let head_13 = (H.make_string ".")
+  in let head_13 = (make_string ".")
   in let head_15 = (erlps__lookup__2 [function_1, symbols_6])
-  in let head_19 = (H.make_string " ")
+  in let head_19 = (make_string " ")
   in let
     head_21 = (erlps__format_arg__2 [(ErlangAtom "a"), argtype_2])
-  in let head_25 = (H.make_string " ")
+  in let head_25 = (make_string " ")
   in let
     head_27 = (erlps__format_arg__2 [(ErlangAtom "a"), rettype_3])
-  in let head_31 = (H.make_string " ")
+  in let head_31 = (make_string " ")
   in let
     head_33 = (erlps__format_arg__2 [(ErlangAtom "a"), value_4])
-  in let head_37 = (H.make_string " ")
+  in let head_37 = (make_string " ")
   in let head_39 = (erlps__format_arg__2 [(ErlangAtom "a"), gas_5])
   in
     (ErlangCons head_7
@@ -246,7 +246,7 @@ erlps__format_op__2 [(ErlangTuple [(ErlangAtom "CALL_GR"),
 erlps__format_op__2 [(ErlangTuple [(ErlangAtom "JUMP"), arg0_0]),
                      _]
   =
-  let    head_1 = (H.make_string "JUMP ")
+  let    head_1 = (make_string "JUMP ")
   in let
     head_3 = (erlps__format_arg__2 [(ErlangAtom "ii"), arg0_0])
   in (ErlangCons head_1 (ErlangCons head_3 ErlangEmptyList))
@@ -254,9 +254,9 @@ erlps__format_op__2 [(ErlangTuple [(ErlangAtom "JUMPIF"), arg0_0,
                                    arg1_1]),
                      _]
   =
-  let    head_2 = (H.make_string "JUMPIF ")
+  let    head_2 = (make_string "JUMPIF ")
   in let head_4 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_8 = (H.make_string " ")
+  in let head_8 = (make_string " ")
   in let
     head_10 = (erlps__format_arg__2 [(ErlangAtom "ii"), arg1_1])
   in
@@ -270,12 +270,12 @@ erlps__format_op__2__p1 [(ErlangTuple [(ErlangAtom "SWITCH_V2"),
                                        arg0_0, arg1_1, arg2_2]),
                          _]
   =
-  let    head_3 = (H.make_string "SWITCH_V2 ")
+  let    head_3 = (make_string "SWITCH_V2 ")
   in let head_5 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_9 = (H.make_string " ")
+  in let head_9 = (make_string " ")
   in let
     head_11 = (erlps__format_arg__2 [(ErlangAtom "ii"), arg1_1])
-  in let head_15 = (H.make_string " ")
+  in let head_15 = (make_string " ")
   in let
     head_17 = (erlps__format_arg__2 [(ErlangAtom "ii"), arg2_2])
   in
@@ -288,15 +288,15 @@ erlps__format_op__2__p1 [(ErlangTuple [(ErlangAtom "SWITCH_V3"),
                                        arg0_0, arg1_1, arg2_2, arg3_3]),
                          _]
   =
-  let    head_4 = (H.make_string "SWITCH_V3 ")
+  let    head_4 = (make_string "SWITCH_V3 ")
   in let head_6 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_10 = (H.make_string " ")
+  in let head_10 = (make_string " ")
   in let
     head_12 = (erlps__format_arg__2 [(ErlangAtom "ii"), arg1_1])
-  in let head_16 = (H.make_string " ")
+  in let head_16 = (make_string " ")
   in let
     head_18 = (erlps__format_arg__2 [(ErlangAtom "ii"), arg2_2])
-  in let head_22 = (H.make_string " ")
+  in let head_22 = (make_string " ")
   in let
     head_24 = (erlps__format_arg__2 [(ErlangAtom "ii"), arg3_3])
   in
@@ -312,9 +312,9 @@ erlps__format_op__2__p1 [(ErlangTuple [(ErlangAtom "SWITCH_VN"),
                                        arg0_0, arg1_1]),
                          _]
   =
-  let    head_2 = (H.make_string "SWITCH_VN ")
+  let    head_2 = (make_string "SWITCH_VN ")
   in let head_4 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_8 = (H.make_string " ")
+  in let head_8 = (make_string " ")
   in let
     head_10 = (erlps__format_arg__2 [(ErlangAtom "li"), arg1_1])
   in
@@ -325,66 +325,66 @@ erlps__format_op__2__p1 [(ErlangTuple [(ErlangAtom "CALL_VALUE"),
                                        arg0_0]),
                          _]
   =
-  let    head_1 = (H.make_string "CALL_VALUE ")
+  let    head_1 = (make_string "CALL_VALUE ")
   in let head_3 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
   in (ErlangCons head_1 (ErlangCons head_3 ErlangEmptyList))
 erlps__format_op__2__p1 [(ErlangTuple [(ErlangAtom "PUSH"),
                                        arg0_0]),
                          _]
   =
-  let    head_1 = (H.make_string "PUSH ")
+  let    head_1 = (make_string "PUSH ")
   in let head_3 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
   in (ErlangCons head_1 (ErlangCons head_3 ErlangEmptyList))
 erlps__format_op__2__p1 [(ErlangAtom "DUPA"), _] =
-  let head_0 = (H.make_string "DUPA")
+  let head_0 = (make_string "DUPA")
   in (ErlangCons head_0 ErlangEmptyList)
 erlps__format_op__2__p1 [(ErlangTuple [(ErlangAtom "DUP"),
                                        arg0_0]),
                          _]
   =
-  let    head_1 = (H.make_string "DUP ")
+  let    head_1 = (make_string "DUP ")
   in let head_3 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
   in (ErlangCons head_1 (ErlangCons head_3 ErlangEmptyList))
 erlps__format_op__2__p1 [(ErlangTuple [(ErlangAtom "POP"),
                                        arg0_0]),
                          _]
   =
-  let    head_1 = (H.make_string "POP ")
+  let    head_1 = (make_string "POP ")
   in let head_3 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
   in (ErlangCons head_1 (ErlangCons head_3 ErlangEmptyList))
 erlps__format_op__2__p1 [(ErlangAtom "INCA"), _] =
-  let head_0 = (H.make_string "INCA")
+  let head_0 = (make_string "INCA")
   in (ErlangCons head_0 ErlangEmptyList)
 erlps__format_op__2__p1 [(ErlangTuple [(ErlangAtom "INC"),
                                        arg0_0]),
                          _]
   =
-  let    head_1 = (H.make_string "INC ")
+  let    head_1 = (make_string "INC ")
   in let head_3 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
   in (ErlangCons head_1 (ErlangCons head_3 ErlangEmptyList))
 erlps__format_op__2__p1 args = (erlps__format_op__2__p2 args)
 
 erlps__format_op__2__p2 :: ErlangFun
 erlps__format_op__2__p2 [(ErlangAtom "DECA"), _] =
-  let head_0 = (H.make_string "DECA")
+  let head_0 = (make_string "DECA")
   in (ErlangCons head_0 ErlangEmptyList)
 erlps__format_op__2__p2 [(ErlangTuple [(ErlangAtom "DEC"),
                                        arg0_0]),
                          _]
   =
-  let    head_1 = (H.make_string "DEC ")
+  let    head_1 = (make_string "DEC ")
   in let head_3 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
   in (ErlangCons head_1 (ErlangCons head_3 ErlangEmptyList))
 erlps__format_op__2__p2 [(ErlangTuple [(ErlangAtom "ADD"),
                                        arg0_0, arg1_1, arg2_2]),
                          _]
   =
-  let    head_3 = (H.make_string "ADD ")
+  let    head_3 = (make_string "ADD ")
   in let head_5 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_9 = (H.make_string " ")
+  in let head_9 = (make_string " ")
   in let
     head_11 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
-  in let head_15 = (H.make_string " ")
+  in let head_15 = (make_string " ")
   in let
     head_17 = (erlps__format_arg__2 [(ErlangAtom "a"), arg2_2])
   in
@@ -397,12 +397,12 @@ erlps__format_op__2__p2 [(ErlangTuple [(ErlangAtom "SUB"),
                                        arg0_0, arg1_1, arg2_2]),
                          _]
   =
-  let    head_3 = (H.make_string "SUB ")
+  let    head_3 = (make_string "SUB ")
   in let head_5 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_9 = (H.make_string " ")
+  in let head_9 = (make_string " ")
   in let
     head_11 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
-  in let head_15 = (H.make_string " ")
+  in let head_15 = (make_string " ")
   in let
     head_17 = (erlps__format_arg__2 [(ErlangAtom "a"), arg2_2])
   in
@@ -415,12 +415,12 @@ erlps__format_op__2__p2 [(ErlangTuple [(ErlangAtom "MUL"),
                                        arg0_0, arg1_1, arg2_2]),
                          _]
   =
-  let    head_3 = (H.make_string "MUL ")
+  let    head_3 = (make_string "MUL ")
   in let head_5 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_9 = (H.make_string " ")
+  in let head_9 = (make_string " ")
   in let
     head_11 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
-  in let head_15 = (H.make_string " ")
+  in let head_15 = (make_string " ")
   in let
     head_17 = (erlps__format_arg__2 [(ErlangAtom "a"), arg2_2])
   in
@@ -433,12 +433,12 @@ erlps__format_op__2__p2 [(ErlangTuple [(ErlangAtom "DIV"),
                                        arg0_0, arg1_1, arg2_2]),
                          _]
   =
-  let    head_3 = (H.make_string "DIV ")
+  let    head_3 = (make_string "DIV ")
   in let head_5 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_9 = (H.make_string " ")
+  in let head_9 = (make_string " ")
   in let
     head_11 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
-  in let head_15 = (H.make_string " ")
+  in let head_15 = (make_string " ")
   in let
     head_17 = (erlps__format_arg__2 [(ErlangAtom "a"), arg2_2])
   in
@@ -451,12 +451,12 @@ erlps__format_op__2__p2 [(ErlangTuple [(ErlangAtom "MOD"),
                                        arg0_0, arg1_1, arg2_2]),
                          _]
   =
-  let    head_3 = (H.make_string "MOD ")
+  let    head_3 = (make_string "MOD ")
   in let head_5 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_9 = (H.make_string " ")
+  in let head_9 = (make_string " ")
   in let
     head_11 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
-  in let head_15 = (H.make_string " ")
+  in let head_15 = (make_string " ")
   in let
     head_17 = (erlps__format_arg__2 [(ErlangAtom "a"), arg2_2])
   in
@@ -469,12 +469,12 @@ erlps__format_op__2__p2 [(ErlangTuple [(ErlangAtom "POW"),
                                        arg0_0, arg1_1, arg2_2]),
                          _]
   =
-  let    head_3 = (H.make_string "POW ")
+  let    head_3 = (make_string "POW ")
   in let head_5 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_9 = (H.make_string " ")
+  in let head_9 = (make_string " ")
   in let
     head_11 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
-  in let head_15 = (H.make_string " ")
+  in let head_15 = (make_string " ")
   in let
     head_17 = (erlps__format_arg__2 [(ErlangAtom "a"), arg2_2])
   in
@@ -487,9 +487,9 @@ erlps__format_op__2__p2 [(ErlangTuple [(ErlangAtom "STORE"),
                                        arg0_0, arg1_1]),
                          _]
   =
-  let    head_2 = (H.make_string "STORE ")
+  let    head_2 = (make_string "STORE ")
   in let head_4 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_8 = (H.make_string " ")
+  in let head_8 = (make_string " ")
   in let
     head_10 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
   in
@@ -500,9 +500,9 @@ erlps__format_op__2__p2 [(ErlangTuple [(ErlangAtom "SHA3"),
                                        arg0_0, arg1_1]),
                          _]
   =
-  let    head_2 = (H.make_string "SHA3 ")
+  let    head_2 = (make_string "SHA3 ")
   in let head_4 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_8 = (H.make_string " ")
+  in let head_8 = (make_string " ")
   in let
     head_10 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
   in
@@ -516,9 +516,9 @@ erlps__format_op__2__p3 [(ErlangTuple [(ErlangAtom "SHA256"),
                                        arg0_0, arg1_1]),
                          _]
   =
-  let    head_2 = (H.make_string "SHA256 ")
+  let    head_2 = (make_string "SHA256 ")
   in let head_4 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_8 = (H.make_string " ")
+  in let head_8 = (make_string " ")
   in let
     head_10 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
   in
@@ -529,9 +529,9 @@ erlps__format_op__2__p3 [(ErlangTuple [(ErlangAtom "BLAKE2B"),
                                        arg0_0, arg1_1]),
                          _]
   =
-  let    head_2 = (H.make_string "BLAKE2B ")
+  let    head_2 = (make_string "BLAKE2B ")
   in let head_4 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_8 = (H.make_string " ")
+  in let head_8 = (make_string " ")
   in let
     head_10 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
   in
@@ -542,12 +542,12 @@ erlps__format_op__2__p3 [(ErlangTuple [(ErlangAtom "LT"), arg0_0,
                                        arg1_1, arg2_2]),
                          _]
   =
-  let    head_3 = (H.make_string "LT ")
+  let    head_3 = (make_string "LT ")
   in let head_5 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_9 = (H.make_string " ")
+  in let head_9 = (make_string " ")
   in let
     head_11 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
-  in let head_15 = (H.make_string " ")
+  in let head_15 = (make_string " ")
   in let
     head_17 = (erlps__format_arg__2 [(ErlangAtom "a"), arg2_2])
   in
@@ -560,12 +560,12 @@ erlps__format_op__2__p3 [(ErlangTuple [(ErlangAtom "GT"), arg0_0,
                                        arg1_1, arg2_2]),
                          _]
   =
-  let    head_3 = (H.make_string "GT ")
+  let    head_3 = (make_string "GT ")
   in let head_5 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_9 = (H.make_string " ")
+  in let head_9 = (make_string " ")
   in let
     head_11 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
-  in let head_15 = (H.make_string " ")
+  in let head_15 = (make_string " ")
   in let
     head_17 = (erlps__format_arg__2 [(ErlangAtom "a"), arg2_2])
   in
@@ -578,12 +578,12 @@ erlps__format_op__2__p3 [(ErlangTuple [(ErlangAtom "EQ"), arg0_0,
                                        arg1_1, arg2_2]),
                          _]
   =
-  let    head_3 = (H.make_string "EQ ")
+  let    head_3 = (make_string "EQ ")
   in let head_5 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_9 = (H.make_string " ")
+  in let head_9 = (make_string " ")
   in let
     head_11 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
-  in let head_15 = (H.make_string " ")
+  in let head_15 = (make_string " ")
   in let
     head_17 = (erlps__format_arg__2 [(ErlangAtom "a"), arg2_2])
   in
@@ -596,12 +596,12 @@ erlps__format_op__2__p3 [(ErlangTuple [(ErlangAtom "ELT"),
                                        arg0_0, arg1_1, arg2_2]),
                          _]
   =
-  let    head_3 = (H.make_string "ELT ")
+  let    head_3 = (make_string "ELT ")
   in let head_5 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_9 = (H.make_string " ")
+  in let head_9 = (make_string " ")
   in let
     head_11 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
-  in let head_15 = (H.make_string " ")
+  in let head_15 = (make_string " ")
   in let
     head_17 = (erlps__format_arg__2 [(ErlangAtom "a"), arg2_2])
   in
@@ -614,12 +614,12 @@ erlps__format_op__2__p3 [(ErlangTuple [(ErlangAtom "EGT"),
                                        arg0_0, arg1_1, arg2_2]),
                          _]
   =
-  let    head_3 = (H.make_string "EGT ")
+  let    head_3 = (make_string "EGT ")
   in let head_5 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_9 = (H.make_string " ")
+  in let head_9 = (make_string " ")
   in let
     head_11 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
-  in let head_15 = (H.make_string " ")
+  in let head_15 = (make_string " ")
   in let
     head_17 = (erlps__format_arg__2 [(ErlangAtom "a"), arg2_2])
   in
@@ -632,12 +632,12 @@ erlps__format_op__2__p3 [(ErlangTuple [(ErlangAtom "NEQ"),
                                        arg0_0, arg1_1, arg2_2]),
                          _]
   =
-  let    head_3 = (H.make_string "NEQ ")
+  let    head_3 = (make_string "NEQ ")
   in let head_5 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_9 = (H.make_string " ")
+  in let head_9 = (make_string " ")
   in let
     head_11 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
-  in let head_15 = (H.make_string " ")
+  in let head_15 = (make_string " ")
   in let
     head_17 = (erlps__format_arg__2 [(ErlangAtom "a"), arg2_2])
   in
@@ -650,12 +650,12 @@ erlps__format_op__2__p3 [(ErlangTuple [(ErlangAtom "AND"),
                                        arg0_0, arg1_1, arg2_2]),
                          _]
   =
-  let    head_3 = (H.make_string "AND ")
+  let    head_3 = (make_string "AND ")
   in let head_5 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_9 = (H.make_string " ")
+  in let head_9 = (make_string " ")
   in let
     head_11 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
-  in let head_15 = (H.make_string " ")
+  in let head_15 = (make_string " ")
   in let
     head_17 = (erlps__format_arg__2 [(ErlangAtom "a"), arg2_2])
   in
@@ -668,12 +668,12 @@ erlps__format_op__2__p3 [(ErlangTuple [(ErlangAtom "OR"), arg0_0,
                                        arg1_1, arg2_2]),
                          _]
   =
-  let    head_3 = (H.make_string "OR ")
+  let    head_3 = (make_string "OR ")
   in let head_5 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_9 = (H.make_string " ")
+  in let head_9 = (make_string " ")
   in let
     head_11 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
-  in let head_15 = (H.make_string " ")
+  in let head_15 = (make_string " ")
   in let
     head_17 = (erlps__format_arg__2 [(ErlangAtom "a"), arg2_2])
   in
@@ -689,9 +689,9 @@ erlps__format_op__2__p4 [(ErlangTuple [(ErlangAtom "NOT"),
                                        arg0_0, arg1_1]),
                          _]
   =
-  let    head_2 = (H.make_string "NOT ")
+  let    head_2 = (make_string "NOT ")
   in let head_4 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_8 = (H.make_string " ")
+  in let head_8 = (make_string " ")
   in let
     head_10 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
   in
@@ -702,9 +702,9 @@ erlps__format_op__2__p4 [(ErlangTuple [(ErlangAtom "TUPLE"),
                                        arg0_0, arg1_1]),
                          _]
   =
-  let    head_2 = (H.make_string "TUPLE ")
+  let    head_2 = (make_string "TUPLE ")
   in let head_4 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_8 = (H.make_string " ")
+  in let head_8 = (make_string " ")
   in let
     head_10 = (erlps__format_arg__2 [(ErlangAtom "ii"), arg1_1])
   in
@@ -715,12 +715,12 @@ erlps__format_op__2__p4 [(ErlangTuple [(ErlangAtom "ELEMENT"),
                                        arg0_0, arg1_1, arg2_2]),
                          _]
   =
-  let    head_3 = (H.make_string "ELEMENT ")
+  let    head_3 = (make_string "ELEMENT ")
   in let head_5 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_9 = (H.make_string " ")
+  in let head_9 = (make_string " ")
   in let
     head_11 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
-  in let head_15 = (H.make_string " ")
+  in let head_15 = (make_string " ")
   in let
     head_17 = (erlps__format_arg__2 [(ErlangAtom "a"), arg2_2])
   in
@@ -733,15 +733,15 @@ erlps__format_op__2__p4 [(ErlangTuple [(ErlangAtom "SETELEMENT"),
                                        arg0_0, arg1_1, arg2_2, arg3_3]),
                          _]
   =
-  let    head_4 = (H.make_string "SETELEMENT ")
+  let    head_4 = (make_string "SETELEMENT ")
   in let head_6 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_10 = (H.make_string " ")
+  in let head_10 = (make_string " ")
   in let
     head_12 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
-  in let head_16 = (H.make_string " ")
+  in let head_16 = (make_string " ")
   in let
     head_18 = (erlps__format_arg__2 [(ErlangAtom "a"), arg2_2])
-  in let head_22 = (H.make_string " ")
+  in let head_22 = (make_string " ")
   in let
     head_24 = (erlps__format_arg__2 [(ErlangAtom "a"), arg3_3])
   in
@@ -757,19 +757,19 @@ erlps__format_op__2__p4 [(ErlangTuple [(ErlangAtom "MAP_EMPTY"),
                                        arg0_0]),
                          _]
   =
-  let    head_1 = (H.make_string "MAP_EMPTY ")
+  let    head_1 = (make_string "MAP_EMPTY ")
   in let head_3 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
   in (ErlangCons head_1 (ErlangCons head_3 ErlangEmptyList))
 erlps__format_op__2__p4 [(ErlangTuple [(ErlangAtom "MAP_LOOKUP"),
                                        arg0_0, arg1_1, arg2_2]),
                          _]
   =
-  let    head_3 = (H.make_string "MAP_LOOKUP ")
+  let    head_3 = (make_string "MAP_LOOKUP ")
   in let head_5 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_9 = (H.make_string " ")
+  in let head_9 = (make_string " ")
   in let
     head_11 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
-  in let head_15 = (H.make_string " ")
+  in let head_15 = (make_string " ")
   in let
     head_17 = (erlps__format_arg__2 [(ErlangAtom "a"), arg2_2])
   in
@@ -782,15 +782,15 @@ erlps__format_op__2__p4 [(ErlangTuple [(ErlangAtom "MAP_LOOKUPD"),
                                        arg0_0, arg1_1, arg2_2, arg3_3]),
                          _]
   =
-  let    head_4 = (H.make_string "MAP_LOOKUPD ")
+  let    head_4 = (make_string "MAP_LOOKUPD ")
   in let head_6 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_10 = (H.make_string " ")
+  in let head_10 = (make_string " ")
   in let
     head_12 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
-  in let head_16 = (H.make_string " ")
+  in let head_16 = (make_string " ")
   in let
     head_18 = (erlps__format_arg__2 [(ErlangAtom "a"), arg2_2])
-  in let head_22 = (H.make_string " ")
+  in let head_22 = (make_string " ")
   in let
     head_24 = (erlps__format_arg__2 [(ErlangAtom "a"), arg3_3])
   in
@@ -806,15 +806,15 @@ erlps__format_op__2__p4 [(ErlangTuple [(ErlangAtom "MAP_UPDATE"),
                                        arg0_0, arg1_1, arg2_2, arg3_3]),
                          _]
   =
-  let    head_4 = (H.make_string "MAP_UPDATE ")
+  let    head_4 = (make_string "MAP_UPDATE ")
   in let head_6 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_10 = (H.make_string " ")
+  in let head_10 = (make_string " ")
   in let
     head_12 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
-  in let head_16 = (H.make_string " ")
+  in let head_16 = (make_string " ")
   in let
     head_18 = (erlps__format_arg__2 [(ErlangAtom "a"), arg2_2])
-  in let head_22 = (H.make_string " ")
+  in let head_22 = (make_string " ")
   in let
     head_24 = (erlps__format_arg__2 [(ErlangAtom "a"), arg3_3])
   in
@@ -830,12 +830,12 @@ erlps__format_op__2__p4 [(ErlangTuple [(ErlangAtom "MAP_DELETE"),
                                        arg0_0, arg1_1, arg2_2]),
                          _]
   =
-  let    head_3 = (H.make_string "MAP_DELETE ")
+  let    head_3 = (make_string "MAP_DELETE ")
   in let head_5 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_9 = (H.make_string " ")
+  in let head_9 = (make_string " ")
   in let
     head_11 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
-  in let head_15 = (H.make_string " ")
+  in let head_15 = (make_string " ")
   in let
     head_17 = (erlps__format_arg__2 [(ErlangAtom "a"), arg2_2])
   in
@@ -848,12 +848,12 @@ erlps__format_op__2__p4 [(ErlangTuple [(ErlangAtom "MAP_MEMBER"),
                                        arg0_0, arg1_1, arg2_2]),
                          _]
   =
-  let    head_3 = (H.make_string "MAP_MEMBER ")
+  let    head_3 = (make_string "MAP_MEMBER ")
   in let head_5 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_9 = (H.make_string " ")
+  in let head_9 = (make_string " ")
   in let
     head_11 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
-  in let head_15 = (H.make_string " ")
+  in let head_15 = (make_string " ")
   in let
     head_17 = (erlps__format_arg__2 [(ErlangAtom "a"), arg2_2])
   in
@@ -869,9 +869,9 @@ erlps__format_op__2__p5 [(ErlangTuple [(ErlangAtom "MAP_FROM_LIST"),
                                        arg0_0, arg1_1]),
                          _]
   =
-  let    head_2 = (H.make_string "MAP_FROM_LIST ")
+  let    head_2 = (make_string "MAP_FROM_LIST ")
   in let head_4 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_8 = (H.make_string " ")
+  in let head_8 = (make_string " ")
   in let
     head_10 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
   in
@@ -882,9 +882,9 @@ erlps__format_op__2__p5 [(ErlangTuple [(ErlangAtom "MAP_SIZE"),
                                        arg0_0, arg1_1]),
                          _]
   =
-  let    head_2 = (H.make_string "MAP_SIZE ")
+  let    head_2 = (make_string "MAP_SIZE ")
   in let head_4 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_8 = (H.make_string " ")
+  in let head_8 = (make_string " ")
   in let
     head_10 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
   in
@@ -895,9 +895,9 @@ erlps__format_op__2__p5 [(ErlangTuple [(ErlangAtom "MAP_TO_LIST"),
                                        arg0_0, arg1_1]),
                          _]
   =
-  let    head_2 = (H.make_string "MAP_TO_LIST ")
+  let    head_2 = (make_string "MAP_TO_LIST ")
   in let head_4 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_8 = (H.make_string " ")
+  in let head_8 = (make_string " ")
   in let
     head_10 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
   in
@@ -908,9 +908,9 @@ erlps__format_op__2__p5 [(ErlangTuple [(ErlangAtom "IS_NIL"),
                                        arg0_0, arg1_1]),
                          _]
   =
-  let    head_2 = (H.make_string "IS_NIL ")
+  let    head_2 = (make_string "IS_NIL ")
   in let head_4 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_8 = (H.make_string " ")
+  in let head_8 = (make_string " ")
   in let
     head_10 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
   in
@@ -921,12 +921,12 @@ erlps__format_op__2__p5 [(ErlangTuple [(ErlangAtom "CONS"),
                                        arg0_0, arg1_1, arg2_2]),
                          _]
   =
-  let    head_3 = (H.make_string "CONS ")
+  let    head_3 = (make_string "CONS ")
   in let head_5 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_9 = (H.make_string " ")
+  in let head_9 = (make_string " ")
   in let
     head_11 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
-  in let head_15 = (H.make_string " ")
+  in let head_15 = (make_string " ")
   in let
     head_17 = (erlps__format_arg__2 [(ErlangAtom "a"), arg2_2])
   in
@@ -939,9 +939,9 @@ erlps__format_op__2__p5 [(ErlangTuple [(ErlangAtom "HD"), arg0_0,
                                        arg1_1]),
                          _]
   =
-  let    head_2 = (H.make_string "HD ")
+  let    head_2 = (make_string "HD ")
   in let head_4 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_8 = (H.make_string " ")
+  in let head_8 = (make_string " ")
   in let
     head_10 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
   in
@@ -952,9 +952,9 @@ erlps__format_op__2__p5 [(ErlangTuple [(ErlangAtom "TL"), arg0_0,
                                        arg1_1]),
                          _]
   =
-  let    head_2 = (H.make_string "TL ")
+  let    head_2 = (make_string "TL ")
   in let head_4 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_8 = (H.make_string " ")
+  in let head_8 = (make_string " ")
   in let
     head_10 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
   in
@@ -965,9 +965,9 @@ erlps__format_op__2__p5 [(ErlangTuple [(ErlangAtom "LENGTH"),
                                        arg0_0, arg1_1]),
                          _]
   =
-  let    head_2 = (H.make_string "LENGTH ")
+  let    head_2 = (make_string "LENGTH ")
   in let head_4 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_8 = (H.make_string " ")
+  in let head_8 = (make_string " ")
   in let
     head_10 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
   in
@@ -978,19 +978,19 @@ erlps__format_op__2__p5 [(ErlangTuple [(ErlangAtom "NIL"),
                                        arg0_0]),
                          _]
   =
-  let    head_1 = (H.make_string "NIL ")
+  let    head_1 = (make_string "NIL ")
   in let head_3 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
   in (ErlangCons head_1 (ErlangCons head_3 ErlangEmptyList))
 erlps__format_op__2__p5 [(ErlangTuple [(ErlangAtom "APPEND"),
                                        arg0_0, arg1_1, arg2_2]),
                          _]
   =
-  let    head_3 = (H.make_string "APPEND ")
+  let    head_3 = (make_string "APPEND ")
   in let head_5 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_9 = (H.make_string " ")
+  in let head_9 = (make_string " ")
   in let
     head_11 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
-  in let head_15 = (H.make_string " ")
+  in let head_15 = (make_string " ")
   in let
     head_17 = (erlps__format_arg__2 [(ErlangAtom "a"), arg2_2])
   in
@@ -1006,12 +1006,12 @@ erlps__format_op__2__p6 [(ErlangTuple [(ErlangAtom "STR_JOIN"),
                                        arg0_0, arg1_1, arg2_2]),
                          _]
   =
-  let    head_3 = (H.make_string "STR_JOIN ")
+  let    head_3 = (make_string "STR_JOIN ")
   in let head_5 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_9 = (H.make_string " ")
+  in let head_9 = (make_string " ")
   in let
     head_11 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
-  in let head_15 = (H.make_string " ")
+  in let head_15 = (make_string " ")
   in let
     head_17 = (erlps__format_arg__2 [(ErlangAtom "a"), arg2_2])
   in
@@ -1024,9 +1024,9 @@ erlps__format_op__2__p6 [(ErlangTuple [(ErlangAtom "INT_TO_STR"),
                                        arg0_0, arg1_1]),
                          _]
   =
-  let    head_2 = (H.make_string "INT_TO_STR ")
+  let    head_2 = (make_string "INT_TO_STR ")
   in let head_4 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_8 = (H.make_string " ")
+  in let head_8 = (make_string " ")
   in let
     head_10 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
   in
@@ -1037,9 +1037,9 @@ erlps__format_op__2__p6 [(ErlangTuple [(ErlangAtom "ADDR_TO_STR"),
                                        arg0_0, arg1_1]),
                          _]
   =
-  let    head_2 = (H.make_string "ADDR_TO_STR ")
+  let    head_2 = (make_string "ADDR_TO_STR ")
   in let head_4 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_8 = (H.make_string " ")
+  in let head_8 = (make_string " ")
   in let
     head_10 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
   in
@@ -1050,9 +1050,9 @@ erlps__format_op__2__p6 [(ErlangTuple [(ErlangAtom "STR_REVERSE"),
                                        arg0_0, arg1_1]),
                          _]
   =
-  let    head_2 = (H.make_string "STR_REVERSE ")
+  let    head_2 = (make_string "STR_REVERSE ")
   in let head_4 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_8 = (H.make_string " ")
+  in let head_8 = (make_string " ")
   in let
     head_10 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
   in
@@ -1063,9 +1063,9 @@ erlps__format_op__2__p6 [(ErlangTuple [(ErlangAtom "STR_LENGTH"),
                                        arg0_0, arg1_1]),
                          _]
   =
-  let    head_2 = (H.make_string "STR_LENGTH ")
+  let    head_2 = (make_string "STR_LENGTH ")
   in let head_4 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_8 = (H.make_string " ")
+  in let head_8 = (make_string " ")
   in let
     head_10 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
   in
@@ -1076,9 +1076,9 @@ erlps__format_op__2__p6 [(ErlangTuple [(ErlangAtom "BYTES_TO_INT"),
                                        arg0_0, arg1_1]),
                          _]
   =
-  let    head_2 = (H.make_string "BYTES_TO_INT ")
+  let    head_2 = (make_string "BYTES_TO_INT ")
   in let head_4 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_8 = (H.make_string " ")
+  in let head_8 = (make_string " ")
   in let
     head_10 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
   in
@@ -1089,9 +1089,9 @@ erlps__format_op__2__p6 [(ErlangTuple [(ErlangAtom "BYTES_TO_STR"),
                                        arg0_0, arg1_1]),
                          _]
   =
-  let    head_2 = (H.make_string "BYTES_TO_STR ")
+  let    head_2 = (make_string "BYTES_TO_STR ")
   in let head_4 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_8 = (H.make_string " ")
+  in let head_8 = (make_string " ")
   in let
     head_10 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
   in
@@ -1102,12 +1102,12 @@ erlps__format_op__2__p6 [(ErlangTuple [(ErlangAtom "BYTES_CONCAT"),
                                        arg0_0, arg1_1, arg2_2]),
                          _]
   =
-  let    head_3 = (H.make_string "BYTES_CONCAT ")
+  let    head_3 = (make_string "BYTES_CONCAT ")
   in let head_5 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_9 = (H.make_string " ")
+  in let head_9 = (make_string " ")
   in let
     head_11 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
-  in let head_15 = (H.make_string " ")
+  in let head_15 = (make_string " ")
   in let
     head_17 = (erlps__format_arg__2 [(ErlangAtom "a"), arg2_2])
   in
@@ -1120,12 +1120,12 @@ erlps__format_op__2__p6 [(ErlangTuple [(ErlangAtom "BYTES_SPLIT"),
                                        arg0_0, arg1_1, arg2_2]),
                          _]
   =
-  let    head_3 = (H.make_string "BYTES_SPLIT ")
+  let    head_3 = (make_string "BYTES_SPLIT ")
   in let head_5 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_9 = (H.make_string " ")
+  in let head_9 = (make_string " ")
   in let
     head_11 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
-  in let head_15 = (H.make_string " ")
+  in let head_15 = (make_string " ")
   in let
     head_17 = (erlps__format_arg__2 [(ErlangAtom "a"), arg2_2])
   in
@@ -1138,9 +1138,9 @@ erlps__format_op__2__p6 [(ErlangTuple [(ErlangAtom "INT_TO_ADDR"),
                                        arg0_0, arg1_1]),
                          _]
   =
-  let    head_2 = (H.make_string "INT_TO_ADDR ")
+  let    head_2 = (make_string "INT_TO_ADDR ")
   in let head_4 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_8 = (H.make_string " ")
+  in let head_8 = (make_string " ")
   in let
     head_10 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
   in
@@ -1154,15 +1154,15 @@ erlps__format_op__2__p7 [(ErlangTuple [(ErlangAtom "VARIANT"),
                                        arg0_0, arg1_1, arg2_2, arg3_3]),
                          _]
   =
-  let    head_4 = (H.make_string "VARIANT ")
+  let    head_4 = (make_string "VARIANT ")
   in let head_6 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_10 = (H.make_string " ")
+  in let head_10 = (make_string " ")
   in let
     head_12 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
-  in let head_16 = (H.make_string " ")
+  in let head_16 = (make_string " ")
   in let
     head_18 = (erlps__format_arg__2 [(ErlangAtom "a"), arg2_2])
-  in let head_22 = (H.make_string " ")
+  in let head_22 = (make_string " ")
   in let
     head_24 = (erlps__format_arg__2 [(ErlangAtom "a"), arg3_3])
   in
@@ -1178,12 +1178,12 @@ erlps__format_op__2__p7 [(ErlangTuple [(ErlangAtom "VARIANT_TEST"),
                                        arg0_0, arg1_1, arg2_2]),
                          _]
   =
-  let    head_3 = (H.make_string "VARIANT_TEST ")
+  let    head_3 = (make_string "VARIANT_TEST ")
   in let head_5 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_9 = (H.make_string " ")
+  in let head_9 = (make_string " ")
   in let
     head_11 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
-  in let head_15 = (H.make_string " ")
+  in let head_15 = (make_string " ")
   in let
     head_17 = (erlps__format_arg__2 [(ErlangAtom "a"), arg2_2])
   in
@@ -1196,12 +1196,12 @@ erlps__format_op__2__p7 [(ErlangTuple [(ErlangAtom "VARIANT_ELEMENT"),
                                        arg0_0, arg1_1, arg2_2]),
                          _]
   =
-  let    head_3 = (H.make_string "VARIANT_ELEMENT ")
+  let    head_3 = (make_string "VARIANT_ELEMENT ")
   in let head_5 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_9 = (H.make_string " ")
+  in let head_9 = (make_string " ")
   in let
     head_11 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
-  in let head_15 = (H.make_string " ")
+  in let head_15 = (make_string " ")
   in let
     head_17 = (erlps__format_arg__2 [(ErlangAtom "a"), arg2_2])
   in
@@ -1211,32 +1211,32 @@ erlps__format_op__2__p7 [(ErlangTuple [(ErlangAtom "VARIANT_ELEMENT"),
              (ErlangCons head_11
                 (ErlangCons head_15 (ErlangCons head_17 ErlangEmptyList))))))
 erlps__format_op__2__p7 [(ErlangAtom "BITS_NONEA"), _] =
-  let head_0 = (H.make_string "BITS_NONEA")
+  let head_0 = (make_string "BITS_NONEA")
   in (ErlangCons head_0 ErlangEmptyList)
 erlps__format_op__2__p7 [(ErlangTuple [(ErlangAtom "BITS_NONE"),
                                        arg0_0]),
                          _]
   =
-  let    head_1 = (H.make_string "BITS_NONE ")
+  let    head_1 = (make_string "BITS_NONE ")
   in let head_3 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
   in (ErlangCons head_1 (ErlangCons head_3 ErlangEmptyList))
 erlps__format_op__2__p7 [(ErlangAtom "BITS_ALLA"), _] =
-  let head_0 = (H.make_string "BITS_ALLA")
+  let head_0 = (make_string "BITS_ALLA")
   in (ErlangCons head_0 ErlangEmptyList)
 erlps__format_op__2__p7 [(ErlangTuple [(ErlangAtom "BITS_ALL"),
                                        arg0_0]),
                          _]
   =
-  let    head_1 = (H.make_string "BITS_ALL ")
+  let    head_1 = (make_string "BITS_ALL ")
   in let head_3 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
   in (ErlangCons head_1 (ErlangCons head_3 ErlangEmptyList))
 erlps__format_op__2__p7 [(ErlangTuple [(ErlangAtom "BITS_ALL_N"),
                                        arg0_0, arg1_1]),
                          _]
   =
-  let    head_2 = (H.make_string "BITS_ALL_N ")
+  let    head_2 = (make_string "BITS_ALL_N ")
   in let head_4 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_8 = (H.make_string " ")
+  in let head_8 = (make_string " ")
   in let
     head_10 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
   in
@@ -1247,12 +1247,12 @@ erlps__format_op__2__p7 [(ErlangTuple [(ErlangAtom "BITS_SET"),
                                        arg0_0, arg1_1, arg2_2]),
                          _]
   =
-  let    head_3 = (H.make_string "BITS_SET ")
+  let    head_3 = (make_string "BITS_SET ")
   in let head_5 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_9 = (H.make_string " ")
+  in let head_9 = (make_string " ")
   in let
     head_11 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
-  in let head_15 = (H.make_string " ")
+  in let head_15 = (make_string " ")
   in let
     head_17 = (erlps__format_arg__2 [(ErlangAtom "a"), arg2_2])
   in
@@ -1265,12 +1265,12 @@ erlps__format_op__2__p7 [(ErlangTuple [(ErlangAtom "BITS_CLEAR"),
                                        arg0_0, arg1_1, arg2_2]),
                          _]
   =
-  let    head_3 = (H.make_string "BITS_CLEAR ")
+  let    head_3 = (make_string "BITS_CLEAR ")
   in let head_5 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_9 = (H.make_string " ")
+  in let head_9 = (make_string " ")
   in let
     head_11 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
-  in let head_15 = (H.make_string " ")
+  in let head_15 = (make_string " ")
   in let
     head_17 = (erlps__format_arg__2 [(ErlangAtom "a"), arg2_2])
   in
@@ -1286,12 +1286,12 @@ erlps__format_op__2__p8 [(ErlangTuple [(ErlangAtom "BITS_TEST"),
                                        arg0_0, arg1_1, arg2_2]),
                          _]
   =
-  let    head_3 = (H.make_string "BITS_TEST ")
+  let    head_3 = (make_string "BITS_TEST ")
   in let head_5 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_9 = (H.make_string " ")
+  in let head_9 = (make_string " ")
   in let
     head_11 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
-  in let head_15 = (H.make_string " ")
+  in let head_15 = (make_string " ")
   in let
     head_17 = (erlps__format_arg__2 [(ErlangAtom "a"), arg2_2])
   in
@@ -1304,9 +1304,9 @@ erlps__format_op__2__p8 [(ErlangTuple [(ErlangAtom "BITS_SUM"),
                                        arg0_0, arg1_1]),
                          _]
   =
-  let    head_2 = (H.make_string "BITS_SUM ")
+  let    head_2 = (make_string "BITS_SUM ")
   in let head_4 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_8 = (H.make_string " ")
+  in let head_8 = (make_string " ")
   in let
     head_10 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
   in
@@ -1317,12 +1317,12 @@ erlps__format_op__2__p8 [(ErlangTuple [(ErlangAtom "BITS_OR"),
                                        arg0_0, arg1_1, arg2_2]),
                          _]
   =
-  let    head_3 = (H.make_string "BITS_OR ")
+  let    head_3 = (make_string "BITS_OR ")
   in let head_5 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_9 = (H.make_string " ")
+  in let head_9 = (make_string " ")
   in let
     head_11 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
-  in let head_15 = (H.make_string " ")
+  in let head_15 = (make_string " ")
   in let
     head_17 = (erlps__format_arg__2 [(ErlangAtom "a"), arg2_2])
   in
@@ -1335,12 +1335,12 @@ erlps__format_op__2__p8 [(ErlangTuple [(ErlangAtom "BITS_AND"),
                                        arg0_0, arg1_1, arg2_2]),
                          _]
   =
-  let    head_3 = (H.make_string "BITS_AND ")
+  let    head_3 = (make_string "BITS_AND ")
   in let head_5 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_9 = (H.make_string " ")
+  in let head_9 = (make_string " ")
   in let
     head_11 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
-  in let head_15 = (H.make_string " ")
+  in let head_15 = (make_string " ")
   in let
     head_17 = (erlps__format_arg__2 [(ErlangAtom "a"), arg2_2])
   in
@@ -1353,12 +1353,12 @@ erlps__format_op__2__p8 [(ErlangTuple [(ErlangAtom "BITS_DIFF"),
                                        arg0_0, arg1_1, arg2_2]),
                          _]
   =
-  let    head_3 = (H.make_string "BITS_DIFF ")
+  let    head_3 = (make_string "BITS_DIFF ")
   in let head_5 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_9 = (H.make_string " ")
+  in let head_9 = (make_string " ")
   in let
     head_11 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
-  in let head_15 = (H.make_string " ")
+  in let head_15 = (make_string " ")
   in let
     head_17 = (erlps__format_arg__2 [(ErlangAtom "a"), arg2_2])
   in
@@ -1371,30 +1371,30 @@ erlps__format_op__2__p8 [(ErlangTuple [(ErlangAtom "BALANCE"),
                                        arg0_0]),
                          _]
   =
-  let    head_1 = (H.make_string "BALANCE ")
+  let    head_1 = (make_string "BALANCE ")
   in let head_3 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
   in (ErlangCons head_1 (ErlangCons head_3 ErlangEmptyList))
 erlps__format_op__2__p8 [(ErlangTuple [(ErlangAtom "ORIGIN"),
                                        arg0_0]),
                          _]
   =
-  let    head_1 = (H.make_string "ORIGIN ")
+  let    head_1 = (make_string "ORIGIN ")
   in let head_3 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
   in (ErlangCons head_1 (ErlangCons head_3 ErlangEmptyList))
 erlps__format_op__2__p8 [(ErlangTuple [(ErlangAtom "CALLER"),
                                        arg0_0]),
                          _]
   =
-  let    head_1 = (H.make_string "CALLER ")
+  let    head_1 = (make_string "CALLER ")
   in let head_3 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
   in (ErlangCons head_1 (ErlangCons head_3 ErlangEmptyList))
 erlps__format_op__2__p8 [(ErlangTuple [(ErlangAtom "BLOCKHASH"),
                                        arg0_0, arg1_1]),
                          _]
   =
-  let    head_2 = (H.make_string "BLOCKHASH ")
+  let    head_2 = (make_string "BLOCKHASH ")
   in let head_4 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_8 = (H.make_string " ")
+  in let head_8 = (make_string " ")
   in let
     head_10 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
   in
@@ -1405,7 +1405,7 @@ erlps__format_op__2__p8 [(ErlangTuple [(ErlangAtom "BENEFICIARY"),
                                        arg0_0]),
                          _]
   =
-  let    head_1 = (H.make_string "BENEFICIARY ")
+  let    head_1 = (make_string "BENEFICIARY ")
   in let head_3 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
   in (ErlangCons head_1 (ErlangCons head_3 ErlangEmptyList))
 erlps__format_op__2__p8 args = (erlps__format_op__2__p9 args)
@@ -1415,72 +1415,72 @@ erlps__format_op__2__p9 [(ErlangTuple [(ErlangAtom "TIMESTAMP"),
                                        arg0_0]),
                          _]
   =
-  let    head_1 = (H.make_string "TIMESTAMP ")
+  let    head_1 = (make_string "TIMESTAMP ")
   in let head_3 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
   in (ErlangCons head_1 (ErlangCons head_3 ErlangEmptyList))
 erlps__format_op__2__p9 [(ErlangTuple [(ErlangAtom "GENERATION"),
                                        arg0_0]),
                          _]
   =
-  let    head_1 = (H.make_string "GENERATION ")
+  let    head_1 = (make_string "GENERATION ")
   in let head_3 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
   in (ErlangCons head_1 (ErlangCons head_3 ErlangEmptyList))
 erlps__format_op__2__p9 [(ErlangTuple [(ErlangAtom "MICROBLOCK"),
                                        arg0_0]),
                          _]
   =
-  let    head_1 = (H.make_string "MICROBLOCK ")
+  let    head_1 = (make_string "MICROBLOCK ")
   in let head_3 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
   in (ErlangCons head_1 (ErlangCons head_3 ErlangEmptyList))
 erlps__format_op__2__p9 [(ErlangTuple [(ErlangAtom "DIFFICULTY"),
                                        arg0_0]),
                          _]
   =
-  let    head_1 = (H.make_string "DIFFICULTY ")
+  let    head_1 = (make_string "DIFFICULTY ")
   in let head_3 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
   in (ErlangCons head_1 (ErlangCons head_3 ErlangEmptyList))
 erlps__format_op__2__p9 [(ErlangTuple [(ErlangAtom "GASLIMIT"),
                                        arg0_0]),
                          _]
   =
-  let    head_1 = (H.make_string "GASLIMIT ")
+  let    head_1 = (make_string "GASLIMIT ")
   in let head_3 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
   in (ErlangCons head_1 (ErlangCons head_3 ErlangEmptyList))
 erlps__format_op__2__p9 [(ErlangTuple [(ErlangAtom "GAS"),
                                        arg0_0]),
                          _]
   =
-  let    head_1 = (H.make_string "GAS ")
+  let    head_1 = (make_string "GAS ")
   in let head_3 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
   in (ErlangCons head_1 (ErlangCons head_3 ErlangEmptyList))
 erlps__format_op__2__p9 [(ErlangTuple [(ErlangAtom "ADDRESS"),
                                        arg0_0]),
                          _]
   =
-  let    head_1 = (H.make_string "ADDRESS ")
+  let    head_1 = (make_string "ADDRESS ")
   in let head_3 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
   in (ErlangCons head_1 (ErlangCons head_3 ErlangEmptyList))
 erlps__format_op__2__p9 [(ErlangTuple [(ErlangAtom "GASPRICE"),
                                        arg0_0]),
                          _]
   =
-  let    head_1 = (H.make_string "GASPRICE ")
+  let    head_1 = (make_string "GASPRICE ")
   in let head_3 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
   in (ErlangCons head_1 (ErlangCons head_3 ErlangEmptyList))
 erlps__format_op__2__p9 [(ErlangTuple [(ErlangAtom "LOG0"),
                                        arg0_0]),
                          _]
   =
-  let    head_1 = (H.make_string "LOG0 ")
+  let    head_1 = (make_string "LOG0 ")
   in let head_3 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
   in (ErlangCons head_1 (ErlangCons head_3 ErlangEmptyList))
 erlps__format_op__2__p9 [(ErlangTuple [(ErlangAtom "LOG1"),
                                        arg0_0, arg1_1]),
                          _]
   =
-  let    head_2 = (H.make_string "LOG1 ")
+  let    head_2 = (make_string "LOG1 ")
   in let head_4 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_8 = (H.make_string " ")
+  in let head_8 = (make_string " ")
   in let
     head_10 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
   in
@@ -1494,12 +1494,12 @@ erlps__format_op__2__p10 [(ErlangTuple [(ErlangAtom "LOG2"),
                                         arg0_0, arg1_1, arg2_2]),
                           _]
   =
-  let    head_3 = (H.make_string "LOG2 ")
+  let    head_3 = (make_string "LOG2 ")
   in let head_5 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_9 = (H.make_string " ")
+  in let head_9 = (make_string " ")
   in let
     head_11 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
-  in let head_15 = (H.make_string " ")
+  in let head_15 = (make_string " ")
   in let
     head_17 = (erlps__format_arg__2 [(ErlangAtom "a"), arg2_2])
   in
@@ -1512,15 +1512,15 @@ erlps__format_op__2__p10 [(ErlangTuple [(ErlangAtom "LOG3"),
                                         arg0_0, arg1_1, arg2_2, arg3_3]),
                           _]
   =
-  let    head_4 = (H.make_string "LOG3 ")
+  let    head_4 = (make_string "LOG3 ")
   in let head_6 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_10 = (H.make_string " ")
+  in let head_10 = (make_string " ")
   in let
     head_12 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
-  in let head_16 = (H.make_string " ")
+  in let head_16 = (make_string " ")
   in let
     head_18 = (erlps__format_arg__2 [(ErlangAtom "a"), arg2_2])
-  in let head_22 = (H.make_string " ")
+  in let head_22 = (make_string " ")
   in let
     head_24 = (erlps__format_arg__2 [(ErlangAtom "a"), arg3_3])
   in
@@ -1537,18 +1537,18 @@ erlps__format_op__2__p10 [(ErlangTuple [(ErlangAtom "LOG4"),
                                         arg4_4]),
                           _]
   =
-  let    head_5 = (H.make_string "LOG4 ")
+  let    head_5 = (make_string "LOG4 ")
   in let head_7 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_11 = (H.make_string " ")
+  in let head_11 = (make_string " ")
   in let
     head_13 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
-  in let head_17 = (H.make_string " ")
+  in let head_17 = (make_string " ")
   in let
     head_19 = (erlps__format_arg__2 [(ErlangAtom "a"), arg2_2])
-  in let head_23 = (H.make_string " ")
+  in let head_23 = (make_string " ")
   in let
     head_25 = (erlps__format_arg__2 [(ErlangAtom "a"), arg3_3])
-  in let head_29 = (H.make_string " ")
+  in let head_29 = (make_string " ")
   in let
     head_31 = (erlps__format_arg__2 [(ErlangAtom "a"), arg4_4])
   in
@@ -1566,9 +1566,9 @@ erlps__format_op__2__p10 [(ErlangTuple [(ErlangAtom "SPEND"),
                                         arg0_0, arg1_1]),
                           _]
   =
-  let    head_2 = (H.make_string "SPEND ")
+  let    head_2 = (make_string "SPEND ")
   in let head_4 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_8 = (H.make_string " ")
+  in let head_8 = (make_string " ")
   in let
     head_10 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
   in
@@ -1580,24 +1580,24 @@ erlps__format_op__2__p10 [(ErlangTuple [(ErlangAtom "ORACLE_REGISTER"),
                                         arg5_5, arg6_6]),
                           _]
   =
-  let    head_7 = (H.make_string "ORACLE_REGISTER ")
+  let    head_7 = (make_string "ORACLE_REGISTER ")
   in let head_9 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_13 = (H.make_string " ")
+  in let head_13 = (make_string " ")
   in let
     head_15 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
-  in let head_19 = (H.make_string " ")
+  in let head_19 = (make_string " ")
   in let
     head_21 = (erlps__format_arg__2 [(ErlangAtom "a"), arg2_2])
-  in let head_25 = (H.make_string " ")
+  in let head_25 = (make_string " ")
   in let
     head_27 = (erlps__format_arg__2 [(ErlangAtom "a"), arg3_3])
-  in let head_31 = (H.make_string " ")
+  in let head_31 = (make_string " ")
   in let
     head_33 = (erlps__format_arg__2 [(ErlangAtom "a"), arg4_4])
-  in let head_37 = (H.make_string " ")
+  in let head_37 = (make_string " ")
   in let
     head_39 = (erlps__format_arg__2 [(ErlangAtom "a"), arg5_5])
-  in let head_43 = (H.make_string " ")
+  in let head_43 = (make_string " ")
   in let
     head_45 = (erlps__format_arg__2 [(ErlangAtom "a"), arg6_6])
   in
@@ -1621,28 +1621,28 @@ erlps__format_op__2__p10 [(ErlangTuple [(ErlangAtom "ORACLE_QUERY"),
                                         arg5_5, arg6_6, arg7_7]),
                           _]
   =
-  let    head_8 = (H.make_string "ORACLE_QUERY ")
+  let    head_8 = (make_string "ORACLE_QUERY ")
   in let
     head_10 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_14 = (H.make_string " ")
+  in let head_14 = (make_string " ")
   in let
     head_16 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
-  in let head_20 = (H.make_string " ")
+  in let head_20 = (make_string " ")
   in let
     head_22 = (erlps__format_arg__2 [(ErlangAtom "a"), arg2_2])
-  in let head_26 = (H.make_string " ")
+  in let head_26 = (make_string " ")
   in let
     head_28 = (erlps__format_arg__2 [(ErlangAtom "a"), arg3_3])
-  in let head_32 = (H.make_string " ")
+  in let head_32 = (make_string " ")
   in let
     head_34 = (erlps__format_arg__2 [(ErlangAtom "a"), arg4_4])
-  in let head_38 = (H.make_string " ")
+  in let head_38 = (make_string " ")
   in let
     head_40 = (erlps__format_arg__2 [(ErlangAtom "a"), arg5_5])
-  in let head_44 = (H.make_string " ")
+  in let head_44 = (make_string " ")
   in let
     head_46 = (erlps__format_arg__2 [(ErlangAtom "a"), arg6_6])
-  in let head_50 = (H.make_string " ")
+  in let head_50 = (make_string " ")
   in let
     head_52 = (erlps__format_arg__2 [(ErlangAtom "a"), arg7_7])
   in
@@ -1668,21 +1668,21 @@ erlps__format_op__2__p10 [(ErlangTuple [(ErlangAtom "ORACLE_RESPOND"),
                                         arg5_5]),
                           _]
   =
-  let    head_6 = (H.make_string "ORACLE_RESPOND ")
+  let    head_6 = (make_string "ORACLE_RESPOND ")
   in let head_8 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_12 = (H.make_string " ")
+  in let head_12 = (make_string " ")
   in let
     head_14 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
-  in let head_18 = (H.make_string " ")
+  in let head_18 = (make_string " ")
   in let
     head_20 = (erlps__format_arg__2 [(ErlangAtom "a"), arg2_2])
-  in let head_24 = (H.make_string " ")
+  in let head_24 = (make_string " ")
   in let
     head_26 = (erlps__format_arg__2 [(ErlangAtom "a"), arg3_3])
-  in let head_30 = (H.make_string " ")
+  in let head_30 = (make_string " ")
   in let
     head_32 = (erlps__format_arg__2 [(ErlangAtom "a"), arg4_4])
-  in let head_36 = (H.make_string " ")
+  in let head_36 = (make_string " ")
   in let
     head_38 = (erlps__format_arg__2 [(ErlangAtom "a"), arg5_5])
   in
@@ -1703,12 +1703,12 @@ erlps__format_op__2__p10 [(ErlangTuple [(ErlangAtom "ORACLE_EXTEND"),
                                         arg0_0, arg1_1, arg2_2]),
                           _]
   =
-  let    head_3 = (H.make_string "ORACLE_EXTEND ")
+  let    head_3 = (make_string "ORACLE_EXTEND ")
   in let head_5 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_9 = (H.make_string " ")
+  in let head_9 = (make_string " ")
   in let
     head_11 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
-  in let head_15 = (H.make_string " ")
+  in let head_15 = (make_string " ")
   in let
     head_17 = (erlps__format_arg__2 [(ErlangAtom "a"), arg2_2])
   in
@@ -1722,18 +1722,18 @@ erlps__format_op__2__p10 [(ErlangTuple [(ErlangAtom "ORACLE_GET_ANSWER"),
                                         arg4_4]),
                           _]
   =
-  let    head_5 = (H.make_string "ORACLE_GET_ANSWER ")
+  let    head_5 = (make_string "ORACLE_GET_ANSWER ")
   in let head_7 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_11 = (H.make_string " ")
+  in let head_11 = (make_string " ")
   in let
     head_13 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
-  in let head_17 = (H.make_string " ")
+  in let head_17 = (make_string " ")
   in let
     head_19 = (erlps__format_arg__2 [(ErlangAtom "a"), arg2_2])
-  in let head_23 = (H.make_string " ")
+  in let head_23 = (make_string " ")
   in let
     head_25 = (erlps__format_arg__2 [(ErlangAtom "a"), arg3_3])
-  in let head_29 = (H.make_string " ")
+  in let head_29 = (make_string " ")
   in let
     head_31 = (erlps__format_arg__2 [(ErlangAtom "a"), arg4_4])
   in
@@ -1752,18 +1752,18 @@ erlps__format_op__2__p10 [(ErlangTuple [(ErlangAtom "ORACLE_GET_QUESTION"),
                                         arg4_4]),
                           _]
   =
-  let    head_5 = (H.make_string "ORACLE_GET_QUESTION ")
+  let    head_5 = (make_string "ORACLE_GET_QUESTION ")
   in let head_7 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_11 = (H.make_string " ")
+  in let head_11 = (make_string " ")
   in let
     head_13 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
-  in let head_17 = (H.make_string " ")
+  in let head_17 = (make_string " ")
   in let
     head_19 = (erlps__format_arg__2 [(ErlangAtom "a"), arg2_2])
-  in let head_23 = (H.make_string " ")
+  in let head_23 = (make_string " ")
   in let
     head_25 = (erlps__format_arg__2 [(ErlangAtom "a"), arg3_3])
-  in let head_29 = (H.make_string " ")
+  in let head_29 = (make_string " ")
   in let
     head_31 = (erlps__format_arg__2 [(ErlangAtom "a"), arg4_4])
   in
@@ -1784,9 +1784,9 @@ erlps__format_op__2__p11 [(ErlangTuple [(ErlangAtom "ORACLE_QUERY_FEE"),
                                         arg0_0, arg1_1]),
                           _]
   =
-  let    head_2 = (H.make_string "ORACLE_QUERY_FEE ")
+  let    head_2 = (make_string "ORACLE_QUERY_FEE ")
   in let head_4 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_8 = (H.make_string " ")
+  in let head_8 = (make_string " ")
   in let
     head_10 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
   in
@@ -1797,15 +1797,15 @@ erlps__format_op__2__p11 [(ErlangTuple [(ErlangAtom "AENS_RESOLVE"),
                                         arg0_0, arg1_1, arg2_2, arg3_3]),
                           _]
   =
-  let    head_4 = (H.make_string "AENS_RESOLVE ")
+  let    head_4 = (make_string "AENS_RESOLVE ")
   in let head_6 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_10 = (H.make_string " ")
+  in let head_10 = (make_string " ")
   in let
     head_12 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
-  in let head_16 = (H.make_string " ")
+  in let head_16 = (make_string " ")
   in let
     head_18 = (erlps__format_arg__2 [(ErlangAtom "a"), arg2_2])
-  in let head_22 = (H.make_string " ")
+  in let head_22 = (make_string " ")
   in let
     head_24 = (erlps__format_arg__2 [(ErlangAtom "a"), arg3_3])
   in
@@ -1821,12 +1821,12 @@ erlps__format_op__2__p11 [(ErlangTuple [(ErlangAtom "AENS_PRECLAIM"),
                                         arg0_0, arg1_1, arg2_2]),
                           _]
   =
-  let    head_3 = (H.make_string "AENS_PRECLAIM ")
+  let    head_3 = (make_string "AENS_PRECLAIM ")
   in let head_5 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_9 = (H.make_string " ")
+  in let head_9 = (make_string " ")
   in let
     head_11 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
-  in let head_15 = (H.make_string " ")
+  in let head_15 = (make_string " ")
   in let
     head_17 = (erlps__format_arg__2 [(ErlangAtom "a"), arg2_2])
   in
@@ -1840,18 +1840,18 @@ erlps__format_op__2__p11 [(ErlangTuple [(ErlangAtom "AENS_CLAIM"),
                                         arg4_4]),
                           _]
   =
-  let    head_5 = (H.make_string "AENS_CLAIM ")
+  let    head_5 = (make_string "AENS_CLAIM ")
   in let head_7 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_11 = (H.make_string " ")
+  in let head_11 = (make_string " ")
   in let
     head_13 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
-  in let head_17 = (H.make_string " ")
+  in let head_17 = (make_string " ")
   in let
     head_19 = (erlps__format_arg__2 [(ErlangAtom "a"), arg2_2])
-  in let head_23 = (H.make_string " ")
+  in let head_23 = (make_string " ")
   in let
     head_25 = (erlps__format_arg__2 [(ErlangAtom "a"), arg3_3])
-  in let head_29 = (H.make_string " ")
+  in let head_29 = (make_string " ")
   in let
     head_31 = (erlps__format_arg__2 [(ErlangAtom "a"), arg4_4])
   in
@@ -1870,21 +1870,21 @@ erlps__format_op__2__p11 [(ErlangTuple [(ErlangAtom "AENS_UPDATE"),
                                         arg5_5]),
                           _]
   =
-  let    head_6 = (H.make_string "AENS_UPDATE ")
+  let    head_6 = (make_string "AENS_UPDATE ")
   in let head_8 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_12 = (H.make_string " ")
+  in let head_12 = (make_string " ")
   in let
     head_14 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
-  in let head_18 = (H.make_string " ")
+  in let head_18 = (make_string " ")
   in let
     head_20 = (erlps__format_arg__2 [(ErlangAtom "a"), arg2_2])
-  in let head_24 = (H.make_string " ")
+  in let head_24 = (make_string " ")
   in let
     head_26 = (erlps__format_arg__2 [(ErlangAtom "a"), arg3_3])
-  in let head_30 = (H.make_string " ")
+  in let head_30 = (make_string " ")
   in let
     head_32 = (erlps__format_arg__2 [(ErlangAtom "a"), arg4_4])
-  in let head_36 = (H.make_string " ")
+  in let head_36 = (make_string " ")
   in let
     head_38 = (erlps__format_arg__2 [(ErlangAtom "a"), arg5_5])
   in
@@ -1905,15 +1905,15 @@ erlps__format_op__2__p11 [(ErlangTuple [(ErlangAtom "AENS_TRANSFER"),
                                         arg0_0, arg1_1, arg2_2, arg3_3]),
                           _]
   =
-  let    head_4 = (H.make_string "AENS_TRANSFER ")
+  let    head_4 = (make_string "AENS_TRANSFER ")
   in let head_6 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_10 = (H.make_string " ")
+  in let head_10 = (make_string " ")
   in let
     head_12 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
-  in let head_16 = (H.make_string " ")
+  in let head_16 = (make_string " ")
   in let
     head_18 = (erlps__format_arg__2 [(ErlangAtom "a"), arg2_2])
-  in let head_22 = (H.make_string " ")
+  in let head_22 = (make_string " ")
   in let
     head_24 = (erlps__format_arg__2 [(ErlangAtom "a"), arg3_3])
   in
@@ -1929,12 +1929,12 @@ erlps__format_op__2__p11 [(ErlangTuple [(ErlangAtom "AENS_REVOKE"),
                                         arg0_0, arg1_1, arg2_2]),
                           _]
   =
-  let    head_3 = (H.make_string "AENS_REVOKE ")
+  let    head_3 = (make_string "AENS_REVOKE ")
   in let head_5 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_9 = (H.make_string " ")
+  in let head_9 = (make_string " ")
   in let
     head_11 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
-  in let head_15 = (H.make_string " ")
+  in let head_15 = (make_string " ")
   in let
     head_17 = (erlps__format_arg__2 [(ErlangAtom "a"), arg2_2])
   in
@@ -1947,9 +1947,9 @@ erlps__format_op__2__p11 [(ErlangTuple [(ErlangAtom "BALANCE_OTHER"),
                                         arg0_0, arg1_1]),
                           _]
   =
-  let    head_2 = (H.make_string "BALANCE_OTHER ")
+  let    head_2 = (make_string "BALANCE_OTHER ")
   in let head_4 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_8 = (H.make_string " ")
+  in let head_8 = (make_string " ")
   in let
     head_10 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
   in
@@ -1960,15 +1960,15 @@ erlps__format_op__2__p11 [(ErlangTuple [(ErlangAtom "VERIFY_SIG"),
                                         arg0_0, arg1_1, arg2_2, arg3_3]),
                           _]
   =
-  let    head_4 = (H.make_string "VERIFY_SIG ")
+  let    head_4 = (make_string "VERIFY_SIG ")
   in let head_6 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_10 = (H.make_string " ")
+  in let head_10 = (make_string " ")
   in let
     head_12 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
-  in let head_16 = (H.make_string " ")
+  in let head_16 = (make_string " ")
   in let
     head_18 = (erlps__format_arg__2 [(ErlangAtom "a"), arg2_2])
-  in let head_22 = (H.make_string " ")
+  in let head_22 = (make_string " ")
   in let
     head_24 = (erlps__format_arg__2 [(ErlangAtom "a"), arg3_3])
   in
@@ -1984,15 +1984,15 @@ erlps__format_op__2__p11 [(ErlangTuple [(ErlangAtom "VERIFY_SIG_SECP256K1"),
                                         arg0_0, arg1_1, arg2_2, arg3_3]),
                           _]
   =
-  let    head_4 = (H.make_string "VERIFY_SIG_SECP256K1 ")
+  let    head_4 = (make_string "VERIFY_SIG_SECP256K1 ")
   in let head_6 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_10 = (H.make_string " ")
+  in let head_10 = (make_string " ")
   in let
     head_12 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
-  in let head_16 = (H.make_string " ")
+  in let head_16 = (make_string " ")
   in let
     head_18 = (erlps__format_arg__2 [(ErlangAtom "a"), arg2_2])
-  in let head_22 = (H.make_string " ")
+  in let head_22 = (make_string " ")
   in let
     head_24 = (erlps__format_arg__2 [(ErlangAtom "a"), arg3_3])
   in
@@ -2011,9 +2011,9 @@ erlps__format_op__2__p12 [(ErlangTuple [(ErlangAtom "CONTRACT_TO_ADDRESS"),
                                         arg0_0, arg1_1]),
                           _]
   =
-  let    head_2 = (H.make_string "CONTRACT_TO_ADDRESS ")
+  let    head_2 = (make_string "CONTRACT_TO_ADDRESS ")
   in let head_4 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_8 = (H.make_string " ")
+  in let head_8 = (make_string " ")
   in let
     head_10 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
   in
@@ -2024,22 +2024,22 @@ erlps__format_op__2__p12 [(ErlangTuple [(ErlangAtom "AUTH_TX_HASH"),
                                         arg0_0]),
                           _]
   =
-  let    head_1 = (H.make_string "AUTH_TX_HASH ")
+  let    head_1 = (make_string "AUTH_TX_HASH ")
   in let head_3 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
   in (ErlangCons head_1 (ErlangCons head_3 ErlangEmptyList))
 erlps__format_op__2__p12 [(ErlangTuple [(ErlangAtom "ORACLE_CHECK"),
                                         arg0_0, arg1_1, arg2_2, arg3_3]),
                           _]
   =
-  let    head_4 = (H.make_string "ORACLE_CHECK ")
+  let    head_4 = (make_string "ORACLE_CHECK ")
   in let head_6 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_10 = (H.make_string " ")
+  in let head_10 = (make_string " ")
   in let
     head_12 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
-  in let head_16 = (H.make_string " ")
+  in let head_16 = (make_string " ")
   in let
     head_18 = (erlps__format_arg__2 [(ErlangAtom "a"), arg2_2])
-  in let head_22 = (H.make_string " ")
+  in let head_22 = (make_string " ")
   in let
     head_24 = (erlps__format_arg__2 [(ErlangAtom "a"), arg3_3])
   in
@@ -2056,18 +2056,18 @@ erlps__format_op__2__p12 [(ErlangTuple [(ErlangAtom "ORACLE_CHECK_QUERY"),
                                         arg4_4]),
                           _]
   =
-  let    head_5 = (H.make_string "ORACLE_CHECK_QUERY ")
+  let    head_5 = (make_string "ORACLE_CHECK_QUERY ")
   in let head_7 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_11 = (H.make_string " ")
+  in let head_11 = (make_string " ")
   in let
     head_13 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
-  in let head_17 = (H.make_string " ")
+  in let head_17 = (make_string " ")
   in let
     head_19 = (erlps__format_arg__2 [(ErlangAtom "a"), arg2_2])
-  in let head_23 = (H.make_string " ")
+  in let head_23 = (make_string " ")
   in let
     head_25 = (erlps__format_arg__2 [(ErlangAtom "a"), arg3_3])
-  in let head_29 = (H.make_string " ")
+  in let head_29 = (make_string " ")
   in let
     head_31 = (erlps__format_arg__2 [(ErlangAtom "a"), arg4_4])
   in
@@ -2085,9 +2085,9 @@ erlps__format_op__2__p12 [(ErlangTuple [(ErlangAtom "IS_ORACLE"),
                                         arg0_0, arg1_1]),
                           _]
   =
-  let    head_2 = (H.make_string "IS_ORACLE ")
+  let    head_2 = (make_string "IS_ORACLE ")
   in let head_4 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_8 = (H.make_string " ")
+  in let head_8 = (make_string " ")
   in let
     head_10 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
   in
@@ -2098,9 +2098,9 @@ erlps__format_op__2__p12 [(ErlangTuple [(ErlangAtom "IS_CONTRACT"),
                                         arg0_0, arg1_1]),
                           _]
   =
-  let    head_2 = (H.make_string "IS_CONTRACT ")
+  let    head_2 = (make_string "IS_CONTRACT ")
   in let head_4 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_8 = (H.make_string " ")
+  in let head_8 = (make_string " ")
   in let
     head_10 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
   in
@@ -2111,9 +2111,9 @@ erlps__format_op__2__p12 [(ErlangTuple [(ErlangAtom "IS_PAYABLE"),
                                         arg0_0, arg1_1]),
                           _]
   =
-  let    head_2 = (H.make_string "IS_PAYABLE ")
+  let    head_2 = (make_string "IS_PAYABLE ")
   in let head_4 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_8 = (H.make_string " ")
+  in let head_8 = (make_string " ")
   in let
     head_10 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
   in
@@ -2124,22 +2124,22 @@ erlps__format_op__2__p12 [(ErlangTuple [(ErlangAtom "CREATOR"),
                                         arg0_0]),
                           _]
   =
-  let    head_1 = (H.make_string "CREATOR ")
+  let    head_1 = (make_string "CREATOR ")
   in let head_3 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
   in (ErlangCons head_1 (ErlangCons head_3 ErlangEmptyList))
 erlps__format_op__2__p12 [(ErlangTuple [(ErlangAtom "ECVERIFY_SECP256K1"),
                                         arg0_0, arg1_1, arg2_2, arg3_3]),
                           _]
   =
-  let    head_4 = (H.make_string "ECVERIFY_SECP256K1 ")
+  let    head_4 = (make_string "ECVERIFY_SECP256K1 ")
   in let head_6 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_10 = (H.make_string " ")
+  in let head_10 = (make_string " ")
   in let
     head_12 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
-  in let head_16 = (H.make_string " ")
+  in let head_16 = (make_string " ")
   in let
     head_18 = (erlps__format_arg__2 [(ErlangAtom "a"), arg2_2])
-  in let head_22 = (H.make_string " ")
+  in let head_22 = (make_string " ")
   in let
     head_24 = (erlps__format_arg__2 [(ErlangAtom "a"), arg3_3])
   in
@@ -2155,12 +2155,12 @@ erlps__format_op__2__p12 [(ErlangTuple [(ErlangAtom "ECRECOVER_SECP256K1"),
                                         arg0_0, arg1_1, arg2_2]),
                           _]
   =
-  let    head_3 = (H.make_string "ECRECOVER_SECP256K1 ")
+  let    head_3 = (make_string "ECRECOVER_SECP256K1 ")
   in let head_5 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_9 = (H.make_string " ")
+  in let head_9 = (make_string " ")
   in let
     head_11 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
-  in let head_15 = (H.make_string " ")
+  in let head_15 = (make_string " ")
   in let
     head_17 = (erlps__format_arg__2 [(ErlangAtom "a"), arg2_2])
   in
@@ -2176,9 +2176,9 @@ erlps__format_op__2__p13 [(ErlangTuple [(ErlangAtom "ADDRESS_TO_CONTRACT"),
                                         arg0_0, arg1_1]),
                           _]
   =
-  let    head_2 = (H.make_string "ADDRESS_TO_CONTRACT ")
+  let    head_2 = (make_string "ADDRESS_TO_CONTRACT ")
   in let head_4 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_8 = (H.make_string " ")
+  in let head_8 = (make_string " ")
   in let
     head_10 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
   in
@@ -2189,9 +2189,9 @@ erlps__format_op__2__p13 [(ErlangTuple [(ErlangAtom "BLS12_381_G1_NEG"),
                                         arg0_0, arg1_1]),
                           _]
   =
-  let    head_2 = (H.make_string "BLS12_381_G1_NEG ")
+  let    head_2 = (make_string "BLS12_381_G1_NEG ")
   in let head_4 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_8 = (H.make_string " ")
+  in let head_8 = (make_string " ")
   in let
     head_10 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
   in
@@ -2202,9 +2202,9 @@ erlps__format_op__2__p13 [(ErlangTuple [(ErlangAtom "BLS12_381_G1_NORM"),
                                         arg0_0, arg1_1]),
                           _]
   =
-  let    head_2 = (H.make_string "BLS12_381_G1_NORM ")
+  let    head_2 = (make_string "BLS12_381_G1_NORM ")
   in let head_4 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_8 = (H.make_string " ")
+  in let head_8 = (make_string " ")
   in let
     head_10 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
   in
@@ -2215,9 +2215,9 @@ erlps__format_op__2__p13 [(ErlangTuple [(ErlangAtom "BLS12_381_G1_VALID"),
                                         arg0_0, arg1_1]),
                           _]
   =
-  let    head_2 = (H.make_string "BLS12_381_G1_VALID ")
+  let    head_2 = (make_string "BLS12_381_G1_VALID ")
   in let head_4 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_8 = (H.make_string " ")
+  in let head_8 = (make_string " ")
   in let
     head_10 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
   in
@@ -2228,9 +2228,9 @@ erlps__format_op__2__p13 [(ErlangTuple [(ErlangAtom "BLS12_381_G1_IS_ZERO"),
                                         arg0_0, arg1_1]),
                           _]
   =
-  let    head_2 = (H.make_string "BLS12_381_G1_IS_ZERO ")
+  let    head_2 = (make_string "BLS12_381_G1_IS_ZERO ")
   in let head_4 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_8 = (H.make_string " ")
+  in let head_8 = (make_string " ")
   in let
     head_10 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
   in
@@ -2241,12 +2241,12 @@ erlps__format_op__2__p13 [(ErlangTuple [(ErlangAtom "BLS12_381_G1_ADD"),
                                         arg0_0, arg1_1, arg2_2]),
                           _]
   =
-  let    head_3 = (H.make_string "BLS12_381_G1_ADD ")
+  let    head_3 = (make_string "BLS12_381_G1_ADD ")
   in let head_5 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_9 = (H.make_string " ")
+  in let head_9 = (make_string " ")
   in let
     head_11 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
-  in let head_15 = (H.make_string " ")
+  in let head_15 = (make_string " ")
   in let
     head_17 = (erlps__format_arg__2 [(ErlangAtom "a"), arg2_2])
   in
@@ -2259,12 +2259,12 @@ erlps__format_op__2__p13 [(ErlangTuple [(ErlangAtom "BLS12_381_G1_MUL"),
                                         arg0_0, arg1_1, arg2_2]),
                           _]
   =
-  let    head_3 = (H.make_string "BLS12_381_G1_MUL ")
+  let    head_3 = (make_string "BLS12_381_G1_MUL ")
   in let head_5 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_9 = (H.make_string " ")
+  in let head_9 = (make_string " ")
   in let
     head_11 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
-  in let head_15 = (H.make_string " ")
+  in let head_15 = (make_string " ")
   in let
     head_17 = (erlps__format_arg__2 [(ErlangAtom "a"), arg2_2])
   in
@@ -2277,9 +2277,9 @@ erlps__format_op__2__p13 [(ErlangTuple [(ErlangAtom "BLS12_381_G2_NEG"),
                                         arg0_0, arg1_1]),
                           _]
   =
-  let    head_2 = (H.make_string "BLS12_381_G2_NEG ")
+  let    head_2 = (make_string "BLS12_381_G2_NEG ")
   in let head_4 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_8 = (H.make_string " ")
+  in let head_8 = (make_string " ")
   in let
     head_10 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
   in
@@ -2290,9 +2290,9 @@ erlps__format_op__2__p13 [(ErlangTuple [(ErlangAtom "BLS12_381_G2_NORM"),
                                         arg0_0, arg1_1]),
                           _]
   =
-  let    head_2 = (H.make_string "BLS12_381_G2_NORM ")
+  let    head_2 = (make_string "BLS12_381_G2_NORM ")
   in let head_4 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_8 = (H.make_string " ")
+  in let head_8 = (make_string " ")
   in let
     head_10 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
   in
@@ -2303,9 +2303,9 @@ erlps__format_op__2__p13 [(ErlangTuple [(ErlangAtom "BLS12_381_G2_VALID"),
                                         arg0_0, arg1_1]),
                           _]
   =
-  let    head_2 = (H.make_string "BLS12_381_G2_VALID ")
+  let    head_2 = (make_string "BLS12_381_G2_VALID ")
   in let head_4 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_8 = (H.make_string " ")
+  in let head_8 = (make_string " ")
   in let
     head_10 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
   in
@@ -2319,9 +2319,9 @@ erlps__format_op__2__p14 [(ErlangTuple [(ErlangAtom "BLS12_381_G2_IS_ZERO"),
                                         arg0_0, arg1_1]),
                           _]
   =
-  let    head_2 = (H.make_string "BLS12_381_G2_IS_ZERO ")
+  let    head_2 = (make_string "BLS12_381_G2_IS_ZERO ")
   in let head_4 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_8 = (H.make_string " ")
+  in let head_8 = (make_string " ")
   in let
     head_10 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
   in
@@ -2332,12 +2332,12 @@ erlps__format_op__2__p14 [(ErlangTuple [(ErlangAtom "BLS12_381_G2_ADD"),
                                         arg0_0, arg1_1, arg2_2]),
                           _]
   =
-  let    head_3 = (H.make_string "BLS12_381_G2_ADD ")
+  let    head_3 = (make_string "BLS12_381_G2_ADD ")
   in let head_5 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_9 = (H.make_string " ")
+  in let head_9 = (make_string " ")
   in let
     head_11 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
-  in let head_15 = (H.make_string " ")
+  in let head_15 = (make_string " ")
   in let
     head_17 = (erlps__format_arg__2 [(ErlangAtom "a"), arg2_2])
   in
@@ -2350,12 +2350,12 @@ erlps__format_op__2__p14 [(ErlangTuple [(ErlangAtom "BLS12_381_G2_MUL"),
                                         arg0_0, arg1_1, arg2_2]),
                           _]
   =
-  let    head_3 = (H.make_string "BLS12_381_G2_MUL ")
+  let    head_3 = (make_string "BLS12_381_G2_MUL ")
   in let head_5 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_9 = (H.make_string " ")
+  in let head_9 = (make_string " ")
   in let
     head_11 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
-  in let head_15 = (H.make_string " ")
+  in let head_15 = (make_string " ")
   in let
     head_17 = (erlps__format_arg__2 [(ErlangAtom "a"), arg2_2])
   in
@@ -2368,9 +2368,9 @@ erlps__format_op__2__p14 [(ErlangTuple [(ErlangAtom "BLS12_381_GT_INV"),
                                         arg0_0, arg1_1]),
                           _]
   =
-  let    head_2 = (H.make_string "BLS12_381_GT_INV ")
+  let    head_2 = (make_string "BLS12_381_GT_INV ")
   in let head_4 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_8 = (H.make_string " ")
+  in let head_8 = (make_string " ")
   in let
     head_10 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
   in
@@ -2381,12 +2381,12 @@ erlps__format_op__2__p14 [(ErlangTuple [(ErlangAtom "BLS12_381_GT_ADD"),
                                         arg0_0, arg1_1, arg2_2]),
                           _]
   =
-  let    head_3 = (H.make_string "BLS12_381_GT_ADD ")
+  let    head_3 = (make_string "BLS12_381_GT_ADD ")
   in let head_5 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_9 = (H.make_string " ")
+  in let head_9 = (make_string " ")
   in let
     head_11 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
-  in let head_15 = (H.make_string " ")
+  in let head_15 = (make_string " ")
   in let
     head_17 = (erlps__format_arg__2 [(ErlangAtom "a"), arg2_2])
   in
@@ -2399,12 +2399,12 @@ erlps__format_op__2__p14 [(ErlangTuple [(ErlangAtom "BLS12_381_GT_MUL"),
                                         arg0_0, arg1_1, arg2_2]),
                           _]
   =
-  let    head_3 = (H.make_string "BLS12_381_GT_MUL ")
+  let    head_3 = (make_string "BLS12_381_GT_MUL ")
   in let head_5 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_9 = (H.make_string " ")
+  in let head_9 = (make_string " ")
   in let
     head_11 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
-  in let head_15 = (H.make_string " ")
+  in let head_15 = (make_string " ")
   in let
     head_17 = (erlps__format_arg__2 [(ErlangAtom "a"), arg2_2])
   in
@@ -2417,12 +2417,12 @@ erlps__format_op__2__p14 [(ErlangTuple [(ErlangAtom "BLS12_381_GT_POW"),
                                         arg0_0, arg1_1, arg2_2]),
                           _]
   =
-  let    head_3 = (H.make_string "BLS12_381_GT_POW ")
+  let    head_3 = (make_string "BLS12_381_GT_POW ")
   in let head_5 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_9 = (H.make_string " ")
+  in let head_9 = (make_string " ")
   in let
     head_11 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
-  in let head_15 = (H.make_string " ")
+  in let head_15 = (make_string " ")
   in let
     head_17 = (erlps__format_arg__2 [(ErlangAtom "a"), arg2_2])
   in
@@ -2435,9 +2435,9 @@ erlps__format_op__2__p14 [(ErlangTuple [(ErlangAtom "BLS12_381_GT_IS_ONE"),
                                         arg0_0, arg1_1]),
                           _]
   =
-  let    head_2 = (H.make_string "BLS12_381_GT_IS_ONE ")
+  let    head_2 = (make_string "BLS12_381_GT_IS_ONE ")
   in let head_4 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_8 = (H.make_string " ")
+  in let head_8 = (make_string " ")
   in let
     head_10 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
   in
@@ -2448,12 +2448,12 @@ erlps__format_op__2__p14 [(ErlangTuple [(ErlangAtom "BLS12_381_PAIRING"),
                                         arg0_0, arg1_1, arg2_2]),
                           _]
   =
-  let    head_3 = (H.make_string "BLS12_381_PAIRING ")
+  let    head_3 = (make_string "BLS12_381_PAIRING ")
   in let head_5 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_9 = (H.make_string " ")
+  in let head_9 = (make_string " ")
   in let
     head_11 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
-  in let head_15 = (H.make_string " ")
+  in let head_15 = (make_string " ")
   in let
     head_17 = (erlps__format_arg__2 [(ErlangAtom "a"), arg2_2])
   in
@@ -2466,12 +2466,12 @@ erlps__format_op__2__p14 [(ErlangTuple [(ErlangAtom "BLS12_381_MILLER_LOOP"),
                                         arg0_0, arg1_1, arg2_2]),
                           _]
   =
-  let    head_3 = (H.make_string "BLS12_381_MILLER_LOOP ")
+  let    head_3 = (make_string "BLS12_381_MILLER_LOOP ")
   in let head_5 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_9 = (H.make_string " ")
+  in let head_9 = (make_string " ")
   in let
     head_11 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
-  in let head_15 = (H.make_string " ")
+  in let head_15 = (make_string " ")
   in let
     head_17 = (erlps__format_arg__2 [(ErlangAtom "a"), arg2_2])
   in
@@ -2487,9 +2487,9 @@ erlps__format_op__2__p15 [(ErlangTuple [(ErlangAtom "BLS12_381_FINAL_EXP"),
                                         arg0_0, arg1_1]),
                           _]
   =
-  let    head_2 = (H.make_string "BLS12_381_FINAL_EXP ")
+  let    head_2 = (make_string "BLS12_381_FINAL_EXP ")
   in let head_4 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_8 = (H.make_string " ")
+  in let head_8 = (make_string " ")
   in let
     head_10 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
   in
@@ -2500,9 +2500,9 @@ erlps__format_op__2__p15 [(ErlangTuple [(ErlangAtom "BLS12_381_INT_TO_FR"),
                                         arg0_0, arg1_1]),
                           _]
   =
-  let    head_2 = (H.make_string "BLS12_381_INT_TO_FR ")
+  let    head_2 = (make_string "BLS12_381_INT_TO_FR ")
   in let head_4 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_8 = (H.make_string " ")
+  in let head_8 = (make_string " ")
   in let
     head_10 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
   in
@@ -2513,9 +2513,9 @@ erlps__format_op__2__p15 [(ErlangTuple [(ErlangAtom "BLS12_381_INT_TO_FP"),
                                         arg0_0, arg1_1]),
                           _]
   =
-  let    head_2 = (H.make_string "BLS12_381_INT_TO_FP ")
+  let    head_2 = (make_string "BLS12_381_INT_TO_FP ")
   in let head_4 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_8 = (H.make_string " ")
+  in let head_8 = (make_string " ")
   in let
     head_10 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
   in
@@ -2526,9 +2526,9 @@ erlps__format_op__2__p15 [(ErlangTuple [(ErlangAtom "BLS12_381_FR_TO_INT"),
                                         arg0_0, arg1_1]),
                           _]
   =
-  let    head_2 = (H.make_string "BLS12_381_FR_TO_INT ")
+  let    head_2 = (make_string "BLS12_381_FR_TO_INT ")
   in let head_4 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_8 = (H.make_string " ")
+  in let head_8 = (make_string " ")
   in let
     head_10 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
   in
@@ -2539,9 +2539,9 @@ erlps__format_op__2__p15 [(ErlangTuple [(ErlangAtom "BLS12_381_FP_TO_INT"),
                                         arg0_0, arg1_1]),
                           _]
   =
-  let    head_2 = (H.make_string "BLS12_381_FP_TO_INT ")
+  let    head_2 = (make_string "BLS12_381_FP_TO_INT ")
   in let head_4 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_8 = (H.make_string " ")
+  in let head_8 = (make_string " ")
   in let
     head_10 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
   in
@@ -2552,9 +2552,9 @@ erlps__format_op__2__p15 [(ErlangTuple [(ErlangAtom "AENS_LOOKUP"),
                                         arg0_0, arg1_1]),
                           _]
   =
-  let    head_2 = (H.make_string "AENS_LOOKUP ")
+  let    head_2 = (make_string "AENS_LOOKUP ")
   in let head_4 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_8 = (H.make_string " ")
+  in let head_8 = (make_string " ")
   in let
     head_10 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
   in
@@ -2565,9 +2565,9 @@ erlps__format_op__2__p15 [(ErlangTuple [(ErlangAtom "ORACLE_EXPIRY"),
                                         arg0_0, arg1_1]),
                           _]
   =
-  let    head_2 = (H.make_string "ORACLE_EXPIRY ")
+  let    head_2 = (make_string "ORACLE_EXPIRY ")
   in let head_4 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_8 = (H.make_string " ")
+  in let head_8 = (make_string " ")
   in let
     head_10 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
   in
@@ -2578,16 +2578,16 @@ erlps__format_op__2__p15 [(ErlangTuple [(ErlangAtom "AUTH_TX"),
                                         arg0_0]),
                           _]
   =
-  let    head_1 = (H.make_string "AUTH_TX ")
+  let    head_1 = (make_string "AUTH_TX ")
   in let head_3 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
   in (ErlangCons head_1 (ErlangCons head_3 ErlangEmptyList))
 erlps__format_op__2__p15 [(ErlangTuple [(ErlangAtom "STR_TO_LIST"),
                                         arg0_0, arg1_1]),
                           _]
   =
-  let    head_2 = (H.make_string "STR_TO_LIST ")
+  let    head_2 = (make_string "STR_TO_LIST ")
   in let head_4 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_8 = (H.make_string " ")
+  in let head_8 = (make_string " ")
   in let
     head_10 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
   in
@@ -2598,9 +2598,9 @@ erlps__format_op__2__p15 [(ErlangTuple [(ErlangAtom "STR_FROM_LIST"),
                                         arg0_0, arg1_1]),
                           _]
   =
-  let    head_2 = (H.make_string "STR_FROM_LIST ")
+  let    head_2 = (make_string "STR_FROM_LIST ")
   in let head_4 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_8 = (H.make_string " ")
+  in let head_8 = (make_string " ")
   in let
     head_10 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
   in
@@ -2614,9 +2614,9 @@ erlps__format_op__2__p16 [(ErlangTuple [(ErlangAtom "STR_TO_UPPER"),
                                         arg0_0, arg1_1]),
                           _]
   =
-  let    head_2 = (H.make_string "STR_TO_UPPER ")
+  let    head_2 = (make_string "STR_TO_UPPER ")
   in let head_4 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_8 = (H.make_string " ")
+  in let head_8 = (make_string " ")
   in let
     head_10 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
   in
@@ -2627,9 +2627,9 @@ erlps__format_op__2__p16 [(ErlangTuple [(ErlangAtom "STR_TO_LOWER"),
                                         arg0_0, arg1_1]),
                           _]
   =
-  let    head_2 = (H.make_string "STR_TO_LOWER ")
+  let    head_2 = (make_string "STR_TO_LOWER ")
   in let head_4 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_8 = (H.make_string " ")
+  in let head_8 = (make_string " ")
   in let
     head_10 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
   in
@@ -2640,9 +2640,9 @@ erlps__format_op__2__p16 [(ErlangTuple [(ErlangAtom "CHAR_TO_INT"),
                                         arg0_0, arg1_1]),
                           _]
   =
-  let    head_2 = (H.make_string "CHAR_TO_INT ")
+  let    head_2 = (make_string "CHAR_TO_INT ")
   in let head_4 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_8 = (H.make_string " ")
+  in let head_8 = (make_string " ")
   in let
     head_10 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
   in
@@ -2653,9 +2653,9 @@ erlps__format_op__2__p16 [(ErlangTuple [(ErlangAtom "CHAR_FROM_INT"),
                                         arg0_0, arg1_1]),
                           _]
   =
-  let    head_2 = (H.make_string "CHAR_FROM_INT ")
+  let    head_2 = (make_string "CHAR_FROM_INT ")
   in let head_4 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_8 = (H.make_string " ")
+  in let head_8 = (make_string " ")
   in let
     head_10 = (erlps__format_arg__2 [(ErlangAtom "a"), arg1_1])
   in
@@ -2667,24 +2667,24 @@ erlps__format_op__2__p16 [(ErlangTuple [(ErlangAtom "CALL_PGR"),
                                         arg5_5, arg6_6]),
                           _]
   =
-  let    head_7 = (H.make_string "CALL_PGR ")
+  let    head_7 = (make_string "CALL_PGR ")
   in let head_9 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
-  in let head_13 = (H.make_string " ")
+  in let head_13 = (make_string " ")
   in let
     head_15 = (erlps__format_arg__2 [(ErlangAtom "is"), arg1_1])
-  in let head_19 = (H.make_string " ")
+  in let head_19 = (make_string " ")
   in let
     head_21 = (erlps__format_arg__2 [(ErlangAtom "a"), arg2_2])
-  in let head_25 = (H.make_string " ")
+  in let head_25 = (make_string " ")
   in let
     head_27 = (erlps__format_arg__2 [(ErlangAtom "a"), arg3_3])
-  in let head_31 = (H.make_string " ")
+  in let head_31 = (make_string " ")
   in let
     head_33 = (erlps__format_arg__2 [(ErlangAtom "a"), arg4_4])
-  in let head_37 = (H.make_string " ")
+  in let head_37 = (make_string " ")
   in let
     head_39 = (erlps__format_arg__2 [(ErlangAtom "a"), arg5_5])
-  in let head_43 = (H.make_string " ")
+  in let head_43 = (make_string " ")
   in let
     head_45 = (erlps__format_arg__2 [(ErlangAtom "a"), arg6_6])
   in
@@ -2704,27 +2704,27 @@ erlps__format_op__2__p16 [(ErlangTuple [(ErlangAtom "CALL_PGR"),
                                            (ErlangCons head_45
                                               ErlangEmptyList))))))))))))))
 erlps__format_op__2__p16 [(ErlangAtom "DEACTIVATE"), _] =
-  let head_0 = (H.make_string "DEACTIVATE")
+  let head_0 = (make_string "DEACTIVATE")
   in (ErlangCons head_0 ErlangEmptyList)
 erlps__format_op__2__p16 [(ErlangTuple [(ErlangAtom "ABORT"),
                                         arg0_0]),
                           _]
   =
-  let    head_1 = (H.make_string "ABORT ")
+  let    head_1 = (make_string "ABORT ")
   in let head_3 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
   in (ErlangCons head_1 (ErlangCons head_3 ErlangEmptyList))
 erlps__format_op__2__p16 [(ErlangTuple [(ErlangAtom "EXIT"),
                                         arg0_0]),
                           _]
   =
-  let    head_1 = (H.make_string "EXIT ")
+  let    head_1 = (make_string "EXIT ")
   in let head_3 = (erlps__format_arg__2 [(ErlangAtom "a"), arg0_0])
   in (ErlangCons head_1 (ErlangCons head_3 ErlangEmptyList))
 erlps__format_op__2__p16 [(ErlangAtom "NOP"), _] =
-  let head_0 = (H.make_string "NOP")
+  let head_0 = (make_string "NOP")
   in (ErlangCons head_0 ErlangEmptyList)
 erlps__format_op__2__p16 [op_0, _symbols_1] =
-  let arg_2 = (H.make_string ";; Bad Op: ~w\n")
+  let arg_2 = (make_string ";; Bad Op: ~w\n")
   in
     (BIF.do_remote_fun_call "Io.Lib" "erlps__format__2"
        [arg_2, (ErlangCons op_0 ErlangEmptyList)])

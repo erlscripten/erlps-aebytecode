@@ -18,7 +18,7 @@ import Data.Tuple as Tup
 import Data.BigInt as DBI
 import Erlang.Builtins as BIF
 import Erlang.Binary as BIN
-import Erlang.Helpers as H
+import Erlang.Helpers
 import Erlang.Exception as EXC
 import Erlang.Type (ErlangFun, ErlangTerm(..), weakCmp, weakEq,
                     weakNEq, weakLt, weakLeq, weakGeq, weakGt)
@@ -167,7 +167,7 @@ erlps__format_error__1 :: ErlangFun
 erlps__format_error__1 [(ErlangTuple [(ErlangAtom "illegal"),
                                       s_0])]
   =
-  let    head_1 = (H.make_string "illegal characters ")
+  let    head_1 = (make_string "illegal characters ")
   in let
     head_3 =
       (BIF.do_remote_fun_call "Io.Lib" "erlps__write_string__1" [s_0])
@@ -373,6 +373,7 @@ erlps__token__8 [s0_0, ics0_1, l0_2, tcs_3, tlen0_4, tline_5,
                        [tline_5, (ErlangAtom "aeb_fate_asm_scan"), tup_el_75])
                 in (ErlangTuple [(ErlangAtom "error"), tup_el_72, l1_69])
               _ -> (ErlangTuple [(ErlangAtom "eof"), l1_69])
+              _ -> (EXC.if_clause unit)
         in
           (ErlangTuple [(ErlangAtom "done"), ret_83, (ErlangAtom "eof")])
       (ErlangTuple [(ErlangAtom "reject"), _alen1_87, tlen1_88,
@@ -561,6 +562,7 @@ erlps__tokens__9 [s0_0, ics0_1, l0_2, tcs_3, tlen0_4, tline_5,
               _ ->
                 let tup_el_89 = (erlps__yyrev__1 [ts_6])
                 in (ErlangTuple [(ErlangAtom "ok"), tup_el_89, l1_74])
+              _ -> (EXC.if_clause unit)
         in
           (ErlangTuple [(ErlangAtom "done"), ret_92, (ErlangAtom "eof")])
       (ErlangTuple [(ErlangAtom "reject"), _alen1_96, tlen1_97,
@@ -23019,7 +23021,7 @@ erlps__yyaction_197__0 args =
 
 erlps__yyaction_198__1 :: ErlangFun
 erlps__yyaction_198__1 [tokenchars_0] =
-  let    lop_3 = (H.make_string "Unexpected token: ")
+  let    lop_3 = (make_string "Unexpected token: ")
   in let tup_el_2 = (BIF.erlang__op_append [lop_3, tokenchars_0])
   in (ErlangTuple [(ErlangAtom "error"), tup_el_2])
 erlps__yyaction_198__1 [arg_5] = (EXC.function_clause unit)

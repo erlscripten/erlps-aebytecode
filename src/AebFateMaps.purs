@@ -19,7 +19,7 @@ import Data.Tuple as Tup
 import Data.BigInt as DBI
 import Erlang.Builtins as BIF
 import Erlang.Binary as BIN
-import Erlang.Helpers as H
+import Erlang.Helpers
 import Erlang.Exception as EXC
 import Erlang.Type (ErlangFun, ErlangTerm(..), weakCmp, weakEq,
                     weakNEq, weakLt, weakLeq, weakGeq, weakGt)
@@ -120,11 +120,11 @@ erlps__allocate_store_maps__3__p1 args =
 
 erlps__allocate_store_maps__3__p2 :: ErlangFun
 erlps__allocate_store_maps__3__p2 [used_0, val_1, maps_2]
-  | (H.isEInt val_1) =
+  | (isEInt val_1) =
   (ErlangTuple [used_0, val_1, maps_2])
 erlps__allocate_store_maps__3__p2 [used_0, val_1, maps_2]
   | ((ErlangAtom "true") ==
-       (H.falsifyErrors (\ _ -> (BIF.erlang__is_binary__1 [val_1])))) =
+       (falsifyErrors (\ _ -> (BIF.erlang__is_binary__1 [val_1])))) =
   (ErlangTuple [used_0, val_1, maps_2])
 erlps__allocate_store_maps__3__p2 [used_0,
                                    (ErlangTuple [(ErlangAtom "tuple"), val_1]),
@@ -143,7 +143,7 @@ erlps__allocate_store_maps__3__p2 [used_0,
         in (ErlangTuple [used1_7, tup_el_12, maps1_9])
       _ -> (EXC.badmatch match_expr_10)
 erlps__allocate_store_maps__3__p2 [used_0, val_1, maps_2]
-  | (H.isEList val_1) =
+  | (isEList val_1) =
   let
     match_expr_9 =
       (erlps__allocate_store_maps_l__3 [used_0, val_1, maps_2])
@@ -172,7 +172,7 @@ erlps__allocate_store_maps__3__p2 [used_0,
         in (ErlangTuple [used1_9, tup_el_14, maps1_11])
       _ -> (EXC.badmatch match_expr_12)
 erlps__allocate_store_maps__3__p2 [used_0, val_1, maps_2]
-  | (H.isEMap val_1) =
+  | (isEMap val_1) =
   let
     match_expr_9 =
       (erlps__allocate_store_maps_m__3 [used_0, val_1, maps_2])
@@ -216,7 +216,7 @@ erlps__allocate_store_maps__3__p3 [used_0,
                                                        cache_1, _id_2]),
                                    maps_4]
   | ((ErlangAtom "true") ==
-       (H.falsifyErrors
+       (falsifyErrors
           (\ _ ->
              let rop_9 = (ErlangMap Map.empty)
              in (BIF.erlang__op_exactEq [cache_1, rop_9])))) =
@@ -372,11 +372,11 @@ erlps__unfold_store_maps__2__p1 [_unfold_0,
   =
   val_1
 erlps__unfold_store_maps__2__p1 [_unfold_0, val_1]
-  | (H.isEInt val_1) =
+  | (isEInt val_1) =
   val_1
 erlps__unfold_store_maps__2__p1 [_unfold_0, val_1]
   | ((ErlangAtom "true") ==
-       (H.falsifyErrors (\ _ -> (BIF.erlang__is_binary__1 [val_1])))) =
+       (falsifyErrors (\ _ -> (BIF.erlang__is_binary__1 [val_1])))) =
   val_1
 erlps__unfold_store_maps__2__p1 [unfold_0,
                                  (ErlangTuple [(ErlangAtom "tuple"), val_1])]
@@ -386,7 +386,7 @@ erlps__unfold_store_maps__2__p1 [unfold_0,
   in let tup_el_7 = (BIF.erlang__list_to_tuple__1 [vals_5])
   in (ErlangTuple [(ErlangAtom "tuple"), tup_el_7])
 erlps__unfold_store_maps__2__p1 [unfold_0, val_1]
-  | (H.isEList val_1) =
+  | (isEList val_1) =
   (erlps__unfold_store_maps_l__2 [unfold_0, val_1])
 erlps__unfold_store_maps__2__p1 [unfold_0,
                                  (ErlangTuple [(ErlangAtom "variant"),
@@ -400,7 +400,7 @@ erlps__unfold_store_maps__2__p1 [unfold_0,
     (ErlangTuple
        [(ErlangAtom "variant"), arities_1, tag_2, tup_el_11])
 erlps__unfold_store_maps__2__p1 [unfold_0, val_1]
-  | (H.isEMap val_1) =
+  | (isEMap val_1) =
   (erlps__unfold_store_maps_m__2 [unfold_0, val_1])
 erlps__unfold_store_maps__2__p1 [unfold_0,
                                  (ErlangTuple [(ErlangAtom "store_map"),
@@ -426,10 +426,13 @@ erlps__unfold_store_maps__2__p1 args =
 
 erlps__unfold_store_maps_l__2 :: ErlangFun
 erlps__unfold_store_maps_l__2 [unfold_0, vals_1] =
-  (H.flmap
+  (flmap
      (\ lc_4 ->
-        let lc_ret_5 = (erlps__unfold_store_maps__2 [unfold_0, lc_4])
-        in (ErlangCons lc_ret_5 ErlangEmptyList))
+        case lc_4 of
+          val_3 ->
+            let lc_ret_5 = (erlps__unfold_store_maps__2 [unfold_0, val_3])
+            in (ErlangCons lc_ret_5 ErlangEmptyList)
+          _ -> ErlangEmptyList)
      vals_1)
 erlps__unfold_store_maps_l__2 [arg_8, arg_9] =
   (EXC.function_clause unit)
@@ -615,11 +618,11 @@ erlps__refcount__2__p1 [(ErlangTuple [(ErlangAtom "typerep"),
                         count_0]
   =
   count_0
-erlps__refcount__2__p1 [val_0, count_1] | (H.isEInt val_0) =
+erlps__refcount__2__p1 [val_0, count_1] | (isEInt val_0) =
   count_1
 erlps__refcount__2__p1 [val_0, count_1]
   | ((ErlangAtom "true") ==
-       (H.falsifyErrors (\ _ -> (BIF.erlang__is_binary__1 [val_0])))) =
+       (falsifyErrors (\ _ -> (BIF.erlang__is_binary__1 [val_0])))) =
   count_1
 erlps__refcount__2__p1 [(ErlangTuple [(ErlangAtom "tuple"),
                                       val_0]),
@@ -627,7 +630,7 @@ erlps__refcount__2__p1 [(ErlangTuple [(ErlangAtom "tuple"),
   =
   let arg_2 = (BIF.erlang__tuple_to_list__1 [val_0])
   in (erlps__refcount_l__2 [arg_2, count_1])
-erlps__refcount__2__p1 [val_0, count_1] | (H.isEList val_0) =
+erlps__refcount__2__p1 [val_0, count_1] | (isEList val_0) =
   (erlps__refcount_l__2 [val_0, count_1])
 erlps__refcount__2__p1 [(ErlangTuple [(ErlangAtom "variant"),
                                       _arities_0, _tag_1, vals_2]),
@@ -635,7 +638,7 @@ erlps__refcount__2__p1 [(ErlangTuple [(ErlangAtom "variant"),
   =
   let arg_4 = (BIF.erlang__tuple_to_list__1 [vals_2])
   in (erlps__refcount_l__2 [arg_4, count_3])
-erlps__refcount__2__p1 [val_0, count_1] | (H.isEMap val_0) =
+erlps__refcount__2__p1 [val_0, count_1] | (isEMap val_0) =
   (erlps__refcount_m__2 [val_0, count_1])
 erlps__refcount__2__p1 [(ErlangTuple [(ErlangAtom "store_map"),
                                       cache_0, id_1]),
@@ -710,7 +713,7 @@ erlps__next_id__1 args =
 erlps__next_id__3 :: ErlangFun
 erlps__next_id__3 [used_0, j_1, acc_2]
   | ((ErlangAtom "true") ==
-       (H.falsifyErrors
+       (falsifyErrors
           (\ _ ->
              let lop_10 = (BIF.erlang__op_eq [used_0, ErlangEmptyList])
              in

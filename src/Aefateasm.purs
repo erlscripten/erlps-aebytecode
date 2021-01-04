@@ -15,7 +15,7 @@ import Data.Tuple as Tup
 import Data.BigInt as DBI
 import Erlang.Builtins as BIF
 import Erlang.Binary as BIN
-import Erlang.Helpers as H
+import Erlang.Helpers
 import Erlang.Exception as EXC
 import Erlang.Type (ErlangFun, ErlangTerm(..), weakCmp, weakEq,
                     weakNEq, weakLt, weakLeq, weakGeq, weakGt)
@@ -27,34 +27,34 @@ import Partial.Unsafe (unsafePartial)
 
 erlps__usage__0 :: ErlangFun
 erlps__usage__0 [] =
-  let    tup_el_6 = (H.make_string "Fate assembler code file")
+  let    tup_el_6 = (make_string "Fate assembler code file")
   in let
     head_1 =
       (ErlangTuple
          [(ErlangAtom "src_file"), (ErlangAtom "undefined"),
           (ErlangAtom "undefined"), (ErlangAtom "string"), tup_el_6])
-  in let tup_el_11 = (H.make_string "verbose")
-  in let tup_el_13 = (H.make_string "Verbose output")
+  in let tup_el_11 = (make_string "verbose")
+  in let tup_el_13 = (make_string "Verbose output")
   in let
     head_8 =
       (ErlangTuple
          [(ErlangAtom "verbose"), (ErlangInt (DBI.fromInt 118)),
           tup_el_11, (ErlangAtom "undefined"), tup_el_13])
-  in let tup_el_18 = (H.make_string "help")
-  in let tup_el_20 = (H.make_string "Show this message")
+  in let tup_el_18 = (make_string "help")
+  in let tup_el_20 = (make_string "Show this message")
   in let
     head_15 =
       (ErlangTuple
          [(ErlangAtom "help"), (ErlangInt (DBI.fromInt 104)), tup_el_18,
           (ErlangAtom "undefined"), tup_el_20])
-  in let tup_el_25 = (H.make_string "out")
-  in let tup_el_27 = (H.make_string "Output file (experimental)")
+  in let tup_el_25 = (make_string "out")
+  in let tup_el_27 = (make_string "Output file (experimental)")
   in let
     head_22 =
       (ErlangTuple
          [(ErlangAtom "outfile"), (ErlangInt (DBI.fromInt 111)),
           tup_el_25, (ErlangAtom "string"), tup_el_27])
-  in let arg_29 = (H.make_string "aefateasm")
+  in let arg_29 = (make_string "aefateasm")
   in
     (BIF.do_remote_fun_call "Getopt" "erlps__usage__2"
        [(ErlangCons head_1
@@ -67,28 +67,28 @@ erlps__usage__0 args =
 
 erlps__main__1 :: ErlangFun
 erlps__main__1 [args_0] =
-  let    tup_el_8 = (H.make_string "Fate assembler code file")
+  let    tup_el_8 = (make_string "Fate assembler code file")
   in let
     head_3 =
       (ErlangTuple
          [(ErlangAtom "src_file"), (ErlangAtom "undefined"),
           (ErlangAtom "undefined"), (ErlangAtom "string"), tup_el_8])
-  in let tup_el_13 = (H.make_string "verbose")
-  in let tup_el_15 = (H.make_string "Verbose output")
+  in let tup_el_13 = (make_string "verbose")
+  in let tup_el_15 = (make_string "Verbose output")
   in let
     head_10 =
       (ErlangTuple
          [(ErlangAtom "verbose"), (ErlangInt (DBI.fromInt 118)),
           tup_el_13, (ErlangAtom "undefined"), tup_el_15])
-  in let tup_el_20 = (H.make_string "help")
-  in let tup_el_22 = (H.make_string "Show this message")
+  in let tup_el_20 = (make_string "help")
+  in let tup_el_22 = (make_string "Show this message")
   in let
     head_17 =
       (ErlangTuple
          [(ErlangAtom "help"), (ErlangInt (DBI.fromInt 104)), tup_el_20,
           (ErlangAtom "undefined"), tup_el_22])
-  in let tup_el_27 = (H.make_string "out")
-  in let tup_el_29 = (H.make_string "Output file (experimental)")
+  in let tup_el_27 = (make_string "out")
+  in let tup_el_29 = (make_string "Output file (experimental)")
   in let
     head_24 =
       (ErlangTuple
@@ -116,7 +116,7 @@ erlps__main__1 [args_0] =
             something_else -> (EXC.case_clause something_else)
       (ErlangTuple [(ErlangAtom "ok"),
                     (ErlangTuple [_, nonopts_38])]) ->
-        let    arg_39 = (H.make_string "Can\'t understand ~p\n\n")
+        let    arg_39 = (make_string "Can\'t understand ~p\n\n")
         in let
           _ =
             (BIF.do_remote_fun_call "Erlang.Io" "erlps__format__2"
@@ -124,7 +124,7 @@ erlps__main__1 [args_0] =
         in (erlps__usage__0 [])
       (ErlangTuple [(ErlangAtom "error"),
                     (ErlangTuple [reason_43, data_44])]) ->
-        let    arg_45 = (H.make_string "Error: ~s ~p\n\n")
+        let    arg_45 = (make_string "Error: ~s ~p\n\n")
         in let
           _ =
             (BIF.do_remote_fun_call "Erlang.Io" "erlps__format__2"
@@ -146,12 +146,13 @@ erlps__assemble__1 [opts_0] =
   in
     case case_1 of
       (ErlangAtom "undefined") ->
-        let    arg_5 = (H.make_string "Error: no input source file\n\n")
+        let    arg_5 = (make_string "Error: no input source file\n\n")
         in let
           _ =
             (BIF.do_remote_fun_call "Erlang.Io" "erlps__format__1" [arg_5])
         in (erlps__usage__0 [])
       file_6 -> (erlps__assemble__2 [file_6, opts_0])
+      something_else -> (EXC.case_clause something_else)
 erlps__assemble__1 [arg_9] = (EXC.function_clause unit)
 erlps__assemble__1 args =
   (EXC.badarity
@@ -185,13 +186,13 @@ erlps__assemble__2 [file_0, opts_1] =
                 _ =
                   case verbose_5 of
                     (ErlangAtom "true") ->
-                      let arg_18 = (H.make_string "Env: ~0p~n")
+                      let arg_18 = (make_string "Env: ~0p~n")
                       in
                         (BIF.do_remote_fun_call "Erlang.Io" "erlps__format__2"
                            [arg_18, (ErlangCons env_14 ErlangEmptyList)])
                     (ErlangAtom "false") -> (ErlangAtom "ok")
                     something_else -> (EXC.case_clause something_else)
-              in let arg_22 = (H.make_string "Code: ~0p~n")
+              in let arg_22 = (make_string "Code: ~0p~n")
               in
                 (BIF.do_remote_fun_call "Erlang.Io" "erlps__format__2"
                    [arg_22, (ErlangCons bc_15 ErlangEmptyList)])
@@ -199,6 +200,7 @@ erlps__assemble__2 [file_0, opts_1] =
       outfile_26 ->
         (BIF.do_remote_fun_call "Aeb.Fate.Asm" "erlps__assemble_file__3"
            [file_0, outfile_26, opts_1])
+      something_else -> (EXC.case_clause something_else)
 erlps__assemble__2 [arg_30, arg_31] = (EXC.function_clause unit)
 erlps__assemble__2 args =
   (EXC.badarity
