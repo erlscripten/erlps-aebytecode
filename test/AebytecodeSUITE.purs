@@ -16,7 +16,7 @@ import Data.Tuple as Tup
 import Data.BigInt as DBI
 import Erlang.Builtins as BIF
 import Erlang.Binary as BIN
-import Erlang.Helpers
+import Erlang.Helpers as H
 import Erlang.Exception as EXC
 import Erlang.Type (ErlangFun, ErlangTerm(..), weakCmp, weakEq,
                     weakNEq, weakLt, weakLeq, weakGeq, weakGt)
@@ -39,7 +39,7 @@ erlps__roundtrip_identy__1 [_cfg_0] =
     codedir_3 =
       (BIF.do_remote_fun_call "Code" "erlps__lib_dir__2"
          [(ErlangAtom "aebytecode"), (ErlangAtom "test")])
-  in let arg_5 = (make_string "asm_code/identity.aesm")
+  in let arg_5 = (H.make_string "asm_code/identity.aesm")
   in let
     filename_6 =
       (BIF.do_remote_fun_call "Filename" "erlps__join__2"
@@ -48,7 +48,7 @@ erlps__roundtrip_identy__1 [_cfg_0] =
     code_9 =
       (BIF.do_remote_fun_call "Aeb.Asm" "erlps__file__2"
          [filename_6, ErlangEmptyList])
-  in let arg_10 = (make_string "Code ~p:~n~s~n")
+  in let arg_10 = (H.make_string "Code ~p:~n~s~n")
   in let
     arg_16 =
       (BIF.erlang__make_fun__3

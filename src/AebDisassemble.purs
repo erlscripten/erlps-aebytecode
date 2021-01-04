@@ -16,7 +16,7 @@ import Data.Tuple as Tup
 import Data.BigInt as DBI
 import Erlang.Builtins as BIF
 import Erlang.Binary as BIN
-import Erlang.Helpers
+import Erlang.Helpers as H
 import Erlang.Exception as EXC
 import Erlang.Type (ErlangFun, ErlangTerm(..), weakCmp, weakEq,
                     weakNEq, weakLt, weakLeq, weakGeq, weakGt)
@@ -34,7 +34,7 @@ erlps__pp__1 [binary_0] =
          [(ErlangAtom "io"), (ErlangAtom "format"),
           (ErlangInt (DBI.fromInt 2))])
   in let listing_6 = (erlps__format__2 [binary_0, arg_2])
-  in let arg_7 = (make_string "~s~n")
+  in let arg_7 = (H.make_string "~s~n")
   in
     (BIF.do_remote_fun_call "Erlang.Io" "erlps__format__2"
        [arg_7, (ErlangCons listing_6 ErlangEmptyList)])
@@ -205,7 +205,7 @@ erlps__pp__4 [address_0, (ErlangCons op_1 ops_2), assembly_3,
         (erlps__next__5
            [address_0, ops_2, instr_130, assembly_3, errformatfun_4])
     _ ->
-      let    arg_136 = (make_string "unhandled op ~p at ~p")
+      let    arg_136 = (H.make_string "unhandled op ~p at ~p")
       in let
         _ =
           (BIF.erlang__apply__2
@@ -214,11 +214,10 @@ erlps__pp__4 [address_0, (ErlangCons op_1 ops_2), assembly_3,
                  (ErlangCons
                     (ErlangCons op_1 (ErlangCons address_0 ErlangEmptyList))
                     ErlangEmptyList))])
-      in let arg_145 = (make_string "")
+      in let arg_145 = (H.make_string "")
       in
         (erlps__next__5
            [address_0, ops_2, arg_145, assembly_3, errformatfun_4])
-    something_else -> (EXC.case_clause something_else)
 erlps__pp__4 [_, (ErlangEmptyList), assembly_0, _] =
   (BIF.do_remote_fun_call "Lists" "erlps__reverse__1" [assembly_0])
 erlps__pp__4 [arg_2, arg_3, arg_4, arg_5] =
@@ -252,11 +251,11 @@ erlps__arglist_to_arg__2 args =
 erlps__pp_instruction__3 :: ErlangFun
 erlps__pp_instruction__3 [address_0, op_1, args_2] =
   let    head_3 = (erlps__format_address__1 [address_0])
-  in let head_6 = (make_string "   ")
+  in let head_6 = (H.make_string "   ")
   in let arg_9 = (BIF.erlang__atom_to_list__1 [op_1])
   in let head_8 = (erlps__pad_op__1 [arg_9])
   in let head_12 = (erlps__pp_args__1 [args_2])
-  in let head_15 = (make_string "\n")
+  in let head_15 = (H.make_string "\n")
   in
     (ErlangCons head_3
        (ErlangCons head_6
@@ -270,7 +269,7 @@ erlps__pp_instruction__3 args =
 
 erlps__format_address__1 :: ErlangFun
 erlps__format_address__1 [address_0] =
-  let arg_1 = (make_string "0x~8.16.0B")
+  let arg_1 = (H.make_string "0x~8.16.0B")
   in
     (BIF.do_remote_fun_call "Io.Lib" "erlps__format__2"
        [arg_1, (ErlangCons address_0 ErlangEmptyList)])
@@ -303,34 +302,33 @@ erlps__pp_args__1 [(ErlangCons (ErlangTuple [arg_0,
   case size_1 of
     (ErlangInt num_3) | ((ErlangInt num_3) ==
                            (ErlangInt (DBI.fromInt 8))) ->
-      let arg_4 = (make_string "0x~2.16.0B")
+      let arg_4 = (H.make_string "0x~2.16.0B")
       in
         (BIF.do_remote_fun_call "Io.Lib" "erlps__format__2"
            [arg_4, (ErlangCons arg_0 ErlangEmptyList)])
     (ErlangInt num_8) | ((ErlangInt num_8) ==
                            (ErlangInt (DBI.fromInt 160))) ->
-      let arg_9 = (make_string "0x~64.16.0B")
+      let arg_9 = (H.make_string "0x~64.16.0B")
       in
         (BIF.do_remote_fun_call "Io.Lib" "erlps__format__2"
            [arg_9, (ErlangCons arg_0 ErlangEmptyList)])
     (ErlangInt num_13) | ((ErlangInt num_13) ==
                             (ErlangInt (DBI.fromInt 232))) ->
-      let arg_14 = (make_string "0x~64.16.0B")
+      let arg_14 = (H.make_string "0x~64.16.0B")
       in
         (BIF.do_remote_fun_call "Io.Lib" "erlps__format__2"
            [arg_14, (ErlangCons arg_0 ErlangEmptyList)])
     (ErlangInt num_18) | ((ErlangInt num_18) ==
                             (ErlangInt (DBI.fromInt 256))) ->
-      let arg_19 = (make_string "0x~64.16.0B")
+      let arg_19 = (H.make_string "0x~64.16.0B")
       in
         (BIF.do_remote_fun_call "Io.Lib" "erlps__format__2"
            [arg_19, (ErlangCons arg_0 ErlangEmptyList)])
     _ ->
-      let arg_23 = (make_string "0x~64.16.0B")
+      let arg_23 = (H.make_string "0x~64.16.0B")
       in
         (BIF.do_remote_fun_call "Io.Lib" "erlps__format__2"
            [arg_23, (ErlangCons arg_0 ErlangEmptyList)])
-    something_else -> (EXC.case_clause something_else)
 erlps__pp_args__1 [(ErlangCons (ErlangTuple [arg_0,
                                              size_1]) args_2)]
   =
@@ -338,7 +336,7 @@ erlps__pp_args__1 [(ErlangCons (ErlangTuple [arg_0,
   in let
     head_3 =
       (erlps__pp_args__1 [(ErlangCons head_5 ErlangEmptyList)])
-  in let head_10 = (make_string " ")
+  in let head_10 = (H.make_string " ")
   in let head_12 = (erlps__pp_args__1 [args_2])
   in
     (ErlangCons head_3

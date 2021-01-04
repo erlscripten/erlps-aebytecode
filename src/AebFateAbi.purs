@@ -20,7 +20,7 @@ import Data.Tuple as Tup
 import Data.BigInt as DBI
 import Erlang.Builtins as BIF
 import Erlang.Binary as BIN
-import Erlang.Helpers
+import Erlang.Helpers as H
 import Erlang.Exception as EXC
 import Erlang.Type (ErlangFun, ErlangTerm(..), weakCmp, weakEq,
                     weakNEq, weakLt, weakLeq, weakGeq, weakGt)
@@ -84,23 +84,23 @@ erlps__decode_calldata__2 [funname_0, calldata_1] =
           in (BIF.erlang__tuple_to_list__1 [arg_5]))
        (\ of_9 ->
           case of_9 of
-            (ErlangCons functionid_11 (ErlangCons fateargs_12 (ErlangEmptyList))) | (functionid_11 ==
+            (ErlangCons functionid_12 (ErlangCons fateargs_13 (ErlangEmptyList))) | (functionid_12 ==
                                                                                        functionid_4) ->
               let   
-                arg_15 =
+                arg_16 =
                   (BIF.erlang__element__2
-                     [(ErlangInt (DBI.fromInt 2)), fateargs_12])
-              in let tup_el_14 = (BIF.erlang__tuple_to_list__1 [arg_15])
-              in (ErlangTuple [(ErlangAtom "ok"), tup_el_14])
+                     [(ErlangInt (DBI.fromInt 2)), fateargs_13])
+              in let tup_el_15 = (BIF.erlang__tuple_to_list__1 [arg_16])
+              in (ErlangTuple [(ErlangAtom "ok"), tup_el_15])
             _ ->
-              (ErlangTuple [(ErlangAtom "error"), (ErlangAtom "decode_error")])
-            something_else -> (EXC.try_clause something_else))
+              (ErlangTuple
+                 [(ErlangAtom "error"), (ErlangAtom "decode_error")]))
        (\ ex_10 ->
           case ex_10 of
             (ErlangTuple [_, _, _]) ->
               (ErlangTuple [(ErlangAtom "error"), (ErlangAtom "decode_error")])
-            ex_10 -> (EXC.raise ex_10)))
-erlps__decode_calldata__2 [arg_22, arg_23] =
+            ex_11 -> (EXC.raise ex_11)))
+erlps__decode_calldata__2 [arg_23, arg_24] =
   (EXC.function_clause unit)
 erlps__decode_calldata__2 args =
   (EXC.badarity
@@ -137,7 +137,6 @@ erlps__get_function_name_from_function_hash__2 [symbolhash_3@(ErlangBinary bin_c
            [(ErlangAtom "error"),
             (ErlangAtom "no_function_matching_function_hash")])
       function_13 -> (ErlangTuple [(ErlangAtom "ok"), function_13])
-      something_else -> (EXC.case_clause something_else)
 erlps__get_function_name_from_function_hash__2 [arg_16, arg_17] =
   (EXC.function_clause unit)
 erlps__get_function_name_from_function_hash__2 args =
@@ -158,17 +157,17 @@ erlps__get_function_hash_from_calldata__1 [calldata_0] =
         in (BIF.erlang__tuple_to_list__1 [arg_1]))
      (\ of_5 ->
         case of_5 of
-          (ErlangCons funhash_7 (ErlangCons _args_8 (ErlangEmptyList))) ->
-            (ErlangTuple [(ErlangAtom "ok"), funhash_7])
+          (ErlangCons funhash_8 (ErlangCons _args_9 (ErlangEmptyList))) ->
+            (ErlangTuple [(ErlangAtom "ok"), funhash_8])
           _ ->
-            (ErlangTuple [(ErlangAtom "error"), (ErlangAtom "bad_calldata")])
-          something_else -> (EXC.try_clause something_else))
+            (ErlangTuple
+               [(ErlangAtom "error"), (ErlangAtom "bad_calldata")]))
      (\ ex_6 ->
         case ex_6 of
           (ErlangTuple [_, _, _]) ->
             (ErlangTuple [(ErlangAtom "error"), (ErlangAtom "bad_calldata")])
-          ex_6 -> (EXC.raise ex_6)))
-erlps__get_function_hash_from_calldata__1 [arg_15] =
+          ex_7 -> (EXC.raise ex_7)))
+erlps__get_function_hash_from_calldata__1 [arg_16] =
   (EXC.function_clause unit)
 erlps__get_function_hash_from_calldata__1 args =
   (EXC.badarity

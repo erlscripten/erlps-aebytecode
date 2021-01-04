@@ -24,7 +24,7 @@ import Data.Tuple as Tup
 import Data.BigInt as DBI
 import Erlang.Builtins as BIF
 import Erlang.Binary as BIN
-import Erlang.Helpers
+import Erlang.Helpers as H
 import Erlang.Exception as EXC
 import Erlang.Type (ErlangFun, ErlangTerm(..), weakCmp, weakEq,
                     weakNEq, weakLt, weakLeq, weakGeq, weakGt)
@@ -207,10 +207,10 @@ erlps__heap_value_byte_size__1 [(ErlangTuple [_, heap_0])] =
     valuesize_11 =
       case (ErlangAtom "true") of
         _ | ((ErlangAtom "true") ==
-               (falsifyErrors (\ _ -> (BIF.erlang__is_binary__1 [value_4])))) ->
+               (H.falsifyErrors
+                  (\ _ -> (BIF.erlang__is_binary__1 [value_4])))) ->
           (BIF.erlang__byte_size__1 [value_4])
         _ -> (ErlangInt (DBI.fromInt 0))
-        _ -> (EXC.if_clause unit)
   in let
     arg_14 =
       case maps_8 of
@@ -221,13 +221,10 @@ erlps__heap_value_byte_size__1 [(ErlangTuple [_, heap_0])] =
   in let lc_src_13 = (BIF.maps__values__1 [arg_14])
   in let
     arg_12 =
-      (flmap
+      (H.flmap
          (\ lc_19 ->
-            case lc_19 of
-              map_18 ->
-                let lc_ret_20 = (erlps__pmap_size__1 [map_18])
-                in (ErlangCons lc_ret_20 ErlangEmptyList)
-              _ -> ErlangEmptyList)
+            let lc_ret_20 = (erlps__pmap_size__1 [lc_19])
+            in (ErlangCons lc_ret_20 ErlangEmptyList))
          lc_src_13)
   in let
     mapssize_22 =
@@ -246,11 +243,11 @@ erlps__pmap_size__1 [(ErlangTuple [(ErlangAtom "pmap"), _, _, _,
   (ErlangInt (DBI.fromInt 0))
 erlps__pmap_size__1 [(ErlangTuple [(ErlangAtom "pmap"), _, _, _,
                                    _, data_0])]
-  | (isEMap data_0) =
+  | (H.isEMap data_0) =
   let    lc_src_2 = (BIF.maps__to_list__1 [data_0])
   in let
     arg_1 =
-      (flmap
+      (H.flmap
          (\ lc_6 ->
             case lc_6 of
               (ErlangTuple [key_4, val_5]) ->
@@ -306,12 +303,12 @@ erlps__to_binary__2 args =
      (ErlangFun 2 (\ _ -> (ErlangAtom "purs_tco_sucks"))) args)
 
 erlps__to_binary1__2 :: ErlangFun
-erlps__to_binary1__2 [data_0, _address_1] | (isEInt data_0) =
+erlps__to_binary1__2 [data_0, _address_1] | (H.isEInt data_0) =
   let tup_el_3 = (ErlangBinary (BIN.concat []))
   in (ErlangTuple [data_0, tup_el_3])
 erlps__to_binary1__2 [data_0, address_1]
   | ((ErlangAtom "true") ==
-       (falsifyErrors (\ _ -> (BIF.erlang__is_binary__1 [data_0])))) =
+       (H.falsifyErrors (\ _ -> (BIF.erlang__is_binary__1 [data_0])))) =
   let   
     words_3 =
       (BIF.do_remote_fun_call "Aeb.Memory" "erlps__binary_to_words__1"
@@ -320,17 +317,14 @@ erlps__to_binary1__2 [data_0, address_1]
   in let
     bin_el_8 =
       (BIN.concat_erl
-         (flmap
+         (H.flmap
             (\ lc_11 ->
-               case lc_11 of
-                 w_10 ->
-                   let
-                     lc_ret_12 =
-                       (ErlangBinary
-                          (BIN.from_int w_10 (ErlangInt (DBI.fromInt 256)) 1
-                             BIN.Big))
-                   in (ErlangCons lc_ret_12 ErlangEmptyList)
-                 _ -> ErlangEmptyList)
+               let
+                 lc_ret_12 =
+                   (ErlangBinary
+                      (BIN.from_int lc_11 (ErlangInt (DBI.fromInt 256)) 1
+                         BIN.Big))
+               in (ErlangCons lc_ret_12 ErlangEmptyList))
             words_3))
   in let
     tup_el_5 =
@@ -408,13 +402,13 @@ erlps__to_binary1__2 [(ErlangTuple [(ErlangAtom "variant"),
     arg_3 =
       (BIF.erlang__list_to_tuple__1 [(ErlangCons tag_0 args_1)])
   in (erlps__to_binary1__2 [arg_3, address_2])
-erlps__to_binary1__2 [map_0, address_1] | (isEMap map_0) =
+erlps__to_binary1__2 [map_0, address_1] | (H.isEMap map_0) =
   let   
     size_3 = (BIF.do_remote_fun_call "Maps" "erlps__size__1" [map_0])
   in let lc_src_5 = (BIF.maps__to_list__1 [map_0])
   in let
     arg_4 =
-      (flmap
+      (H.flmap
          (\ lc_9 ->
             case lc_9 of
               (ErlangTuple [k_7, v_8]) ->
@@ -430,7 +424,7 @@ erlps__to_binary1__2 [map_0, address_1] | (isEMap map_0) =
   in let
     bin_el_19 =
       (BIN.concat_erl
-         (flmap
+         (H.flmap
             (\ lc_23 ->
                case lc_23 of
                  (ErlangTuple [k_21, v_22]) ->
@@ -459,7 +453,7 @@ erlps__to_binary1__2 [map_0, address_1] | (isEMap map_0) =
 erlps__to_binary1__2 [(ErlangTuple []), _address_0] =
   let tup_el_2 = (ErlangBinary (BIN.concat []))
   in (ErlangTuple [(ErlangInt (DBI.fromInt 0)), tup_el_2])
-erlps__to_binary1__2 [data_0, address_1] | (isETuple data_0) =
+erlps__to_binary1__2 [data_0, address_1] | (H.isETuple data_0) =
   let    arg_2 = (BIF.erlang__tuple_to_list__1 [data_0])
   in let rop_8 = (BIF.erlang__size__1 [data_0])
   in let
@@ -473,17 +467,14 @@ erlps__to_binary1__2 [data_0, address_1] | (isETuple data_0) =
         let   
           elemsbin_18 =
             (BIN.concat_erl
-               (flmap
+               (H.flmap
                   (\ lc_15 ->
-                     case lc_15 of
-                       w_14 ->
-                         let
-                           lc_ret_16 =
-                             (ErlangBinary
-                                (BIN.from_int w_14 (ErlangInt (DBI.fromInt 256))
-                                   1 BIN.Big))
-                         in (ErlangCons lc_ret_16 ErlangEmptyList)
-                       _ -> ErlangEmptyList)
+                     let
+                       lc_ret_16 =
+                         (ErlangBinary
+                            (BIN.from_int lc_15 (ErlangInt (DBI.fromInt 256)) 1
+                               BIN.Big))
+                     in (ErlangCons lc_ret_16 ErlangEmptyList))
                   elems_10))
         in let
           tup_el_20 =
@@ -558,10 +549,10 @@ erlps__from_heap__3 [type_0, heap_1, ptr_2] =
         in (ErlangTuple [(ErlangAtom "ok"), tup_el_4]))
      (\ ex_10 ->
         case ex_10 of
-          (ErlangTuple [_, err_11, _]) ->
-            (ErlangTuple [(ErlangAtom "error"), err_11])
-          ex_10 -> (EXC.raise ex_10)))
-erlps__from_heap__3 [arg_14, arg_15, arg_16] =
+          (ErlangTuple [_, err_12, _]) ->
+            (ErlangTuple [(ErlangAtom "error"), err_12])
+          ex_11 -> (EXC.raise ex_11)))
+erlps__from_heap__3 [arg_15, arg_16, arg_17] =
   (EXC.function_clause unit)
 erlps__from_heap__3 args =
   (EXC.badarity
@@ -716,7 +707,7 @@ erlps__from_binary__4 [visited_0,
          in lambda_37)
   in let
     elements_57 =
-      (flmap
+      (H.flmap
          (\ lc_52 ->
             case lc_52 of
               (ErlangTuple [t_50, i_51]) ->
@@ -761,7 +752,6 @@ erlps__from_binary__4 [visited_0,
               case match_expr_25 of
                 (ErlangTuple [h_23, t_24]) -> (ErlangCons h_23 t_24)
                 _ -> (EXC.badmatch match_expr_25)
-          _ -> (EXC.if_clause unit)
       _ -> (EXC.badmatch match_expr_10)
 erlps__from_binary__4 [visited_0,
                        (ErlangTuple [(ErlangAtom "option"), a_1]), heap_2, v_3]
@@ -830,7 +820,6 @@ erlps__from_binary__4 [visited_0,
                   (ErlangEmptyList) -> tag_21
                   _ ->
                     (BIF.erlang__list_to_tuple__1 [(ErlangCons tag_21 args_15)])
-                  something_else -> (EXC.case_clause something_else)
             _ -> (EXC.badmatch match_expr_16)
       _ -> (EXC.badmatch match_expr_7)
 erlps__from_binary__4 [_visited_0,
@@ -1034,7 +1023,7 @@ erlps__check_circular_refs__2 args =
 erlps__heap_word__2 :: ErlangFun
 erlps__heap_word__2 [heap_0, addr_1]
   | ((ErlangAtom "true") ==
-       (falsifyErrors (\ _ -> (BIF.erlang__is_binary__1 [heap_0])))) =
+       (H.falsifyErrors (\ _ -> (BIF.erlang__is_binary__1 [heap_0])))) =
   let
     bitsize_4 =
       (BIF.erlang__op_mult [(ErlangInt (DBI.fromInt 8)), addr_1])
@@ -1054,7 +1043,7 @@ erlps__heap_word__2 [heap_0, addr_1]
                              , (BIN.empty bin_12) ->
         w_10
       _ -> (EXC.badmatch heap_0)
-erlps__heap_word__2 [heap_0, addr_1] | (isEMap heap_0) =
+erlps__heap_word__2 [heap_0, addr_1] | (H.isEMap heap_0) =
   let
     match_expr_5 =
       (BIF.erlang__op_rem_strict
@@ -1080,7 +1069,7 @@ erlps__get_word__2 [(ErlangTuple [(ErlangAtom "heap"), _, offs_0,
   in (erlps__get_word__2 [mem_1, arg_4])
 erlps__get_word__2 [mem_0, addr_1]
   | ((ErlangAtom "true") ==
-       (falsifyErrors (\ _ -> (BIF.erlang__is_binary__1 [mem_0])))) =
+       (H.falsifyErrors (\ _ -> (BIF.erlang__is_binary__1 [mem_0])))) =
   case mem_0 of
     (ErlangBinary bin_c_2) | (ErlangInt size_3) <- (addr_1)
                            , (BIN.Ok _ bin_4) <-
@@ -1109,7 +1098,7 @@ erlps__get_chunk__3 [(ErlangTuple [(ErlangAtom "heap"), _,
   in (erlps__get_chunk__3 [mem_1, arg_5, bytes_3])
 erlps__get_chunk__3 [mem_0, addr_1, bytes_2]
   | ((ErlangAtom "true") ==
-       (falsifyErrors (\ _ -> (BIF.erlang__is_binary__1 [mem_0])))) =
+       (H.falsifyErrors (\ _ -> (BIF.erlang__is_binary__1 [mem_0])))) =
   case mem_0 of
     (ErlangBinary bin_c_3) | (ErlangInt size_4) <- (addr_1)
                            , (BIN.Ok _ bin_5) <-

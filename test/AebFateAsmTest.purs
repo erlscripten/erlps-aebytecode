@@ -17,7 +17,7 @@ import Data.Tuple as Tup
 import Data.BigInt as DBI
 import Erlang.Builtins as BIF
 import Erlang.Binary as BIN
-import Erlang.Helpers
+import Erlang.Helpers as H
 import Erlang.Exception as EXC
 import Erlang.Type (ErlangFun, ErlangTerm(..), weakCmp, weakEq,
                     weakNEq, weakLt, weakLeq, weakGeq, weakGt)
@@ -33,7 +33,7 @@ erlps__asm_path__0 [] =
     arg_0 =
       (BIF.do_remote_fun_call "Code" "erlps__lib_dir__2"
          [(ErlangAtom "aebytecode"), (ErlangAtom "test")])
-  in let arg_3 = (make_string "asm_code")
+  in let arg_3 = (H.make_string "asm_code")
   in
     (BIF.do_remote_fun_call "Filename" "erlps__join__2"
        [arg_0, arg_3])
@@ -48,7 +48,7 @@ erlps__file_path__1 [file_0] =
     lop_1 =
       (BIF.do_remote_fun_call "Filename" "erlps__join__2"
          [arg_2, file_0])
-  in let rop_4 = (make_string ".fate")
+  in let rop_4 = (H.make_string ".fate")
   in (BIF.erlang__op_append [lop_1, rop_4])
 erlps__file_path__1 [arg_5] = (EXC.function_clause unit)
 erlps__file_path__1 args =
@@ -88,30 +88,26 @@ erlps__asm_disasm_files_test___0 :: ErlangFun
 erlps__asm_disasm_files_test___0 [] =
   let lc_src_0 = (erlps__sources__0 [])
   in
-    (flmap
+    (H.flmap
        (\ lc_2 ->
-          case lc_2 of
-            x_1 ->
-              let    arg_6 = (make_string "~p")
-              in let
-                arg_5 =
-                  (BIF.do_remote_fun_call "Io.Lib" "erlps__format__2"
-                     [arg_6, (ErlangCons x_1 ErlangEmptyList)])
-              in let
-                tup_el_4 =
-                  (BIF.do_remote_fun_call "Lists" "erlps__flatten__1" [arg_5])
-              in let
-                tup_el_10 =
-                  (ErlangFun 0
-                     let
-                       lambda_11 [] = (erlps__check_roundtrip__1 [x_1])
-                       lambda_11 [] = (EXC.function_clause unit)
-                       lambda_11 args =
-                         (EXC.badarity (ErlangFun 0 lambda_11) args)
-                     in lambda_11)
-              in let lc_ret_3 = (ErlangTuple [tup_el_4, tup_el_10])
-              in (ErlangCons lc_ret_3 ErlangEmptyList)
-            _ -> ErlangEmptyList)
+          let    arg_6 = (H.make_string "~p")
+          in let
+            arg_5 =
+              (BIF.do_remote_fun_call "Io.Lib" "erlps__format__2"
+                 [arg_6, (ErlangCons lc_2 ErlangEmptyList)])
+          in let
+            tup_el_4 =
+              (BIF.do_remote_fun_call "Lists" "erlps__flatten__1" [arg_5])
+          in let
+            tup_el_10 =
+              (ErlangFun 0
+                 let
+                   lambda_11 [] = (erlps__check_roundtrip__1 [lc_2])
+                   lambda_11 [] = (EXC.function_clause unit)
+                   lambda_11 args = (EXC.badarity (ErlangFun 0 lambda_11) args)
+                 in lambda_11)
+          in let lc_ret_3 = (ErlangTuple [tup_el_4, tup_el_10])
+          in (ErlangCons lc_ret_3 ErlangEmptyList))
        lc_src_0)
 erlps__asm_disasm_files_test___0 args =
   (EXC.badarity
@@ -119,19 +115,19 @@ erlps__asm_disasm_files_test___0 args =
 
 erlps__sources__0 :: ErlangFun
 erlps__sources__0 [] =
-  let    head_0 = (make_string "arith")
-  in let head_2 = (make_string "bool")
-  in let head_4 = (make_string "comp")
-  in let head_6 = (make_string "jumpif")
-  in let head_8 = (make_string "map")
-  in let head_10 = (make_string "memory")
-  in let head_12 = (make_string "remote")
-  in let head_14 = (make_string "test")
-  in let head_16 = (make_string "tuple")
-  in let head_18 = (make_string "mapofmap")
-  in let head_20 = (make_string "immediates")
-  in let head_22 = (make_string "names")
-  in let head_24 = (make_string "oracles")
+  let    head_0 = (H.make_string "arith")
+  in let head_2 = (H.make_string "bool")
+  in let head_4 = (H.make_string "comp")
+  in let head_6 = (H.make_string "jumpif")
+  in let head_8 = (H.make_string "map")
+  in let head_10 = (H.make_string "memory")
+  in let head_12 = (H.make_string "remote")
+  in let head_14 = (H.make_string "test")
+  in let head_16 = (H.make_string "tuple")
+  in let head_18 = (H.make_string "mapofmap")
+  in let head_20 = (H.make_string "immediates")
+  in let head_22 = (H.make_string "names")
+  in let head_24 = (H.make_string "oracles")
   in
     (ErlangCons head_0
        (ErlangCons head_2
@@ -204,7 +200,7 @@ erlps__check_roundtrip__1 [file_0] =
                                  (ErlangTuple
                                     [(ErlangAtom "line"),
                                      (ErlangInt (DBI.fromInt 65))])
-                             in let tup_el_42 = (make_string "Code2")
+                             in let tup_el_42 = (H.make_string "Code2")
                              in let
                                head_40 =
                                  (ErlangTuple
@@ -227,7 +223,6 @@ erlps__check_roundtrip__1 [file_0] =
                                                  (ErlangCons head_48
                                                     ErlangEmptyList)))))])
                              in (BIF.erlang__error__1 [arg_29])
-                           something_else -> (EXC.case_clause something_else)
                        lambda_24 [] = (EXC.function_clause unit)
                        lambda_24 args =
                          (EXC.badarity (ErlangFun 0 lambda_24) args)
@@ -251,7 +246,7 @@ erlps__check_roundtrip__1 [file_0] =
                                  (ErlangTuple
                                     [(ErlangAtom "line"),
                                      (ErlangInt (DBI.fromInt 66))])
-                             in let tup_el_71 = (make_string "Code3")
+                             in let tup_el_71 = (H.make_string "Code3")
                              in let
                                head_69 =
                                  (ErlangTuple
@@ -274,7 +269,6 @@ erlps__check_roundtrip__1 [file_0] =
                                                  (ErlangCons head_77
                                                     ErlangEmptyList)))))])
                              in (BIF.erlang__error__1 [arg_58])
-                           something_else -> (EXC.case_clause something_else)
                        lambda_53 [] = (EXC.function_clause unit)
                        lambda_53 args =
                          (EXC.badarity (ErlangFun 0 lambda_53) args)

@@ -1,3 +1,4 @@
 [submodule "aebytecode"]
 	path = aebytecode
-	url = git@github.com:aeternity/aebytecode
+    url = git@github.com:erlscripten/aebytecode.git
+
