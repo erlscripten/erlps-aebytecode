@@ -37,8 +37,7 @@ erlps__roundtrip_identy__1 :: ErlangFun
 erlps__roundtrip_identy__1 [_cfg_0] =
   let   
     codedir_3 =
-      (BIF.do_remote_fun_call "Code" "erlps__lib_dir__2"
-         [(ErlangAtom "aebytecode"), (ErlangAtom "test")])
+      make_string "aebytecode/test"
   in let arg_5 = (make_string "asm_code/identity.aesm")
   in let
     filename_6 =

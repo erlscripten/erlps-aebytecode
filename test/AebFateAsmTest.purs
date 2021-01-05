@@ -31,8 +31,7 @@ erlps__asm_path__0 :: ErlangFun
 erlps__asm_path__0 [] =
   let   
     arg_0 =
-      (BIF.do_remote_fun_call "Code" "erlps__lib_dir__2"
-         [(ErlangAtom "aebytecode"), (ErlangAtom "test")])
+      make_string "aebytecode/test"
   in let arg_3 = (make_string "asm_code")
   in
     (BIF.do_remote_fun_call "Filename" "erlps__join__2"
