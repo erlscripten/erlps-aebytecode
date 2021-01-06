@@ -34,3 +34,7 @@ libs:
 clean:
 	rm src/* -f
 	rm test/Aeb* -f
+
+nuke: clean
+	rm output -rf
+	rm .spago -rf
