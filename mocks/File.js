@@ -1,6 +1,6 @@
 "use static";
 
-var fs = require("filemap.json");
+var fs = require("./filemap.json");
 
 exports.readFileImpl = function(toErlString) {
     return function(enoent) {
