@@ -11,7 +11,7 @@ transpile_test: $(ERLANG_PROJECT) libs
 
 fs:
 	spago build --purs-args "+RTS -I5 -w -A128M --"
-	runhaskell gen_filesystem.hs > output/File/filemap.json
+	runhaskell gen_filesystem.hs $(ERLANG_PROJECT)/test/asm_code > output/File/filemap.json
 
 sed:
 	sed -n -f sed/lib_dir.sed test/AebytecodeSUITE.purs > /tmp/aebps

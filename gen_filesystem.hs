@@ -1,19 +1,17 @@
 module Main where
 
-import Control.Monad
+import Data.Traversable
 import System.Directory
 import System.FilePath
-
-asmDir :: FilePath
-asmDir = "aebytecode/test/asm_code"
+import System.Environment
 
 main :: IO ()
 main = do
+  files <- fmap concat $ getArgs >>= traverse (\d -> fmap (d </>) <$> listDirectory d)
   putStrLn "{"
-  files <- fmap (asmDir </>) <$> listDirectory asmDir
-  forM_ files $ \filePath -> do
+  forM files $ \filePath -> do
     putStr "\"" >> putStr filePath >> putStrLn "\":"
     readFile filePath >>= print
     putStr ","
-  putStrLn "\"/\":null}"
+  putStrLn "null:null}"
     
