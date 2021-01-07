@@ -1,12 +1,12 @@
 "use static";
 
-var fs = require("filemap.json");
+var fs = require("./filemap.json");
 
-exports.readFileImpl = function(toErlString) {
+exports.readFileImpl = function(makeBinary) {
     return function(enoent) {
 	return function(filename) {
 	    let file = fs[filename];
-	    if(file) return toErlString(file);
+	    if(file) return makeBinary(Buffer.from(file));
 	    else return enoent;
 	}
     }

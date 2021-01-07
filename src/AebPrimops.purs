@@ -16,7 +16,7 @@ import Data.Tuple as Tup
 import Data.BigInt as DBI
 import Erlang.Builtins as BIF
 import Erlang.Binary as BIN
-import Erlang.Helpers
+import Erlang.Helpers as H
 import Erlang.Exception as EXC
 import Erlang.Type (ErlangFun, ErlangTerm(..), weakCmp, weakEq,
                     weakNEq, weakLt, weakLeq, weakGeq, weakGt)
@@ -35,7 +35,7 @@ erlps__is_local_primop_op__1 [op_0]
   | ((weakGt op_0 (ErlangInt (DBI.fromInt 399))) &&
        (weakLt op_0 (ErlangInt (DBI.fromInt 500)))) =
   (ErlangAtom "true")
-erlps__is_local_primop_op__1 [op_0] | (isEInt op_0) =
+erlps__is_local_primop_op__1 [op_0] | (H.isEInt op_0) =
   (ErlangAtom "false")
 erlps__is_local_primop_op__1 [arg_1] = (EXC.function_clause unit)
 erlps__is_local_primop_op__1 args =

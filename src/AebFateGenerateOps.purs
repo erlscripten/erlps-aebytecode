@@ -19,7 +19,7 @@ import Data.Tuple as Tup
 import Data.BigInt as DBI
 import Erlang.Builtins as BIF
 import Erlang.Binary as BIN
-import Erlang.Helpers
+import Erlang.Helpers as H
 import Erlang.Exception as EXC
 import Erlang.Type (ErlangFun, ErlangTerm(..), weakCmp, weakEq,
                     weakNEq, weakLt, weakLeq, weakGeq, weakGt)
@@ -43,8 +43,8 @@ erlps__gen_and_halt__1 args =
 
 erlps__generate__0 :: ErlangFun
 erlps__generate__0 [] =
-  let    arg_0 = (make_string "src/")
-  in let arg_1 = (make_string "include/")
+  let    arg_0 = (H.make_string "src/")
+  in let arg_1 = (H.make_string "include/")
   in (erlps__generate__2 [arg_0, arg_1])
 erlps__generate__0 args =
   (EXC.badarity
@@ -63,7 +63,7 @@ erlps__generate__2 [src_0, include_1] =
   let    arg_2 = (erlps__ops_defs__0 [])
   in let _ = (erlps__check_defs__1 [arg_2])
   in let ops_3 = (erlps__get_ops__0 [])
-  in let rop_5 = (make_string "aeb_fate_opcodes.hrl")
+  in let rop_5 = (H.make_string "aeb_fate_opcodes.hrl")
   in let hrlfile_6 = (BIF.erlang__op_append [include_1, rop_5])
   in let _ = (erlps__generate_header_file__2 [hrlfile_6, ops_3])
   in let
@@ -74,8 +74,8 @@ erlps__generate__2 [src_0, include_1] =
     _ =
       (erlps__generate_code_ops__3
          [(ErlangAtom "aeb_fate_ops"), src_0, ops_3])
-  in let arg_16 = (make_string "aeb_fate_asm_scan.template")
-  in let arg_17 = (make_string "aeb_fate_asm_scan.xrl")
+  in let arg_16 = (H.make_string "aeb_fate_asm_scan.template")
+  in let arg_17 = (H.make_string "aeb_fate_asm_scan.xrl")
   in let
     _ = (erlps__generate_scanner__4 [arg_16, arg_17, src_0, ops_3])
   in
@@ -139,7 +139,7 @@ erlps__ops_defs__0 [] =
   let    tup_el_9 = (ErlangTuple [])
   in let
     tup_el_11 =
-      (make_string
+      (H.make_string
          "Return from function call, top of stack is return value . The type of the retun value has to match the return type of the function.")
   in let
     head_0 =
@@ -151,7 +151,7 @@ erlps__ops_defs__0 [] =
   in let tup_el_24 = (ErlangTuple [(ErlangAtom "any")])
   in let
     tup_el_27 =
-      (make_string
+      (H.make_string
          "Push Arg0 and return from function. The type of the retun value has to match the return type of the function.")
   in let
     head_13 =
@@ -165,7 +165,7 @@ erlps__ops_defs__0 [] =
   in let tup_el_40 = (ErlangTuple [(ErlangAtom "string")])
   in let
     tup_el_43 =
-      (make_string
+      (H.make_string
          "Call the function Arg0 with args on stack. The types of the arguments has to match the argument typs of the function.")
   in let
     head_29 =
@@ -183,7 +183,7 @@ erlps__ops_defs__0 [] =
           (ErlangAtom "integer")])
   in let
     tup_el_71 =
-      (make_string
+      (H.make_string
          "Remote call to contract Arg0 and function Arg1 of type Arg2 => Arg3 with value Arg4. The types of the arguments has to match the argument types of the function.")
   in let
     head_45 =
@@ -200,7 +200,7 @@ erlps__ops_defs__0 [] =
   in let tup_el_84 = (ErlangTuple [(ErlangAtom "string")])
   in let
     tup_el_87 =
-      (make_string
+      (H.make_string
          "Tail call to function Arg0. The types of the arguments has to match the argument typs of the function. And the return type of the called function has to match the type of the current function.")
   in let
     head_73 =
@@ -218,7 +218,7 @@ erlps__ops_defs__0 [] =
           (ErlangAtom "integer"), (ErlangAtom "integer")])
   in let
     tup_el_118 =
-      (make_string
+      (H.make_string
          "Remote call with gas cap in Arg4. Otherwise as CALL_R.")
   in let
     head_89 =
@@ -237,7 +237,7 @@ erlps__ops_defs__0 [] =
   in let tup_el_131 = (ErlangTuple [(ErlangAtom "integer")])
   in let
     tup_el_134 =
-      (make_string
+      (H.make_string
          "Jump to a basic block. The basic block has to exist in the current function.")
   in let
     head_120 =
@@ -253,7 +253,7 @@ erlps__ops_defs__0 [] =
       (ErlangTuple [(ErlangAtom "boolean"), (ErlangAtom "integer")])
   in let
     tup_el_153 =
-      (make_string
+      (H.make_string
          "Conditional jump to a basic block. If Arg0 then jump to Arg1.")
   in let
     head_136 =
@@ -272,7 +272,8 @@ erlps__ops_defs__0 [] =
           (ErlangAtom "ingeger")])
   in let
     tup_el_175 =
-      (make_string "Conditional jump to a basic block on variant tag.")
+      (H.make_string
+         "Conditional jump to a basic block on variant tag.")
   in let
     head_155 =
       (ErlangTuple
@@ -291,7 +292,8 @@ erlps__ops_defs__0 [] =
           (ErlangAtom "integer"), (ErlangAtom "ingeger")])
   in let
     tup_el_200 =
-      (make_string "Conditional jump to a basic block on variant tag.")
+      (H.make_string
+         "Conditional jump to a basic block on variant tag.")
   in let
     head_177 =
       (ErlangTuple
@@ -311,7 +313,8 @@ erlps__ops_defs__0 [] =
     tup_el_215 = (ErlangTuple [(ErlangAtom "variant"), tup_el_217])
   in let
     tup_el_221 =
-      (make_string "Conditional jump to a basic block on variant tag.")
+      (H.make_string
+         "Conditional jump to a basic block on variant tag.")
   in let
     head_202 =
       (ErlangTuple
@@ -325,7 +328,7 @@ erlps__ops_defs__0 [] =
   in let tup_el_234 = (ErlangTuple [])
   in let
     tup_el_236 =
-      (make_string "The value sent in the current remote call.")
+      (H.make_string "The value sent in the current remote call.")
   in let
     head_223 =
       (ErlangTuple
@@ -336,7 +339,7 @@ erlps__ops_defs__0 [] =
           (ErlangAtom "call_value"), tup_el_234, (ErlangAtom "integer"),
           tup_el_236])
   in let tup_el_249 = (ErlangTuple [(ErlangAtom "any")])
-  in let tup_el_252 = (make_string "Push argument to stack.")
+  in let tup_el_252 = (H.make_string "Push argument to stack.")
   in let
     head_238 =
       (ErlangTuple
@@ -346,7 +349,7 @@ erlps__ops_defs__0 [] =
           (ErlangCons (ErlangAtom "a") ErlangEmptyList),
           (ErlangAtom "push"), tup_el_249, (ErlangAtom "any"), tup_el_252])
   in let tup_el_263 = (ErlangTuple [(ErlangAtom "any")])
-  in let tup_el_266 = (make_string "Duplicate top of stack.")
+  in let tup_el_266 = (H.make_string "Duplicate top of stack.")
   in let
     head_254 =
       (ErlangTuple
@@ -356,7 +359,8 @@ erlps__ops_defs__0 [] =
           (ErlangAtom "dup"), tup_el_263, (ErlangAtom "any"), tup_el_266])
   in let tup_el_279 = (ErlangTuple [(ErlangAtom "any")])
   in let
-    tup_el_282 = (make_string "push Arg0 stack pos on top of stack.")
+    tup_el_282 =
+      (H.make_string "push Arg0 stack pos on top of stack.")
   in let
     head_268 =
       (ErlangTuple
@@ -366,7 +370,7 @@ erlps__ops_defs__0 [] =
           (ErlangCons (ErlangAtom "a") ErlangEmptyList),
           (ErlangAtom "dup"), tup_el_279, (ErlangAtom "any"), tup_el_282])
   in let tup_el_295 = (ErlangTuple [(ErlangAtom "integer")])
-  in let tup_el_298 = (make_string "Arg0 := top of stack.")
+  in let tup_el_298 = (H.make_string "Arg0 := top of stack.")
   in let
     head_284 =
       (ErlangTuple
@@ -377,7 +381,7 @@ erlps__ops_defs__0 [] =
           (ErlangAtom "pop"), tup_el_295, (ErlangAtom "integer"),
           tup_el_298])
   in let tup_el_309 = (ErlangTuple [(ErlangAtom "integer")])
-  in let tup_el_312 = (make_string "Increment accumulator.")
+  in let tup_el_312 = (H.make_string "Increment accumulator.")
   in let
     head_300 =
       (ErlangTuple
@@ -387,7 +391,7 @@ erlps__ops_defs__0 [] =
           (ErlangAtom "inc"), tup_el_309, (ErlangAtom "integer"),
           tup_el_312])
   in let tup_el_325 = (ErlangTuple [(ErlangAtom "integer")])
-  in let tup_el_328 = (make_string "Increment argument.")
+  in let tup_el_328 = (H.make_string "Increment argument.")
   in let
     head_314 =
       (ErlangTuple
@@ -398,7 +402,7 @@ erlps__ops_defs__0 [] =
           (ErlangAtom "inc"), tup_el_325, (ErlangAtom "integer"),
           tup_el_328])
   in let tup_el_339 = (ErlangTuple [(ErlangAtom "integer")])
-  in let tup_el_342 = (make_string "Decrement accumulator.")
+  in let tup_el_342 = (H.make_string "Decrement accumulator.")
   in let
     head_330 =
       (ErlangTuple
@@ -408,7 +412,7 @@ erlps__ops_defs__0 [] =
           (ErlangAtom "dec"), tup_el_339, (ErlangAtom "integer"),
           tup_el_342])
   in let tup_el_355 = (ErlangTuple [(ErlangAtom "integer")])
-  in let tup_el_358 = (make_string "Decrement argument.")
+  in let tup_el_358 = (H.make_string "Decrement argument.")
   in let
     head_344 =
       (ErlangTuple
@@ -421,7 +425,7 @@ erlps__ops_defs__0 [] =
   in let
     tup_el_375 =
       (ErlangTuple [(ErlangAtom "integer"), (ErlangAtom "integer")])
-  in let tup_el_379 = (make_string "Arg0 := Arg1 + Arg2.")
+  in let tup_el_379 = (H.make_string "Arg0 := Arg1 + Arg2.")
   in let
     head_360 =
       (ErlangTuple
@@ -436,7 +440,7 @@ erlps__ops_defs__0 [] =
   in let
     tup_el_396 =
       (ErlangTuple [(ErlangAtom "integer"), (ErlangAtom "integer")])
-  in let tup_el_400 = (make_string "Arg0 := Arg1 - Arg2.")
+  in let tup_el_400 = (H.make_string "Arg0 := Arg1 - Arg2.")
   in let
     head_381 =
       (ErlangTuple
@@ -451,7 +455,7 @@ erlps__ops_defs__0 [] =
   in let
     tup_el_417 =
       (ErlangTuple [(ErlangAtom "integer"), (ErlangAtom "integer")])
-  in let tup_el_421 = (make_string "Arg0 := Arg1 * Arg2.")
+  in let tup_el_421 = (H.make_string "Arg0 := Arg1 * Arg2.")
   in let
     head_402 =
       (ErlangTuple
@@ -466,7 +470,7 @@ erlps__ops_defs__0 [] =
   in let
     tup_el_438 =
       (ErlangTuple [(ErlangAtom "integer"), (ErlangAtom "integer")])
-  in let tup_el_442 = (make_string "Arg0 := Arg1 / Arg2.")
+  in let tup_el_442 = (H.make_string "Arg0 := Arg1 / Arg2.")
   in let
     head_423 =
       (ErlangTuple
@@ -481,7 +485,7 @@ erlps__ops_defs__0 [] =
   in let
     tup_el_459 =
       (ErlangTuple [(ErlangAtom "integer"), (ErlangAtom "integer")])
-  in let tup_el_463 = (make_string "Arg0 := Arg1 mod Arg2.")
+  in let tup_el_463 = (H.make_string "Arg0 := Arg1 mod Arg2.")
   in let
     head_444 =
       (ErlangTuple
@@ -496,7 +500,7 @@ erlps__ops_defs__0 [] =
   in let
     tup_el_480 =
       (ErlangTuple [(ErlangAtom "integer"), (ErlangAtom "integer")])
-  in let tup_el_484 = (make_string "Arg0 := Arg1  ^ Arg2.")
+  in let tup_el_484 = (H.make_string "Arg0 := Arg1  ^ Arg2.")
   in let
     head_465 =
       (ErlangTuple
@@ -509,7 +513,7 @@ erlps__ops_defs__0 [] =
           (ErlangAtom "pow"), tup_el_480, (ErlangAtom "integer"),
           tup_el_484])
   in let tup_el_499 = (ErlangTuple [(ErlangAtom "any")])
-  in let tup_el_502 = (make_string "Arg0 := Arg1.")
+  in let tup_el_502 = (H.make_string "Arg0 := Arg1.")
   in let
     head_486 =
       (ErlangTuple
@@ -521,7 +525,7 @@ erlps__ops_defs__0 [] =
           (ErlangAtom "store"), tup_el_499, (ErlangAtom "any"),
           tup_el_502])
   in let tup_el_517 = (ErlangTuple [(ErlangAtom "any")])
-  in let tup_el_520 = (make_string "Arg0 := sha3(Arg1).")
+  in let tup_el_520 = (H.make_string "Arg0 := sha3(Arg1).")
   in let
     head_504 =
       (ErlangTuple
@@ -533,7 +537,7 @@ erlps__ops_defs__0 [] =
           (ErlangAtom "sha3"), tup_el_517, (ErlangAtom "hash"),
           tup_el_520])
   in let tup_el_535 = (ErlangTuple [(ErlangAtom "any")])
-  in let tup_el_538 = (make_string "Arg0 := sha256(Arg1).")
+  in let tup_el_538 = (H.make_string "Arg0 := sha256(Arg1).")
   in let
     head_522 =
       (ErlangTuple
@@ -545,7 +549,7 @@ erlps__ops_defs__0 [] =
           (ErlangAtom "sha256"), tup_el_535, (ErlangAtom "hash"),
           tup_el_538])
   in let tup_el_553 = (ErlangTuple [(ErlangAtom "any")])
-  in let tup_el_556 = (make_string "Arg0 := blake2b(Arg1).")
+  in let tup_el_556 = (H.make_string "Arg0 := blake2b(Arg1).")
   in let
     head_540 =
       (ErlangTuple
@@ -559,7 +563,7 @@ erlps__ops_defs__0 [] =
   in let
     tup_el_573 =
       (ErlangTuple [(ErlangAtom "integer"), (ErlangAtom "integer")])
-  in let tup_el_577 = (make_string "Arg0 := Arg1  < Arg2.")
+  in let tup_el_577 = (H.make_string "Arg0 := Arg1  < Arg2.")
   in let
     head_558 =
       (ErlangTuple
@@ -574,7 +578,7 @@ erlps__ops_defs__0 [] =
   in let
     tup_el_594 =
       (ErlangTuple [(ErlangAtom "integer"), (ErlangAtom "integer")])
-  in let tup_el_598 = (make_string "Arg0 := Arg1  > Arg2.")
+  in let tup_el_598 = (H.make_string "Arg0 := Arg1  > Arg2.")
   in let
     head_579 =
       (ErlangTuple
@@ -589,7 +593,7 @@ erlps__ops_defs__0 [] =
   in let
     tup_el_615 =
       (ErlangTuple [(ErlangAtom "integer"), (ErlangAtom "integer")])
-  in let tup_el_619 = (make_string "Arg0 := Arg1  = Arg2.")
+  in let tup_el_619 = (H.make_string "Arg0 := Arg1  = Arg2.")
   in let
     head_600 =
       (ErlangTuple
@@ -604,7 +608,7 @@ erlps__ops_defs__0 [] =
   in let
     tup_el_636 =
       (ErlangTuple [(ErlangAtom "integer"), (ErlangAtom "integer")])
-  in let tup_el_640 = (make_string "Arg0 := Arg1 =< Arg2.")
+  in let tup_el_640 = (H.make_string "Arg0 := Arg1 =< Arg2.")
   in let
     head_621 =
       (ErlangTuple
@@ -619,7 +623,7 @@ erlps__ops_defs__0 [] =
   in let
     tup_el_657 =
       (ErlangTuple [(ErlangAtom "integer"), (ErlangAtom "integer")])
-  in let tup_el_661 = (make_string "Arg0 := Arg1 >= Arg2.")
+  in let tup_el_661 = (H.make_string "Arg0 := Arg1 >= Arg2.")
   in let
     head_642 =
       (ErlangTuple
@@ -634,7 +638,7 @@ erlps__ops_defs__0 [] =
   in let
     tup_el_678 =
       (ErlangTuple [(ErlangAtom "integer"), (ErlangAtom "integer")])
-  in let tup_el_682 = (make_string "Arg0 := Arg1 /= Arg2.")
+  in let tup_el_682 = (H.make_string "Arg0 := Arg1 /= Arg2.")
   in let
     head_663 =
       (ErlangTuple
@@ -649,7 +653,7 @@ erlps__ops_defs__0 [] =
   in let
     tup_el_699 =
       (ErlangTuple [(ErlangAtom "boolean"), (ErlangAtom "boolean")])
-  in let tup_el_703 = (make_string "Arg0 := Arg1 and Arg2.")
+  in let tup_el_703 = (H.make_string "Arg0 := Arg1 and Arg2.")
   in let
     head_684 =
       (ErlangTuple
@@ -664,7 +668,7 @@ erlps__ops_defs__0 [] =
   in let
     tup_el_720 =
       (ErlangTuple [(ErlangAtom "boolean"), (ErlangAtom "boolean")])
-  in let tup_el_724 = (make_string "Arg0 := Arg1  or Arg2.")
+  in let tup_el_724 = (H.make_string "Arg0 := Arg1  or Arg2.")
   in let
     head_705 =
       (ErlangTuple
@@ -677,7 +681,7 @@ erlps__ops_defs__0 [] =
           (ErlangAtom "or_op"), tup_el_720, (ErlangAtom "boolean"),
           tup_el_724])
   in let tup_el_739 = (ErlangTuple [(ErlangAtom "boolean")])
-  in let tup_el_742 = (make_string "Arg0 := not Arg1.")
+  in let tup_el_742 = (H.make_string "Arg0 := not Arg1.")
   in let
     head_726 =
       (ErlangTuple
@@ -691,7 +695,8 @@ erlps__ops_defs__0 [] =
   in let tup_el_757 = (ErlangTuple [(ErlangAtom "integer")])
   in let
     tup_el_760 =
-      (make_string "Arg0 := tuple of size = Arg1. Elements on stack.")
+      (H.make_string
+         "Arg0 := tuple of size = Arg1. Elements on stack.")
   in let
     head_744 =
       (ErlangTuple
@@ -705,7 +710,8 @@ erlps__ops_defs__0 [] =
   in let
     tup_el_777 =
       (ErlangTuple [(ErlangAtom "integer"), (ErlangAtom "tuple")])
-  in let tup_el_781 = (make_string "Arg1 := element(Arg2, Arg3).")
+  in let
+    tup_el_781 = (H.make_string "Arg1 := element(Arg2, Arg3).")
   in let
     head_762 =
       (ErlangTuple
@@ -724,7 +730,7 @@ erlps__ops_defs__0 [] =
           (ErlangAtom "any")])
   in let
     tup_el_805 =
-      (make_string
+      (H.make_string
          "Arg0 := a new tuple similar to Arg2, but with element number Arg1 replaced by Arg3.")
   in let
     head_783 =
@@ -739,7 +745,7 @@ erlps__ops_defs__0 [] =
           (ErlangAtom "setelement"), tup_el_800, (ErlangAtom "tuple"),
           tup_el_805])
   in let tup_el_818 = (ErlangTuple [])
-  in let tup_el_820 = (make_string "Arg0 := #{}.")
+  in let tup_el_820 = (H.make_string "Arg0 := #{}.")
   in let
     head_807 =
       (ErlangTuple
@@ -753,7 +759,8 @@ erlps__ops_defs__0 [] =
     tup_el_837 =
       (ErlangTuple [(ErlangAtom "map"), (ErlangAtom "any")])
   in let
-    tup_el_841 = (make_string "Arg0 := lookup key Arg2 in map Arg1.")
+    tup_el_841 =
+      (H.make_string "Arg0 := lookup key Arg2 in map Arg1.")
   in let
     head_822 =
       (ErlangTuple
@@ -771,7 +778,7 @@ erlps__ops_defs__0 [] =
          [(ErlangAtom "map"), (ErlangAtom "any"), (ErlangAtom "any")])
   in let
     tup_el_865 =
-      (make_string
+      (H.make_string
          "Arg0 := lookup key Arg2 in map Arg1 if key exists in map otherwise Arg0 := Arg3.")
   in let
     head_843 =
@@ -791,7 +798,7 @@ erlps__ops_defs__0 [] =
          [(ErlangAtom "map"), (ErlangAtom "any"), (ErlangAtom "any")])
   in let
     tup_el_889 =
-      (make_string
+      (H.make_string
          "Arg0 := update key Arg2 in map Arg1 with value Arg3.")
   in let
     head_867 =
@@ -810,7 +817,7 @@ erlps__ops_defs__0 [] =
       (ErlangTuple [(ErlangAtom "map"), (ErlangAtom "any")])
   in let
     tup_el_910 =
-      (make_string "Arg0 := delete key Arg2 from map Arg1.")
+      (H.make_string "Arg0 := delete key Arg2 from map Arg1.")
   in let
     head_891 =
       (ErlangTuple
@@ -827,7 +834,7 @@ erlps__ops_defs__0 [] =
       (ErlangTuple [(ErlangAtom "map"), (ErlangAtom "any")])
   in let
     tup_el_931 =
-      (make_string "Arg0 := true if key Arg2 is in map Arg1.")
+      (H.make_string "Arg0 := true if key Arg2 is in map Arg1.")
   in let
     head_912 =
       (ErlangTuple
@@ -850,7 +857,7 @@ erlps__ops_defs__0 [] =
   in let tup_el_946 = (ErlangTuple [tup_el_947])
   in let
     tup_el_957 =
-      (make_string
+      (H.make_string
          "Arg0 := make a map from (key, value) list in Arg1.")
   in let
     head_933 =
@@ -864,7 +871,7 @@ erlps__ops_defs__0 [] =
           tup_el_957])
   in let tup_el_972 = (ErlangTuple [(ErlangAtom "map")])
   in let
-    tup_el_975 = (make_string "Arg0 := The size of the map Arg1.")
+    tup_el_975 = (H.make_string "Arg0 := The size of the map Arg1.")
   in let
     head_959 =
       (ErlangTuple
@@ -878,7 +885,7 @@ erlps__ops_defs__0 [] =
   in let tup_el_990 = (ErlangTuple [(ErlangAtom "map")])
   in let
     tup_el_993 =
-      (make_string
+      (H.make_string
          "Arg0 := The tuple list representation of the map Arg1.")
   in let
     head_977 =
@@ -891,7 +898,8 @@ erlps__ops_defs__0 [] =
           (ErlangAtom "map_to_list"), tup_el_990, (ErlangAtom "list"),
           tup_el_993])
   in let tup_el_1008 = (ErlangTuple [(ErlangAtom "list")])
-  in let tup_el_1011 = (make_string "Arg0 := true if Arg1 == [].")
+  in let
+    tup_el_1011 = (H.make_string "Arg0 := true if Arg1 == [].")
   in let
     head_995 =
       (ErlangTuple
@@ -905,7 +913,7 @@ erlps__ops_defs__0 [] =
   in let
     tup_el_1028 =
       (ErlangTuple [(ErlangAtom "any"), (ErlangAtom "list")])
-  in let tup_el_1032 = (make_string "Arg0 := [Arg1|Arg2].")
+  in let tup_el_1032 = (H.make_string "Arg0 := [Arg1|Arg2].")
   in let
     head_1013 =
       (ErlangTuple
@@ -918,7 +926,7 @@ erlps__ops_defs__0 [] =
           (ErlangAtom "cons"), tup_el_1028, (ErlangAtom "list"),
           tup_el_1032])
   in let tup_el_1047 = (ErlangTuple [(ErlangAtom "list")])
-  in let tup_el_1050 = (make_string "Arg0 := head of list Arg1.")
+  in let tup_el_1050 = (H.make_string "Arg0 := head of list Arg1.")
   in let
     head_1034 =
       (ErlangTuple
@@ -929,7 +937,7 @@ erlps__ops_defs__0 [] =
              (ErlangCons (ErlangAtom "a") ErlangEmptyList)),
           (ErlangAtom "hd"), tup_el_1047, (ErlangAtom "any"), tup_el_1050])
   in let tup_el_1065 = (ErlangTuple [(ErlangAtom "list")])
-  in let tup_el_1068 = (make_string "Arg0 := tail of list Arg1.")
+  in let tup_el_1068 = (H.make_string "Arg0 := tail of list Arg1.")
   in let
     head_1052 =
       (ErlangTuple
@@ -941,7 +949,8 @@ erlps__ops_defs__0 [] =
           (ErlangAtom "tl"), tup_el_1065, (ErlangAtom "list"),
           tup_el_1068])
   in let tup_el_1083 = (ErlangTuple [(ErlangAtom "list")])
-  in let tup_el_1086 = (make_string "Arg0 := length of list Arg1.")
+  in let
+    tup_el_1086 = (H.make_string "Arg0 := length of list Arg1.")
   in let
     head_1070 =
       (ErlangTuple
@@ -953,7 +962,7 @@ erlps__ops_defs__0 [] =
           (ErlangAtom "length"), tup_el_1083, (ErlangAtom "integer"),
           tup_el_1086])
   in let tup_el_1099 = (ErlangTuple [])
-  in let tup_el_1101 = (make_string "Arg0 := [].")
+  in let tup_el_1101 = (H.make_string "Arg0 := [].")
   in let
     head_1088 =
       (ErlangTuple
@@ -966,7 +975,7 @@ erlps__ops_defs__0 [] =
   in let
     tup_el_1118 =
       (ErlangTuple [(ErlangAtom "list"), (ErlangAtom "list")])
-  in let tup_el_1122 = (make_string "Arg0 := Arg1 ++ Arg2.")
+  in let tup_el_1122 = (H.make_string "Arg0 := Arg1 ++ Arg2.")
   in let
     head_1103 =
       (ErlangTuple
@@ -983,7 +992,7 @@ erlps__ops_defs__0 [] =
       (ErlangTuple [(ErlangAtom "string"), (ErlangAtom "string")])
   in let
     tup_el_1143 =
-      (make_string "Arg0 := string Arg1 followed by string Arg2.")
+      (H.make_string "Arg0 := string Arg1 followed by string Arg2.")
   in let
     head_1124 =
       (ErlangTuple
@@ -998,7 +1007,7 @@ erlps__ops_defs__0 [] =
   in let tup_el_1158 = (ErlangTuple [(ErlangAtom "integer")])
   in let
     tup_el_1161 =
-      (make_string "Arg0 := turn integer Arg1 into a string.")
+      (H.make_string "Arg0 := turn integer Arg1 into a string.")
   in let
     head_1145 =
       (ErlangTuple
@@ -1012,7 +1021,7 @@ erlps__ops_defs__0 [] =
   in let tup_el_1176 = (ErlangTuple [(ErlangAtom "address")])
   in let
     tup_el_1179 =
-      (make_string "Arg0 := turn address Arg1 into a string.")
+      (H.make_string "Arg0 := turn address Arg1 into a string.")
   in let
     head_1163 =
       (ErlangTuple
@@ -1025,7 +1034,8 @@ erlps__ops_defs__0 [] =
           tup_el_1179])
   in let tup_el_1194 = (ErlangTuple [(ErlangAtom "string")])
   in let
-    tup_el_1197 = (make_string "Arg0 := the reverse of string Arg1.")
+    tup_el_1197 =
+      (H.make_string "Arg0 := the reverse of string Arg1.")
   in let
     head_1181 =
       (ErlangTuple
@@ -1039,7 +1049,7 @@ erlps__ops_defs__0 [] =
   in let tup_el_1212 = (ErlangTuple [(ErlangAtom "string")])
   in let
     tup_el_1215 =
-      (make_string "Arg0 := The length of the string Arg1.")
+      (H.make_string "Arg0 := The length of the string Arg1.")
   in let
     head_1199 =
       (ErlangTuple
@@ -1051,7 +1061,7 @@ erlps__ops_defs__0 [] =
           (ErlangAtom "str_length"), tup_el_1212, (ErlangAtom "integer"),
           tup_el_1215])
   in let tup_el_1230 = (ErlangTuple [(ErlangAtom "bytes")])
-  in let tup_el_1233 = (make_string "Arg0 := bytes_to_int(Arg1)")
+  in let tup_el_1233 = (H.make_string "Arg0 := bytes_to_int(Arg1)")
   in let
     head_1217 =
       (ErlangTuple
@@ -1063,7 +1073,7 @@ erlps__ops_defs__0 [] =
           (ErlangAtom "bytes_to_int"), tup_el_1230, (ErlangAtom "integer"),
           tup_el_1233])
   in let tup_el_1248 = (ErlangTuple [(ErlangAtom "bytes")])
-  in let tup_el_1251 = (make_string "Arg0 := bytes_to_str(Arg1)")
+  in let tup_el_1251 = (H.make_string "Arg0 := bytes_to_str(Arg1)")
   in let
     head_1235 =
       (ErlangTuple
@@ -1078,7 +1088,7 @@ erlps__ops_defs__0 [] =
     tup_el_1268 =
       (ErlangTuple [(ErlangAtom "bytes"), (ErlangAtom "bytes")])
   in let
-    tup_el_1272 = (make_string "Arg0 := bytes_concat(Arg1, Arg2)")
+    tup_el_1272 = (H.make_string "Arg0 := bytes_concat(Arg1, Arg2)")
   in let
     head_1253 =
       (ErlangTuple
@@ -1095,7 +1105,7 @@ erlps__ops_defs__0 [] =
       (ErlangTuple [(ErlangAtom "bytes"), (ErlangAtom "integer")])
   in let
     tup_el_1293 =
-      (make_string
+      (H.make_string
          "Arg0 := bytes_split(Arg2, Arg1), where Arg2 is the length of the first chunk.")
   in let
     head_1274 =
@@ -1111,7 +1121,7 @@ erlps__ops_defs__0 [] =
   in let tup_el_1308 = (ErlangTuple [(ErlangAtom "integer")])
   in let
     tup_el_1311 =
-      (make_string "Arg0 := turn integer Arg1 into an address.")
+      (H.make_string "Arg0 := turn integer Arg1 into an address.")
   in let
     head_1295 =
       (ErlangTuple
@@ -1129,7 +1139,7 @@ erlps__ops_defs__0 [] =
           (ErlangAtom "integer")])
   in let
     tup_el_1335 =
-      (make_string
+      (H.make_string
          "Arg0 := create a variant of size Arg1 with the tag Arg2 (Arg2 < Arg1) and take Arg3 elements from the stack.")
   in let
     head_1313 =
@@ -1148,7 +1158,7 @@ erlps__ops_defs__0 [] =
       (ErlangTuple [(ErlangAtom "variant"), (ErlangAtom "integer")])
   in let
     tup_el_1356 =
-      (make_string "Arg0 := true if variant Arg1 has the tag Arg2.")
+      (H.make_string "Arg0 := true if variant Arg1 has the tag Arg2.")
   in let
     head_1337 =
       (ErlangTuple
@@ -1165,7 +1175,7 @@ erlps__ops_defs__0 [] =
       (ErlangTuple [(ErlangAtom "variant"), (ErlangAtom "integer")])
   in let
     tup_el_1377 =
-      (make_string "Arg0 := element number Arg2 from variant Arg1.")
+      (H.make_string "Arg0 := element number Arg2 from variant Arg1.")
   in let
     head_1358 =
       (ErlangTuple
@@ -1179,7 +1189,8 @@ erlps__ops_defs__0 [] =
           tup_el_1377])
   in let tup_el_1388 = (ErlangTuple [])
   in let
-    tup_el_1390 = (make_string "push an empty bitmap on the stack.")
+    tup_el_1390 =
+      (H.make_string "push an empty bitmap on the stack.")
   in let
     head_1379 =
       (ErlangTuple
@@ -1189,7 +1200,7 @@ erlps__ops_defs__0 [] =
           (ErlangAtom "bits_none"), tup_el_1388, (ErlangAtom "bits"),
           tup_el_1390])
   in let tup_el_1403 = (ErlangTuple [])
-  in let tup_el_1405 = (make_string "Arg0 := empty bitmap.")
+  in let tup_el_1405 = (H.make_string "Arg0 := empty bitmap.")
   in let
     head_1392 =
       (ErlangTuple
@@ -1201,7 +1212,7 @@ erlps__ops_defs__0 [] =
           tup_el_1405])
   in let tup_el_1416 = (ErlangTuple [])
   in let
-    tup_el_1418 = (make_string "push a full bitmap on the stack.")
+    tup_el_1418 = (H.make_string "push a full bitmap on the stack.")
   in let
     head_1407 =
       (ErlangTuple
@@ -1211,7 +1222,7 @@ erlps__ops_defs__0 [] =
           (ErlangAtom "bits_all"), tup_el_1416, (ErlangAtom "bits"),
           tup_el_1418])
   in let tup_el_1431 = (ErlangTuple [])
-  in let tup_el_1433 = (make_string "Arg0 := full bitmap.")
+  in let tup_el_1433 = (H.make_string "Arg0 := full bitmap.")
   in let
     head_1420 =
       (ErlangTuple
@@ -1223,7 +1234,8 @@ erlps__ops_defs__0 [] =
           tup_el_1433])
   in let tup_el_1448 = (ErlangTuple [(ErlangAtom "integer")])
   in let
-    tup_el_1451 = (make_string "Arg0 := bitmap with Arg1 bits set.")
+    tup_el_1451 =
+      (H.make_string "Arg0 := bitmap with Arg1 bits set.")
   in let
     head_1435 =
       (ErlangTuple
@@ -1239,7 +1251,7 @@ erlps__ops_defs__0 [] =
       (ErlangTuple [(ErlangAtom "bits"), (ErlangAtom "integer")])
   in let
     tup_el_1472 =
-      (make_string "Arg0 := set bit Arg2 of bitmap Arg1.")
+      (H.make_string "Arg0 := set bit Arg2 of bitmap Arg1.")
   in let
     head_1453 =
       (ErlangTuple
@@ -1256,7 +1268,7 @@ erlps__ops_defs__0 [] =
       (ErlangTuple [(ErlangAtom "bits"), (ErlangAtom "integer")])
   in let
     tup_el_1493 =
-      (make_string "Arg0 := clear bit Arg2 of bitmap Arg1.")
+      (H.make_string "Arg0 := clear bit Arg2 of bitmap Arg1.")
   in let
     head_1474 =
       (ErlangTuple
@@ -1273,7 +1285,7 @@ erlps__ops_defs__0 [] =
       (ErlangTuple [(ErlangAtom "bits"), (ErlangAtom "integer")])
   in let
     tup_el_1514 =
-      (make_string "Arg0 := true if bit Arg2 of bitmap Arg1 is set.")
+      (H.make_string "Arg0 := true if bit Arg2 of bitmap Arg1 is set.")
   in let
     head_1495 =
       (ErlangTuple
@@ -1288,7 +1300,7 @@ erlps__ops_defs__0 [] =
   in let tup_el_1529 = (ErlangTuple [(ErlangAtom "bits")])
   in let
     tup_el_1532 =
-      (make_string
+      (H.make_string
          "Arg0 := sum of set bits in bitmap Arg1. Exception if infinit bitmap.")
   in let
     head_1516 =
@@ -1303,7 +1315,7 @@ erlps__ops_defs__0 [] =
   in let
     tup_el_1549 =
       (ErlangTuple [(ErlangAtom "bits"), (ErlangAtom "bits")])
-  in let tup_el_1553 = (make_string "Arg0 := Arg1 v Arg2.")
+  in let tup_el_1553 = (H.make_string "Arg0 := Arg1 v Arg2.")
   in let
     head_1534 =
       (ErlangTuple
@@ -1318,7 +1330,7 @@ erlps__ops_defs__0 [] =
   in let
     tup_el_1570 =
       (ErlangTuple [(ErlangAtom "bits"), (ErlangAtom "bits")])
-  in let tup_el_1574 = (make_string "Arg0 := Arg1 ^ Arg2.")
+  in let tup_el_1574 = (H.make_string "Arg0 := Arg1 ^ Arg2.")
   in let
     head_1555 =
       (ErlangTuple
@@ -1333,7 +1345,7 @@ erlps__ops_defs__0 [] =
   in let
     tup_el_1591 =
       (ErlangTuple [(ErlangAtom "bits"), (ErlangAtom "bits")])
-  in let tup_el_1595 = (make_string "Arg0 := Arg1 - Arg2.")
+  in let tup_el_1595 = (H.make_string "Arg0 := Arg1 - Arg2.")
   in let
     head_1576 =
       (ErlangTuple
@@ -1348,7 +1360,7 @@ erlps__ops_defs__0 [] =
   in let tup_el_1608 = (ErlangTuple [])
   in let
     tup_el_1610 =
-      (make_string "Arg0 := The current contract balance.")
+      (H.make_string "Arg0 := The current contract balance.")
   in let
     head_1597 =
       (ErlangTuple
@@ -1361,7 +1373,7 @@ erlps__ops_defs__0 [] =
   in let tup_el_1623 = (ErlangTuple [])
   in let
     tup_el_1625 =
-      (make_string
+      (H.make_string
          "Arg0 := Address of contract called by the call transaction.")
   in let
     head_1612 =
@@ -1375,7 +1387,7 @@ erlps__ops_defs__0 [] =
   in let tup_el_1638 = (ErlangTuple [])
   in let
     tup_el_1640 =
-      (make_string
+      (H.make_string
          "Arg0 := The address that signed the call transaction.")
   in let
     head_1627 =
@@ -1388,7 +1400,7 @@ erlps__ops_defs__0 [] =
           tup_el_1640])
   in let tup_el_1655 = (ErlangTuple [(ErlangAtom "integer")])
   in let
-    tup_el_1658 = (make_string "Arg0 := The blockhash at height.")
+    tup_el_1658 = (H.make_string "Arg0 := The blockhash at height.")
   in let
     head_1642 =
       (ErlangTuple
@@ -1402,7 +1414,7 @@ erlps__ops_defs__0 [] =
   in let tup_el_1671 = (ErlangTuple [])
   in let
     tup_el_1673 =
-      (make_string "Arg0 := The address of the current beneficiary.")
+      (H.make_string "Arg0 := The address of the current beneficiary.")
   in let
     head_1660 =
       (ErlangTuple
@@ -1415,7 +1427,7 @@ erlps__ops_defs__0 [] =
   in let tup_el_1686 = (ErlangTuple [])
   in let
     tup_el_1688 =
-      (make_string
+      (H.make_string
          "Arg0 := The current timestamp. Unrelaiable, don\'t use for anything.")
   in let
     head_1675 =
@@ -1429,7 +1441,7 @@ erlps__ops_defs__0 [] =
   in let tup_el_1701 = (ErlangTuple [])
   in let
     tup_el_1703 =
-      (make_string
+      (H.make_string
          "Arg0 := The block height of the cureent generation.")
   in let
     head_1690 =
@@ -1443,7 +1455,7 @@ erlps__ops_defs__0 [] =
   in let tup_el_1716 = (ErlangTuple [])
   in let
     tup_el_1718 =
-      (make_string "Arg0 := The current micro block number.")
+      (H.make_string "Arg0 := The current micro block number.")
   in let
     head_1705 =
       (ErlangTuple
@@ -1455,7 +1467,7 @@ erlps__ops_defs__0 [] =
           tup_el_1718])
   in let tup_el_1731 = (ErlangTuple [])
   in let
-    tup_el_1733 = (make_string "Arg0 := The current difficulty.")
+    tup_el_1733 = (H.make_string "Arg0 := The current difficulty.")
   in let
     head_1720 =
       (ErlangTuple
@@ -1467,7 +1479,7 @@ erlps__ops_defs__0 [] =
           tup_el_1733])
   in let tup_el_1746 = (ErlangTuple [])
   in let
-    tup_el_1748 = (make_string "Arg0 := The current gaslimit.")
+    tup_el_1748 = (H.make_string "Arg0 := The current gaslimit.")
   in let
     head_1735 =
       (ErlangTuple
@@ -1479,7 +1491,7 @@ erlps__ops_defs__0 [] =
           tup_el_1748])
   in let tup_el_1761 = (ErlangTuple [])
   in let
-    tup_el_1763 = (make_string "Arg0 := The amount of gas left.")
+    tup_el_1763 = (H.make_string "Arg0 := The amount of gas left.")
   in let
     head_1750 =
       (ErlangTuple
@@ -1492,7 +1504,7 @@ erlps__ops_defs__0 [] =
   in let tup_el_1776 = (ErlangTuple [])
   in let
     tup_el_1778 =
-      (make_string "Arg0 := The current contract address.")
+      (H.make_string "Arg0 := The current contract address.")
   in let
     head_1765 =
       (ErlangTuple
@@ -1504,7 +1516,7 @@ erlps__ops_defs__0 [] =
           tup_el_1778])
   in let tup_el_1791 = (ErlangTuple [])
   in let
-    tup_el_1793 = (make_string "Arg0 := The current gas price.")
+    tup_el_1793 = (H.make_string "Arg0 := The current gas price.")
   in let
     head_1780 =
       (ErlangTuple
@@ -1517,7 +1529,7 @@ erlps__ops_defs__0 [] =
   in let tup_el_1806 = (ErlangTuple [(ErlangAtom "string")])
   in let
     tup_el_1809 =
-      (make_string "Create a log message in the call object.")
+      (H.make_string "Create a log message in the call object.")
   in let
     head_1795 =
       (ErlangTuple
@@ -1532,7 +1544,7 @@ erlps__ops_defs__0 [] =
       (ErlangTuple [(ErlangAtom "integer"), (ErlangAtom "string")])
   in let
     tup_el_1828 =
-      (make_string
+      (H.make_string
          "Create a log message with one topic in the call object.")
   in let
     head_1811 =
@@ -1551,7 +1563,7 @@ erlps__ops_defs__0 [] =
           (ErlangAtom "string")])
   in let
     tup_el_1850 =
-      (make_string
+      (H.make_string
          "Create a log message with two topics in the call object.")
   in let
     head_1830 =
@@ -1571,7 +1583,7 @@ erlps__ops_defs__0 [] =
           (ErlangAtom "integer"), (ErlangAtom "string")])
   in let
     tup_el_1875 =
-      (make_string
+      (H.make_string
          "Create a log message with three topics in the call object.")
   in let
     head_1852 =
@@ -1593,7 +1605,7 @@ erlps__ops_defs__0 [] =
           (ErlangAtom "string")])
   in let
     tup_el_1903 =
-      (make_string
+      (H.make_string
          "Create a log message with four topics in the call object.")
   in let
     head_1877 =
@@ -1613,7 +1625,7 @@ erlps__ops_defs__0 [] =
       (ErlangTuple [(ErlangAtom "address"), (ErlangAtom "integer")])
   in let
     tup_el_1922 =
-      (make_string
+      (H.make_string
          "Transfer Arg1 tokens to account Arg0. (If the contract account has at least that many tokens.")
   in let
     head_1905 =
@@ -1633,7 +1645,7 @@ erlps__ops_defs__0 [] =
           (ErlangAtom "typerep"), (ErlangAtom "typerep")])
   in let
     tup_el_1955 =
-      (make_string
+      (H.make_string
          "Arg0 := New oracle with address Arg2, query fee Arg3, TTL Arg4, query type Arg5 and response type Arg6. Arg0 contains delegation signature.")
   in let
     head_1924 =
@@ -1659,7 +1671,7 @@ erlps__ops_defs__0 [] =
           (ErlangAtom "typerep")])
   in let
     tup_el_1991 =
-      (make_string
+      (H.make_string
          "Arg0 := New oracle query for oracle Arg1, question in Arg2, query fee in Arg3, query TTL in Arg4, response TTL in Arg5. Typereps for checking oracle type is in Arg6 and Arg7.")
   in let
     head_1957 =
@@ -1686,7 +1698,7 @@ erlps__ops_defs__0 [] =
           (ErlangAtom "typerep"), (ErlangAtom "typerep")])
   in let
     tup_el_2022 =
-      (make_string
+      (H.make_string
          "Respond as oracle Arg1 to query in Arg2 with response Arg3. Arg0 contains delegation signature. Typereps for checking oracle type is in Arg4 and Arg5.")
   in let
     head_1993 =
@@ -1709,7 +1721,7 @@ erlps__ops_defs__0 [] =
           (ErlangAtom "variant")])
   in let
     tup_el_2044 =
-      (make_string
+      (H.make_string
          "Extend oracle in Arg1 with TTL in Arg2. Arg0 contains delegation signature.")
   in let
     head_2024 =
@@ -1729,7 +1741,7 @@ erlps__ops_defs__0 [] =
           (ErlangAtom "typerep"), (ErlangAtom "typerep")])
   in let
     tup_el_2071 =
-      (make_string
+      (H.make_string
          "Arg0 := option variant with answer (if any) from oracle query in Arg1 given by oracle Arg0. Typereps for checking oracle type is in Arg3 and Arg4.")
   in let
     head_2046 =
@@ -1751,7 +1763,7 @@ erlps__ops_defs__0 [] =
           (ErlangAtom "typerep"), (ErlangAtom "typerep")])
   in let
     tup_el_2098 =
-      (make_string
+      (H.make_string
          "Arg0 := question in oracle query Arg2 given to oracle Arg1. Typereps for checking oracle type is in Arg3 and Arg4.")
   in let
     head_2073 =
@@ -1769,7 +1781,7 @@ erlps__ops_defs__0 [] =
           (ErlangAtom "any"), tup_el_2098])
   in let tup_el_2113 = (ErlangTuple [(ErlangAtom "oracle")])
   in let
-    tup_el_2116 = (make_string "Arg0 := query fee for oracle Arg1")
+    tup_el_2116 = (H.make_string "Arg0 := query fee for oracle Arg1")
   in let
     head_2100 =
       (ErlangTuple
@@ -1787,7 +1799,7 @@ erlps__ops_defs__0 [] =
           (ErlangAtom "typerep")])
   in let
     tup_el_2140 =
-      (make_string
+      (H.make_string
          "Resolve name in Arg0 with tag Arg1. Arg2 describes the type parameter of the resolved name.")
   in let
     head_2118 =
@@ -1808,7 +1820,7 @@ erlps__ops_defs__0 [] =
           (ErlangAtom "hash")])
   in let
     tup_el_2162 =
-      (make_string
+      (H.make_string
          "Preclaim the hash in Arg2 for address in Arg1. Arg0 contains delegation signature.")
   in let
     head_2142 =
@@ -1829,7 +1841,7 @@ erlps__ops_defs__0 [] =
           (ErlangAtom "integer")])
   in let
     tup_el_2190 =
-      (make_string
+      (H.make_string
          "Attempt to claim the name in Arg2 for address in Arg1 at a price in Arg4. Arg3 contains the salt used to hash the preclaim. Arg0 contains delegation signature.")
   in let
     head_2164 =
@@ -1852,7 +1864,7 @@ erlps__ops_defs__0 [] =
           (ErlangAtom "variant"), (ErlangAtom "variant")])
   in let
     tup_el_2221 =
-      (make_string
+      (H.make_string
          "Updates name in Arg2 for address in Arg1. Arg3 contains optional ttl (of type Chain.ttl), Arg4 contains optional client_ttl (of type int), Arg5 contains optional pointers (of type map(string, pointee))")
   in let
     head_2192 =
@@ -1875,7 +1887,7 @@ erlps__ops_defs__0 [] =
           (ErlangAtom "address"), (ErlangAtom "string")])
   in let
     tup_el_2246 =
-      (make_string
+      (H.make_string
          "Transfer ownership of name Arg3 from account Arg1 to Arg2. Arg0 contains delegation signature.")
   in let
     head_2223 =
@@ -1896,7 +1908,7 @@ erlps__ops_defs__0 [] =
           (ErlangAtom "string")])
   in let
     tup_el_2268 =
-      (make_string
+      (H.make_string
          "Revoke the name in Arg2 from owner Arg1. Arg0 contains delegation signature.")
   in let
     head_2248 =
@@ -1912,7 +1924,7 @@ erlps__ops_defs__0 [] =
   in let tup_el_2283 = (ErlangTuple [(ErlangAtom "address")])
   in let
     tup_el_2286 =
-      (make_string "Arg0 := The balance of address Arg1.")
+      (H.make_string "Arg0 := The balance of address Arg1.")
   in let
     head_2270 =
       (ErlangTuple
@@ -1930,7 +1942,7 @@ erlps__ops_defs__0 [] =
           (ErlangAtom "bytes")])
   in let
     tup_el_2310 =
-      (make_string "Arg0 := verify_sig(Hash, PubKey, Signature)")
+      (H.make_string "Arg0 := verify_sig(Hash, PubKey, Signature)")
   in let
     head_2288 =
       (ErlangTuple
@@ -1950,7 +1962,7 @@ erlps__ops_defs__0 [] =
           (ErlangAtom "bytes")])
   in let
     tup_el_2334 =
-      (make_string
+      (H.make_string
          "Arg0 := verify_sig_secp256k1(Hash, PubKey, Signature)")
   in let
     head_2312 =
@@ -1968,7 +1980,7 @@ erlps__ops_defs__0 [] =
   in let tup_el_2349 = (ErlangTuple [(ErlangAtom "contract")])
   in let
     tup_el_2352 =
-      (make_string "Arg0 := Arg1 - A no-op type conversion")
+      (H.make_string "Arg0 := Arg1 - A no-op type conversion")
   in let
     head_2336 =
       (ErlangTuple
@@ -1983,7 +1995,7 @@ erlps__ops_defs__0 [] =
   in let tup_el_2365 = (ErlangTuple [])
   in let
     tup_el_2367 =
-      (make_string
+      (H.make_string
          "If in GA authentication context return Some(TxHash) otherwise None.")
   in let
     head_2354 =
@@ -2001,7 +2013,7 @@ erlps__ops_defs__0 [] =
           (ErlangAtom "typerep")])
   in let
     tup_el_2391 =
-      (make_string
+      (H.make_string
          "Arg0 := is Arg1 an oracle with the given query (Arg2) and response (Arg3) types")
   in let
     head_2369 =
@@ -2022,7 +2034,7 @@ erlps__ops_defs__0 [] =
           (ErlangAtom "typerep"), (ErlangAtom "typerep")])
   in let
     tup_el_2418 =
-      (make_string
+      (H.make_string
          "Arg0 := is Arg2 a query for the oracle Arg1 with the given types (Arg3, Arg4)")
   in let
     head_2393 =
@@ -2039,7 +2051,7 @@ erlps__ops_defs__0 [] =
           (ErlangAtom "oracle_check_query"), tup_el_2412,
           (ErlangAtom "bool"), tup_el_2418])
   in let tup_el_2433 = (ErlangTuple [(ErlangAtom "address")])
-  in let tup_el_2436 = (make_string "Arg0 := is Arg1 an oracle")
+  in let tup_el_2436 = (H.make_string "Arg0 := is Arg1 an oracle")
   in let
     head_2420 =
       (ErlangTuple
@@ -2051,7 +2063,7 @@ erlps__ops_defs__0 [] =
           (ErlangAtom "is_oracle"), tup_el_2433, (ErlangAtom "bool"),
           tup_el_2436])
   in let tup_el_2451 = (ErlangTuple [(ErlangAtom "address")])
-  in let tup_el_2454 = (make_string "Arg0 := is Arg1 a contract")
+  in let tup_el_2454 = (H.make_string "Arg0 := is Arg1 a contract")
   in let
     head_2438 =
       (ErlangTuple
@@ -2064,7 +2076,7 @@ erlps__ops_defs__0 [] =
           tup_el_2454])
   in let tup_el_2469 = (ErlangTuple [(ErlangAtom "address")])
   in let
-    tup_el_2472 = (make_string "Arg0 := is Arg1 a payable address")
+    tup_el_2472 = (H.make_string "Arg0 := is Arg1 a payable address")
   in let
     head_2456 =
       (ErlangTuple
@@ -2076,7 +2088,7 @@ erlps__ops_defs__0 [] =
           (ErlangAtom "is_payable"), tup_el_2469, (ErlangAtom "bool"),
           tup_el_2472])
   in let tup_el_2485 = (ErlangTuple [])
-  in let tup_el_2487 = (make_string "Arg0 := contract creator")
+  in let tup_el_2487 = (H.make_string "Arg0 := contract creator")
   in let
     head_2474 =
       (ErlangTuple
@@ -2093,7 +2105,8 @@ erlps__ops_defs__0 [] =
           (ErlangAtom "bytes")])
   in let
     tup_el_2511 =
-      (make_string "Arg0 := ecverify_secp256k1(Hash, Addr, Signature)")
+      (H.make_string
+         "Arg0 := ecverify_secp256k1(Hash, Addr, Signature)")
   in let
     head_2489 =
       (ErlangTuple
@@ -2112,7 +2125,7 @@ erlps__ops_defs__0 [] =
       (ErlangTuple [(ErlangAtom "bytes"), (ErlangAtom "bytes")])
   in let
     tup_el_2532 =
-      (make_string "Arg0 := ecrecover_secp256k1(Hash, Signature)")
+      (H.make_string "Arg0 := ecrecover_secp256k1(Hash, Signature)")
   in let
     head_2513 =
       (ErlangTuple
@@ -2128,7 +2141,7 @@ erlps__ops_defs__0 [] =
   in let tup_el_2547 = (ErlangTuple [(ErlangAtom "address")])
   in let
     tup_el_2550 =
-      (make_string "Arg0 := Arg1 - A no-op type conversion")
+      (H.make_string "Arg0 := Arg1 - A no-op type conversion")
   in let
     head_2534 =
       (ErlangTuple
@@ -2143,7 +2156,7 @@ erlps__ops_defs__0 [] =
   in let tup_el_2565 = (ErlangTuple [(ErlangAtom "tuple")])
   in let
     tup_el_2568 =
-      (make_string
+      (H.make_string
          "Arg0 := BLS12_381.g1_neg(Arg1) - Negate a G1-value")
   in let
     head_2552 =
@@ -2158,7 +2171,7 @@ erlps__ops_defs__0 [] =
   in let tup_el_2583 = (ErlangTuple [(ErlangAtom "tuple")])
   in let
     tup_el_2586 =
-      (make_string
+      (H.make_string
          "Arg0 := BLS12_381.g1_normalize(Arg1) - Normalize a G1-value")
   in let
     head_2570 =
@@ -2173,7 +2186,7 @@ erlps__ops_defs__0 [] =
   in let tup_el_2601 = (ErlangTuple [(ErlangAtom "tuple")])
   in let
     tup_el_2604 =
-      (make_string
+      (H.make_string
          "Arg0 := BLS12_381.g1_valid(Arg1) - Check if G1-value is a valid group member")
   in let
     head_2588 =
@@ -2189,7 +2202,7 @@ erlps__ops_defs__0 [] =
   in let tup_el_2619 = (ErlangTuple [(ErlangAtom "tuple")])
   in let
     tup_el_2622 =
-      (make_string
+      (H.make_string
          "Arg0 := BLS12_381.g1_is_zero(Arg1) - Check if G1-value is zero")
   in let
     head_2606 =
@@ -2207,7 +2220,7 @@ erlps__ops_defs__0 [] =
       (ErlangTuple [(ErlangAtom "tuple"), (ErlangAtom "tuple")])
   in let
     tup_el_2643 =
-      (make_string
+      (H.make_string
          "Arg0 := BLS12_381.g1_add(Arg1, Arg2) - Add two G1-values")
   in let
     head_2624 =
@@ -2225,7 +2238,7 @@ erlps__ops_defs__0 [] =
       (ErlangTuple [(ErlangAtom "tuple"), (ErlangAtom "tuple")])
   in let
     tup_el_2664 =
-      (make_string
+      (H.make_string
          "Arg0 := BLS12_381.g1_mul(Arg1, Arg2) - Scalar multiplication for a G1-value (Arg1), and an Fr-value")
   in let
     head_2645 =
@@ -2241,7 +2254,7 @@ erlps__ops_defs__0 [] =
   in let tup_el_2679 = (ErlangTuple [(ErlangAtom "tuple")])
   in let
     tup_el_2682 =
-      (make_string
+      (H.make_string
          "Arg0 := BLS12_381.g2_neg(Arg1) - Negate a G2-value")
   in let
     head_2666 =
@@ -2256,7 +2269,7 @@ erlps__ops_defs__0 [] =
   in let tup_el_2697 = (ErlangTuple [(ErlangAtom "tuple")])
   in let
     tup_el_2700 =
-      (make_string
+      (H.make_string
          "Arg0 := BLS12_381.g2_normalize(Arg1) - Normalize a G2-value")
   in let
     head_2684 =
@@ -2271,7 +2284,7 @@ erlps__ops_defs__0 [] =
   in let tup_el_2715 = (ErlangTuple [(ErlangAtom "tuple")])
   in let
     tup_el_2718 =
-      (make_string
+      (H.make_string
          "Arg0 := BLS12_381.g2_valid(Arg1) - Check if G2-value is a valid group member")
   in let
     head_2702 =
@@ -2287,7 +2300,7 @@ erlps__ops_defs__0 [] =
   in let tup_el_2733 = (ErlangTuple [(ErlangAtom "tuple")])
   in let
     tup_el_2736 =
-      (make_string
+      (H.make_string
          "Arg0 := BLS12_381.g2_is_zero(Arg1) - Check if G2-value is zero")
   in let
     head_2720 =
@@ -2305,7 +2318,7 @@ erlps__ops_defs__0 [] =
       (ErlangTuple [(ErlangAtom "tuple"), (ErlangAtom "tuple")])
   in let
     tup_el_2757 =
-      (make_string
+      (H.make_string
          "Arg0 := BLS12_381.g2_add(Arg1, Arg2) - Add two G2-values")
   in let
     head_2738 =
@@ -2323,7 +2336,7 @@ erlps__ops_defs__0 [] =
       (ErlangTuple [(ErlangAtom "tuple"), (ErlangAtom "tuple")])
   in let
     tup_el_2778 =
-      (make_string
+      (H.make_string
          "Arg0 := BLS12_381.g2_mul(Arg1, Arg2) - Scalar multiplication for a G2-value (Arg2), and an Fr-value")
   in let
     head_2759 =
@@ -2339,7 +2352,7 @@ erlps__ops_defs__0 [] =
   in let tup_el_2793 = (ErlangTuple [(ErlangAtom "tuple")])
   in let
     tup_el_2796 =
-      (make_string
+      (H.make_string
          "Arg0 := BLS12_381.gt_inv(Arg1) - Invert a GT-value")
   in let
     head_2780 =
@@ -2356,7 +2369,7 @@ erlps__ops_defs__0 [] =
       (ErlangTuple [(ErlangAtom "tuple"), (ErlangAtom "tuple")])
   in let
     tup_el_2817 =
-      (make_string
+      (H.make_string
          "Arg0 := BLS12_381.gt_add(Arg1, Arg2) - Add two GT-values")
   in let
     head_2798 =
@@ -2374,7 +2387,7 @@ erlps__ops_defs__0 [] =
       (ErlangTuple [(ErlangAtom "tuple"), (ErlangAtom "tuple")])
   in let
     tup_el_2838 =
-      (make_string
+      (H.make_string
          "Arg0 := BLS12_381.gt_mul(Arg1, Arg2) - Multiply two GT-values")
   in let
     head_2819 =
@@ -2392,7 +2405,7 @@ erlps__ops_defs__0 [] =
       (ErlangTuple [(ErlangAtom "tuple"), (ErlangAtom "tuple")])
   in let
     tup_el_2859 =
-      (make_string
+      (H.make_string
          "Arg0 := BLS12_381.gt_pow(Arg1, Arg2) - Scalar exponentiation for a GT-value (Arg2), and an Fr-value")
   in let
     head_2840 =
@@ -2408,7 +2421,7 @@ erlps__ops_defs__0 [] =
   in let tup_el_2874 = (ErlangTuple [(ErlangAtom "tuple")])
   in let
     tup_el_2877 =
-      (make_string
+      (H.make_string
          "Arg0 := BLS12_381.gt_is_one(Arg1) - Check if a GT value is \"one\"")
   in let
     head_2861 =
@@ -2426,7 +2439,7 @@ erlps__ops_defs__0 [] =
       (ErlangTuple [(ErlangAtom "tuple"), (ErlangAtom "tuple")])
   in let
     tup_el_2898 =
-      (make_string
+      (H.make_string
          "Arg0 := BLS12_381.pairing(Arg1, Arg2) - Find the pairing of a G1-value (Arg1) and a G2-value (Arg2)")
   in let
     head_2879 =
@@ -2444,7 +2457,7 @@ erlps__ops_defs__0 [] =
       (ErlangTuple [(ErlangAtom "tuple"), (ErlangAtom "tuple")])
   in let
     tup_el_2919 =
-      (make_string
+      (H.make_string
          "Arg0 := BLS12_381.miller_loop(Arg1, Arg2) - Do the Miller-loop step of pairing for a G1-value (Arg1) and a G2-value (Arg2)")
   in let
     head_2900 =
@@ -2461,7 +2474,7 @@ erlps__ops_defs__0 [] =
   in let tup_el_2934 = (ErlangTuple [(ErlangAtom "tuple")])
   in let
     tup_el_2937 =
-      (make_string
+      (H.make_string
          "Arg0 := BLS12_381.final_exp(Arg1) - Do the final exponentiation in pairing")
   in let
     head_2921 =
@@ -2477,7 +2490,7 @@ erlps__ops_defs__0 [] =
   in let tup_el_2952 = (ErlangTuple [(ErlangAtom "tuple")])
   in let
     tup_el_2955 =
-      (make_string
+      (H.make_string
          "Arg0 := to_montgomery(Arg1) - Convert (Big)integer to montgomery representation (32 bytes)")
   in let
     head_2939 =
@@ -2493,7 +2506,7 @@ erlps__ops_defs__0 [] =
   in let tup_el_2970 = (ErlangTuple [(ErlangAtom "tuple")])
   in let
     tup_el_2973 =
-      (make_string
+      (H.make_string
          "Arg0 := to_montgomery(Arg1) - Convert (Big)integer to montgomery representation (48 bytes)")
   in let
     head_2957 =
@@ -2509,7 +2522,7 @@ erlps__ops_defs__0 [] =
   in let tup_el_2988 = (ErlangTuple [(ErlangAtom "tuple")])
   in let
     tup_el_2991 =
-      (make_string
+      (H.make_string
          "Arg0 := from_montgomery(Arg1) - Convert montgomery representation (32 bytes) to integer")
   in let
     head_2975 =
@@ -2525,7 +2538,7 @@ erlps__ops_defs__0 [] =
   in let tup_el_3006 = (ErlangTuple [(ErlangAtom "tuple")])
   in let
     tup_el_3009 =
-      (make_string
+      (H.make_string
          "Arg0 := from_montgomery(Arg1) - Convert montgomery representation (48 bytes) to integer")
   in let
     head_2993 =
@@ -2541,7 +2554,7 @@ erlps__ops_defs__0 [] =
   in let tup_el_3024 = (ErlangTuple [(ErlangAtom "string")])
   in let
     tup_el_3027 =
-      (make_string
+      (H.make_string
          "Lookup the name of Arg0. Returns option(AENS.name)")
   in let
     head_3011 =
@@ -2556,7 +2569,7 @@ erlps__ops_defs__0 [] =
   in let tup_el_3042 = (ErlangTuple [(ErlangAtom "oracle")])
   in let
     tup_el_3045 =
-      (make_string "Arg0 := expiry block for oracle Arg1")
+      (H.make_string "Arg0 := expiry block for oracle Arg1")
   in let
     head_3029 =
       (ErlangTuple
@@ -2570,7 +2583,7 @@ erlps__ops_defs__0 [] =
   in let tup_el_3058 = (ErlangTuple [])
   in let
     tup_el_3060 =
-      (make_string
+      (H.make_string
          "If in GA authentication context return Some(Tx) otherwise None.")
   in let
     head_3047 =
@@ -2584,7 +2597,7 @@ erlps__ops_defs__0 [] =
   in let tup_el_3075 = (ErlangTuple [(ErlangAtom "string")])
   in let
     tup_el_3078 =
-      (make_string "Arg0 := string converted to list of characters")
+      (H.make_string "Arg0 := string converted to list of characters")
   in let
     head_3062 =
       (ErlangTuple
@@ -2598,7 +2611,8 @@ erlps__ops_defs__0 [] =
   in let tup_el_3093 = (ErlangTuple [(ErlangAtom "list")])
   in let
     tup_el_3096 =
-      (make_string "Arg0 := string converted from list of characters")
+      (H.make_string
+         "Arg0 := string converted from list of characters")
   in let
     head_3080 =
       (ErlangTuple
@@ -2610,7 +2624,7 @@ erlps__ops_defs__0 [] =
           (ErlangAtom "str_from_list"), tup_el_3093, (ErlangAtom "string"),
           tup_el_3096])
   in let tup_el_3111 = (ErlangTuple [(ErlangAtom "string")])
-  in let tup_el_3114 = (make_string "Arg0 := to_upper(string)")
+  in let tup_el_3114 = (H.make_string "Arg0 := to_upper(string)")
   in let
     head_3098 =
       (ErlangTuple
@@ -2622,7 +2636,7 @@ erlps__ops_defs__0 [] =
           (ErlangAtom "str_to_upper"), tup_el_3111, (ErlangAtom "string"),
           tup_el_3114])
   in let tup_el_3129 = (ErlangTuple [(ErlangAtom "string")])
-  in let tup_el_3132 = (make_string "Arg0 := to_lower(string)")
+  in let tup_el_3132 = (H.make_string "Arg0 := to_lower(string)")
   in let
     head_3116 =
       (ErlangTuple
@@ -2636,7 +2650,8 @@ erlps__ops_defs__0 [] =
   in let tup_el_3147 = (ErlangTuple [(ErlangAtom "char")])
   in let
     tup_el_3150 =
-      (make_string "Arg0 := integer representation of UTF-8 character")
+      (H.make_string
+         "Arg0 := integer representation of UTF-8 character")
   in let
     head_3134 =
       (ErlangTuple
@@ -2650,7 +2665,7 @@ erlps__ops_defs__0 [] =
   in let tup_el_3165 = (ErlangTuple [(ErlangAtom "int")])
   in let
     tup_el_3168 =
-      (make_string
+      (H.make_string
          "Arg0 := Some(UTF-8 character) from integer if valid, None if not valid.")
   in let
     head_3152 =
@@ -2671,7 +2686,7 @@ erlps__ops_defs__0 [] =
           (ErlangAtom "bool")])
   in let
     tup_el_3202 =
-      (make_string
+      (H.make_string
          "Potentially protected remote call. Arg5 is protected flag, otherwise as CALL_GR.")
   in let
     head_3170 =
@@ -2691,7 +2706,7 @@ erlps__ops_defs__0 [] =
   in let tup_el_3213 = (ErlangTuple [])
   in let
     tup_el_3215 =
-      (make_string "Mark the current contract for deactivation.")
+      (H.make_string "Mark the current contract for deactivation.")
   in let
     head_3204 =
       (ErlangTuple
@@ -2703,7 +2718,7 @@ erlps__ops_defs__0 [] =
   in let tup_el_3228 = (ErlangTuple [(ErlangAtom "string")])
   in let
     tup_el_3231 =
-      (make_string
+      (H.make_string
          "Abort execution (dont use all gas) with error message in Arg0.")
   in let
     head_3217 =
@@ -2717,7 +2732,7 @@ erlps__ops_defs__0 [] =
   in let tup_el_3244 = (ErlangTuple [(ErlangAtom "string")])
   in let
     tup_el_3247 =
-      (make_string
+      (H.make_string
          "Abort execution (use upp all gas) with error message in Arg0.")
   in let
     head_3233 =
@@ -2729,7 +2744,7 @@ erlps__ops_defs__0 [] =
           (ErlangAtom "exit"), tup_el_3244, (ErlangAtom "none"),
           tup_el_3247])
   in let tup_el_3258 = (ErlangTuple [])
-  in let tup_el_3260 = (make_string "The no op. does nothing.")
+  in let tup_el_3260 = (H.make_string "The no op. does nothing.")
   in let
     head_3249 =
       (ErlangTuple
@@ -3069,33 +3084,30 @@ erlps__generate_header_file__2 [filename_0, ops_1] =
       (ErlangTuple [(ErlangAtom "ok"), file_6]) ->
         let   
           arg_8 =
-            (flmap
+            (H.flmap
                (\ lc_11 ->
-                  case lc_11 of
-                    op_10 ->
-                      let lc_ret_12 = (erlps__gen_defines__1 [op_10])
-                      in (ErlangCons lc_ret_12 ErlangEmptyList)
-                    _ -> ErlangEmptyList)
+                  let lc_ret_12 = (erlps__gen_defines__1 [lc_11])
+                  in (ErlangCons lc_ret_12 ErlangEmptyList))
                ops_1)
         in let
           defines_14 =
             (BIF.do_remote_fun_call "Lists" "erlps__flatten__1" [arg_8])
-        in let arg_16 = (make_string "~s")
-        in let arg_19 = (make_string "Provides opcode defines.\n")
+        in let arg_16 = (H.make_string "~s")
+        in let arg_19 = (H.make_string "Provides opcode defines.\n")
         in let head_18 = (erlps__prelude__1 [arg_19])
         in let
           _ =
             (BIF.do_remote_fun_call "Erlang.Io" "erlps__format__3"
                [file_6, arg_16, (ErlangCons head_18 ErlangEmptyList)])
-        in let arg_22 = (make_string "%% FATE opcodes\n~s")
+        in let arg_22 = (H.make_string "%% FATE opcodes\n~s")
         in let
           _ =
             (BIF.do_remote_fun_call "Erlang.Io" "erlps__format__3"
                [file_6, arg_22, (ErlangCons defines_14 ErlangEmptyList)])
-        in let arg_27 = (make_string "~s")
+        in let arg_27 = (H.make_string "~s")
         in let
           head_29 =
-            (make_string
+            (H.make_string
                "-define(\'FUNCTION\'                , 16#fe).\n-define(\'EXTEND\'                  , 16#ff).\n\n")
         in let
           _ =
@@ -3114,7 +3126,7 @@ erlps__generate_opcodes_ops__4 [modulename_0, hrlfile_1,
                                 srcdir_2, ops_3]
   =
   let    lop_6 = (BIF.erlang__atom_to_list__1 [modulename_0])
-  in let rop_8 = (make_string ".erl")
+  in let rop_8 = (H.make_string ".erl")
   in let rop_5 = (BIF.erlang__op_append [lop_6, rop_8])
   in let filename_9 = (BIF.erlang__op_append [srcdir_2, rop_5])
   in let
@@ -3126,106 +3138,85 @@ erlps__generate_opcodes_ops__4 [modulename_0, hrlfile_1,
       (ErlangTuple [(ErlangAtom "ok"), file_14]) ->
         let   
           arg_16 =
-            (flmap
+            (H.flmap
                (\ lc_19 ->
-                  case lc_19 of
-                    op_18 ->
-                      let lc_ret_20 = (erlps__gen_mnemonic__1 [op_18])
-                      in (ErlangCons lc_ret_20 ErlangEmptyList)
-                    _ -> ErlangEmptyList)
+                  let lc_ret_20 = (erlps__gen_mnemonic__1 [lc_19])
+                  in (ErlangCons lc_ret_20 ErlangEmptyList))
                ops_3)
         in let
           mnemonic_22 =
             (BIF.do_remote_fun_call "Lists" "erlps__flatten__1" [arg_16])
         in let
           arg_23 =
-            (flmap
+            (H.flmap
                (\ lc_26 ->
-                  case lc_26 of
-                    op_25 ->
-                      let lc_ret_27 = (erlps__gen_m_to_op__1 [op_25])
-                      in (ErlangCons lc_ret_27 ErlangEmptyList)
-                    _ -> ErlangEmptyList)
+                  let lc_ret_27 = (erlps__gen_m_to_op__1 [lc_26])
+                  in (ErlangCons lc_ret_27 ErlangEmptyList))
                ops_3)
         in let
           toop_29 =
             (BIF.do_remote_fun_call "Lists" "erlps__flatten__1" [arg_23])
         in let
           arg_30 =
-            (flmap
+            (H.flmap
                (\ lc_33 ->
-                  case lc_33 of
-                    op_32 ->
-                      let lc_ret_34 = (erlps__gen_args__1 [op_32])
-                      in (ErlangCons lc_ret_34 ErlangEmptyList)
-                    _ -> ErlangEmptyList)
+                  let lc_ret_34 = (erlps__gen_args__1 [lc_33])
+                  in (ErlangCons lc_ret_34 ErlangEmptyList))
                ops_3)
         in let
           args_36 =
             (BIF.do_remote_fun_call "Lists" "erlps__flatten__1" [arg_30])
         in let
           arg_37 =
-            (flmap
+            (H.flmap
                (\ lc_40 ->
-                  case lc_40 of
-                    op_39 ->
-                      let lc_ret_41 = (erlps__gen_bb__1 [op_39])
-                      in (ErlangCons lc_ret_41 ErlangEmptyList)
-                    _ -> ErlangEmptyList)
+                  let lc_ret_41 = (erlps__gen_bb__1 [lc_40])
+                  in (ErlangCons lc_ret_41 ErlangEmptyList))
                ops_3)
         in let
           endbb_43 =
             (BIF.do_remote_fun_call "Lists" "erlps__flatten__1" [arg_37])
         in let
           arg_44 =
-            (flmap
+            (H.flmap
                (\ lc_47 ->
-                  case lc_47 of
-                    op_46 ->
-                      let lc_ret_48 = (erlps__gen_in_auth__1 [op_46])
-                      in (ErlangCons lc_ret_48 ErlangEmptyList)
-                    _ -> ErlangEmptyList)
+                  let lc_ret_48 = (erlps__gen_in_auth__1 [lc_47])
+                  in (ErlangCons lc_ret_48 ErlangEmptyList))
                ops_3)
         in let
           inauth_50 =
             (BIF.do_remote_fun_call "Lists" "erlps__flatten__1" [arg_44])
         in let
           arg_51 =
-            (flmap
+            (H.flmap
                (\ lc_54 ->
-                  case lc_54 of
-                    op_53 ->
-                      let lc_ret_55 = (erlps__gen_allowed_offchain__1 [op_53])
-                      in (ErlangCons lc_ret_55 ErlangEmptyList)
-                    _ -> ErlangEmptyList)
+                  let lc_ret_55 = (erlps__gen_allowed_offchain__1 [lc_54])
+                  in (ErlangCons lc_ret_55 ErlangEmptyList))
                ops_3)
         in let
           offchain_57 =
             (BIF.do_remote_fun_call "Lists" "erlps__flatten__1" [arg_51])
         in let
           arg_58 =
-            (flmap
+            (H.flmap
                (\ lc_61 ->
-                  case lc_61 of
-                    op_60 ->
-                      let lc_ret_62 = (erlps__gen_gas_cost__1 [op_60])
-                      in (ErlangCons lc_ret_62 ErlangEmptyList)
-                    _ -> ErlangEmptyList)
+                  let lc_ret_62 = (erlps__gen_gas_cost__1 [lc_61])
+                  in (ErlangCons lc_ret_62 ErlangEmptyList))
                ops_3)
         in let
           gascost_64 =
             (BIF.do_remote_fun_call "Lists" "erlps__flatten__1" [arg_58])
-        in let arg_66 = (make_string "~s")
-        in let arg_69 = (make_string "Provides opcode primitives.\n")
+        in let arg_66 = (H.make_string "~s")
+        in let arg_69 = (H.make_string "Provides opcode primitives.\n")
         in let head_68 = (erlps__prelude__1 [arg_69])
         in let
           _ =
             (BIF.do_remote_fun_call "Erlang.Io" "erlps__format__3"
                [file_14, arg_66, (ErlangCons head_68 ErlangEmptyList)])
-        in let arg_72 = (make_string "~s")
+        in let arg_72 = (H.make_string "~s")
         in let
           head_78 =
-            (make_string
+            (H.make_string
                "args/1\n        , end_bb/1\n        , in_auth/1\n        , allowed_offchain/1\n        , mnemonic/1\n        , m_to_op/1\n        , gas_cost/1\n")
         in let
           head_74 =
@@ -3235,88 +3226,90 @@ erlps__generate_opcodes_ops__4 [modulename_0, hrlfile_1,
           _ =
             (BIF.do_remote_fun_call "Erlang.Io" "erlps__format__3"
                [file_14, arg_72, (ErlangCons head_74 ErlangEmptyList)])
-        in let arg_82 = (make_string "%% FATE mnemonics\n~s")
+        in let arg_82 = (H.make_string "%% FATE mnemonics\n~s")
         in let
           _ =
             (BIF.do_remote_fun_call "Erlang.Io" "erlps__format__3"
                [file_14, arg_82, (ErlangCons mnemonic_22 ErlangEmptyList)])
         in let
           arg_87 =
-            (make_string "mnemonic(Op) -> exit({bad_opcode, Op}).\n\n")
+            (H.make_string "mnemonic(Op) -> exit({bad_opcode, Op}).\n\n")
         in let
           _ =
             (BIF.do_remote_fun_call "Erlang.Io" "erlps__format__3"
                [file_14, arg_87, ErlangEmptyList])
-        in let arg_90 = (make_string "%% FATE opcodes\n~s")
+        in let arg_90 = (H.make_string "%% FATE opcodes\n~s")
         in let
           _ =
             (BIF.do_remote_fun_call "Erlang.Io" "erlps__format__3"
                [file_14, arg_90, (ErlangCons toop_29 ErlangEmptyList)])
         in let
           arg_95 =
-            (make_string "m_to_op(M) -> exit({bad_mnemonic, M}).\n\n")
+            (H.make_string "m_to_op(M) -> exit({bad_mnemonic, M}).\n\n")
         in let
           _ =
             (BIF.do_remote_fun_call "Erlang.Io" "erlps__format__3"
                [file_14, arg_95, ErlangEmptyList])
         in let
-          arg_98 = (make_string "%% FATE numbers of args to op.\n~s")
+          arg_98 = (H.make_string "%% FATE numbers of args to op.\n~s")
         in let
           _ =
             (BIF.do_remote_fun_call "Erlang.Io" "erlps__format__3"
                [file_14, arg_98, (ErlangCons args_36 ErlangEmptyList)])
         in let
-          arg_103 = (make_string "args(Op) -> exit({bad_opcode, Op}).\n\n")
+          arg_103 =
+            (H.make_string "args(Op) -> exit({bad_opcode, Op}).\n\n")
         in let
           _ =
             (BIF.do_remote_fun_call "Erlang.Io" "erlps__format__3"
                [file_14, arg_103, ErlangEmptyList])
         in let
-          arg_106 = (make_string "%% Does FATE Op end a Basic Block?\n~s")
+          arg_106 =
+            (H.make_string "%% Does FATE Op end a Basic Block?\n~s")
         in let
           _ =
             (BIF.do_remote_fun_call "Erlang.Io" "erlps__format__3"
                [file_14, arg_106, (ErlangCons endbb_43 ErlangEmptyList)])
-        in let arg_111 = (make_string "end_bb(_) -> false.\n\n")
+        in let arg_111 = (H.make_string "end_bb(_) -> false.\n\n")
         in let
           _ =
             (BIF.do_remote_fun_call "Erlang.Io" "erlps__format__3"
                [file_14, arg_111, ErlangEmptyList])
         in let
           arg_114 =
-            (make_string
+            (H.make_string
                "%% Is FATE Op allowed in GA Authentication context?\n~s")
         in let
           _ =
             (BIF.do_remote_fun_call "Erlang.Io" "erlps__format__3"
                [file_14, arg_114, (ErlangCons inauth_50 ErlangEmptyList)])
-        in let arg_119 = (make_string "in_auth(_) -> false.\n\n")
+        in let arg_119 = (H.make_string "in_auth(_) -> false.\n\n")
         in let
           _ =
             (BIF.do_remote_fun_call "Erlang.Io" "erlps__format__3"
                [file_14, arg_119, ErlangEmptyList])
         in let
           arg_122 =
-            (make_string
+            (H.make_string
                "%% Is FATE Op allowed in a state channel offchain context?\n~s")
         in let
           _ =
             (BIF.do_remote_fun_call "Erlang.Io" "erlps__format__3"
                [file_14, arg_122, (ErlangCons offchain_57 ErlangEmptyList)])
         in let
-          arg_127 = (make_string "allowed_offchain(_) -> false.\n\n")
+          arg_127 = (H.make_string "allowed_offchain(_) -> false.\n\n")
         in let
           _ =
             (BIF.do_remote_fun_call "Erlang.Io" "erlps__format__3"
                [file_14, arg_127, ErlangEmptyList])
-        in let arg_130 = (make_string "%% Base cost of operation\n~s")
+        in let arg_130 = (H.make_string "%% Base cost of operation\n~s")
         in let
           _ =
             (BIF.do_remote_fun_call "Erlang.Io" "erlps__format__3"
                [file_14, arg_130, (ErlangCons gascost_64 ErlangEmptyList)])
         in let
           arg_135 =
-            (make_string "gas_cost(Op) -> exit({bad_opcode, Op}).\n\n")
+            (H.make_string "gas_cost(Op) -> exit({bad_opcode, Op}).\n\n")
         in let
           _ =
             (BIF.do_remote_fun_call "Erlang.Io" "erlps__format__3"
@@ -3334,7 +3327,7 @@ erlps__generate_opcodes_ops__4 args =
 erlps__generate_code_ops__3 :: ErlangFun
 erlps__generate_code_ops__3 [modulename_0, srcdir_1, ops_2] =
   let    lop_5 = (BIF.erlang__atom_to_list__1 [modulename_0])
-  in let rop_7 = (make_string ".erl")
+  in let rop_7 = (H.make_string ".erl")
   in let rop_4 = (BIF.erlang__op_append [lop_5, rop_7])
   in let filename_8 = (BIF.erlang__op_append [srcdir_1, rop_4])
   in let
@@ -3346,26 +3339,20 @@ erlps__generate_code_ops__3 [modulename_0, srcdir_1, ops_2] =
       (ErlangTuple [(ErlangAtom "ok"), file_13]) ->
         let   
           arg_15 =
-            (flmap
+            (H.flmap
                (\ lc_18 ->
-                  case lc_18 of
-                    op_17 ->
-                      let lc_ret_19 = (erlps__gen_type__1 [op_17])
-                      in (ErlangCons lc_ret_19 ErlangEmptyList)
-                    _ -> ErlangEmptyList)
+                  let lc_ret_19 = (erlps__gen_type__1 [lc_18])
+                  in (ErlangCons lc_ret_19 ErlangEmptyList))
                ops_2)
         in let
           types_21 =
             (BIF.do_remote_fun_call "Lists" "erlps__flatten__1" [arg_15])
         in let
           arg_22 =
-            (flmap
+            (H.flmap
                (\ lc_25 ->
-                  case lc_25 of
-                    op_24 ->
-                      let lc_ret_26 = (erlps__gen_type_exports__1 [op_24])
-                      in (ErlangCons lc_ret_26 ErlangEmptyList)
-                    _ -> ErlangEmptyList)
+                  let lc_ret_26 = (erlps__gen_type_exports__1 [lc_25])
+                  in (ErlangCons lc_ret_26 ErlangEmptyList))
                ops_2)
         in let
           typeexports_28 =
@@ -3379,57 +3366,47 @@ erlps__generate_code_ops__3 [modulename_0, srcdir_1, ops_2] =
                                                                  map_29)) ->
               let   
                 arg_33 =
-                  (flmap
+                  (H.flmap
                      (\ lc_36 ->
-                        case lc_36 of
-                          op_35 ->
-                            let
-                              lc_ret_37 = (erlps__gen_fate_code_type__1 [op_35])
-                            in (ErlangCons lc_ret_37 ErlangEmptyList)
-                          _ -> ErlangEmptyList)
+                        let lc_ret_37 = (erlps__gen_fate_code_type__1 [lc_36])
+                        in (ErlangCons lc_ret_37 ErlangEmptyList))
                      restofops_31)
               in let
                 fatetypes_39 =
                   (BIF.do_remote_fun_call "Lists" "erlps__flatten__1" [arg_33])
               in let
                 arg_40 =
-                  (flmap
+                  (H.flmap
                      (\ lc_43 ->
-                        case lc_43 of
-                          op_42 ->
-                            let
-                              lc_ret_44 =
-                                (erlps__gen_constructor_exports__1 [op_42])
-                            in (ErlangCons lc_ret_44 ErlangEmptyList)
-                          _ -> ErlangEmptyList)
+                        let
+                          lc_ret_44 =
+                            (erlps__gen_constructor_exports__1 [lc_43])
+                        in (ErlangCons lc_ret_44 ErlangEmptyList))
                      ops_2)
               in let
                 constructorexports_46 =
                   (BIF.do_remote_fun_call "Lists" "erlps__flatten__1" [arg_40])
               in let
                 arg_47 =
-                  (flmap
+                  (H.flmap
                      (\ lc_50 ->
-                        case lc_50 of
-                          op_49 ->
-                            let lc_ret_51 = (erlps__gen_constructors__1 [op_49])
-                            in (ErlangCons lc_ret_51 ErlangEmptyList)
-                          _ -> ErlangEmptyList)
+                        let lc_ret_51 = (erlps__gen_constructors__1 [lc_50])
+                        in (ErlangCons lc_ret_51 ErlangEmptyList))
                      ops_2)
               in let
                 constructors_53 =
                   (BIF.do_remote_fun_call "Lists" "erlps__flatten__1" [arg_47])
-              in let arg_55 = (make_string "~s")
+              in let arg_55 = (H.make_string "~s")
               in let
                 arg_58 =
-                  (make_string
+                  (H.make_string
                      " Provide constructor functuions for Fate instructions.\n%%% Provide types and documentation for Fate instructions.\n")
               in let head_57 = (erlps__prelude__1 [arg_58])
               in let
                 _ =
                   (BIF.do_remote_fun_call "Erlang.Io" "erlps__format__3"
                      [file_13, arg_55, (ErlangCons head_57 ErlangEmptyList)])
-              in let arg_61 = (make_string "-module(~w).\n\n")
+              in let arg_61 = (H.make_string "-module(~w).\n\n")
               in let
                 _ =
                   (BIF.do_remote_fun_call "Erlang.Io" "erlps__format__3"
@@ -3437,20 +3414,20 @@ erlps__generate_code_ops__3 [modulename_0, srcdir_1, ops_2] =
                       (ErlangCons modulename_0 ErlangEmptyList)])
               in let
                 arg_66 =
-                  (make_string
+                  (H.make_string
                      "-include_lib(\"aebytecode/include/aeb_fate_data.hrl\").\n\n-define(i(__X__), {immediate, __X__ }).\n\n-type fate_arg_immediate(T) :: {immediate, T}.\n-type fate_arg_var()        :: {var, integer()}.\n-type fate_arg_arg()        :: {arg, integer()}.\n-type fate_arg_stack()      :: {stack, 0}.\n-type fate_arg() :: fate_arg_immediate()\n                  | fate_arg_var()\n                  | fate_arg_arg()\n                  | fate_arg_stack().\n\n-type fate_arg_immediate() :: {immediate, aeb_fate_data:fate_type()}.\n")
               in let
                 _ =
                   (BIF.do_remote_fun_call "Erlang.Io" "erlps__format__3"
                      [file_13, arg_66, ErlangEmptyList])
-              in let arg_69 = (make_string "~s")
+              in let arg_69 = (H.make_string "~s")
               in let
                 _ =
                   (BIF.do_remote_fun_call "Erlang.Io" "erlps__format__3"
                      [file_13, arg_69, (ErlangCons types_21 ErlangEmptyList)])
               in let
                 arg_74 =
-                  (make_string
+                  (H.make_string
                      "-type fate_code() :: ~s\n~s                   .\n\n")
               in let
                 _ =
@@ -3460,26 +3437,27 @@ erlps__generate_code_ops__3 [modulename_0, srcdir_1, ops_2] =
                          (ErlangCons fatetypes_39 ErlangEmptyList))])
               in let
                 arg_81 =
-                  (make_string
+                  (H.make_string
                      "-export_type([ fate_code/0\n~s            ]).\n\n")
               in let
                 _ =
                   (BIF.do_remote_fun_call "Erlang.Io" "erlps__format__3"
                      [file_13, arg_81,
                       (ErlangCons typeexports_28 ErlangEmptyList)])
-              in let arg_86 = (make_string "-export([ foo/0\n~s       ]).\n\n")
+              in let
+                arg_86 = (H.make_string "-export([ foo/0\n~s       ]).\n\n")
               in let
                 _ =
                   (BIF.do_remote_fun_call "Erlang.Io" "erlps__format__3"
                      [file_13, arg_86,
                       (ErlangCons constructorexports_46 ErlangEmptyList)])
-              in let arg_91 = (make_string "~s\n")
+              in let arg_91 = (H.make_string "~s\n")
               in let
                 _ =
                   (BIF.do_remote_fun_call "Erlang.Io" "erlps__format__3"
                      [file_13, arg_91,
                       (ErlangCons constructors_53 ErlangEmptyList)])
-              in let arg_96 = (make_string "foo() -> \"A temp hack.\".\n")
+              in let arg_96 = (H.make_string "foo() -> \"A temp hack.\".\n")
               in let
                 _ =
                   (BIF.do_remote_fun_call "Erlang.Io" "erlps__format__3"
@@ -3498,7 +3476,7 @@ erlps__gen_type__1 [(ErlangMap map_0)]
   | (DM.Just type_2) <- ((Map.lookup (ErlangAtom "type") map_0))
   , (DM.Just typename_1) <-
       ((Map.lookup (ErlangAtom "type_name") map_0)) =
-  let    arg_4 = (make_string "-type ~-29s :: ~s.\n")
+  let    arg_4 = (H.make_string "-type ~-29s :: ~s.\n")
   in let
     arg_3 =
       (BIF.do_remote_fun_call "Io.Lib" "erlps__format__2"
@@ -3514,7 +3492,7 @@ erlps__gen_fate_code_type__1 :: ErlangFun
 erlps__gen_fate_code_type__1 [(ErlangMap map_0)]
   | (DM.Just typename_1) <-
       ((Map.lookup (ErlangAtom "type_name") map_0)) =
-  let    arg_3 = (make_string "                   | ~s\n")
+  let    arg_3 = (H.make_string "                   | ~s\n")
   in let
     arg_2 =
       (BIF.do_remote_fun_call "Io.Lib" "erlps__format__2"
@@ -3529,8 +3507,8 @@ erlps__gen_type_exports__1 :: ErlangFun
 erlps__gen_type_exports__1 [(ErlangMap map_0)]
   | (DM.Just typename_1) <-
       ((Map.lookup (ErlangAtom "type_name") map_0)) =
-  let    arg_3 = (make_string "             , ~s/0\n")
-  in let rop_7 = (make_string "()")
+  let    arg_3 = (H.make_string "             , ~s/0\n")
+  in let rop_7 = (H.make_string "()")
   in let head_5 = (BIF.erlang__op_unAppend [typename_1, rop_7])
   in let
     arg_2 =
@@ -3546,7 +3524,7 @@ erlps__gen_constructor_exports__1 :: ErlangFun
 erlps__gen_constructor_exports__1 [(ErlangMap map_0)]
   | (DM.Just function_1) <-
       ((Map.lookup (ErlangAtom "constructor_type") map_0)) =
-  let    arg_3 = (make_string "        , ~s\n")
+  let    arg_3 = (H.make_string "        , ~s\n")
   in let
     arg_2 =
       (BIF.do_remote_fun_call "Io.Lib" "erlps__format__2"
@@ -3568,7 +3546,7 @@ erlps__gen_constructors__1 [(ErlangMap map_0)]
   , (DM.Just function_1) <-
       ((Map.lookup (ErlangAtom "constructor") map_0)) =
   let   
-    arg_5 = (make_string "-spec ~s() -> ~s.\n~s() ->\n    ~w.\n\n")
+    arg_5 = (H.make_string "-spec ~s() -> ~s.\n~s() ->\n    ~w.\n\n")
   in let
     arg_4 =
       (BIF.do_remote_fun_call "Io.Lib" "erlps__format__2"
@@ -3596,7 +3574,8 @@ erlps__gen_constructors__1 [(ErlangMap map_0)]
       (erlps__gen_arg_uses__2 [(ErlangInt (DBI.fromInt 0)), argspec_2])
   in let
     arg_14 =
-      (make_string "-spec ~s(~s) -> ~s.\n~s(~s) ->\n    {~w, ~s}.\n\n")
+      (H.make_string
+         "-spec ~s(~s) -> ~s.\n~s(~s) ->\n    {~w, ~s}.\n\n")
   in let
     arg_13 =
       (BIF.do_remote_fun_call "Io.Lib" "erlps__format__2"
@@ -3619,42 +3598,42 @@ erlps__gen_arg_type_specs__1 [(ErlangEmptyList)] =
   ErlangEmptyList
 erlps__gen_arg_type_specs__1 [(ErlangCons (ErlangAtom "a") (ErlangEmptyList))]
   =
-  (make_string "fate_arg()")
+  (H.make_string "fate_arg()")
 erlps__gen_arg_type_specs__1 [(ErlangCons (ErlangAtom "is") (ErlangEmptyList))]
   =
-  (make_string "aeb_fate_data:fate_string()")
+  (H.make_string "aeb_fate_data:fate_string()")
 erlps__gen_arg_type_specs__1 [(ErlangCons (ErlangAtom "ii") (ErlangEmptyList))]
   =
-  (make_string "aeb_fate_data:fate_integer()")
+  (H.make_string "aeb_fate_data:fate_integer()")
 erlps__gen_arg_type_specs__1 [(ErlangCons (ErlangAtom "li") (ErlangEmptyList))]
   =
-  (make_string "[aeb_fate_data:fate_integer()]")
+  (H.make_string "[aeb_fate_data:fate_integer()]")
 erlps__gen_arg_type_specs__1 [(ErlangCons (ErlangAtom "t") (ErlangEmptyList))]
   =
-  (make_string "aeb_fate_data:fate_type_type()")
+  (H.make_string "aeb_fate_data:fate_type_type()")
 erlps__gen_arg_type_specs__1 [(ErlangCons (ErlangAtom "a") args_0)]
   =
-  let    lop_1 = (make_string "fate_arg(), ")
+  let    lop_1 = (H.make_string "fate_arg(), ")
   in let rop_2 = (erlps__gen_arg_type_specs__1 [args_0])
   in (BIF.erlang__op_append [lop_1, rop_2])
 erlps__gen_arg_type_specs__1 [(ErlangCons (ErlangAtom "is") args_0)]
   =
-  let    lop_1 = (make_string "aeb_fate_data:fate_string(), ")
+  let    lop_1 = (H.make_string "aeb_fate_data:fate_string(), ")
   in let rop_2 = (erlps__gen_arg_type_specs__1 [args_0])
   in (BIF.erlang__op_append [lop_1, rop_2])
 erlps__gen_arg_type_specs__1 [(ErlangCons (ErlangAtom "ii") args_0)]
   =
-  let    lop_1 = (make_string "aeb_fate_data:fate_integer(), ")
+  let    lop_1 = (H.make_string "aeb_fate_data:fate_integer(), ")
   in let rop_2 = (erlps__gen_arg_type_specs__1 [args_0])
   in (BIF.erlang__op_append [lop_1, rop_2])
 erlps__gen_arg_type_specs__1 [(ErlangCons (ErlangAtom "li") args_0)]
   =
-  let    lop_1 = (make_string "[aeb_fate_data:fate_integer()], ")
+  let    lop_1 = (H.make_string "[aeb_fate_data:fate_integer()], ")
   in let rop_2 = (erlps__gen_arg_type_specs__1 [args_0])
   in (BIF.erlang__op_append [lop_1, rop_2])
 erlps__gen_arg_type_specs__1 [(ErlangCons (ErlangAtom "t") args_0)]
   =
-  let    lop_1 = (make_string "aeb_fate_data:fate_type_type(), ")
+  let    lop_1 = (H.make_string "aeb_fate_data:fate_type_type(), ")
   in let rop_2 = (erlps__gen_arg_type_specs__1 [args_0])
   in (BIF.erlang__op_append [lop_1, rop_2])
 erlps__gen_arg_type_specs__1 [arg_4] = (EXC.function_clause unit)
@@ -3665,12 +3644,12 @@ erlps__gen_arg_type_specs__1 args =
 erlps__gen_arg_names__2 :: ErlangFun
 erlps__gen_arg_names__2 [_, (ErlangEmptyList)] = ErlangEmptyList
 erlps__gen_arg_names__2 [n_0, (ErlangCons _ (ErlangEmptyList))] =
-  let arg_1 = (make_string "Arg~w")
+  let arg_1 = (H.make_string "Arg~w")
   in
     (BIF.do_remote_fun_call "Io.Lib" "erlps__format__2"
        [arg_1, (ErlangCons n_0 ErlangEmptyList)])
 erlps__gen_arg_names__2 [n_0, (ErlangCons _ args_1)] =
-  let    arg_3 = (make_string "Arg~w, ")
+  let    arg_3 = (H.make_string "Arg~w, ")
   in let
     lop_2 =
       (BIF.do_remote_fun_call "Io.Lib" "erlps__format__2"
@@ -3690,42 +3669,42 @@ erlps__gen_arg_uses__2 [_, (ErlangEmptyList)] = ErlangEmptyList
 erlps__gen_arg_uses__2 [n_0,
                         (ErlangCons (ErlangAtom "a") (ErlangEmptyList))]
   =
-  let arg_1 = (make_string "Arg~w")
+  let arg_1 = (H.make_string "Arg~w")
   in
     (BIF.do_remote_fun_call "Io.Lib" "erlps__format__2"
        [arg_1, (ErlangCons n_0 ErlangEmptyList)])
 erlps__gen_arg_uses__2 [n_0,
                         (ErlangCons (ErlangAtom "is") (ErlangEmptyList))]
   =
-  let arg_1 = (make_string "{immediate, Arg~w}")
+  let arg_1 = (H.make_string "{immediate, Arg~w}")
   in
     (BIF.do_remote_fun_call "Io.Lib" "erlps__format__2"
        [arg_1, (ErlangCons n_0 ErlangEmptyList)])
 erlps__gen_arg_uses__2 [n_0,
                         (ErlangCons (ErlangAtom "ii") (ErlangEmptyList))]
   =
-  let arg_1 = (make_string "{immediate, Arg~w}")
+  let arg_1 = (H.make_string "{immediate, Arg~w}")
   in
     (BIF.do_remote_fun_call "Io.Lib" "erlps__format__2"
        [arg_1, (ErlangCons n_0 ErlangEmptyList)])
 erlps__gen_arg_uses__2 [n_0,
                         (ErlangCons (ErlangAtom "li") (ErlangEmptyList))]
   =
-  let arg_1 = (make_string "{immediate, Arg~w}")
+  let arg_1 = (H.make_string "{immediate, Arg~w}")
   in
     (BIF.do_remote_fun_call "Io.Lib" "erlps__format__2"
        [arg_1, (ErlangCons n_0 ErlangEmptyList)])
 erlps__gen_arg_uses__2 [n_0,
                         (ErlangCons (ErlangAtom "t") (ErlangEmptyList))]
   =
-  let arg_1 = (make_string "Arg~w")
+  let arg_1 = (H.make_string "Arg~w")
   in
     (BIF.do_remote_fun_call "Io.Lib" "erlps__format__2"
        [arg_1, (ErlangCons n_0 ErlangEmptyList)])
 erlps__gen_arg_uses__2 [n_0,
                         (ErlangCons (ErlangAtom "a") args_1)]
   =
-  let    arg_3 = (make_string "Arg~w, ")
+  let    arg_3 = (H.make_string "Arg~w, ")
   in let
     lop_2 =
       (BIF.do_remote_fun_call "Io.Lib" "erlps__format__2"
@@ -3737,7 +3716,7 @@ erlps__gen_arg_uses__2 [n_0,
 erlps__gen_arg_uses__2 [n_0,
                         (ErlangCons (ErlangAtom "is") args_1)]
   =
-  let    arg_3 = (make_string "{immediate, Arg~w}, ")
+  let    arg_3 = (H.make_string "{immediate, Arg~w}, ")
   in let
     lop_2 =
       (BIF.do_remote_fun_call "Io.Lib" "erlps__format__2"
@@ -3749,7 +3728,7 @@ erlps__gen_arg_uses__2 [n_0,
 erlps__gen_arg_uses__2 [n_0,
                         (ErlangCons (ErlangAtom "ii") args_1)]
   =
-  let    arg_3 = (make_string "{immediate, Arg~w}, ")
+  let    arg_3 = (H.make_string "{immediate, Arg~w}, ")
   in let
     lop_2 =
       (BIF.do_remote_fun_call "Io.Lib" "erlps__format__2"
@@ -3761,7 +3740,7 @@ erlps__gen_arg_uses__2 [n_0,
 erlps__gen_arg_uses__2 [n_0,
                         (ErlangCons (ErlangAtom "li") args_1)]
   =
-  let    arg_3 = (make_string "[{immediate, I} || I <- Arg~w], ")
+  let    arg_3 = (H.make_string "[{immediate, I} || I <- Arg~w], ")
   in let
     lop_2 =
       (BIF.do_remote_fun_call "Io.Lib" "erlps__format__2"
@@ -3773,7 +3752,7 @@ erlps__gen_arg_uses__2 [n_0,
 erlps__gen_arg_uses__2 [n_0,
                         (ErlangCons (ErlangAtom "t") args_1)]
   =
-  let    arg_3 = (make_string "Arg~w, ")
+  let    arg_3 = (H.make_string "Arg~w, ")
   in let
     lop_2 =
       (BIF.do_remote_fun_call "Io.Lib" "erlps__format__2"
@@ -3792,11 +3771,11 @@ erlps__ops_exports__3 :: ErlangFun
 erlps__ops_exports__3 [module_0, hrlfile_1, exports_2] =
   let   
     lop_5 =
-      (make_string
+      (H.make_string
          "-module(~w).\n\n-export([ ~s         ]).\n\n-include_lib(\"aebytecode/")
   in let
     rop_8 =
-      (make_string
+      (H.make_string
          "\").\n\n%%====================================================================\n%% API\n%%====================================================================\n")
   in let rop_6 = (BIF.erlang__op_append [hrlfile_1, rop_8])
   in let arg_4 = (BIF.erlang__op_append [lop_5, rop_6])
@@ -3817,7 +3796,7 @@ erlps__gen_mnemonic__1 [(ErlangMap map_0)]
   | (DM.Just macro_2) <- ((Map.lookup (ErlangAtom "macro") map_0))
   , (DM.Just name_1) <-
       ((Map.lookup (ErlangAtom "opname") map_0)) =
-  let    arg_4 = (make_string "mnemonic(~24s) -> ~24w ;\n")
+  let    arg_4 = (H.make_string "mnemonic(~24s) -> ~24w ;\n")
   in let
     arg_3 =
       (BIF.do_remote_fun_call "Io.Lib" "erlps__format__2"
@@ -3834,7 +3813,7 @@ erlps__gen_m_to_op__1 [(ErlangMap map_0)]
   | (DM.Just macro_2) <- ((Map.lookup (ErlangAtom "macro") map_0))
   , (DM.Just name_1) <-
       ((Map.lookup (ErlangAtom "opname") map_0)) =
-  let    arg_4 = (make_string "m_to_op(~24w) -> ~24s ;\n")
+  let    arg_4 = (H.make_string "m_to_op(~24w) -> ~24s ;\n")
   in let
     arg_3 =
       (BIF.do_remote_fun_call "Io.Lib" "erlps__format__2"
@@ -3851,7 +3830,7 @@ erlps__gen_args__1 [(ErlangMap map_0)]
   | (DM.Just arity_2) <- ((Map.lookup (ErlangAtom "arity") map_0))
   , (DM.Just macro_1) <-
       ((Map.lookup (ErlangAtom "macro") map_0)) =
-  let    arg_4 = (make_string "args(~24s) -> ~2w ;\n")
+  let    arg_4 = (H.make_string "args(~24s) -> ~2w ;\n")
   in let
     arg_3 =
       (BIF.do_remote_fun_call "Io.Lib" "erlps__format__2"
@@ -3868,7 +3847,7 @@ erlps__gen_bb__1 [(ErlangMap map_0)]
   | (DM.Just endbb_2) <- ((Map.lookup (ErlangAtom "end_bb") map_0))
   , (DM.Just macro_1) <-
       ((Map.lookup (ErlangAtom "macro") map_0)) =
-  let    arg_4 = (make_string "end_bb(~24s) -> ~w ;\n")
+  let    arg_4 = (H.make_string "end_bb(~24s) -> ~w ;\n")
   in let
     arg_3 =
       (BIF.do_remote_fun_call "Io.Lib" "erlps__format__2"
@@ -3886,7 +3865,7 @@ erlps__gen_in_auth__1 [(ErlangMap map_0)]
       ((Map.lookup (ErlangAtom "in_auth") map_0))
   , (DM.Just macro_1) <-
       ((Map.lookup (ErlangAtom "macro") map_0)) =
-  let    arg_4 = (make_string "in_auth(~24s) -> ~w ;\n")
+  let    arg_4 = (H.make_string "in_auth(~24s) -> ~w ;\n")
   in let
     arg_3 =
       (BIF.do_remote_fun_call "Io.Lib" "erlps__format__2"
@@ -3904,7 +3883,7 @@ erlps__gen_allowed_offchain__1 [(ErlangMap map_0)]
       ((Map.lookup (ErlangAtom "offchain") map_0))
   , (DM.Just macro_1) <-
       ((Map.lookup (ErlangAtom "macro") map_0)) =
-  let    arg_4 = (make_string "allowed_offchain(~24s) -> ~w ;\n")
+  let    arg_4 = (H.make_string "allowed_offchain(~24s) -> ~w ;\n")
   in let
     arg_3 =
       (BIF.do_remote_fun_call "Io.Lib" "erlps__format__2"
@@ -3922,7 +3901,7 @@ erlps__gen_gas_cost__1 [(ErlangMap map_0)]
   | (DM.Just gas_2) <- ((Map.lookup (ErlangAtom "gas") map_0))
   , (DM.Just macro_1) <-
       ((Map.lookup (ErlangAtom "macro") map_0)) =
-  let    arg_4 = (make_string "gas_cost(~24s) -> ~w ;\n")
+  let    arg_4 = (H.make_string "gas_cost(~24s) -> ~w ;\n")
   in let
     arg_3 =
       (BIF.do_remote_fun_call "Io.Lib" "erlps__format__2"
@@ -3937,11 +3916,11 @@ erlps__prelude__1 :: ErlangFun
 erlps__prelude__1 [doc_0] =
   let   
     lop_1 =
-      (make_string
+      (H.make_string
          "%%%-------------------------------------------------------------------\n%%% @copyright (C) 2019, Aeternity Anstalt\n%%%\n%%%   === ===  N O T E :   This file is generated do not edit. === ===\n%%%\n%%% Source is in aeb_fate_generate_ops.erl\n%%% @doc\n%%%     ")
   in let
     rop_4 =
-      (make_string
+      (H.make_string
          "%%% @end\n%%%-------------------------------------------------------------------\n\n")
   in let rop_2 = (BIF.erlang__op_append [doc_0, rop_4])
   in (BIF.erlang__op_append [lop_1, rop_2])
@@ -3956,7 +3935,7 @@ erlps__gen_defines__1 [(ErlangMap map_0)]
       ((Map.lookup (ErlangAtom "opcode") map_0))
   , (DM.Just name_1) <-
       ((Map.lookup (ErlangAtom "opname") map_0)) =
-  let    arg_4 = (make_string "-define(~-29w, 16#~2.16.0b).\n")
+  let    arg_4 = (H.make_string "-define(~-29w, 16#~2.16.0b).\n")
   in let
     arg_3 =
       (BIF.do_remote_fun_call "Io.Lib" "erlps__format__2"
@@ -3981,31 +3960,30 @@ erlps__gen__1 [(ErlangCons (ErlangTuple [opname_0, opcode_1,
   in let
     lowername_17 =
       (BIF.do_remote_fun_call "String" "erlps__to_lower__1" [name_15])
-  in let lop_18 = (make_string "fate_")
-  in let rop_21 = (make_string "()")
+  in let lop_18 = (H.make_string "fate_")
+  in let rop_21 = (H.make_string "()")
   in let rop_19 = (BIF.erlang__op_append [lowername_17, rop_21])
   in let typename_22 = (BIF.erlang__op_append [lop_18, rop_19])
-  in let lop_23 = (make_string "?")
+  in let lop_23 = (H.make_string "?")
   in let macro_25 = (BIF.erlang__op_append [lop_23, name_15])
   in let
     type_39 =
       case fateformat_6 of
         (ErlangEmptyList) ->
-          let arg_27 = (make_string "~w")
+          let arg_27 = (H.make_string "~w")
           in
             (BIF.do_remote_fun_call "Io.Lib" "erlps__format__2"
                [arg_27, (ErlangCons opname_0 ErlangEmptyList)])
         args_31 ->
-          let    arg_32 = (make_string "{~w, ~s}")
+          let    arg_32 = (H.make_string "{~w, ~s}")
           in let head_36 = (erlps__expand_types__1 [args_31])
           in
             (BIF.do_remote_fun_call "Io.Lib" "erlps__format__2"
                [arg_32,
                 (ErlangCons opname_0 (ErlangCons head_36 ErlangEmptyList))])
-        something_else -> (EXC.case_clause something_else)
   in let lop_40 = (BIF.erlang__atom_to_list__1 [constructor_7])
-  in let lop_43 = (make_string "/")
-  in let arg_45 = (make_string "~w")
+  in let lop_43 = (H.make_string "/")
+  in let arg_45 = (H.make_string "~w")
   in let
     rop_44 =
       (BIF.do_remote_fun_call "Io.Lib" "erlps__format__2"
@@ -4041,12 +4019,12 @@ erlps__gen__1 args =
      (ErlangFun 1 (\ _ -> (ErlangAtom "purs_tco_sucks"))) args)
 
 erlps__expand_types__1 :: ErlangFun
-erlps__expand_types__1 [(ErlangEmptyList)] = (make_string "")
+erlps__expand_types__1 [(ErlangEmptyList)] = (H.make_string "")
 erlps__expand_types__1 [(ErlangCons t_0 (ErlangEmptyList))] =
   (erlps__expand_type__1 [t_0])
 erlps__expand_types__1 [(ErlangCons t_0 ts_1)] =
   let    lop_2 = (erlps__expand_type__1 [t_0])
-  in let lop_5 = (make_string ", ")
+  in let lop_5 = (H.make_string ", ")
   in let rop_6 = (erlps__expand_types__1 [ts_1])
   in let rop_4 = (BIF.erlang__op_append [lop_5, rop_6])
   in (BIF.erlang__op_append [lop_2, rop_4])
@@ -4057,16 +4035,17 @@ erlps__expand_types__1 args =
 
 erlps__expand_type__1 :: ErlangFun
 erlps__expand_type__1 [(ErlangAtom "a")] =
-  (make_string "fate_arg()")
+  (H.make_string "fate_arg()")
 erlps__expand_type__1 [(ErlangAtom "is")] =
-  (make_string "fate_arg_immediate(aeb_fate_data:fate_string())")
+  (H.make_string "fate_arg_immediate(aeb_fate_data:fate_string())")
 erlps__expand_type__1 [(ErlangAtom "ii")] =
-  (make_string "fate_arg_immediate(aeb_fate_data:fate_integer())")
+  (H.make_string
+     "fate_arg_immediate(aeb_fate_data:fate_integer())")
 erlps__expand_type__1 [(ErlangAtom "li")] =
-  (make_string
+  (H.make_string
      "fate_arg_immediate([aeb_fate_data:fate_integer()])")
 erlps__expand_type__1 [(ErlangAtom "t")] =
-  (make_string "aeb_fate_data:fate_type_type()")
+  (H.make_string "aeb_fate_data:fate_type_type()")
 erlps__expand_type__1 [arg_0] = (EXC.function_clause unit)
 erlps__expand_type__1 args =
   (EXC.badarity
@@ -4088,13 +4067,10 @@ erlps__generate_scanner__4 [templatefile_0, outfile_1, path_2,
       (ErlangTuple [(ErlangAtom "ok"), template_7]) ->
         let   
           arg_9 =
-            (flmap
+            (H.flmap
                (\ lc_12 ->
-                  case lc_12 of
-                    op_11 ->
-                      let lc_ret_13 = (erlps__gen_token__1 [op_11])
-                      in (ErlangCons lc_ret_13 ErlangEmptyList)
-                    _ -> ErlangEmptyList)
+                  let lc_ret_13 = (erlps__gen_token__1 [lc_12])
+                  in (ErlangCons lc_ret_13 ErlangEmptyList))
                ops_3)
         in let
           tokens_15 =
@@ -4123,7 +4099,7 @@ erlps__gen_token__1 [(ErlangMap map_0)]
   let    name_3 = (BIF.erlang__atom_to_list__1 [opname_1])
   in let
     arg_4 =
-      (make_string "~-28s: {token, {mnemonic, TokenLine, ~w}}.\n")
+      (H.make_string "~-28s: {token, {mnemonic, TokenLine, ~w}}.\n")
   in
     (BIF.do_remote_fun_call "Io.Lib" "erlps__format__2"
        [arg_4,
@@ -4359,7 +4335,7 @@ erlps__insert_tokens_in_template__2 [(ErlangBinary bin_c_0),
   , (BIN.empty bin_77) =
   let   
     head_80 =
-      (make_string
+      (H.make_string
          "%%%\n%%%   === ===  N O T E :   This file is generated do not edit. === ===\n%%%\n%%% Source is in aeb_fate_generate_ops.erl\n%%%          and aeb_fate_asm_scan.template")
   in let
     tail_81 =
@@ -4389,7 +4365,7 @@ erlps__gen_asm_pp__3 [module_0, path_1, ops_2] =
     lop_3 =
       (BIF.do_remote_fun_call "Filename" "erlps__join__2"
          [path_1, arg_5])
-  in let rop_7 = (make_string ".erl")
+  in let rop_7 = (H.make_string ".erl")
   in let filename_8 = (BIF.erlang__op_append [lop_3, rop_7])
   in let
     match_expr_14 =
@@ -4400,38 +4376,34 @@ erlps__gen_asm_pp__3 [module_0, path_1, ops_2] =
       (ErlangTuple [(ErlangAtom "ok"), file_13]) ->
         let   
           arg_15 =
-            (flmap
+            (H.flmap
                (\ lc_18 ->
-                  case lc_18 of
-                    op_17 ->
-                      let    lop_20 = (erlps__gen_format__1 [op_17])
-                      in let rop_22 = (make_string "\n")
-                      in let
-                        lc_ret_19 = (BIF.erlang__op_append [lop_20, rop_22])
-                      in (ErlangCons lc_ret_19 ErlangEmptyList)
-                    _ -> ErlangEmptyList)
+                  let    lop_20 = (erlps__gen_format__1 [lc_18])
+                  in let rop_22 = (H.make_string "\n")
+                  in let lc_ret_19 = (BIF.erlang__op_append [lop_20, rop_22])
+                  in (ErlangCons lc_ret_19 ErlangEmptyList))
                ops_2)
         in let
           formats_23 =
             (BIF.do_remote_fun_call "Lists" "erlps__flatten__1" [arg_15])
-        in let arg_25 = (make_string "~s")
+        in let arg_25 = (H.make_string "~s")
         in let
           arg_28 =
-            (make_string
+            (H.make_string
                " Provide pretty printing functuions for Fate instructions.\n")
         in let head_27 = (erlps__prelude__1 [arg_28])
         in let
           _ =
             (BIF.do_remote_fun_call "Erlang.Io" "erlps__format__3"
                [file_13, arg_25, (ErlangCons head_27 ErlangEmptyList)])
-        in let arg_31 = (make_string "-module(~w).\n\n")
+        in let arg_31 = (H.make_string "-module(~w).\n\n")
         in let
           _ =
             (BIF.do_remote_fun_call "Erlang.Io" "erlps__format__3"
                [file_13, arg_31, (ErlangCons module_0 ErlangEmptyList)])
         in let
           arg_36 =
-            (make_string
+            (H.make_string
                "-export([format_op/2]).\n\nformat_arg(li, {immediate, LI}) ->\n    aeb_fate_data:format(LI);\nformat_arg(_, {immediate, I}) ->\n    aeb_fate_data:format(I);\nformat_arg(a, {arg, N}) -> io_lib:format(\"arg~~p\", [N]);\nformat_arg(a, {var, N}) when N < 0 -> io_lib:format(\"store~~p\", [-N]);\nformat_arg(a, {var, N}) -> io_lib:format(\"var~~p\", [N]);\nformat_arg(a, {stack, 0}) -> \"a\".\n\nlookup(Name, Symbols) ->\n    maps:get(Name, Symbols, io_lib:format(\"~~p\",[Name])).\n\n~s")
         in let
           _ =
@@ -4439,7 +4411,7 @@ erlps__gen_asm_pp__3 [module_0, path_1, ops_2] =
                [file_13, arg_36, (ErlangCons formats_23 ErlangEmptyList)])
         in let
           arg_41 =
-            (make_string
+            (H.make_string
                "format_op(Op, _Symbols) -> io_lib:format(\";; Bad Op: ~~w\\n\", [Op]).\n")
         in let
           _ =
@@ -4459,7 +4431,7 @@ erlps__gen_format__1 [(ErlangMap map_0)]
   , ((==) name_1 (ErlangAtom "CALL_R")) =
   let   
     arg_2 =
-      (make_string
+      (H.make_string
          "format_op({~w, {immediate, Contract}, {immediate, Function}, ArgType, RetType, Value}, Symbols) ->\n    [\"~s \", lookup(Contract, Symbols), \".\", lookup(Function, Symbols), \" \", format_arg(a, ArgType), \" \", format_arg(a, RetType), \" \", format_arg(a, Value)];\nformat_op({~w, Contract, {immediate, Function}, ArgType, RetType, Value}, Symbols) ->\n[\"~s \", format_arg(a, Contract), \".\", lookup(Function, Symbols), \" \", format_arg(a, ArgType), \" \", format_arg(a, RetType), \" \", format_arg(a, Value)];\n")
   in let head_6 = (BIF.erlang__atom_to_list__1 [name_1])
   in let head_11 = (BIF.erlang__atom_to_list__1 [name_1])
@@ -4474,7 +4446,7 @@ erlps__gen_format__1 [(ErlangMap map_0)]
   , ((==) name_1 (ErlangAtom "CALL_GR")) =
   let   
     arg_2 =
-      (make_string
+      (H.make_string
          "format_op({~w, {immediate, Contract}, {immediate, Function}, ArgType, RetType, Value, Gas}, Symbols) ->\n    [\"~s \", lookup(Contract, Symbols), \".\", lookup(Function, Symbols), \" \", format_arg(a, ArgType), \" \", format_arg(a, RetType), \" \", format_arg(a, Value),  \" \", format_arg(a, Gas)];\nformat_op({~w, Contract, {immediate, Function}, ArgType, RetType, Value, Gas}, Symbols) ->\n[\"~s \", format_arg(a, Contract), \".\", lookup(Function, Symbols), \" \", format_arg(a, ArgType), \" \", format_arg(a, RetType), \" \", format_arg(a, Value),  \" \", format_arg(a, Gas)];\n")
   in let head_6 = (BIF.erlang__atom_to_list__1 [name_1])
   in let head_11 = (BIF.erlang__atom_to_list__1 [name_1])
@@ -4489,7 +4461,7 @@ erlps__gen_format__1 [(ErlangMap map_0)]
       ((Map.lookup (ErlangAtom "format") map_0))
   , (DM.Just name_1) <-
       ((Map.lookup (ErlangAtom "opname") map_0)) =
-  let    arg_2 = (make_string "format_op(~w, _) -> [\"~s\"];")
+  let    arg_2 = (H.make_string "format_op(~w, _) -> [\"~s\"];")
   in let head_6 = (BIF.erlang__atom_to_list__1 [name_1])
   in
     (BIF.do_remote_fun_call "Io.Lib" "erlps__format__2"
@@ -4504,7 +4476,7 @@ erlps__gen_format__1 [(ErlangMap map_0)]
       (ErlangCons t0_6 (ErlangEmptyList)) ->
         let
           arg_7 =
-            (make_string
+            (H.make_string
                "format_op({~w, Arg0}, _) ->\n    [\"~s \", format_arg(~w, Arg0)];")
         in
           (BIF.do_remote_fun_call "Io.Lib" "erlps__format__2"
@@ -4515,7 +4487,7 @@ erlps__gen_format__1 [(ErlangMap map_0)]
       (ErlangCons t0_15 (ErlangCons t1_16 (ErlangEmptyList))) ->
         let
           arg_17 =
-            (make_string
+            (H.make_string
                "format_op({~w, Arg0, Arg1}, _) ->\n    [\"~s \", format_arg(~w, Arg0), \" \",  format_arg(~w, Arg1)];")
         in
           (BIF.do_remote_fun_call "Io.Lib" "erlps__format__2"
@@ -4526,7 +4498,7 @@ erlps__gen_format__1 [(ErlangMap map_0)]
       (ErlangCons t0_27 (ErlangCons t1_28 (ErlangCons t2_29 (ErlangEmptyList)))) ->
         let
           arg_30 =
-            (make_string
+            (H.make_string
                "format_op({~w, Arg0, Arg1, Arg2}, _) ->\n    [\"~s \", format_arg(~w, Arg0), \" \",  format_arg(~w, Arg1),\" \",  format_arg(~w, Arg2)];")
         in
           (BIF.do_remote_fun_call "Io.Lib" "erlps__format__2"
@@ -4539,7 +4511,7 @@ erlps__gen_format__1 [(ErlangMap map_0)]
       (ErlangCons t0_42 (ErlangCons t1_43 (ErlangCons t2_44 (ErlangCons t3_45 (ErlangEmptyList))))) ->
         let
           arg_46 =
-            (make_string
+            (H.make_string
                "format_op({~w, Arg0, Arg1, Arg2, Arg3}, _) ->\n    [\"~s \", format_arg(~w, Arg0), \" \",  format_arg(~w, Arg1),\" \",  format_arg(~w, Arg2),\" \",  format_arg(~w, Arg3)];")
         in
           (BIF.do_remote_fun_call "Io.Lib" "erlps__format__2"
@@ -4553,7 +4525,7 @@ erlps__gen_format__1 [(ErlangMap map_0)]
       (ErlangCons t0_60 (ErlangCons t1_61 (ErlangCons t2_62 (ErlangCons t3_63 (ErlangCons t4_64 (ErlangEmptyList)))))) ->
         let
           arg_65 =
-            (make_string
+            (H.make_string
                "format_op({~w, Arg0, Arg1, Arg2, Arg3, Arg4}, _) ->\n    [\"~s \", format_arg(~w, Arg0), \" \",  format_arg(~w, Arg1),\" \",  format_arg(~w, Arg2),\" \",  format_arg(~w, Arg3),\" \",  format_arg(~w, Arg4)];")
         in
           (BIF.do_remote_fun_call "Io.Lib" "erlps__format__2"
@@ -4568,7 +4540,7 @@ erlps__gen_format__1 [(ErlangMap map_0)]
       (ErlangCons t0_81 (ErlangCons t1_82 (ErlangCons t2_83 (ErlangCons t3_84 (ErlangCons t4_85 (ErlangCons t5_86 (ErlangEmptyList))))))) ->
         let
           arg_87 =
-            (make_string
+            (H.make_string
                "format_op({~w, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5}, _) ->\n    [\"~s \", format_arg(~w, Arg0), \" \",  format_arg(~w, Arg1),\" \",  format_arg(~w, Arg2),\" \",  format_arg(~w, Arg3),\" \",  format_arg(~w, Arg4),\" \",  format_arg(~w, Arg5)];")
         in
           (BIF.do_remote_fun_call "Io.Lib" "erlps__format__2"
@@ -4584,7 +4556,7 @@ erlps__gen_format__1 [(ErlangMap map_0)]
       (ErlangCons t0_105 (ErlangCons t1_106 (ErlangCons t2_107 (ErlangCons t3_108 (ErlangCons t4_109 (ErlangCons t5_110 (ErlangCons t6_111 (ErlangEmptyList)))))))) ->
         let
           arg_112 =
-            (make_string
+            (H.make_string
                "format_op({~w, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6}, _) ->\n    [\"~s \", format_arg(~w, Arg0), \" \",  format_arg(~w, Arg1),\" \",  format_arg(~w, Arg2),\" \",  format_arg(~w, Arg3),\" \",  format_arg(~w, Arg4),\" \",  format_arg(~w, Arg5),\" \",  format_arg(~w, Arg6)];")
         in
           (BIF.do_remote_fun_call "Io.Lib" "erlps__format__2"
@@ -4602,7 +4574,7 @@ erlps__gen_format__1 [(ErlangMap map_0)]
       (ErlangCons t0_132 (ErlangCons t1_133 (ErlangCons t2_134 (ErlangCons t3_135 (ErlangCons t4_136 (ErlangCons t5_137 (ErlangCons t6_138 (ErlangCons t7_139 (ErlangEmptyList))))))))) ->
         let
           arg_140 =
-            (make_string
+            (H.make_string
                "format_op({~w, Arg0, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7}, _) ->\n    [\"~s \", format_arg(~w, Arg0), \" \",  format_arg(~w, Arg1),\" \",  format_arg(~w, Arg2),\" \",  format_arg(~w, Arg3),\" \",  format_arg(~w, Arg4),\" \",  format_arg(~w, Arg5),\" \",  format_arg(~w, Arg6),\" \",  format_arg(~w, Arg7)];")
         in
           (BIF.do_remote_fun_call "Io.Lib" "erlps__format__2"
@@ -4636,29 +4608,25 @@ erlps__test_asm_generator__1 [filename_0] =
         let    lc_src_8 = (erlps__get_ops__0 [])
         in let
           arg_7 =
-            (flmap
+            (H.flmap
                (\ lc_10 ->
-                  case lc_10 of
-                    op_9 ->
-                      let    lop_12 = (erlps__gen_instruction__1 [op_9])
-                      in let rop_14 = (make_string "\n")
-                      in let
-                        lc_ret_11 = (BIF.erlang__op_append [lop_12, rop_14])
-                      in (ErlangCons lc_ret_11 ErlangEmptyList)
-                    _ -> ErlangEmptyList)
+                  let    lop_12 = (erlps__gen_instruction__1 [lc_10])
+                  in let rop_14 = (H.make_string "\n")
+                  in let lc_ret_11 = (BIF.erlang__op_append [lop_12, rop_14])
+                  in (ErlangCons lc_ret_11 ErlangEmptyList))
                lc_src_8)
         in let
           instructions_15 =
             (BIF.do_remote_fun_call "Lists" "erlps__flatten__1" [arg_7])
         in let
           arg_17 =
-            (make_string
+            (H.make_string
                ";; CONTRACT all_instructions\n\n;; Dont expect this contract to typecheck or run.\n;; Just used to check assembler rountrip of all instruction.\n\nFUNCTION foo () : {tuple, []}\n~s")
         in let
           _ =
             (BIF.do_remote_fun_call "Erlang.Io" "erlps__format__3"
                [file_5, arg_17, (ErlangCons instructions_15 ErlangEmptyList)])
-        in let arg_22 = (make_string "  RETURNR ()\n")
+        in let arg_22 = (H.make_string "  RETURNR ()\n")
         in let
           _ =
             (BIF.do_remote_fun_call "Erlang.Io" "erlps__format__3"
@@ -4677,7 +4645,7 @@ erlps__gen_instruction__1 [(ErlangMap map_0)]
       ((Map.lookup (ErlangAtom "format") map_0))
   , (DM.Just name_1) <-
       ((Map.lookup (ErlangAtom "opname") map_0)) =
-  let arg_2 = (make_string "  ~s\n")
+  let arg_2 = (H.make_string "  ~s\n")
   in
     (BIF.do_remote_fun_call "Io.Lib" "erlps__format__2"
        [arg_2, (ErlangCons name_1 ErlangEmptyList)])
@@ -4686,16 +4654,13 @@ erlps__gen_instruction__1 [(ErlangMap map_0)]
       ((Map.lookup (ErlangAtom "format") map_0))
   , (DM.Just name_1) <-
       ((Map.lookup (ErlangAtom "opname") map_0)) =
-  let    arg_4 = (make_string " ")
+  let    arg_4 = (H.make_string " ")
   in let
     arg_5 =
-      (flmap
+      (H.flmap
          (\ lc_8 ->
-            case lc_8 of
-              a_7 ->
-                let lc_ret_9 = (erlps__gen_arg__1 [a_7])
-                in (ErlangCons lc_ret_9 ErlangEmptyList)
-              _ -> ErlangEmptyList)
+            let lc_ret_9 = (erlps__gen_arg__1 [lc_8])
+            in (ErlangCons lc_ret_9 ErlangEmptyList))
          argtypes_2)
   in let
     arg_3 =
@@ -4703,7 +4668,7 @@ erlps__gen_instruction__1 [(ErlangMap map_0)]
   in let
     args_11 =
       (BIF.do_remote_fun_call "Lists" "erlps__flatten__1" [arg_3])
-  in let arg_12 = (make_string "  ~s ~s\n")
+  in let arg_12 = (H.make_string "  ~s ~s\n")
   in let
     i_18 =
       (BIF.do_remote_fun_call "Io.Lib" "erlps__format__2"
@@ -4717,10 +4682,11 @@ erlps__gen_instruction__1 args =
 
 erlps__gen_arg__1 :: ErlangFun
 erlps__gen_arg__1 [(ErlangAtom "a")] = (erlps__any_arg__0 [])
-erlps__gen_arg__1 [(ErlangAtom "is")] = (make_string "foo")
+erlps__gen_arg__1 [(ErlangAtom "is")] = (H.make_string "foo")
 erlps__gen_arg__1 [(ErlangAtom "ii")] = (erlps__gen_int__0 [])
-erlps__gen_arg__1 [(ErlangAtom "li")] = (make_string "[1, 2, 3]")
-erlps__gen_arg__1 [(ErlangAtom "t")] = (make_string "integer")
+erlps__gen_arg__1 [(ErlangAtom "li")] =
+  (H.make_string "[1, 2, 3]")
+erlps__gen_arg__1 [(ErlangAtom "t")] = (H.make_string "integer")
 erlps__gen_arg__1 [arg_0] = (EXC.function_clause unit)
 erlps__gen_arg__1 args =
   (EXC.badarity
@@ -4732,7 +4698,7 @@ erlps__any_arg__0 [] =
     arg_0 =
       (BIF.do_remote_fun_call "Rand" "erlps__uniform__1"
          [(ErlangInt (DBI.fromInt 5))])
-  in let tup_el_3 = (make_string "a")
+  in let tup_el_3 = (H.make_string "a")
   in let tup_el_4 = (erlps__stack_arg__0 [])
   in let tup_el_5 = (erlps__var_arg__0 [])
   in let tup_el_6 = (erlps__arg_arg__0 [])
@@ -4746,14 +4712,14 @@ erlps__any_arg__0 args =
      (ErlangFun 0 (\ _ -> (ErlangAtom "purs_tco_sucks"))) args)
 
 erlps__stack_arg__0 :: ErlangFun
-erlps__stack_arg__0 [] = (make_string "a")
+erlps__stack_arg__0 [] = (H.make_string "a")
 erlps__stack_arg__0 args =
   (EXC.badarity
      (ErlangFun 0 (\ _ -> (ErlangAtom "purs_tco_sucks"))) args)
 
 erlps__arg_arg__0 :: ErlangFun
 erlps__arg_arg__0 [] =
-  let    lop_0 = (make_string "arg")
+  let    lop_0 = (H.make_string "arg")
   in let
     lop_3 =
       (BIF.do_remote_fun_call "Rand" "erlps__uniform__1"
@@ -4769,7 +4735,7 @@ erlps__arg_arg__0 args =
 
 erlps__var_arg__0 :: ErlangFun
 erlps__var_arg__0 [] =
-  let    lop_0 = (make_string "var")
+  let    lop_0 = (H.make_string "var")
   in let
     lop_3 =
       (BIF.do_remote_fun_call "Rand" "erlps__uniform__1"
@@ -4905,8 +4871,8 @@ erlps__gen_boolean__0 [] =
     arg_0 =
       (BIF.do_remote_fun_call "Rand" "erlps__uniform__1"
          [(ErlangInt (DBI.fromInt 2))])
-  in let tup_el_3 = (make_string "true")
-  in let tup_el_4 = (make_string "false")
+  in let tup_el_3 = (H.make_string "true")
+  in let tup_el_4 = (H.make_string "false")
   in let arg_2 = (ErlangTuple [tup_el_3, tup_el_4])
   in (BIF.erlang__element__2 [arg_0, arg_2])
 erlps__gen_boolean__0 args =
@@ -4938,7 +4904,7 @@ erlps__gen_int__0 [] =
       (BIF.do_remote_fun_call "Rand" "erlps__uniform__1"
          [(ErlangInt (DBI.fromInt 100))])
   in let tup_el_12 = (BIF.erlang__integer_to_list__1 [arg_13])
-  in let arg_16 = (make_string "0x~.16b")
+  in let arg_16 = (H.make_string "0x~.16b")
   in let
     arg_20 =
       (BIF.math__pow__2
@@ -4960,25 +4926,25 @@ erlps__gen_int__0 args =
 
 erlps__gen_address__0 :: ErlangFun
 erlps__gen_address__0 [] =
-  (make_string
+  (H.make_string
      "#nv5B93FPzRHrGNmMdTDfGdd5xGZvep3MVSpJqzcQmMp59bBCv")
 erlps__gen_address__0 args =
   (EXC.badarity
      (ErlangFun 0 (\ _ -> (ErlangAtom "purs_tco_sucks"))) args)
 
 erlps__gen_string__0 :: ErlangFun
-erlps__gen_string__0 [] = (make_string "\"foo\"")
+erlps__gen_string__0 [] = (H.make_string "\"foo\"")
 erlps__gen_string__0 args =
   (EXC.badarity
      (ErlangFun 0 (\ _ -> (ErlangAtom "purs_tco_sucks"))) args)
 
 erlps__gen_map__0 :: ErlangFun
 erlps__gen_map__0 [] =
-  let    lop_0 = (make_string "{ ")
+  let    lop_0 = (H.make_string "{ ")
   in let lop_2 = (erlps__gen_key__0 [])
-  in let lop_4 = (make_string " => ")
+  in let lop_4 = (H.make_string " => ")
   in let lop_6 = (erlps__imm_arg__0 [])
-  in let rop_7 = (make_string "}")
+  in let rop_7 = (H.make_string "}")
   in let rop_5 = (BIF.erlang__op_append [lop_6, rop_7])
   in let rop_3 = (BIF.erlang__op_append [lop_4, rop_5])
   in let rop_1 = (BIF.erlang__op_append [lop_2, rop_3])
@@ -4997,32 +4963,32 @@ erlps__gen_list__0 [] =
     case case_0 of
       (ErlangInt num_2) | ((ErlangInt num_2) ==
                              (ErlangInt (DBI.fromInt 1))) ->
-        (make_string "[]")
+        (H.make_string "[]")
       (ErlangInt num_3) | ((ErlangInt num_3) ==
                              (ErlangInt (DBI.fromInt 2))) ->
-        let    lop_4 = (make_string "[")
-        in let arg_7 = (make_string ", ")
+        let    lop_4 = (H.make_string "[")
+        in let arg_7 = (H.make_string ", ")
         in let arg_8 = (erlps__gen_list_elements__0 [])
         in let
           lop_6 =
             (BIF.do_remote_fun_call "Lists" "erlps__join__2" [arg_7, arg_8])
-        in let rop_9 = (make_string " ]")
+        in let rop_9 = (H.make_string " ]")
         in let rop_5 = (BIF.erlang__op_append [lop_6, rop_9])
         in (BIF.erlang__op_append [lop_4, rop_5])
       (ErlangInt num_10) | ((ErlangInt num_10) ==
                               (ErlangInt (DBI.fromInt 3))) ->
-        let    lop_11 = (make_string "[ ")
+        let    lop_11 = (H.make_string "[ ")
         in let lop_13 = (erlps__imm_arg__0 [])
-        in let rop_14 = (make_string " ]")
+        in let rop_14 = (H.make_string " ]")
         in let rop_12 = (BIF.erlang__op_append [lop_13, rop_14])
         in (BIF.erlang__op_append [lop_11, rop_12])
       (ErlangInt num_15) | ((ErlangInt num_15) ==
                               (ErlangInt (DBI.fromInt 4))) ->
-        let    lop_16 = (make_string "[ ")
+        let    lop_16 = (H.make_string "[ ")
         in let lop_18 = (erlps__imm_arg__0 [])
-        in let lop_20 = (make_string ", ")
+        in let lop_20 = (H.make_string ", ")
         in let lop_22 = (erlps__imm_arg__0 [])
-        in let rop_23 = (make_string " ]")
+        in let rop_23 = (H.make_string " ]")
         in let rop_21 = (BIF.erlang__op_append [lop_22, rop_23])
         in let rop_19 = (BIF.erlang__op_append [lop_20, rop_21])
         in let rop_17 = (BIF.erlang__op_append [lop_18, rop_19])
@@ -5063,9 +5029,9 @@ erlps__gen_bits__0 [] =
     arg_0 =
       (BIF.do_remote_fun_call "Rand" "erlps__uniform__1"
          [(ErlangInt (DBI.fromInt 3))])
-  in let tup_el_3 = (make_string "<>")
-  in let tup_el_4 = (make_string "!<>")
-  in let tup_el_5 = (make_string "101010")
+  in let tup_el_3 = (H.make_string "<>")
+  in let tup_el_4 = (H.make_string "!<>")
+  in let tup_el_5 = (H.make_string "101010")
   in let arg_2 = (ErlangTuple [tup_el_3, tup_el_4, tup_el_5])
   in (BIF.erlang__element__2 [arg_0, arg_2])
 erlps__gen_bits__0 args =
@@ -5082,15 +5048,15 @@ erlps__gen_tuple__0 [] =
     case case_0 of
       (ErlangInt num_2) | ((ErlangInt num_2) ==
                              (ErlangInt (DBI.fromInt 1))) ->
-        (make_string "()")
+        (H.make_string "()")
       (ErlangInt num_3) | ((ErlangInt num_3) ==
                              (ErlangInt (DBI.fromInt 2))) ->
-        (make_string "(42)")
+        (H.make_string "(42)")
       (ErlangInt num_4) | ((ErlangInt num_4) ==
                              (ErlangInt (DBI.fromInt 3))) ->
-        let    lop_5 = (make_string "(")
+        let    lop_5 = (H.make_string "(")
         in let lop_7 = (erlps__imm_arg__0 [])
-        in let rop_8 = (make_string ")")
+        in let rop_8 = (H.make_string ")")
         in let rop_6 = (BIF.erlang__op_append [lop_7, rop_8])
         in (BIF.erlang__op_append [lop_5, rop_6])
       something_else -> (EXC.case_clause something_else)
@@ -5108,21 +5074,21 @@ erlps__gen_variant__0 [] =
     case case_0 of
       (ErlangInt num_2) | ((ErlangInt num_2) ==
                              (ErlangInt (DBI.fromInt 1))) ->
-        (make_string "(| 5 | 2 | (1, \"foo\", ()) |)")
+        (H.make_string "(| 5 | 2 | (1, \"foo\", ()) |)")
       (ErlangInt num_3) | ((ErlangInt num_3) ==
                              (ErlangInt (DBI.fromInt 2))) ->
-        let    lop_4 = (make_string "(| 2 | 1 | ( ")
+        let    lop_4 = (H.make_string "(| 2 | 1 | ( ")
         in let lop_6 = (erlps__imm_arg__0 [])
-        in let rop_7 = (make_string " ) |)")
+        in let rop_7 = (H.make_string " ) |)")
         in let rop_5 = (BIF.erlang__op_append [lop_6, rop_7])
         in (BIF.erlang__op_append [lop_4, rop_5])
       (ErlangInt num_8) | ((ErlangInt num_8) ==
                              (ErlangInt (DBI.fromInt 3))) ->
-        let    lop_9 = (make_string "(| 2 | 0 | ( ")
+        let    lop_9 = (H.make_string "(| 2 | 0 | ( ")
         in let lop_11 = (erlps__imm_arg__0 [])
-        in let lop_13 = (make_string ", ")
+        in let lop_13 = (H.make_string ", ")
         in let lop_15 = (erlps__imm_arg__0 [])
-        in let rop_16 = (make_string " ) |)")
+        in let rop_16 = (H.make_string " ) |)")
         in let rop_14 = (BIF.erlang__op_append [lop_15, rop_16])
         in let rop_12 = (BIF.erlang__op_append [lop_13, rop_14])
         in let rop_10 = (BIF.erlang__op_append [lop_11, rop_12])
@@ -5144,29 +5110,25 @@ erlps__generate_documentation__1 [filename_0] =
         let    lc_src_8 = (erlps__get_ops__0 [])
         in let
           arg_7 =
-            (flmap
+            (H.flmap
                (\ lc_10 ->
-                  case lc_10 of
-                    op_9 ->
-                      let    lop_12 = (erlps__gen_doc__1 [op_9])
-                      in let rop_14 = (make_string "\n")
-                      in let
-                        lc_ret_11 = (BIF.erlang__op_append [lop_12, rop_14])
-                      in (ErlangCons lc_ret_11 ErlangEmptyList)
-                    _ -> ErlangEmptyList)
+                  let    lop_12 = (erlps__gen_doc__1 [lc_10])
+                  in let rop_14 = (H.make_string "\n")
+                  in let lc_ret_11 = (BIF.erlang__op_append [lop_12, rop_14])
+                  in (ErlangCons lc_ret_11 ErlangEmptyList))
                lc_src_8)
         in let
           instructions_15 =
             (BIF.do_remote_fun_call "Lists" "erlps__flatten__1" [arg_7])
         in let
           arg_17 =
-            (make_string
+            (H.make_string
                "### Operations\n\n| OpCode | Name | Args | Description |\n| ---    | ---  | ---  |        ---  |\n~s")
         in let
           _ =
             (BIF.do_remote_fun_call "Erlang.Io" "erlps__format__3"
                [file_5, arg_17, (ErlangCons instructions_15 ErlangEmptyList)])
-        in let arg_22 = (make_string "\n")
+        in let arg_22 = (H.make_string "\n")
         in let
           _ =
             (BIF.do_remote_fun_call "Erlang.Io" "erlps__format__3"
@@ -5203,9 +5165,9 @@ erlps__gen_doc__1 [(ErlangMap map_0)]
   let   
     arguments_28 =
       case fateformat_5 of
-        (ErlangEmptyList) -> (make_string "")
+        (ErlangEmptyList) -> (H.make_string "")
         _ ->
-          let    arg_14 = (make_string " ")
+          let    arg_14 = (H.make_string " ")
           in let lop_21 = (BIF.erlang__length__1 [fateformat_5])
           in let
             arg_20 =
@@ -5220,19 +5182,15 @@ erlps__gen_doc__1 [(ErlangMap map_0)]
                  [fateformat_5, arg_18])
           in let
             arg_15 =
-              (flmap
+              (H.flmap
                  (\ lc_25 ->
-                    case lc_25 of
-                      a_24 ->
-                        let lc_ret_26 = (erlps__format_arg_doc__1 [a_24])
-                        in (ErlangCons lc_ret_26 ErlangEmptyList)
-                      _ -> ErlangEmptyList)
+                    let lc_ret_26 = (erlps__format_arg_doc__1 [lc_25])
+                    in (ErlangCons lc_ret_26 ErlangEmptyList))
                  lc_src_16)
           in
             (BIF.do_remote_fun_call "Lists" "erlps__join__2"
                [arg_14, arg_15])
-        something_else -> (EXC.case_clause something_else)
-  in let arg_29 = (make_string "| 0x~.16b | ~w | ~s | ~s |\n")
+  in let arg_29 = (H.make_string "| 0x~.16b | ~w | ~s | ~s |\n")
   in
     (BIF.do_remote_fun_call "Io.Lib" "erlps__format__2"
        [arg_29,
@@ -5247,25 +5205,25 @@ erlps__gen_doc__1 args =
 erlps__format_arg_doc__1 :: ErlangFun
 erlps__format_arg_doc__1 [(ErlangTuple [(ErlangAtom "a"), n_0])]
   =
-  let arg_1 = (make_string "Arg~w")
+  let arg_1 = (H.make_string "Arg~w")
   in
     (BIF.do_remote_fun_call "Io.Lib" "erlps__format__2"
        [arg_1, (ErlangCons n_0 ErlangEmptyList)])
 erlps__format_arg_doc__1 [(ErlangTuple [(ErlangAtom "is"),
                                         _n_0])]
   =
-  (make_string "Identifier")
+  (H.make_string "Identifier")
 erlps__format_arg_doc__1 [(ErlangTuple [(ErlangAtom "ii"),
                                         _n_0])]
   =
-  (make_string "Integer")
+  (H.make_string "Integer")
 erlps__format_arg_doc__1 [(ErlangTuple [(ErlangAtom "li"),
                                         _n_0])]
   =
-  (make_string "[Integers]")
+  (H.make_string "[Integers]")
 erlps__format_arg_doc__1 [(ErlangTuple [(ErlangAtom "t"), _n_0])]
   =
-  (make_string "Type")
+  (H.make_string "Type")
 erlps__format_arg_doc__1 [arg_1] = (EXC.function_clause unit)
 erlps__format_arg_doc__1 args =
   (EXC.badarity

@@ -17,7 +17,7 @@ import Data.Tuple as Tup
 import Data.BigInt as DBI
 import Erlang.Builtins as BIF
 import Erlang.Binary as BIN
-import Erlang.Helpers
+import Erlang.Helpers as H
 import Erlang.Exception as EXC
 import Erlang.Type (ErlangFun, ErlangTerm(..), weakCmp, weakEq,
                     weakNEq, weakLt, weakLeq, weakGeq, weakGt)
@@ -2049,97 +2049,88 @@ erlps__serialize_deserialize_test___0 :: ErlangFun
 erlps__serialize_deserialize_test___0 [] =
   let lc_src_0 = (erlps__sources__0 [])
   in
-    (flmap
+    (H.flmap
        (\ lc_2 ->
-          case lc_2 of
-            x_1 ->
-              let    arg_6 = (make_string "~p")
-              in let
-                arg_5 =
-                  (BIF.do_remote_fun_call "Io.Lib" "erlps__format__2"
-                     [arg_6, (ErlangCons x_1 ErlangEmptyList)])
-              in let
-                tup_el_4 =
-                  (BIF.do_remote_fun_call "Lists" "erlps__flatten__1" [arg_5])
-              in let
-                tup_el_10 =
-                  (ErlangFun 0
+          let    arg_6 = (H.make_string "~p")
+          in let
+            arg_5 =
+              (BIF.do_remote_fun_call "Io.Lib" "erlps__format__2"
+                 [arg_6, (ErlangCons lc_2 ErlangEmptyList)])
+          in let
+            tup_el_4 =
+              (BIF.do_remote_fun_call "Lists" "erlps__flatten__1" [arg_5])
+          in let
+            tup_el_10 =
+              (ErlangFun 0
+                 let
+                   lambda_11 [] =
                      let
-                       lambda_11 [] =
-                         let
-                           fun_12 =
-                             (ErlangFun 0
-                                let
-                                  lambda_13 [] =
-                                    let   
-                                      arg_16 =
-                                        (BIF.do_remote_fun_call
-                                           "Aeb.Fate.Encoding"
-                                           "erlps__serialize__1" [x_1])
-                                    in let
-                                      case_15 =
-                                        (BIF.do_remote_fun_call
-                                           "Aeb.Fate.Encoding"
-                                           "erlps__deserialize__1" [arg_16])
-                                    in
-                                      case case_15 of
-                                        __x_18 | (__x_18 == x_1) ->
-                                          (ErlangAtom "ok")
-                                        __v_19 ->
-                                          let   
-                                            head_23 =
-                                              (ErlangTuple
-                                                 [(ErlangAtom "module"),
-                                                  (ErlangAtom
-                                                     "aeb_serialize_test")])
-                                          in let
-                                            head_27 =
-                                              (ErlangTuple
-                                                 [(ErlangAtom "line"),
-                                                  (ErlangInt (DBI.fromInt 33))])
-                                          in let
-                                            tup_el_33 =
-                                              (make_string
-                                                 "aeb_fate_encoding : deserialize ( aeb_fate_encoding : serialize ( X ) )")
-                                          in let
-                                            head_31 =
-                                              (ErlangTuple
-                                                 [(ErlangAtom "expression"),
-                                                  tup_el_33])
-                                          in let
-                                            head_35 =
-                                              (ErlangTuple
-                                                 [(ErlangAtom "expected"), x_1])
-                                          in let
-                                            head_39 =
-                                              (ErlangTuple
-                                                 [(ErlangAtom "value"), __v_19])
-                                          in let
-                                            arg_20 =
-                                              (ErlangTuple
-                                                 [(ErlangAtom "assertEqual"),
-                                                  (ErlangCons head_23
-                                                     (ErlangCons head_27
-                                                        (ErlangCons head_31
-                                                           (ErlangCons head_35
-                                                              (ErlangCons
-                                                                 head_39
-                                                                 ErlangEmptyList)))))])
-                                          in (BIF.erlang__error__1 [arg_20])
-                                        something_else ->
-                                          (EXC.case_clause something_else)
-                                  lambda_13 [] = (EXC.function_clause unit)
-                                  lambda_13 args =
-                                    (EXC.badarity (ErlangFun 0 lambda_13) args)
-                                in lambda_13)
-                         in (BIF.erlang__apply__2 [fun_12, ErlangEmptyList])
-                       lambda_11 [] = (EXC.function_clause unit)
-                       lambda_11 args =
-                         (EXC.badarity (ErlangFun 0 lambda_11) args)
-                     in lambda_11)
-              in let lc_ret_3 = (ErlangTuple [tup_el_4, tup_el_10])
-              in (ErlangCons lc_ret_3 ErlangEmptyList)
-            _ -> ErlangEmptyList)
+                       fun_12 =
+                         (ErlangFun 0
+                            let
+                              lambda_13 [] =
+                                let   
+                                  arg_16 =
+                                    (BIF.do_remote_fun_call "Aeb.Fate.Encoding"
+                                       "erlps__serialize__1" [lc_2])
+                                in let
+                                  case_15 =
+                                    (BIF.do_remote_fun_call "Aeb.Fate.Encoding"
+                                       "erlps__deserialize__1" [arg_16])
+                                in
+                                  case case_15 of
+                                    __x_18 | (__x_18 == lc_2) ->
+                                      (ErlangAtom "ok")
+                                    __v_19 ->
+                                      let   
+                                        head_23 =
+                                          (ErlangTuple
+                                             [(ErlangAtom "module"),
+                                              (ErlangAtom
+                                                 "aeb_serialize_test")])
+                                      in let
+                                        head_27 =
+                                          (ErlangTuple
+                                             [(ErlangAtom "line"),
+                                              (ErlangInt (DBI.fromInt 33))])
+                                      in let
+                                        tup_el_33 =
+                                          (H.make_string
+                                             "aeb_fate_encoding : deserialize ( aeb_fate_encoding : serialize ( X ) )")
+                                      in let
+                                        head_31 =
+                                          (ErlangTuple
+                                             [(ErlangAtom "expression"),
+                                              tup_el_33])
+                                      in let
+                                        head_35 =
+                                          (ErlangTuple
+                                             [(ErlangAtom "expected"), lc_2])
+                                      in let
+                                        head_39 =
+                                          (ErlangTuple
+                                             [(ErlangAtom "value"), __v_19])
+                                      in let
+                                        arg_20 =
+                                          (ErlangTuple
+                                             [(ErlangAtom "assertEqual"),
+                                              (ErlangCons head_23
+                                                 (ErlangCons head_27
+                                                    (ErlangCons head_31
+                                                       (ErlangCons head_35
+                                                          (ErlangCons head_39
+                                                             ErlangEmptyList)))))])
+                                      in (BIF.erlang__error__1 [arg_20])
+                              lambda_13 [] = (EXC.function_clause unit)
+                              lambda_13 args =
+                                (EXC.badarity (ErlangFun 0 lambda_13) args)
+                            in lambda_13)
+                     in (BIF.erlang__apply__2 [fun_12, ErlangEmptyList])
+                   lambda_11 [] = (EXC.function_clause unit)
+                   lambda_11 args = (EXC.badarity (ErlangFun 0 lambda_11) args)
+                 in lambda_11)
+          in let lc_ret_3 = (ErlangTuple [tup_el_4, tup_el_10])
+          in (ErlangCons lc_ret_3 ErlangEmptyList))
        lc_src_0)
 erlps__serialize_deserialize_test___0 args =
   (EXC.badarity
@@ -2152,16 +2143,13 @@ erlps__make_int_list__1 [n_0] =
       (BIF.do_remote_fun_call "Lists" "erlps__seq__2"
          [(ErlangInt (DBI.fromInt 1)), n_0])
   in
-    (flmap
+    (H.flmap
        (\ lc_5 ->
-          case lc_5 of
-            i_4 ->
-              let
-                lc_ret_6 =
-                  (BIF.do_remote_fun_call "Aeb.Fate.Data"
-                     "erlps__make_integer__1" [i_4])
-              in (ErlangCons lc_ret_6 ErlangEmptyList)
-            _ -> ErlangEmptyList)
+          let
+            lc_ret_6 =
+              (BIF.do_remote_fun_call "Aeb.Fate.Data" "erlps__make_integer__1"
+                 [lc_5])
+          in (ErlangCons lc_ret_6 ErlangEmptyList))
        lc_src_1)
 erlps__make_int_list__1 [arg_8] = (EXC.function_clause unit)
 erlps__make_int_list__1 args =
@@ -2189,7 +2177,7 @@ erlps__sources__0 [] =
     nil_8 =
       (BIF.do_remote_fun_call "Aeb.Fate.Data" "erlps__make_list__1"
          [ErlangEmptyList])
-  in let arg_9 = (make_string "")
+  in let arg_9 = (H.make_string "")
   in let
     emptystring_10 =
       (BIF.do_remote_fun_call "Aeb.Fate.Data" "erlps__make_string__1"
@@ -2843,11 +2831,10 @@ erlps__sources__0 [] =
          [(ErlangInt (DBI.fromInt 1)), (ErlangInt (DBI.fromInt 255))])
   in let
     arg_375 =
-      (flmap
+      (H.flmap
          (\ lc_379 ->
             case lc_379 of
-              _ -> (ErlangCons (ErlangInt (DBI.fromInt 0)) ErlangEmptyList)
-              _ -> ErlangEmptyList)
+              _ -> (ErlangCons (ErlangInt (DBI.fromInt 0)) ErlangEmptyList))
          lc_src_376)
   in let arg_382 = (ErlangTuple [])
   in let
