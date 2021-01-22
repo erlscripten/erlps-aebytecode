@@ -45,10 +45,7 @@ erlps__pp__1 args =
 
 erlps__format__2 :: ErlangFun
 erlps__format__2 [binary_0, errformatfun_1] =
-  let
-    arg_3 =
-      (BIF.do_remote_fun_call "Binary" "erlps__bin_to_list__1"
-         [binary_0])
+  let arg_3 = (BIF.binary__bin_to_list__1 [binary_0])
   in
     (erlps__pp__4
        [(ErlangInt (DBI.fromInt 0)), arg_3, ErlangEmptyList,

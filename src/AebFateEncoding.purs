@@ -1139,16 +1139,13 @@ erlps__deserialize2__1__p1 [(ErlangBinary bin_c_0)]
                   (BIF.erlang__op_plus [s_8, (ErlangInt (DBI.fromInt 64))])
               in let
                 string_22 =
-                  (BIF.do_remote_fun_call "Binary" "erlps__part__3"
+                  (BIF.binary__part__3
                      [rest2_9, (ErlangInt (DBI.fromInt 0)), size_18])
               in let arg_24 = (BIF.erlang__byte_size__1 [rest2_9])
               in let lop_28 = (BIF.erlang__byte_size__1 [rest2_9])
               in let op_arg_27 = (BIF.erlang__op_minus [lop_28, size_18])
               in let arg_26 = (BIF.erlang__op_neg [op_arg_27])
-              in let
-                rest3_31 =
-                  (BIF.do_remote_fun_call "Binary" "erlps__part__3"
-                     [rest2_9, arg_24, arg_26])
+              in let rest3_31 = (BIF.binary__part__3 [rest2_9, arg_24, arg_26])
               in (ErlangTuple [string_22, rest3_31])
             _ -> (EXC.badmatch match_expr_15)
       _ -> (EXC.badmatch match_expr_10)
@@ -1172,16 +1169,12 @@ erlps__deserialize2__1__p1 [(ErlangBinary bin_c_0)]
     s_9 = (BIF.erlang__bsr__2 [bin_3, (ErlangInt (DBI.fromInt 2))])
   in let
     string_13 =
-      (BIF.do_remote_fun_call "Binary" "erlps__part__3"
-         [rest_6, (ErlangInt (DBI.fromInt 0)), s_9])
+      (BIF.binary__part__3 [rest_6, (ErlangInt (DBI.fromInt 0)), s_9])
   in let arg_15 = (BIF.erlang__byte_size__1 [rest_6])
   in let lop_19 = (BIF.erlang__byte_size__1 [rest_6])
   in let op_arg_18 = (BIF.erlang__op_minus [lop_19, s_9])
   in let arg_17 = (BIF.erlang__op_neg [op_arg_18])
-  in let
-    rest2_22 =
-      (BIF.do_remote_fun_call "Binary" "erlps__part__3"
-         [rest_6, arg_15, arg_17])
+  in let rest2_22 = (BIF.binary__part__3 [rest_6, arg_15, arg_17])
   in (ErlangTuple [string_13, rest2_22])
 erlps__deserialize2__1__p1 [(ErlangBinary bin_c_0)]
   | size_1 <- ((DBI.fromInt 8))
