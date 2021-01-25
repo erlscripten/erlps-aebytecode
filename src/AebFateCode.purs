@@ -734,114 +734,122 @@ erlps__serialize_code__1 [list_0@(ErlangCons (ErlangTuple [_,
     case match_expr_7 of
       (ErlangTuple [args_5, rest_6]) ->
         let   
-          buildmods_30 =
+          buildmods_27 =
             (ErlangFun 2
                let
-                 buildmods_8 [(ErlangEmptyList), acc_11] =
-                   let
-                     case_12 =
-                       (BIF.erlang__op_greater
-                          [acc_11, (ErlangInt (DBI.fromInt 255))])
-                   in
-                     case case_12 of
-                       (ErlangAtom "true") ->
-                         (ErlangBinary
-                            (BIN.from_int acc_11 (ErlangInt (DBI.fromInt 16)) 1
-                               BIN.Big))
-                       (ErlangAtom "false") ->
-                         (ErlangBinary
-                            (BIN.from_int acc_11 (ErlangInt (DBI.fromInt 8)) 1
-                               BIN.Big))
-                       something_else -> (EXC.case_clause something_else)
-                 buildmods_8 [(ErlangCons (ErlangTuple [type_17, x_18]) t_19),
-                              acc_20]
+                 buildmods_8 [(ErlangEmptyList), acc_11] = acc_11
+                 buildmods_8 [(ErlangCons (ErlangTuple [type_12, x_13]) t_14),
+                              acc_15]
                    =
                    let   
-                     lop_23 =
-                       (BIF.erlang__op_mult
-                          [acc_20, (ErlangInt (DBI.fromInt 4))])
-                   in let rop_26 = (erlps__modifier_bits__2 [type_17, x_18])
-                   in let arg_22 = (BIF.erlang__op_plus [lop_23, rop_26])
-                   in (buildmods_8 [t_19, arg_22])
+                     lop_18 =
+                       (BIF.erlang__bsl__2
+                          [acc_15, (ErlangInt (DBI.fromInt 2))])
+                   in let lop_22 = (erlps__modifier_bits__2 [type_12, x_13])
+                   in let
+                     rop_21 =
+                       (BIF.erlang__band__2
+                          [lop_22, (ErlangInt (DBI.fromInt 3))])
+                   in let arg_17 = (BIF.erlang__bor__2 [lop_18, rop_21])
+                   in (buildmods_8 [t_14, arg_17])
                  buildmods_8 [arg_9, arg_10] = (EXC.function_clause unit)
                  buildmods_8 args =
                    (EXC.badarity
                       (ErlangFun 2 (\ _ -> (ErlangAtom "purs_tco_sucks"))) args)
                in buildmods_8)
         in let
+          arg_28 =
+            (BIF.do_remote_fun_call "Lists" "erlps__reverse__1" [args_5])
+        in let padded_30 = (erlps__pad_args__1 [arg_28])
+        in let
           arg_32 =
             (BIF.do_remote_fun_call "Lists" "erlps__reverse__1" [args_5])
         in let arg_31 = (erlps__pad_args__1 [arg_32])
         in let
-          mods_36 =
+          modsunpadded_36 =
             (BIF.erlang__apply__2
-               [buildmods_30,
+               [buildmods_27,
                 (ErlangCons arg_31
                    (ErlangCons (ErlangInt (DBI.fromInt 0)) ErlangEmptyList))])
+        in let case_37 = (BIF.erlang__length__1 [padded_30])
+        in let
+          mods_43 =
+            case case_37 of
+              (ErlangInt num_39) | ((ErlangInt num_39) ==
+                                      (ErlangInt (DBI.fromInt 4))) ->
+                (ErlangBinary
+                   (BIN.from_int modsunpadded_36 (ErlangInt (DBI.fromInt 8)) 1
+                      BIN.Big))
+              (ErlangInt num_41) | ((ErlangInt num_41) ==
+                                      (ErlangInt (DBI.fromInt 8))) ->
+                (ErlangBinary
+                   (BIN.from_int modsunpadded_36 (ErlangInt (DBI.fromInt 16)) 1
+                      BIN.Big))
+              something_else -> (EXC.case_clause something_else)
         in
-          case mods_36 of
-            (ErlangBinary bin_c_38) | size_39 <- ((DBI.fromInt 8))
-                                    , (BIN.Ok m1_41 bin_40) <-
-                                        ((BIN.chop_int bin_c_38 size_39 1
+          case mods_43 of
+            (ErlangBinary bin_c_45) | size_46 <- ((DBI.fromInt 8))
+                                    , (BIN.Ok m1_48 bin_47) <-
+                                        ((BIN.chop_int bin_c_45 size_46 1
                                             BIN.Big BIN.Unsigned))
-                                    , size_42 <- ((DBI.fromInt 8))
-                                    , (BIN.Ok m2_44 bin_43) <-
-                                        ((BIN.chop_int bin_40 size_42 1 BIN.Big
+                                    , size_49 <- ((DBI.fromInt 8))
+                                    , (BIN.Ok m2_51 bin_50) <-
+                                        ((BIN.chop_int bin_47 size_49 1 BIN.Big
                                             BIN.Unsigned))
-                                    , (BIN.empty bin_43) ->
+                                    , (BIN.empty bin_50) ->
               let   
-                tail_49 =
+                tail_56 =
                   (H.flmap
-                     (\ lc_53 ->
-                        case lc_53 of
-                          (ErlangTuple [type_51, arg_52]) ->
+                     (\ lc_60 ->
+                        case lc_60 of
+                          (ErlangTuple [type_58, arg_59]) ->
                             let
-                              cond_54 =
+                              cond_61 =
                                 (BIF.erlang__op_exactNeq
-                                   [type_51, (ErlangAtom "stack")])
+                                   [type_58, (ErlangAtom "stack")])
                             in
-                              case cond_54 of
+                              case cond_61 of
                                 (ErlangAtom "true") ->
                                   let
-                                    lc_ret_57 =
+                                    lc_ret_64 =
                                       (erlps__serialize_data__2
-                                         [type_51, arg_52])
-                                  in (ErlangCons lc_ret_57 ErlangEmptyList)
+                                         [type_58, arg_59])
+                                  in (ErlangCons lc_ret_64 ErlangEmptyList)
                                 _ -> ErlangEmptyList
                           _ -> ErlangEmptyList)
                      args_5)
-              in let rop_60 = (erlps__serialize_code__1 [rest_6])
+              in let rop_67 = (erlps__serialize_code__1 [rest_6])
               in
                 (BIF.erlang__op_append
-                   [(ErlangCons m1_41 (ErlangCons m2_44 tail_49)), rop_60])
-            (ErlangBinary bin_c_62) | size_63 <- ((DBI.fromInt 8))
-                                    , (BIN.Ok m1_65 bin_64) <-
-                                        ((BIN.chop_int bin_c_62 size_63 1
+                   [(ErlangCons m1_48 (ErlangCons m2_51 tail_56)), rop_67])
+            (ErlangBinary bin_c_69) | size_70 <- ((DBI.fromInt 8))
+                                    , (BIN.Ok m1_72 bin_71) <-
+                                        ((BIN.chop_int bin_c_69 size_70 1
                                             BIN.Big BIN.Unsigned))
-                                    , (BIN.empty bin_64) ->
+                                    , (BIN.empty bin_71) ->
               let   
-                tail_68 =
+                tail_75 =
                   (H.flmap
-                     (\ lc_72 ->
-                        case lc_72 of
-                          (ErlangTuple [type_70, arg_71]) ->
+                     (\ lc_79 ->
+                        case lc_79 of
+                          (ErlangTuple [type_77, arg_78]) ->
                             let
-                              cond_73 =
+                              cond_80 =
                                 (BIF.erlang__op_exactNeq
-                                   [type_70, (ErlangAtom "stack")])
+                                   [type_77, (ErlangAtom "stack")])
                             in
-                              case cond_73 of
+                              case cond_80 of
                                 (ErlangAtom "true") ->
                                   let
-                                    lc_ret_76 =
+                                    lc_ret_83 =
                                       (erlps__serialize_data__2
-                                         [type_70, arg_71])
-                                  in (ErlangCons lc_ret_76 ErlangEmptyList)
+                                         [type_77, arg_78])
+                                  in (ErlangCons lc_ret_83 ErlangEmptyList)
                                 _ -> ErlangEmptyList
                           _ -> ErlangEmptyList)
                      args_5)
-              in let rop_79 = (erlps__serialize_code__1 [rest_6])
-              in (BIF.erlang__op_append [(ErlangCons m1_65 tail_68), rop_79])
+              in let rop_86 = (erlps__serialize_code__1 [rest_6])
+              in (BIF.erlang__op_append [(ErlangCons m1_72 tail_75), rop_86])
             something_else -> (EXC.case_clause something_else)
       _ -> (EXC.badmatch match_expr_7)
 erlps__serialize_code__1 [(ErlangCons op_0 rest_1)] =
