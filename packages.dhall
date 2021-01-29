@@ -115,7 +115,7 @@ in  upstream
         , repo =
           "https://github.com/erlscripten/erlps-core.git"
         , version =
-          "master"
+          "main"
         }
     with purescript-erlps-stdlib =
         { dependencies =
@@ -123,7 +123,7 @@ in  upstream
         , repo =
           "https://github.com/erlscripten/erlps-stdlib.git"
         , version =
-          "master"
+          "main"
         }
      with purescript-erlps-aeserialization =
         { dependencies =
