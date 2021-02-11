@@ -195,8 +195,8 @@ erlps__function_type_info__4 args =
 
 erlps__function_type_hash__3 :: ErlangFun
 erlps__function_type_hash__3 [name_0, argtype_1, outtype_2]
-  | ((ErlangAtom "true") ==
-       (falsifyErrors (\ _ -> BIF.erlang__is_binary__1 [name_0]))) =
+  | (ErlangAtom "true") ==
+      (falsifyErrors (\ _ -> BIF.erlang__is_binary__1 [name_0])) =
   let   
     head_6 =
       BIF.do_remote_fun_call "Aeb.Heap" "erlps__to_binary__1"
@@ -233,11 +233,11 @@ erlps__arg_typerep_from_function__2 [function_0, typeinfo_1] =
   in
     case case_2 of
       (ErlangTuple [_typehash_6, function_7, argtypebin_8,
-                    _outtypebin_9]) | (function_7 == function_0) ->
+                    _outtypebin_9]) | function_7 == function_0 ->
         erlps__arg_typerep_from_type_binary__1 [argtypebin_8]
       (ErlangTuple [_typehash_11, function_12, _payable_13,
-                    argtypebin_14, _outtypebin_15]) | (function_12 ==
-                                                         function_0) ->
+                    argtypebin_14, _outtypebin_15]) | function_12 ==
+                                                        function_0 ->
         erlps__arg_typerep_from_type_binary__1 [argtypebin_14]
       (ErlangAtom "false") ->
         ErlangTuple [ErlangAtom "error", ErlangAtom "unknown_function"]
@@ -275,12 +275,12 @@ erlps__typereps_from_type_hash__2 [typehash_0, typeinfo_1] =
   in
     case case_2 of
       (ErlangTuple [typehash_6, _function_7, argtypebin_8,
-                    outtypebin_9]) | (typehash_6 == typehash_0) ->
+                    outtypebin_9]) | typehash_6 == typehash_0 ->
         erlps__typereps_from_type_binaries__2
           [argtypebin_8, outtypebin_9]
       (ErlangTuple [typehash_12, _function_13, _payable_14,
-                    argtypebin_15, outtypebin_16]) | (typehash_12 ==
-                                                        typehash_0) ->
+                    argtypebin_15, outtypebin_16]) | typehash_12 ==
+                                                       typehash_0 ->
         erlps__typereps_from_type_binaries__2
           [argtypebin_15, outtypebin_16]
       (ErlangAtom "false") ->
@@ -325,11 +325,11 @@ erlps__function_name_from_type_hash__2 [typehash_0, typeinfo_1] =
   in
     case case_2 of
       (ErlangTuple [typehash_6, function_7, _argtypebin_8,
-                    _outtypebin_9]) | (typehash_6 == typehash_0) ->
+                    _outtypebin_9]) | typehash_6 == typehash_0 ->
         ErlangTuple [ErlangAtom "ok", function_7]
       (ErlangTuple [typehash_12, function_13, _payable_14,
-                    _argtypebin_15, _outtypebin_16]) | (typehash_12 ==
-                                                          typehash_0) ->
+                    _argtypebin_15, _outtypebin_16]) | typehash_12 ==
+                                                         typehash_0 ->
         ErlangTuple [ErlangAtom "ok", function_13]
       (ErlangAtom "false") ->
         ErlangTuple [ErlangAtom "error", ErlangAtom "unknown_function"]
@@ -347,10 +347,10 @@ erlps__type_hash_from_function_name__2 [name_0, typeinfo_1] =
   in
     case case_2 of
       (ErlangTuple [typehash_6, name_7, _argtypebin_8,
-                    _outtypebin_9]) | (name_7 == name_0) ->
+                    _outtypebin_9]) | name_7 == name_0 ->
         ErlangTuple [ErlangAtom "ok", typehash_6]
       (ErlangTuple [typehash_12, name_13, _payable_14, _argtypebin_15,
-                    _outtypebin_16]) | (name_13 == name_0) ->
+                    _outtypebin_16]) | name_13 == name_0 ->
         ErlangTuple [ErlangAtom "ok", typehash_12]
       (ErlangAtom "false") ->
         ErlangTuple [ErlangAtom "error", ErlangAtom "unknown_function"]
@@ -369,11 +369,11 @@ erlps__is_payable__2 [typehash_0, typeinfo_1] =
   in
     case case_2 of
       (ErlangTuple [typehash_6, _function_7, _argtypebin_8,
-                    _outtypebin_9]) | (typehash_6 == typehash_0) ->
+                    _outtypebin_9]) | typehash_6 == typehash_0 ->
         ErlangTuple [ErlangAtom "ok", ErlangAtom "true"]
       (ErlangTuple [typehash_12, _function_13, payable_14,
-                    _argtypebin_15, _outtypebin_16]) | (typehash_12 ==
-                                                          typehash_0) ->
+                    _argtypebin_15, _outtypebin_16]) | typehash_12 ==
+                                                         typehash_0 ->
         ErlangTuple [ErlangAtom "ok", payable_14]
       (ErlangAtom "false") ->
         ErlangTuple [ErlangAtom "error", ErlangAtom "unknown_function"]

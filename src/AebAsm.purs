@@ -113,7 +113,7 @@ erlps__format__2 args =
 
 erlps__get_args__2 :: ErlangFun
 erlps__get_args__2 [(ErlangInt num_0), (ErlangCons arg_1 code_2)]
-  | ((ErlangInt num_0) == (toErl 1)) =
+  | (ErlangInt num_0) == (toErl 1) =
   let tup_el_3 = BIF.erlang__integer_to_list__1 [arg_1]
   in ErlangTuple [tup_el_3, code_2]
 erlps__get_args__2 [n_0, (ErlangCons arg_1 code_2)] =
@@ -328,7 +328,7 @@ erlps__resolve_refs__3 args =
 
 erlps__expand_args__1 :: ErlangFun
 erlps__expand_args__1 [(ErlangCons op_0 (ErlangCons arg_1 rest_2))]
-  | ((weakGeq op_0 (toErl 96)) && (weakLeq op_0 (toErl 127))) =
+  | (weakGeq op_0 (toErl 96)) && (weakLeq op_0 (toErl 127)) =
   let   
     lop_4 =
       BIF.do_remote_fun_call "Aeb.Opcodes" "erlps__op_size__1" [op_0]

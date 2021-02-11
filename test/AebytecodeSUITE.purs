@@ -54,7 +54,7 @@ erlps__roundtrip_identy__1 [_cfg_0] =
         [code_9, arg_16]
   in let
     _ =
-      BIF.do_remote_fun_call "Ct" "erlps__log__2"
+      BIF.do_remote_fun_call "Io" "erlps__format__2"
         [arg_10,
          ErlangCons filename_6 (ErlangCons head_14 ErlangEmptyList)]
   in ErlangAtom "ok"

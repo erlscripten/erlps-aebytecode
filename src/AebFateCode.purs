@@ -174,7 +174,7 @@ erlps__insert_symbol__2 [name_0,
   in let case_5 = BIF.maps__find__2 [id_4, syms_1]
   in
     case case_5 of
-      (ErlangTuple [(ErlangAtom "ok"), name_8]) | (name_8 == name_0) ->
+      (ErlangTuple [(ErlangAtom "ok"), name_8]) | name_8 == name_0 ->
         ErlangTuple [f_2, id_4]
       (ErlangTuple [(ErlangAtom "ok"), x_11]) ->
         let
@@ -550,19 +550,19 @@ erlps__sanity_check__1 [(ErlangTuple [(ErlangAtom "fcode"),
                let
                  lcRet_6 =
                    case def_4 of
-                     (ErlangTuple [_, _, bbs_8]) | ((ErlangAtom "true") ==
-                                                      (falsifyErrors
-                                                         (\ _ ->
-                                                            let   
-                                                              lop_9 =
-                                                                BIF.erlang__byte_size__1
-                                                                  [id_3]
-                                                            in let
-                                                              rop_11 = toErl 4
-                                                            in
-                                                              BIF.erlang__op_eq
-                                                                [lop_9,
-                                                                 rop_11]))) ->
+                     (ErlangTuple [_, _, bbs_8]) | (ErlangAtom "true") ==
+                                                     (falsifyErrors
+                                                        (\ _ ->
+                                                           let   
+                                                             lop_9 =
+                                                               BIF.erlang__byte_size__1
+                                                                 [id_3]
+                                                           in let
+                                                             rop_11 = toErl 4
+                                                           in
+                                                             BIF.erlang__op_eq
+                                                               [lop_9,
+                                                                rop_11])) ->
                        erlps__sanity_check_bbs__1 [bbs_8]
                      _ ->
                        let
@@ -752,9 +752,9 @@ erlps__serialize_code__1 [list_0@(ErlangCons (ErlangTuple [_,
         in let
           mods_43 =
             case case_37 of
-              (ErlangInt num_39) | ((ErlangInt num_39) == (toErl 4)) ->
+              (ErlangInt num_39) | (ErlangInt num_39) == (toErl 4) ->
                 ErlangBinary (BIN.fromInt modsunpadded_36 (toErl 8) 1 BIN.Big)
-              (ErlangInt num_41) | ((ErlangInt num_41) == (toErl 8)) ->
+              (ErlangInt num_41) | (ErlangInt num_41) == (toErl 8) ->
                 ErlangBinary (BIN.fromInt modsunpadded_36 (toErl 16) 1 BIN.Big)
               something_else -> EXC.case_clause something_else
         in
@@ -835,7 +835,7 @@ erlps__pad_args__1 [list_0] =
   let case_1 = BIF.erlang__length__1 [list_0]
   in
     case case_1 of
-      (ErlangInt num_3) | ((ErlangInt num_3) == (toErl 0)) -> list_0
+      (ErlangInt num_3) | (ErlangInt num_3) == (toErl 0) -> list_0
       n_4 | weakLeq n_4 (toErl 4) ->
         let    lop_7 = toErl 4
         in let arg_6 = BIF.erlang__op_minus [lop_7, n_4]
@@ -877,7 +877,7 @@ erlps__modifier_bits__2 [(ErlangAtom "immediate"), _] = toErl 3
 erlps__modifier_bits__2 [(ErlangAtom "var"), _] = toErl 2
 erlps__modifier_bits__2 [(ErlangAtom "arg"), _] = toErl 1
 erlps__modifier_bits__2 [(ErlangAtom "stack"), (ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 0)) =
+  | (ErlangInt num_0) == (toErl 0) =
   toErl 0
 erlps__modifier_bits__2 [type_0, x_1] =
   let
@@ -890,16 +890,16 @@ erlps__modifier_bits__2 args =
 
 erlps__bits_to_modifier__1 :: ErlangFun
 erlps__bits_to_modifier__1 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 3)) =
+  | (ErlangInt num_0) == (toErl 3) =
   ErlangAtom "immediate"
 erlps__bits_to_modifier__1 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 2)) =
+  | (ErlangInt num_0) == (toErl 2) =
   ErlangAtom "var"
 erlps__bits_to_modifier__1 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 1)) =
+  | (ErlangInt num_0) == (toErl 1) =
   ErlangAtom "arg"
 erlps__bits_to_modifier__1 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 0)) =
+  | (ErlangInt num_0) == (toErl 0) =
   ErlangAtom "stack"
 erlps__bits_to_modifier__1 [arg_1] = EXC.function_clause unit
 erlps__bits_to_modifier__1 args =
@@ -973,7 +973,7 @@ erlps__deserialize_functions__2 [(ErlangBinary binSeg_0),
   | (ErlangInt size_1) <- (toErl 8)
   , (BIN.Ok (ErlangInt num_3) bin_2) <-
       (BIN.chopInt binSeg_0 size_1 1 BIN.Big BIN.Unsigned)
-  , ((ErlangInt num_3) == (toErl 254))
+  , (ErlangInt num_3) == (toErl 254)
   , (ErlangInt size_4) <- (toErl 8)
   , (BIN.Ok a_6 bin_5) <-
       (BIN.chopInt bin_2 size_4 1 BIN.Big BIN.Unsigned)
@@ -993,7 +993,7 @@ erlps__deserialize_functions__2 [(ErlangBinary binSeg_0),
       (Map.lookup (ErlangAtom "current_bb_code") map_19)
   , (DM.Just (ErlangInt num_20)) <-
       (Map.lookup (ErlangAtom "bb") map_19)
-  , ((ErlangInt num_20) == (toErl 0))
+  , (ErlangInt num_20) == (toErl 0)
   , (DM.Just (ErlangAtom "none")) <-
       (Map.lookup (ErlangAtom "function") map_19) =
   let matchExpr_25 = erlps__deserialize_attributes__1 [rest_18]
@@ -1025,7 +1025,7 @@ erlps__deserialize_functions__2 [(ErlangBinary binSeg_0),
   | (ErlangInt size_1) <- (toErl 8)
   , (BIN.Ok (ErlangInt num_3) bin_2) <-
       (BIN.chopInt binSeg_0 size_1 1 BIN.Big BIN.Unsigned)
-  , ((ErlangInt num_3) == (toErl 254))
+  , (ErlangInt num_3) == (toErl 254)
   , (ErlangInt size_4) <- (toErl 8)
   , (BIN.Ok a_6 bin_5) <-
       (BIN.chopInt bin_2 size_4 1 BIN.Big BIN.Unsigned)
@@ -1230,7 +1230,7 @@ erlps__deserialize_op__3 [op_0, rest_1, code_2] =
       BIF.do_remote_fun_call "Aeb.Fate.Opcodes" "erlps__args__1" [op_0]
   in
     case case_5 of
-      (ErlangInt num_7) | ((ErlangInt num_7) == (toErl 0)) ->
+      (ErlangInt num_7) | (ErlangInt num_7) == (toErl 0) ->
         ErlangTuple [rest_1, ErlangCons opname_4 code_2]
       n_12 ->
         let matchExpr_17 = erlps__deserialize_n_args__2 [n_12, rest_1]
@@ -1437,16 +1437,16 @@ erlps__deserialize_attributes__1 args =
 
 erlps__attr_vals__2 :: ErlangFun
 erlps__attr_vals__2 [_, (ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 0)) =
+  | (ErlangInt num_0) == (toErl 0) =
   ErlangEmptyList
 erlps__attr_vals__2 [x_0, n_1]
-  | ((ErlangAtom "true") ==
-       (falsifyErrors
-          (\ _ ->
-             let    rop_10 = toErl 2
-             in let lop_8 = BIF.erlang__op_rem_strict [n_1, rop_10]
-             in let rop_11 = toErl 0
-             in BIF.erlang__op_eq [lop_8, rop_11]))) =
+  | (ErlangAtom "true") ==
+      (falsifyErrors
+         (\ _ ->
+            let    rop_10 = toErl 2
+            in let lop_8 = BIF.erlang__op_rem_strict [n_1, rop_10]
+            in let rop_11 = toErl 0
+            in BIF.erlang__op_eq [lop_8, rop_11])) =
   let    rop_4 = toErl 1
   in let arg_2 = BIF.erlang__op_plus [x_0, rop_4]
   in let rop_7 = toErl 2
@@ -1466,10 +1466,10 @@ erlps__attr_vals__2 args =
 
 erlps__attr__1 :: ErlangFun
 erlps__attr__1 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 1)) =
+  | (ErlangInt num_0) == (toErl 1) =
   ErlangAtom "private"
 erlps__attr__1 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 2)) =
+  | (ErlangInt num_0) == (toErl 2) =
   ErlangAtom "payable"
 erlps__attr__1 [arg_1] = EXC.function_clause unit
 erlps__attr__1 args =
@@ -1531,7 +1531,7 @@ erlps__deserialize_annotations__1 args =
 erlps__assert_zero__1 :: ErlangFun
 erlps__assert_zero__1 [(ErlangEmptyList)] = ErlangAtom "true"
 erlps__assert_zero__1 [(ErlangCons (ErlangInt num_0) rest_1)]
-  | ((ErlangInt num_0) == (toErl 0)) =
+  | (ErlangInt num_0) == (toErl 0) =
   erlps__assert_zero__1 [rest_1]
 erlps__assert_zero__1 [(ErlangCons _ _)] =
   BIF.erlang__error__1

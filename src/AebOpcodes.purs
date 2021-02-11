@@ -24,927 +24,845 @@ import Partial.Unsafe (unsafePartial)
 
 erlps__opcode__1 :: ErlangFun
 erlps__opcode__1 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 0)) =
+  | (ErlangInt num_0) == (toErl 0) =
   toErl 0
 erlps__opcode__1 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 1)) =
+  | (ErlangInt num_0) == (toErl 1) =
   toErl 1
 erlps__opcode__1 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 2)) =
+  | (ErlangInt num_0) == (toErl 2) =
   toErl 2
 erlps__opcode__1 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 3)) =
+  | (ErlangInt num_0) == (toErl 3) =
   toErl 3
 erlps__opcode__1 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 4)) =
+  | (ErlangInt num_0) == (toErl 4) =
   toErl 4
 erlps__opcode__1 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 5)) =
+  | (ErlangInt num_0) == (toErl 5) =
   toErl 5
 erlps__opcode__1 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 6)) =
+  | (ErlangInt num_0) == (toErl 6) =
   toErl 6
 erlps__opcode__1 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 7)) =
+  | (ErlangInt num_0) == (toErl 7) =
   toErl 7
 erlps__opcode__1 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 8)) =
+  | (ErlangInt num_0) == (toErl 8) =
   toErl 8
 erlps__opcode__1 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 9)) =
+  | (ErlangInt num_0) == (toErl 9) =
   toErl 9
-erlps__opcode__1 args = erlps__opcode__1__p1 args
-
-erlps__opcode__1__p1 :: ErlangFun
-erlps__opcode__1__p1 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 10)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 10) =
   toErl 10
-erlps__opcode__1__p1 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 11)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 11) =
   toErl 11
-erlps__opcode__1__p1 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 16)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 16) =
   toErl 16
-erlps__opcode__1__p1 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 17)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 17) =
   toErl 17
-erlps__opcode__1__p1 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 18)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 18) =
   toErl 18
-erlps__opcode__1__p1 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 19)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 19) =
   toErl 19
-erlps__opcode__1__p1 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 20)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 20) =
   toErl 20
-erlps__opcode__1__p1 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 21)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 21) =
   toErl 21
-erlps__opcode__1__p1 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 22)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 22) =
   toErl 22
-erlps__opcode__1__p1 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 23)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 23) =
   toErl 23
-erlps__opcode__1__p1 args = erlps__opcode__1__p2 args
-
-erlps__opcode__1__p2 :: ErlangFun
-erlps__opcode__1__p2 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 24)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 24) =
   toErl 24
-erlps__opcode__1__p2 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 25)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 25) =
   toErl 25
-erlps__opcode__1__p2 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 26)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 26) =
   toErl 26
-erlps__opcode__1__p2 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 27)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 27) =
   toErl 27
-erlps__opcode__1__p2 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 28)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 28) =
   toErl 28
-erlps__opcode__1__p2 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 29)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 29) =
   toErl 29
-erlps__opcode__1__p2 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 32)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 32) =
   toErl 32
-erlps__opcode__1__p2 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 47)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 47) =
   toErl 47
-erlps__opcode__1__p2 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 48)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 48) =
   toErl 48
-erlps__opcode__1__p2 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 49)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 49) =
   toErl 49
-erlps__opcode__1__p2 args = erlps__opcode__1__p3 args
-
-erlps__opcode__1__p3 :: ErlangFun
-erlps__opcode__1__p3 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 50)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 50) =
   toErl 50
-erlps__opcode__1__p3 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 51)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 51) =
   toErl 51
-erlps__opcode__1__p3 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 52)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 52) =
   toErl 52
-erlps__opcode__1__p3 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 53)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 53) =
   toErl 53
-erlps__opcode__1__p3 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 54)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 54) =
   toErl 54
-erlps__opcode__1__p3 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 55)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 55) =
   toErl 55
-erlps__opcode__1__p3 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 56)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 56) =
   toErl 56
-erlps__opcode__1__p3 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 57)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 57) =
   toErl 57
-erlps__opcode__1__p3 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 58)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 58) =
   toErl 58
-erlps__opcode__1__p3 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 59)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 59) =
   toErl 59
-erlps__opcode__1__p3 args = erlps__opcode__1__p4 args
-
-erlps__opcode__1__p4 :: ErlangFun
-erlps__opcode__1__p4 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 60)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 60) =
   toErl 60
-erlps__opcode__1__p4 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 61)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 61) =
   toErl 61
-erlps__opcode__1__p4 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 62)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 62) =
   toErl 62
-erlps__opcode__1__p4 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 64)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 64) =
   toErl 64
-erlps__opcode__1__p4 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 65)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 65) =
   toErl 65
-erlps__opcode__1__p4 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 66)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 66) =
   toErl 66
-erlps__opcode__1__p4 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 67)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 67) =
   toErl 67
-erlps__opcode__1__p4 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 68)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 68) =
   toErl 68
-erlps__opcode__1__p4 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 69)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 69) =
   toErl 69
-erlps__opcode__1__p4 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 80)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 80) =
   toErl 80
-erlps__opcode__1__p4 args = erlps__opcode__1__p5 args
-
-erlps__opcode__1__p5 :: ErlangFun
-erlps__opcode__1__p5 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 81)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 81) =
   toErl 81
-erlps__opcode__1__p5 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 82)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 82) =
   toErl 82
-erlps__opcode__1__p5 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 83)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 83) =
   toErl 83
-erlps__opcode__1__p5 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 84)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 84) =
   toErl 84
-erlps__opcode__1__p5 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 85)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 85) =
   toErl 85
-erlps__opcode__1__p5 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 86)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 86) =
   toErl 86
-erlps__opcode__1__p5 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 87)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 87) =
   toErl 87
-erlps__opcode__1__p5 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 88)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 88) =
   toErl 88
-erlps__opcode__1__p5 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 89)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 89) =
   toErl 89
-erlps__opcode__1__p5 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 90)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 90) =
   toErl 90
-erlps__opcode__1__p5 args = erlps__opcode__1__p6 args
-
-erlps__opcode__1__p6 :: ErlangFun
-erlps__opcode__1__p6 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 91)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 91) =
   toErl 91
-erlps__opcode__1__p6 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 96)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 96) =
   toErl 96
-erlps__opcode__1__p6 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 97)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 97) =
   toErl 97
-erlps__opcode__1__p6 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 98)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 98) =
   toErl 98
-erlps__opcode__1__p6 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 99)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 99) =
   toErl 99
-erlps__opcode__1__p6 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 100)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 100) =
   toErl 100
-erlps__opcode__1__p6 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 101)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 101) =
   toErl 101
-erlps__opcode__1__p6 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 102)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 102) =
   toErl 102
-erlps__opcode__1__p6 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 103)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 103) =
   toErl 103
-erlps__opcode__1__p6 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 104)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 104) =
   toErl 104
-erlps__opcode__1__p6 args = erlps__opcode__1__p7 args
-
-erlps__opcode__1__p7 :: ErlangFun
-erlps__opcode__1__p7 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 105)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 105) =
   toErl 105
-erlps__opcode__1__p7 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 106)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 106) =
   toErl 106
-erlps__opcode__1__p7 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 107)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 107) =
   toErl 107
-erlps__opcode__1__p7 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 108)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 108) =
   toErl 108
-erlps__opcode__1__p7 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 109)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 109) =
   toErl 109
-erlps__opcode__1__p7 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 110)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 110) =
   toErl 110
-erlps__opcode__1__p7 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 111)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 111) =
   toErl 111
-erlps__opcode__1__p7 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 112)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 112) =
   toErl 112
-erlps__opcode__1__p7 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 113)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 113) =
   toErl 113
-erlps__opcode__1__p7 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 114)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 114) =
   toErl 114
-erlps__opcode__1__p7 args = erlps__opcode__1__p8 args
-
-erlps__opcode__1__p8 :: ErlangFun
-erlps__opcode__1__p8 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 115)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 115) =
   toErl 115
-erlps__opcode__1__p8 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 116)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 116) =
   toErl 116
-erlps__opcode__1__p8 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 117)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 117) =
   toErl 117
-erlps__opcode__1__p8 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 118)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 118) =
   toErl 118
-erlps__opcode__1__p8 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 119)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 119) =
   toErl 119
-erlps__opcode__1__p8 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 120)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 120) =
   toErl 120
-erlps__opcode__1__p8 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 121)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 121) =
   toErl 121
-erlps__opcode__1__p8 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 122)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 122) =
   toErl 122
-erlps__opcode__1__p8 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 123)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 123) =
   toErl 123
-erlps__opcode__1__p8 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 124)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 124) =
   toErl 124
-erlps__opcode__1__p8 args = erlps__opcode__1__p9 args
-
-erlps__opcode__1__p9 :: ErlangFun
-erlps__opcode__1__p9 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 125)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 125) =
   toErl 125
-erlps__opcode__1__p9 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 126)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 126) =
   toErl 126
-erlps__opcode__1__p9 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 127)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 127) =
   toErl 127
-erlps__opcode__1__p9 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 128)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 128) =
   toErl 128
-erlps__opcode__1__p9 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 129)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 129) =
   toErl 129
-erlps__opcode__1__p9 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 130)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 130) =
   toErl 130
-erlps__opcode__1__p9 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 131)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 131) =
   toErl 131
-erlps__opcode__1__p9 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 132)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 132) =
   toErl 132
-erlps__opcode__1__p9 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 133)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 133) =
   toErl 133
-erlps__opcode__1__p9 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 134)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 134) =
   toErl 134
-erlps__opcode__1__p9 args = erlps__opcode__1__p10 args
-
-erlps__opcode__1__p10 :: ErlangFun
-erlps__opcode__1__p10 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 135)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 135) =
   toErl 135
-erlps__opcode__1__p10 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 136)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 136) =
   toErl 136
-erlps__opcode__1__p10 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 137)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 137) =
   toErl 137
-erlps__opcode__1__p10 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 138)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 138) =
   toErl 138
-erlps__opcode__1__p10 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 139)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 139) =
   toErl 139
-erlps__opcode__1__p10 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 140)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 140) =
   toErl 140
-erlps__opcode__1__p10 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 141)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 141) =
   toErl 141
-erlps__opcode__1__p10 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 142)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 142) =
   toErl 142
-erlps__opcode__1__p10 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 143)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 143) =
   toErl 143
-erlps__opcode__1__p10 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 144)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 144) =
   toErl 144
-erlps__opcode__1__p10 args = erlps__opcode__1__p11 args
-
-erlps__opcode__1__p11 :: ErlangFun
-erlps__opcode__1__p11 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 145)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 145) =
   toErl 145
-erlps__opcode__1__p11 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 146)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 146) =
   toErl 146
-erlps__opcode__1__p11 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 147)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 147) =
   toErl 147
-erlps__opcode__1__p11 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 148)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 148) =
   toErl 148
-erlps__opcode__1__p11 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 149)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 149) =
   toErl 149
-erlps__opcode__1__p11 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 150)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 150) =
   toErl 150
-erlps__opcode__1__p11 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 151)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 151) =
   toErl 151
-erlps__opcode__1__p11 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 152)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 152) =
   toErl 152
-erlps__opcode__1__p11 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 153)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 153) =
   toErl 153
-erlps__opcode__1__p11 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 154)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 154) =
   toErl 154
-erlps__opcode__1__p11 args = erlps__opcode__1__p12 args
-
-erlps__opcode__1__p12 :: ErlangFun
-erlps__opcode__1__p12 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 155)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 155) =
   toErl 155
-erlps__opcode__1__p12 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 156)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 156) =
   toErl 156
-erlps__opcode__1__p12 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 157)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 157) =
   toErl 157
-erlps__opcode__1__p12 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 158)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 158) =
   toErl 158
-erlps__opcode__1__p12 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 159)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 159) =
   toErl 159
-erlps__opcode__1__p12 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 160)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 160) =
   toErl 160
-erlps__opcode__1__p12 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 161)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 161) =
   toErl 161
-erlps__opcode__1__p12 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 162)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 162) =
   toErl 162
-erlps__opcode__1__p12 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 163)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 163) =
   toErl 163
-erlps__opcode__1__p12 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 164)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 164) =
   toErl 164
-erlps__opcode__1__p12 args = erlps__opcode__1__p13 args
-
-erlps__opcode__1__p13 :: ErlangFun
-erlps__opcode__1__p13 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 240)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 240) =
   toErl 240
-erlps__opcode__1__p13 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 241)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 241) =
   toErl 241
-erlps__opcode__1__p13 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 242)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 242) =
   toErl 242
-erlps__opcode__1__p13 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 243)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 243) =
   toErl 243
-erlps__opcode__1__p13 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 244)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 244) =
   toErl 244
-erlps__opcode__1__p13 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 250)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 250) =
   toErl 250
-erlps__opcode__1__p13 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 253)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 253) =
   toErl 253
-erlps__opcode__1__p13 [(ErlangTuple [(ErlangAtom "comment"),
-                                     x_0])]
-  =
+erlps__opcode__1 [(ErlangTuple [(ErlangAtom "comment"), x_0])] =
   ErlangTuple [ErlangAtom "comment", x_0]
-erlps__opcode__1__p13 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 255)) =
+erlps__opcode__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 255) =
   toErl 255
-erlps__opcode__1__p13 [arg_1] = EXC.function_clause unit
-erlps__opcode__1__p13 args =
+erlps__opcode__1 [arg_1] = EXC.function_clause unit
+erlps__opcode__1 args =
   EXC.badarity (ErlangFun 1 (\ _ -> ErlangAtom "purs_tco_sucks"))
     args
 
 erlps__mnemonic__1 :: ErlangFun
 erlps__mnemonic__1 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 0)) =
+  | (ErlangInt num_0) == (toErl 0) =
   ErlangAtom "STOP"
 erlps__mnemonic__1 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 1)) =
+  | (ErlangInt num_0) == (toErl 1) =
   ErlangAtom "ADD"
 erlps__mnemonic__1 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 2)) =
+  | (ErlangInt num_0) == (toErl 2) =
   ErlangAtom "MUL"
 erlps__mnemonic__1 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 3)) =
+  | (ErlangInt num_0) == (toErl 3) =
   ErlangAtom "SUB"
 erlps__mnemonic__1 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 4)) =
+  | (ErlangInt num_0) == (toErl 4) =
   ErlangAtom "DIV"
 erlps__mnemonic__1 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 5)) =
+  | (ErlangInt num_0) == (toErl 5) =
   ErlangAtom "SDIV"
 erlps__mnemonic__1 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 6)) =
+  | (ErlangInt num_0) == (toErl 6) =
   ErlangAtom "MOD"
 erlps__mnemonic__1 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 7)) =
+  | (ErlangInt num_0) == (toErl 7) =
   ErlangAtom "SMOD"
 erlps__mnemonic__1 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 8)) =
+  | (ErlangInt num_0) == (toErl 8) =
   ErlangAtom "ADDMOD"
 erlps__mnemonic__1 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 9)) =
+  | (ErlangInt num_0) == (toErl 9) =
   ErlangAtom "MULMOD"
-erlps__mnemonic__1 args = erlps__mnemonic__1__p1 args
-
-erlps__mnemonic__1__p1 :: ErlangFun
-erlps__mnemonic__1__p1 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 10)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 10) =
   ErlangAtom "EXP"
-erlps__mnemonic__1__p1 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 11)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 11) =
   ErlangAtom "SIGNEXTEND"
-erlps__mnemonic__1__p1 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 16)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 16) =
   ErlangAtom "LT"
-erlps__mnemonic__1__p1 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 17)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 17) =
   ErlangAtom "GT"
-erlps__mnemonic__1__p1 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 18)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 18) =
   ErlangAtom "SLT"
-erlps__mnemonic__1__p1 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 19)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 19) =
   ErlangAtom "SGT"
-erlps__mnemonic__1__p1 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 20)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 20) =
   ErlangAtom "EQ"
-erlps__mnemonic__1__p1 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 21)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 21) =
   ErlangAtom "ISZERO"
-erlps__mnemonic__1__p1 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 22)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 22) =
   ErlangAtom "AND"
-erlps__mnemonic__1__p1 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 23)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 23) =
   ErlangAtom "OR"
-erlps__mnemonic__1__p1 args = erlps__mnemonic__1__p2 args
-
-erlps__mnemonic__1__p2 :: ErlangFun
-erlps__mnemonic__1__p2 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 24)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 24) =
   ErlangAtom "XOR"
-erlps__mnemonic__1__p2 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 25)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 25) =
   ErlangAtom "NOT"
-erlps__mnemonic__1__p2 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 26)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 26) =
   ErlangAtom "BYTE"
-erlps__mnemonic__1__p2 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 27)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 27) =
   ErlangAtom "SHL"
-erlps__mnemonic__1__p2 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 28)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 28) =
   ErlangAtom "SHR"
-erlps__mnemonic__1__p2 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 29)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 29) =
   ErlangAtom "SAR"
-erlps__mnemonic__1__p2 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 32)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 32) =
   ErlangAtom "SHA3"
-erlps__mnemonic__1__p2 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 47)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 47) =
   ErlangAtom "CREATOR"
-erlps__mnemonic__1__p2 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 48)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 48) =
   ErlangAtom "ADDRESS"
-erlps__mnemonic__1__p2 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 49)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 49) =
   ErlangAtom "BALANCE"
-erlps__mnemonic__1__p2 args = erlps__mnemonic__1__p3 args
-
-erlps__mnemonic__1__p3 :: ErlangFun
-erlps__mnemonic__1__p3 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 50)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 50) =
   ErlangAtom "ORIGIN"
-erlps__mnemonic__1__p3 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 51)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 51) =
   ErlangAtom "CALLER"
-erlps__mnemonic__1__p3 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 52)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 52) =
   ErlangAtom "CALLVALUE"
-erlps__mnemonic__1__p3 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 53)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 53) =
   ErlangAtom "CALLDATALOAD"
-erlps__mnemonic__1__p3 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 54)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 54) =
   ErlangAtom "CALLDATASIZE"
-erlps__mnemonic__1__p3 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 55)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 55) =
   ErlangAtom "CALLDATACOPY"
-erlps__mnemonic__1__p3 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 56)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 56) =
   ErlangAtom "CODESIZE"
-erlps__mnemonic__1__p3 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 57)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 57) =
   ErlangAtom "CODECOPY"
-erlps__mnemonic__1__p3 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 58)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 58) =
   ErlangAtom "GASPRICE"
-erlps__mnemonic__1__p3 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 59)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 59) =
   ErlangAtom "EXTCODESIZE"
-erlps__mnemonic__1__p3 args = erlps__mnemonic__1__p4 args
-
-erlps__mnemonic__1__p4 :: ErlangFun
-erlps__mnemonic__1__p4 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 60)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 60) =
   ErlangAtom "EXTCODECOPY"
-erlps__mnemonic__1__p4 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 61)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 61) =
   ErlangAtom "RETURNDATASIZE"
-erlps__mnemonic__1__p4 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 62)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 62) =
   ErlangAtom "RETURNDATACOPY"
-erlps__mnemonic__1__p4 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 64)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 64) =
   ErlangAtom "BLOCKHASH"
-erlps__mnemonic__1__p4 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 65)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 65) =
   ErlangAtom "COINBASE"
-erlps__mnemonic__1__p4 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 66)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 66) =
   ErlangAtom "TIMESTAMP"
-erlps__mnemonic__1__p4 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 67)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 67) =
   ErlangAtom "NUMBER"
-erlps__mnemonic__1__p4 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 68)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 68) =
   ErlangAtom "DIFFICULTY"
-erlps__mnemonic__1__p4 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 69)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 69) =
   ErlangAtom "GASLIMIT"
-erlps__mnemonic__1__p4 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 80)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 80) =
   ErlangAtom "POP"
-erlps__mnemonic__1__p4 args = erlps__mnemonic__1__p5 args
-
-erlps__mnemonic__1__p5 :: ErlangFun
-erlps__mnemonic__1__p5 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 81)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 81) =
   ErlangAtom "MLOAD"
-erlps__mnemonic__1__p5 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 82)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 82) =
   ErlangAtom "MSTORE"
-erlps__mnemonic__1__p5 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 83)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 83) =
   ErlangAtom "MSTORE8"
-erlps__mnemonic__1__p5 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 84)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 84) =
   ErlangAtom "SLOAD"
-erlps__mnemonic__1__p5 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 85)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 85) =
   ErlangAtom "SSTORE"
-erlps__mnemonic__1__p5 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 86)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 86) =
   ErlangAtom "JUMP"
-erlps__mnemonic__1__p5 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 87)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 87) =
   ErlangAtom "JUMPI"
-erlps__mnemonic__1__p5 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 88)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 88) =
   ErlangAtom "PC"
-erlps__mnemonic__1__p5 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 89)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 89) =
   ErlangAtom "MSIZE"
-erlps__mnemonic__1__p5 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 90)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 90) =
   ErlangAtom "GAS"
-erlps__mnemonic__1__p5 args = erlps__mnemonic__1__p6 args
-
-erlps__mnemonic__1__p6 :: ErlangFun
-erlps__mnemonic__1__p6 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 91)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 91) =
   ErlangAtom "JUMPDEST"
-erlps__mnemonic__1__p6 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 96)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 96) =
   ErlangAtom "PUSH1"
-erlps__mnemonic__1__p6 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 97)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 97) =
   ErlangAtom "PUSH2"
-erlps__mnemonic__1__p6 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 98)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 98) =
   ErlangAtom "PUSH3"
-erlps__mnemonic__1__p6 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 99)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 99) =
   ErlangAtom "PUSH4"
-erlps__mnemonic__1__p6 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 100)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 100) =
   ErlangAtom "PUSH5"
-erlps__mnemonic__1__p6 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 101)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 101) =
   ErlangAtom "PUSH6"
-erlps__mnemonic__1__p6 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 102)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 102) =
   ErlangAtom "PUSH7"
-erlps__mnemonic__1__p6 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 103)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 103) =
   ErlangAtom "PUSH8"
-erlps__mnemonic__1__p6 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 104)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 104) =
   ErlangAtom "PUSH9"
-erlps__mnemonic__1__p6 args = erlps__mnemonic__1__p7 args
-
-erlps__mnemonic__1__p7 :: ErlangFun
-erlps__mnemonic__1__p7 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 105)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 105) =
   ErlangAtom "PUSH10"
-erlps__mnemonic__1__p7 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 106)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 106) =
   ErlangAtom "PUSH11"
-erlps__mnemonic__1__p7 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 107)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 107) =
   ErlangAtom "PUSH12"
-erlps__mnemonic__1__p7 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 108)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 108) =
   ErlangAtom "PUSH13"
-erlps__mnemonic__1__p7 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 109)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 109) =
   ErlangAtom "PUSH14"
-erlps__mnemonic__1__p7 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 110)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 110) =
   ErlangAtom "PUSH15"
-erlps__mnemonic__1__p7 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 111)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 111) =
   ErlangAtom "PUSH16"
-erlps__mnemonic__1__p7 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 112)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 112) =
   ErlangAtom "PUSH17"
-erlps__mnemonic__1__p7 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 113)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 113) =
   ErlangAtom "PUSH18"
-erlps__mnemonic__1__p7 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 114)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 114) =
   ErlangAtom "PUSH19"
-erlps__mnemonic__1__p7 args = erlps__mnemonic__1__p8 args
-
-erlps__mnemonic__1__p8 :: ErlangFun
-erlps__mnemonic__1__p8 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 115)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 115) =
   ErlangAtom "PUSH20"
-erlps__mnemonic__1__p8 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 116)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 116) =
   ErlangAtom "PUSH21"
-erlps__mnemonic__1__p8 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 117)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 117) =
   ErlangAtom "PUSH22"
-erlps__mnemonic__1__p8 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 118)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 118) =
   ErlangAtom "PUSH23"
-erlps__mnemonic__1__p8 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 119)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 119) =
   ErlangAtom "PUSH24"
-erlps__mnemonic__1__p8 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 120)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 120) =
   ErlangAtom "PUSH25"
-erlps__mnemonic__1__p8 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 121)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 121) =
   ErlangAtom "PUSH26"
-erlps__mnemonic__1__p8 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 122)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 122) =
   ErlangAtom "PUSH27"
-erlps__mnemonic__1__p8 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 123)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 123) =
   ErlangAtom "PUSH28"
-erlps__mnemonic__1__p8 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 124)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 124) =
   ErlangAtom "PUSH29"
-erlps__mnemonic__1__p8 args = erlps__mnemonic__1__p9 args
-
-erlps__mnemonic__1__p9 :: ErlangFun
-erlps__mnemonic__1__p9 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 125)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 125) =
   ErlangAtom "PUSH30"
-erlps__mnemonic__1__p9 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 126)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 126) =
   ErlangAtom "PUSH31"
-erlps__mnemonic__1__p9 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 127)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 127) =
   ErlangAtom "PUSH32"
-erlps__mnemonic__1__p9 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 128)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 128) =
   ErlangAtom "DUP1"
-erlps__mnemonic__1__p9 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 129)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 129) =
   ErlangAtom "DUP2"
-erlps__mnemonic__1__p9 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 130)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 130) =
   ErlangAtom "DUP3"
-erlps__mnemonic__1__p9 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 131)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 131) =
   ErlangAtom "DUP4"
-erlps__mnemonic__1__p9 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 132)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 132) =
   ErlangAtom "DUP5"
-erlps__mnemonic__1__p9 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 133)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 133) =
   ErlangAtom "DUP6"
-erlps__mnemonic__1__p9 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 134)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 134) =
   ErlangAtom "DUP7"
-erlps__mnemonic__1__p9 args = erlps__mnemonic__1__p10 args
-
-erlps__mnemonic__1__p10 :: ErlangFun
-erlps__mnemonic__1__p10 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 135)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 135) =
   ErlangAtom "DUP8"
-erlps__mnemonic__1__p10 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 136)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 136) =
   ErlangAtom "DUP9"
-erlps__mnemonic__1__p10 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 137)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 137) =
   ErlangAtom "DUP10"
-erlps__mnemonic__1__p10 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 138)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 138) =
   ErlangAtom "DUP11"
-erlps__mnemonic__1__p10 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 139)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 139) =
   ErlangAtom "DUP12"
-erlps__mnemonic__1__p10 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 140)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 140) =
   ErlangAtom "DUP13"
-erlps__mnemonic__1__p10 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 141)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 141) =
   ErlangAtom "DUP14"
-erlps__mnemonic__1__p10 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 142)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 142) =
   ErlangAtom "DUP15"
-erlps__mnemonic__1__p10 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 143)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 143) =
   ErlangAtom "DUP16"
-erlps__mnemonic__1__p10 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 144)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 144) =
   ErlangAtom "SWAP1"
-erlps__mnemonic__1__p10 args = erlps__mnemonic__1__p11 args
-
-erlps__mnemonic__1__p11 :: ErlangFun
-erlps__mnemonic__1__p11 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 145)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 145) =
   ErlangAtom "SWAP2"
-erlps__mnemonic__1__p11 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 146)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 146) =
   ErlangAtom "SWAP3"
-erlps__mnemonic__1__p11 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 147)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 147) =
   ErlangAtom "SWAP4"
-erlps__mnemonic__1__p11 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 148)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 148) =
   ErlangAtom "SWAP5"
-erlps__mnemonic__1__p11 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 149)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 149) =
   ErlangAtom "SWAP6"
-erlps__mnemonic__1__p11 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 150)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 150) =
   ErlangAtom "SWAP7"
-erlps__mnemonic__1__p11 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 151)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 151) =
   ErlangAtom "SWAP8"
-erlps__mnemonic__1__p11 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 152)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 152) =
   ErlangAtom "SWAP9"
-erlps__mnemonic__1__p11 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 153)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 153) =
   ErlangAtom "SWAP10"
-erlps__mnemonic__1__p11 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 154)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 154) =
   ErlangAtom "SWAP11"
-erlps__mnemonic__1__p11 args = erlps__mnemonic__1__p12 args
-
-erlps__mnemonic__1__p12 :: ErlangFun
-erlps__mnemonic__1__p12 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 155)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 155) =
   ErlangAtom "SWAP12"
-erlps__mnemonic__1__p12 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 156)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 156) =
   ErlangAtom "SWAP13"
-erlps__mnemonic__1__p12 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 157)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 157) =
   ErlangAtom "SWAP14"
-erlps__mnemonic__1__p12 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 158)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 158) =
   ErlangAtom "SWAP15"
-erlps__mnemonic__1__p12 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 159)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 159) =
   ErlangAtom "SWAP16"
-erlps__mnemonic__1__p12 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 160)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 160) =
   ErlangAtom "LOG0"
-erlps__mnemonic__1__p12 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 161)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 161) =
   ErlangAtom "LOG1"
-erlps__mnemonic__1__p12 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 162)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 162) =
   ErlangAtom "LOG2"
-erlps__mnemonic__1__p12 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 163)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 163) =
   ErlangAtom "LOG3"
-erlps__mnemonic__1__p12 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 164)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 164) =
   ErlangAtom "LOG4"
-erlps__mnemonic__1__p12 args = erlps__mnemonic__1__p13 args
-
-erlps__mnemonic__1__p13 :: ErlangFun
-erlps__mnemonic__1__p13 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 240)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 240) =
   ErlangAtom "CREATE"
-erlps__mnemonic__1__p13 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 241)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 241) =
   ErlangAtom "CALL"
-erlps__mnemonic__1__p13 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 242)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 242) =
   ErlangAtom "CALLCODE"
-erlps__mnemonic__1__p13 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 243)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 243) =
   ErlangAtom "RETURN"
-erlps__mnemonic__1__p13 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 244)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 244) =
   ErlangAtom "DELEGATECALL"
-erlps__mnemonic__1__p13 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 250)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 250) =
   ErlangAtom "STATICCALL"
-erlps__mnemonic__1__p13 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 253)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 253) =
   ErlangAtom "REVERT"
-erlps__mnemonic__1__p13 [(ErlangTuple [(ErlangAtom "comment"),
-                                       _])]
-  =
+erlps__mnemonic__1 [(ErlangTuple [(ErlangAtom "comment"), _])] =
   ErlangAtom "COMMENT"
-erlps__mnemonic__1__p13 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 255)) =
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 255) =
   ErlangAtom "SUICIDE"
-erlps__mnemonic__1__p13 [arg_1] = EXC.function_clause unit
-erlps__mnemonic__1__p13 args =
+erlps__mnemonic__1 [arg_1] = EXC.function_clause unit
+erlps__mnemonic__1 args =
   EXC.badarity (ErlangFun 1 (\ _ -> ErlangAtom "purs_tco_sucks"))
     args
 
@@ -960,183 +878,147 @@ erlps__m_to_op__1 [(ErlangAtom "SMOD")] = toErl 7
 erlps__m_to_op__1 [(ErlangAtom "ADDMOD")] = toErl 8
 erlps__m_to_op__1 [(ErlangAtom "MULMOD")] = toErl 9
 erlps__m_to_op__1 [(ErlangAtom "EXP")] = toErl 10
-erlps__m_to_op__1 args = erlps__m_to_op__1__p1 args
-
-erlps__m_to_op__1__p1 :: ErlangFun
-erlps__m_to_op__1__p1 [(ErlangAtom "SIGNEXTEND")] = toErl 11
-erlps__m_to_op__1__p1 [(ErlangAtom "LT")] = toErl 16
-erlps__m_to_op__1__p1 [(ErlangAtom "GT")] = toErl 17
-erlps__m_to_op__1__p1 [(ErlangAtom "SLT")] = toErl 18
-erlps__m_to_op__1__p1 [(ErlangAtom "SGT")] = toErl 19
-erlps__m_to_op__1__p1 [(ErlangAtom "EQ")] = toErl 20
-erlps__m_to_op__1__p1 [(ErlangAtom "ISZERO")] = toErl 21
-erlps__m_to_op__1__p1 [(ErlangAtom "AND")] = toErl 22
-erlps__m_to_op__1__p1 [(ErlangAtom "OR")] = toErl 23
-erlps__m_to_op__1__p1 [(ErlangAtom "XOR")] = toErl 24
-erlps__m_to_op__1__p1 [(ErlangAtom "NOT")] = toErl 25
-erlps__m_to_op__1__p1 args = erlps__m_to_op__1__p2 args
-
-erlps__m_to_op__1__p2 :: ErlangFun
-erlps__m_to_op__1__p2 [(ErlangAtom "BYTE")] = toErl 26
-erlps__m_to_op__1__p2 [(ErlangAtom "SHL")] = toErl 27
-erlps__m_to_op__1__p2 [(ErlangAtom "SHR")] = toErl 28
-erlps__m_to_op__1__p2 [(ErlangAtom "SAR")] = toErl 29
-erlps__m_to_op__1__p2 [(ErlangAtom "SHA3")] = toErl 32
-erlps__m_to_op__1__p2 [(ErlangAtom "CREATOR")] = toErl 47
-erlps__m_to_op__1__p2 [(ErlangAtom "ADDRESS")] = toErl 48
-erlps__m_to_op__1__p2 [(ErlangAtom "BALANCE")] = toErl 49
-erlps__m_to_op__1__p2 [(ErlangAtom "ORIGIN")] = toErl 50
-erlps__m_to_op__1__p2 [(ErlangAtom "CALLER")] = toErl 51
-erlps__m_to_op__1__p2 [(ErlangAtom "CALLVALUE")] = toErl 52
-erlps__m_to_op__1__p2 args = erlps__m_to_op__1__p3 args
-
-erlps__m_to_op__1__p3 :: ErlangFun
-erlps__m_to_op__1__p3 [(ErlangAtom "CALLDATALOAD")] = toErl 53
-erlps__m_to_op__1__p3 [(ErlangAtom "CALLDATASIZE")] = toErl 54
-erlps__m_to_op__1__p3 [(ErlangAtom "CALLDATACOPY")] = toErl 55
-erlps__m_to_op__1__p3 [(ErlangAtom "CODESIZE")] = toErl 56
-erlps__m_to_op__1__p3 [(ErlangAtom "CODECOPY")] = toErl 57
-erlps__m_to_op__1__p3 [(ErlangAtom "GASPRICE")] = toErl 58
-erlps__m_to_op__1__p3 [(ErlangAtom "EXTCODESIZE")] = toErl 59
-erlps__m_to_op__1__p3 [(ErlangAtom "EXTCODECOPY")] = toErl 60
-erlps__m_to_op__1__p3 [(ErlangAtom "RETURNDATASIZE")] = toErl 61
-erlps__m_to_op__1__p3 [(ErlangAtom "RETURNDATACOPY")] = toErl 62
-erlps__m_to_op__1__p3 [(ErlangAtom "BLOCKHASH")] = toErl 64
-erlps__m_to_op__1__p3 args = erlps__m_to_op__1__p4 args
-
-erlps__m_to_op__1__p4 :: ErlangFun
-erlps__m_to_op__1__p4 [(ErlangAtom "COINBASE")] = toErl 65
-erlps__m_to_op__1__p4 [(ErlangAtom "TIMESTAMP")] = toErl 66
-erlps__m_to_op__1__p4 [(ErlangAtom "NUMBER")] = toErl 67
-erlps__m_to_op__1__p4 [(ErlangAtom "DIFFICULTY")] = toErl 68
-erlps__m_to_op__1__p4 [(ErlangAtom "GASLIMIT")] = toErl 69
-erlps__m_to_op__1__p4 [(ErlangAtom "POP")] = toErl 80
-erlps__m_to_op__1__p4 [(ErlangAtom "MLOAD")] = toErl 81
-erlps__m_to_op__1__p4 [(ErlangAtom "MSTORE")] = toErl 82
-erlps__m_to_op__1__p4 [(ErlangAtom "MSTORE8")] = toErl 83
-erlps__m_to_op__1__p4 [(ErlangAtom "SLOAD")] = toErl 84
-erlps__m_to_op__1__p4 [(ErlangAtom "SSTORE")] = toErl 85
-erlps__m_to_op__1__p4 args = erlps__m_to_op__1__p5 args
-
-erlps__m_to_op__1__p5 :: ErlangFun
-erlps__m_to_op__1__p5 [(ErlangAtom "JUMP")] = toErl 86
-erlps__m_to_op__1__p5 [(ErlangAtom "JUMPI")] = toErl 87
-erlps__m_to_op__1__p5 [(ErlangAtom "PC")] = toErl 88
-erlps__m_to_op__1__p5 [(ErlangAtom "MSIZE")] = toErl 89
-erlps__m_to_op__1__p5 [(ErlangAtom "GAS")] = toErl 90
-erlps__m_to_op__1__p5 [(ErlangAtom "JUMPDEST")] = toErl 91
-erlps__m_to_op__1__p5 [(ErlangAtom "PUSH1")] = toErl 96
-erlps__m_to_op__1__p5 [(ErlangAtom "PUSH2")] = toErl 97
-erlps__m_to_op__1__p5 [(ErlangAtom "PUSH3")] = toErl 98
-erlps__m_to_op__1__p5 [(ErlangAtom "PUSH4")] = toErl 99
-erlps__m_to_op__1__p5 [(ErlangAtom "PUSH5")] = toErl 100
-erlps__m_to_op__1__p5 args = erlps__m_to_op__1__p6 args
-
-erlps__m_to_op__1__p6 :: ErlangFun
-erlps__m_to_op__1__p6 [(ErlangAtom "PUSH6")] = toErl 101
-erlps__m_to_op__1__p6 [(ErlangAtom "PUSH7")] = toErl 102
-erlps__m_to_op__1__p6 [(ErlangAtom "PUSH8")] = toErl 103
-erlps__m_to_op__1__p6 [(ErlangAtom "PUSH9")] = toErl 104
-erlps__m_to_op__1__p6 [(ErlangAtom "PUSH10")] = toErl 105
-erlps__m_to_op__1__p6 [(ErlangAtom "PUSH11")] = toErl 106
-erlps__m_to_op__1__p6 [(ErlangAtom "PUSH12")] = toErl 107
-erlps__m_to_op__1__p6 [(ErlangAtom "PUSH13")] = toErl 108
-erlps__m_to_op__1__p6 [(ErlangAtom "PUSH14")] = toErl 109
-erlps__m_to_op__1__p6 [(ErlangAtom "PUSH15")] = toErl 110
-erlps__m_to_op__1__p6 [(ErlangAtom "PUSH16")] = toErl 111
-erlps__m_to_op__1__p6 args = erlps__m_to_op__1__p7 args
-
-erlps__m_to_op__1__p7 :: ErlangFun
-erlps__m_to_op__1__p7 [(ErlangAtom "PUSH17")] = toErl 112
-erlps__m_to_op__1__p7 [(ErlangAtom "PUSH18")] = toErl 113
-erlps__m_to_op__1__p7 [(ErlangAtom "PUSH19")] = toErl 114
-erlps__m_to_op__1__p7 [(ErlangAtom "PUSH20")] = toErl 115
-erlps__m_to_op__1__p7 [(ErlangAtom "PUSH21")] = toErl 116
-erlps__m_to_op__1__p7 [(ErlangAtom "PUSH22")] = toErl 117
-erlps__m_to_op__1__p7 [(ErlangAtom "PUSH23")] = toErl 118
-erlps__m_to_op__1__p7 [(ErlangAtom "PUSH24")] = toErl 119
-erlps__m_to_op__1__p7 [(ErlangAtom "PUSH25")] = toErl 120
-erlps__m_to_op__1__p7 [(ErlangAtom "PUSH26")] = toErl 121
-erlps__m_to_op__1__p7 [(ErlangAtom "PUSH27")] = toErl 122
-erlps__m_to_op__1__p7 args = erlps__m_to_op__1__p8 args
-
-erlps__m_to_op__1__p8 :: ErlangFun
-erlps__m_to_op__1__p8 [(ErlangAtom "PUSH28")] = toErl 123
-erlps__m_to_op__1__p8 [(ErlangAtom "PUSH29")] = toErl 124
-erlps__m_to_op__1__p8 [(ErlangAtom "PUSH30")] = toErl 125
-erlps__m_to_op__1__p8 [(ErlangAtom "PUSH31")] = toErl 126
-erlps__m_to_op__1__p8 [(ErlangAtom "PUSH32")] = toErl 127
-erlps__m_to_op__1__p8 [(ErlangAtom "DUP1")] = toErl 128
-erlps__m_to_op__1__p8 [(ErlangAtom "DUP2")] = toErl 129
-erlps__m_to_op__1__p8 [(ErlangAtom "DUP3")] = toErl 130
-erlps__m_to_op__1__p8 [(ErlangAtom "DUP4")] = toErl 131
-erlps__m_to_op__1__p8 [(ErlangAtom "DUP5")] = toErl 132
-erlps__m_to_op__1__p8 [(ErlangAtom "DUP6")] = toErl 133
-erlps__m_to_op__1__p8 args = erlps__m_to_op__1__p9 args
-
-erlps__m_to_op__1__p9 :: ErlangFun
-erlps__m_to_op__1__p9 [(ErlangAtom "DUP7")] = toErl 134
-erlps__m_to_op__1__p9 [(ErlangAtom "DUP8")] = toErl 135
-erlps__m_to_op__1__p9 [(ErlangAtom "DUP9")] = toErl 136
-erlps__m_to_op__1__p9 [(ErlangAtom "DUP10")] = toErl 137
-erlps__m_to_op__1__p9 [(ErlangAtom "DUP11")] = toErl 138
-erlps__m_to_op__1__p9 [(ErlangAtom "DUP12")] = toErl 139
-erlps__m_to_op__1__p9 [(ErlangAtom "DUP13")] = toErl 140
-erlps__m_to_op__1__p9 [(ErlangAtom "DUP14")] = toErl 141
-erlps__m_to_op__1__p9 [(ErlangAtom "DUP15")] = toErl 142
-erlps__m_to_op__1__p9 [(ErlangAtom "DUP16")] = toErl 143
-erlps__m_to_op__1__p9 [(ErlangAtom "SWAP1")] = toErl 144
-erlps__m_to_op__1__p9 args = erlps__m_to_op__1__p10 args
-
-erlps__m_to_op__1__p10 :: ErlangFun
-erlps__m_to_op__1__p10 [(ErlangAtom "SWAP2")] = toErl 145
-erlps__m_to_op__1__p10 [(ErlangAtom "SWAP3")] = toErl 146
-erlps__m_to_op__1__p10 [(ErlangAtom "SWAP4")] = toErl 147
-erlps__m_to_op__1__p10 [(ErlangAtom "SWAP5")] = toErl 148
-erlps__m_to_op__1__p10 [(ErlangAtom "SWAP6")] = toErl 149
-erlps__m_to_op__1__p10 [(ErlangAtom "SWAP7")] = toErl 150
-erlps__m_to_op__1__p10 [(ErlangAtom "SWAP8")] = toErl 151
-erlps__m_to_op__1__p10 [(ErlangAtom "SWAP9")] = toErl 152
-erlps__m_to_op__1__p10 [(ErlangAtom "SWAP10")] = toErl 153
-erlps__m_to_op__1__p10 [(ErlangAtom "SWAP11")] = toErl 154
-erlps__m_to_op__1__p10 [(ErlangAtom "SWAP12")] = toErl 155
-erlps__m_to_op__1__p10 args = erlps__m_to_op__1__p11 args
-
-erlps__m_to_op__1__p11 :: ErlangFun
-erlps__m_to_op__1__p11 [(ErlangAtom "SWAP13")] = toErl 156
-erlps__m_to_op__1__p11 [(ErlangAtom "SWAP14")] = toErl 157
-erlps__m_to_op__1__p11 [(ErlangAtom "SWAP15")] = toErl 158
-erlps__m_to_op__1__p11 [(ErlangAtom "SWAP16")] = toErl 159
-erlps__m_to_op__1__p11 [(ErlangAtom "LOG0")] = toErl 160
-erlps__m_to_op__1__p11 [(ErlangAtom "LOG1")] = toErl 161
-erlps__m_to_op__1__p11 [(ErlangAtom "LOG2")] = toErl 162
-erlps__m_to_op__1__p11 [(ErlangAtom "LOG3")] = toErl 163
-erlps__m_to_op__1__p11 [(ErlangAtom "LOG4")] = toErl 164
-erlps__m_to_op__1__p11 [(ErlangAtom "CREATE")] = toErl 240
-erlps__m_to_op__1__p11 [(ErlangAtom "CALL")] = toErl 241
-erlps__m_to_op__1__p11 args = erlps__m_to_op__1__p12 args
-
-erlps__m_to_op__1__p12 :: ErlangFun
-erlps__m_to_op__1__p12 [(ErlangAtom "CALLCODE")] = toErl 242
-erlps__m_to_op__1__p12 [(ErlangAtom "RETURN")] = toErl 243
-erlps__m_to_op__1__p12 [(ErlangAtom "DELEGATECALL")] = toErl 244
-erlps__m_to_op__1__p12 [(ErlangAtom "STATICCALL")] = toErl 250
-erlps__m_to_op__1__p12 [(ErlangAtom "REVERT")] = toErl 253
-erlps__m_to_op__1__p12 [(ErlangAtom "COMMENT")] =
+erlps__m_to_op__1 [(ErlangAtom "SIGNEXTEND")] = toErl 11
+erlps__m_to_op__1 [(ErlangAtom "LT")] = toErl 16
+erlps__m_to_op__1 [(ErlangAtom "GT")] = toErl 17
+erlps__m_to_op__1 [(ErlangAtom "SLT")] = toErl 18
+erlps__m_to_op__1 [(ErlangAtom "SGT")] = toErl 19
+erlps__m_to_op__1 [(ErlangAtom "EQ")] = toErl 20
+erlps__m_to_op__1 [(ErlangAtom "ISZERO")] = toErl 21
+erlps__m_to_op__1 [(ErlangAtom "AND")] = toErl 22
+erlps__m_to_op__1 [(ErlangAtom "OR")] = toErl 23
+erlps__m_to_op__1 [(ErlangAtom "XOR")] = toErl 24
+erlps__m_to_op__1 [(ErlangAtom "NOT")] = toErl 25
+erlps__m_to_op__1 [(ErlangAtom "BYTE")] = toErl 26
+erlps__m_to_op__1 [(ErlangAtom "SHL")] = toErl 27
+erlps__m_to_op__1 [(ErlangAtom "SHR")] = toErl 28
+erlps__m_to_op__1 [(ErlangAtom "SAR")] = toErl 29
+erlps__m_to_op__1 [(ErlangAtom "SHA3")] = toErl 32
+erlps__m_to_op__1 [(ErlangAtom "CREATOR")] = toErl 47
+erlps__m_to_op__1 [(ErlangAtom "ADDRESS")] = toErl 48
+erlps__m_to_op__1 [(ErlangAtom "BALANCE")] = toErl 49
+erlps__m_to_op__1 [(ErlangAtom "ORIGIN")] = toErl 50
+erlps__m_to_op__1 [(ErlangAtom "CALLER")] = toErl 51
+erlps__m_to_op__1 [(ErlangAtom "CALLVALUE")] = toErl 52
+erlps__m_to_op__1 [(ErlangAtom "CALLDATALOAD")] = toErl 53
+erlps__m_to_op__1 [(ErlangAtom "CALLDATASIZE")] = toErl 54
+erlps__m_to_op__1 [(ErlangAtom "CALLDATACOPY")] = toErl 55
+erlps__m_to_op__1 [(ErlangAtom "CODESIZE")] = toErl 56
+erlps__m_to_op__1 [(ErlangAtom "CODECOPY")] = toErl 57
+erlps__m_to_op__1 [(ErlangAtom "GASPRICE")] = toErl 58
+erlps__m_to_op__1 [(ErlangAtom "EXTCODESIZE")] = toErl 59
+erlps__m_to_op__1 [(ErlangAtom "EXTCODECOPY")] = toErl 60
+erlps__m_to_op__1 [(ErlangAtom "RETURNDATASIZE")] = toErl 61
+erlps__m_to_op__1 [(ErlangAtom "RETURNDATACOPY")] = toErl 62
+erlps__m_to_op__1 [(ErlangAtom "BLOCKHASH")] = toErl 64
+erlps__m_to_op__1 [(ErlangAtom "COINBASE")] = toErl 65
+erlps__m_to_op__1 [(ErlangAtom "TIMESTAMP")] = toErl 66
+erlps__m_to_op__1 [(ErlangAtom "NUMBER")] = toErl 67
+erlps__m_to_op__1 [(ErlangAtom "DIFFICULTY")] = toErl 68
+erlps__m_to_op__1 [(ErlangAtom "GASLIMIT")] = toErl 69
+erlps__m_to_op__1 [(ErlangAtom "POP")] = toErl 80
+erlps__m_to_op__1 [(ErlangAtom "MLOAD")] = toErl 81
+erlps__m_to_op__1 [(ErlangAtom "MSTORE")] = toErl 82
+erlps__m_to_op__1 [(ErlangAtom "MSTORE8")] = toErl 83
+erlps__m_to_op__1 [(ErlangAtom "SLOAD")] = toErl 84
+erlps__m_to_op__1 [(ErlangAtom "SSTORE")] = toErl 85
+erlps__m_to_op__1 [(ErlangAtom "JUMP")] = toErl 86
+erlps__m_to_op__1 [(ErlangAtom "JUMPI")] = toErl 87
+erlps__m_to_op__1 [(ErlangAtom "PC")] = toErl 88
+erlps__m_to_op__1 [(ErlangAtom "MSIZE")] = toErl 89
+erlps__m_to_op__1 [(ErlangAtom "GAS")] = toErl 90
+erlps__m_to_op__1 [(ErlangAtom "JUMPDEST")] = toErl 91
+erlps__m_to_op__1 [(ErlangAtom "PUSH1")] = toErl 96
+erlps__m_to_op__1 [(ErlangAtom "PUSH2")] = toErl 97
+erlps__m_to_op__1 [(ErlangAtom "PUSH3")] = toErl 98
+erlps__m_to_op__1 [(ErlangAtom "PUSH4")] = toErl 99
+erlps__m_to_op__1 [(ErlangAtom "PUSH5")] = toErl 100
+erlps__m_to_op__1 [(ErlangAtom "PUSH6")] = toErl 101
+erlps__m_to_op__1 [(ErlangAtom "PUSH7")] = toErl 102
+erlps__m_to_op__1 [(ErlangAtom "PUSH8")] = toErl 103
+erlps__m_to_op__1 [(ErlangAtom "PUSH9")] = toErl 104
+erlps__m_to_op__1 [(ErlangAtom "PUSH10")] = toErl 105
+erlps__m_to_op__1 [(ErlangAtom "PUSH11")] = toErl 106
+erlps__m_to_op__1 [(ErlangAtom "PUSH12")] = toErl 107
+erlps__m_to_op__1 [(ErlangAtom "PUSH13")] = toErl 108
+erlps__m_to_op__1 [(ErlangAtom "PUSH14")] = toErl 109
+erlps__m_to_op__1 [(ErlangAtom "PUSH15")] = toErl 110
+erlps__m_to_op__1 [(ErlangAtom "PUSH16")] = toErl 111
+erlps__m_to_op__1 [(ErlangAtom "PUSH17")] = toErl 112
+erlps__m_to_op__1 [(ErlangAtom "PUSH18")] = toErl 113
+erlps__m_to_op__1 [(ErlangAtom "PUSH19")] = toErl 114
+erlps__m_to_op__1 [(ErlangAtom "PUSH20")] = toErl 115
+erlps__m_to_op__1 [(ErlangAtom "PUSH21")] = toErl 116
+erlps__m_to_op__1 [(ErlangAtom "PUSH22")] = toErl 117
+erlps__m_to_op__1 [(ErlangAtom "PUSH23")] = toErl 118
+erlps__m_to_op__1 [(ErlangAtom "PUSH24")] = toErl 119
+erlps__m_to_op__1 [(ErlangAtom "PUSH25")] = toErl 120
+erlps__m_to_op__1 [(ErlangAtom "PUSH26")] = toErl 121
+erlps__m_to_op__1 [(ErlangAtom "PUSH27")] = toErl 122
+erlps__m_to_op__1 [(ErlangAtom "PUSH28")] = toErl 123
+erlps__m_to_op__1 [(ErlangAtom "PUSH29")] = toErl 124
+erlps__m_to_op__1 [(ErlangAtom "PUSH30")] = toErl 125
+erlps__m_to_op__1 [(ErlangAtom "PUSH31")] = toErl 126
+erlps__m_to_op__1 [(ErlangAtom "PUSH32")] = toErl 127
+erlps__m_to_op__1 [(ErlangAtom "DUP1")] = toErl 128
+erlps__m_to_op__1 [(ErlangAtom "DUP2")] = toErl 129
+erlps__m_to_op__1 [(ErlangAtom "DUP3")] = toErl 130
+erlps__m_to_op__1 [(ErlangAtom "DUP4")] = toErl 131
+erlps__m_to_op__1 [(ErlangAtom "DUP5")] = toErl 132
+erlps__m_to_op__1 [(ErlangAtom "DUP6")] = toErl 133
+erlps__m_to_op__1 [(ErlangAtom "DUP7")] = toErl 134
+erlps__m_to_op__1 [(ErlangAtom "DUP8")] = toErl 135
+erlps__m_to_op__1 [(ErlangAtom "DUP9")] = toErl 136
+erlps__m_to_op__1 [(ErlangAtom "DUP10")] = toErl 137
+erlps__m_to_op__1 [(ErlangAtom "DUP11")] = toErl 138
+erlps__m_to_op__1 [(ErlangAtom "DUP12")] = toErl 139
+erlps__m_to_op__1 [(ErlangAtom "DUP13")] = toErl 140
+erlps__m_to_op__1 [(ErlangAtom "DUP14")] = toErl 141
+erlps__m_to_op__1 [(ErlangAtom "DUP15")] = toErl 142
+erlps__m_to_op__1 [(ErlangAtom "DUP16")] = toErl 143
+erlps__m_to_op__1 [(ErlangAtom "SWAP1")] = toErl 144
+erlps__m_to_op__1 [(ErlangAtom "SWAP2")] = toErl 145
+erlps__m_to_op__1 [(ErlangAtom "SWAP3")] = toErl 146
+erlps__m_to_op__1 [(ErlangAtom "SWAP4")] = toErl 147
+erlps__m_to_op__1 [(ErlangAtom "SWAP5")] = toErl 148
+erlps__m_to_op__1 [(ErlangAtom "SWAP6")] = toErl 149
+erlps__m_to_op__1 [(ErlangAtom "SWAP7")] = toErl 150
+erlps__m_to_op__1 [(ErlangAtom "SWAP8")] = toErl 151
+erlps__m_to_op__1 [(ErlangAtom "SWAP9")] = toErl 152
+erlps__m_to_op__1 [(ErlangAtom "SWAP10")] = toErl 153
+erlps__m_to_op__1 [(ErlangAtom "SWAP11")] = toErl 154
+erlps__m_to_op__1 [(ErlangAtom "SWAP12")] = toErl 155
+erlps__m_to_op__1 [(ErlangAtom "SWAP13")] = toErl 156
+erlps__m_to_op__1 [(ErlangAtom "SWAP14")] = toErl 157
+erlps__m_to_op__1 [(ErlangAtom "SWAP15")] = toErl 158
+erlps__m_to_op__1 [(ErlangAtom "SWAP16")] = toErl 159
+erlps__m_to_op__1 [(ErlangAtom "LOG0")] = toErl 160
+erlps__m_to_op__1 [(ErlangAtom "LOG1")] = toErl 161
+erlps__m_to_op__1 [(ErlangAtom "LOG2")] = toErl 162
+erlps__m_to_op__1 [(ErlangAtom "LOG3")] = toErl 163
+erlps__m_to_op__1 [(ErlangAtom "LOG4")] = toErl 164
+erlps__m_to_op__1 [(ErlangAtom "CREATE")] = toErl 240
+erlps__m_to_op__1 [(ErlangAtom "CALL")] = toErl 241
+erlps__m_to_op__1 [(ErlangAtom "CALLCODE")] = toErl 242
+erlps__m_to_op__1 [(ErlangAtom "RETURN")] = toErl 243
+erlps__m_to_op__1 [(ErlangAtom "DELEGATECALL")] = toErl 244
+erlps__m_to_op__1 [(ErlangAtom "STATICCALL")] = toErl 250
+erlps__m_to_op__1 [(ErlangAtom "REVERT")] = toErl 253
+erlps__m_to_op__1 [(ErlangAtom "COMMENT")] =
   let tup_el_1 = toErl ""
   in ErlangTuple [ErlangAtom "comment", tup_el_1]
-erlps__m_to_op__1__p12 [(ErlangAtom "SUICIDE")] = toErl 255
-erlps__m_to_op__1__p12 [data_0]
-  | ((weakLeq (toErl 0) data_0) && (weakLeq data_0 (toErl 255))) =
+erlps__m_to_op__1 [(ErlangAtom "SUICIDE")] = toErl 255
+erlps__m_to_op__1 [data_0]
+  | (weakLeq (toErl 0) data_0) && (weakLeq data_0 (toErl 255)) =
   data_0
-erlps__m_to_op__1__p12 [arg_1] = EXC.function_clause unit
-erlps__m_to_op__1__p12 args =
+erlps__m_to_op__1 [arg_1] = EXC.function_clause unit
+erlps__m_to_op__1 args =
   EXC.badarity (ErlangFun 1 (\ _ -> ErlangAtom "purs_tco_sucks"))
     args
 
 erlps__push__1 :: ErlangFun
 erlps__push__1 [n_0]
-  | ((weakGeq n_0 (toErl 1)) && (weakLeq n_0 (toErl 32))) =
+  | (weakGeq n_0 (toErl 1)) && (weakLeq n_0 (toErl 32)) =
   let    lop_2 = toErl 96
   in let lop_1 = BIF.erlang__op_plus [lop_2, n_0]
   in let rop_4 = toErl 1
@@ -1148,7 +1030,7 @@ erlps__push__1 args =
 
 erlps__dup__1 :: ErlangFun
 erlps__dup__1 [n_0]
-  | ((weakGeq n_0 (toErl 1)) && (weakLeq n_0 (toErl 16))) =
+  | (weakGeq n_0 (toErl 1)) && (weakLeq n_0 (toErl 16)) =
   let    lop_2 = toErl 128
   in let lop_1 = BIF.erlang__op_plus [lop_2, n_0]
   in let rop_4 = toErl 1
@@ -1160,7 +1042,7 @@ erlps__dup__1 args =
 
 erlps__swap__1 :: ErlangFun
 erlps__swap__1 [n_0]
-  | ((weakGeq n_0 (toErl 1)) && (weakLeq n_0 (toErl 16))) =
+  | (weakGeq n_0 (toErl 1)) && (weakLeq n_0 (toErl 16)) =
   let    lop_2 = toErl 144
   in let lop_1 = BIF.erlang__op_plus [lop_2, n_0]
   in let rop_4 = toErl 1
@@ -1172,7 +1054,7 @@ erlps__swap__1 args =
 
 erlps__op_size__1 :: ErlangFun
 erlps__op_size__1 [op_0]
-  | ((weakGeq op_0 (toErl 96)) && (weakLeq op_0 (toErl 127))) =
+  | (weakGeq op_0 (toErl 96)) && (weakLeq op_0 (toErl 127)) =
   let    rop_3 = toErl 96
   in let lop_1 = BIF.erlang__op_minus [op_0, rop_3]
   in let rop_4 = toErl 2

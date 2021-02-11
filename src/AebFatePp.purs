@@ -53,7 +53,7 @@ erlps__format_arg__2 [(ErlangAtom "a"),
       [arg_1, ErlangCons n_0 ErlangEmptyList]
 erlps__format_arg__2 [(ErlangAtom "a"),
                       (ErlangTuple [(ErlangAtom "stack"), (ErlangInt num_0)])]
-  | ((ErlangInt num_0) == (toErl 0)) =
+  | (ErlangInt num_0) == (toErl 0) =
   toErl "a"
 erlps__format_arg__2 [arg_1, arg_2] = EXC.function_clause unit
 erlps__format_arg__2 args =
@@ -241,12 +241,9 @@ erlps__format_op__2 [(ErlangTuple [(ErlangAtom "JUMPIF"), arg0_0,
     ErlangCons head_2
       (ErlangCons head_4
          (ErlangCons head_8 (ErlangCons head_10 ErlangEmptyList)))
-erlps__format_op__2 args = erlps__format_op__2__p1 args
-
-erlps__format_op__2__p1 :: ErlangFun
-erlps__format_op__2__p1 [(ErlangTuple [(ErlangAtom "SWITCH_V2"),
-                                       arg0_0, arg1_1, arg2_2]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "SWITCH_V2"),
+                                   arg0_0, arg1_1, arg2_2]),
+                     _]
   =
   let    head_3 = toErl "SWITCH_V2 "
   in let head_5 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -260,9 +257,9 @@ erlps__format_op__2__p1 [(ErlangTuple [(ErlangAtom "SWITCH_V2"),
          (ErlangCons head_9
             (ErlangCons head_11
                (ErlangCons head_15 (ErlangCons head_17 ErlangEmptyList)))))
-erlps__format_op__2__p1 [(ErlangTuple [(ErlangAtom "SWITCH_V3"),
-                                       arg0_0, arg1_1, arg2_2, arg3_3]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "SWITCH_V3"),
+                                   arg0_0, arg1_1, arg2_2, arg3_3]),
+                     _]
   =
   let    head_4 = toErl "SWITCH_V3 "
   in let head_6 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -281,9 +278,9 @@ erlps__format_op__2__p1 [(ErlangTuple [(ErlangAtom "SWITCH_V3"),
                   (ErlangCons head_18
                      (ErlangCons head_22
                         (ErlangCons head_24 ErlangEmptyList)))))))
-erlps__format_op__2__p1 [(ErlangTuple [(ErlangAtom "SWITCH_VN"),
-                                       arg0_0, arg1_1]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "SWITCH_VN"),
+                                   arg0_0, arg1_1]),
+                     _]
   =
   let    head_2 = toErl "SWITCH_VN "
   in let head_4 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -293,63 +290,55 @@ erlps__format_op__2__p1 [(ErlangTuple [(ErlangAtom "SWITCH_VN"),
     ErlangCons head_2
       (ErlangCons head_4
          (ErlangCons head_8 (ErlangCons head_10 ErlangEmptyList)))
-erlps__format_op__2__p1 [(ErlangTuple [(ErlangAtom "CALL_VALUE"),
-                                       arg0_0]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "CALL_VALUE"),
+                                   arg0_0]),
+                     _]
   =
   let    head_1 = toErl "CALL_VALUE "
   in let head_3 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
   in ErlangCons head_1 (ErlangCons head_3 ErlangEmptyList)
-erlps__format_op__2__p1 [(ErlangTuple [(ErlangAtom "PUSH"),
-                                       arg0_0]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "PUSH"), arg0_0]),
+                     _]
   =
   let    head_1 = toErl "PUSH "
   in let head_3 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
   in ErlangCons head_1 (ErlangCons head_3 ErlangEmptyList)
-erlps__format_op__2__p1 [(ErlangAtom "DUPA"), _] =
+erlps__format_op__2 [(ErlangAtom "DUPA"), _] =
   let head_0 = toErl "DUPA"
   in ErlangCons head_0 ErlangEmptyList
-erlps__format_op__2__p1 [(ErlangTuple [(ErlangAtom "DUP"),
-                                       arg0_0]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "DUP"), arg0_0]),
+                     _]
   =
   let    head_1 = toErl "DUP "
   in let head_3 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
   in ErlangCons head_1 (ErlangCons head_3 ErlangEmptyList)
-erlps__format_op__2__p1 [(ErlangTuple [(ErlangAtom "POP"),
-                                       arg0_0]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "POP"), arg0_0]),
+                     _]
   =
   let    head_1 = toErl "POP "
   in let head_3 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
   in ErlangCons head_1 (ErlangCons head_3 ErlangEmptyList)
-erlps__format_op__2__p1 [(ErlangAtom "INCA"), _] =
+erlps__format_op__2 [(ErlangAtom "INCA"), _] =
   let head_0 = toErl "INCA"
   in ErlangCons head_0 ErlangEmptyList
-erlps__format_op__2__p1 [(ErlangTuple [(ErlangAtom "INC"),
-                                       arg0_0]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "INC"), arg0_0]),
+                     _]
   =
   let    head_1 = toErl "INC "
   in let head_3 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
   in ErlangCons head_1 (ErlangCons head_3 ErlangEmptyList)
-erlps__format_op__2__p1 args = erlps__format_op__2__p2 args
-
-erlps__format_op__2__p2 :: ErlangFun
-erlps__format_op__2__p2 [(ErlangAtom "DECA"), _] =
+erlps__format_op__2 [(ErlangAtom "DECA"), _] =
   let head_0 = toErl "DECA"
   in ErlangCons head_0 ErlangEmptyList
-erlps__format_op__2__p2 [(ErlangTuple [(ErlangAtom "DEC"),
-                                       arg0_0]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "DEC"), arg0_0]),
+                     _]
   =
   let    head_1 = toErl "DEC "
   in let head_3 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
   in ErlangCons head_1 (ErlangCons head_3 ErlangEmptyList)
-erlps__format_op__2__p2 [(ErlangTuple [(ErlangAtom "ADD"),
-                                       arg0_0, arg1_1, arg2_2]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "ADD"), arg0_0,
+                                   arg1_1, arg2_2]),
+                     _]
   =
   let    head_3 = toErl "ADD "
   in let head_5 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -363,9 +352,9 @@ erlps__format_op__2__p2 [(ErlangTuple [(ErlangAtom "ADD"),
          (ErlangCons head_9
             (ErlangCons head_11
                (ErlangCons head_15 (ErlangCons head_17 ErlangEmptyList)))))
-erlps__format_op__2__p2 [(ErlangTuple [(ErlangAtom "SUB"),
-                                       arg0_0, arg1_1, arg2_2]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "SUB"), arg0_0,
+                                   arg1_1, arg2_2]),
+                     _]
   =
   let    head_3 = toErl "SUB "
   in let head_5 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -379,9 +368,9 @@ erlps__format_op__2__p2 [(ErlangTuple [(ErlangAtom "SUB"),
          (ErlangCons head_9
             (ErlangCons head_11
                (ErlangCons head_15 (ErlangCons head_17 ErlangEmptyList)))))
-erlps__format_op__2__p2 [(ErlangTuple [(ErlangAtom "MUL"),
-                                       arg0_0, arg1_1, arg2_2]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "MUL"), arg0_0,
+                                   arg1_1, arg2_2]),
+                     _]
   =
   let    head_3 = toErl "MUL "
   in let head_5 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -395,9 +384,9 @@ erlps__format_op__2__p2 [(ErlangTuple [(ErlangAtom "MUL"),
          (ErlangCons head_9
             (ErlangCons head_11
                (ErlangCons head_15 (ErlangCons head_17 ErlangEmptyList)))))
-erlps__format_op__2__p2 [(ErlangTuple [(ErlangAtom "DIV"),
-                                       arg0_0, arg1_1, arg2_2]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "DIV"), arg0_0,
+                                   arg1_1, arg2_2]),
+                     _]
   =
   let    head_3 = toErl "DIV "
   in let head_5 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -411,9 +400,9 @@ erlps__format_op__2__p2 [(ErlangTuple [(ErlangAtom "DIV"),
          (ErlangCons head_9
             (ErlangCons head_11
                (ErlangCons head_15 (ErlangCons head_17 ErlangEmptyList)))))
-erlps__format_op__2__p2 [(ErlangTuple [(ErlangAtom "MOD"),
-                                       arg0_0, arg1_1, arg2_2]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "MOD"), arg0_0,
+                                   arg1_1, arg2_2]),
+                     _]
   =
   let    head_3 = toErl "MOD "
   in let head_5 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -427,9 +416,9 @@ erlps__format_op__2__p2 [(ErlangTuple [(ErlangAtom "MOD"),
          (ErlangCons head_9
             (ErlangCons head_11
                (ErlangCons head_15 (ErlangCons head_17 ErlangEmptyList)))))
-erlps__format_op__2__p2 [(ErlangTuple [(ErlangAtom "POW"),
-                                       arg0_0, arg1_1, arg2_2]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "POW"), arg0_0,
+                                   arg1_1, arg2_2]),
+                     _]
   =
   let    head_3 = toErl "POW "
   in let head_5 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -443,9 +432,9 @@ erlps__format_op__2__p2 [(ErlangTuple [(ErlangAtom "POW"),
          (ErlangCons head_9
             (ErlangCons head_11
                (ErlangCons head_15 (ErlangCons head_17 ErlangEmptyList)))))
-erlps__format_op__2__p2 [(ErlangTuple [(ErlangAtom "STORE"),
-                                       arg0_0, arg1_1]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "STORE"), arg0_0,
+                                   arg1_1]),
+                     _]
   =
   let    head_2 = toErl "STORE "
   in let head_4 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -455,9 +444,9 @@ erlps__format_op__2__p2 [(ErlangTuple [(ErlangAtom "STORE"),
     ErlangCons head_2
       (ErlangCons head_4
          (ErlangCons head_8 (ErlangCons head_10 ErlangEmptyList)))
-erlps__format_op__2__p2 [(ErlangTuple [(ErlangAtom "SHA3"),
-                                       arg0_0, arg1_1]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "SHA3"), arg0_0,
+                                   arg1_1]),
+                     _]
   =
   let    head_2 = toErl "SHA3 "
   in let head_4 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -467,12 +456,9 @@ erlps__format_op__2__p2 [(ErlangTuple [(ErlangAtom "SHA3"),
     ErlangCons head_2
       (ErlangCons head_4
          (ErlangCons head_8 (ErlangCons head_10 ErlangEmptyList)))
-erlps__format_op__2__p2 args = erlps__format_op__2__p3 args
-
-erlps__format_op__2__p3 :: ErlangFun
-erlps__format_op__2__p3 [(ErlangTuple [(ErlangAtom "SHA256"),
-                                       arg0_0, arg1_1]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "SHA256"), arg0_0,
+                                   arg1_1]),
+                     _]
   =
   let    head_2 = toErl "SHA256 "
   in let head_4 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -482,9 +468,9 @@ erlps__format_op__2__p3 [(ErlangTuple [(ErlangAtom "SHA256"),
     ErlangCons head_2
       (ErlangCons head_4
          (ErlangCons head_8 (ErlangCons head_10 ErlangEmptyList)))
-erlps__format_op__2__p3 [(ErlangTuple [(ErlangAtom "BLAKE2B"),
-                                       arg0_0, arg1_1]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "BLAKE2B"),
+                                   arg0_0, arg1_1]),
+                     _]
   =
   let    head_2 = toErl "BLAKE2B "
   in let head_4 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -494,9 +480,9 @@ erlps__format_op__2__p3 [(ErlangTuple [(ErlangAtom "BLAKE2B"),
     ErlangCons head_2
       (ErlangCons head_4
          (ErlangCons head_8 (ErlangCons head_10 ErlangEmptyList)))
-erlps__format_op__2__p3 [(ErlangTuple [(ErlangAtom "LT"), arg0_0,
-                                       arg1_1, arg2_2]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "LT"), arg0_0,
+                                   arg1_1, arg2_2]),
+                     _]
   =
   let    head_3 = toErl "LT "
   in let head_5 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -510,9 +496,9 @@ erlps__format_op__2__p3 [(ErlangTuple [(ErlangAtom "LT"), arg0_0,
          (ErlangCons head_9
             (ErlangCons head_11
                (ErlangCons head_15 (ErlangCons head_17 ErlangEmptyList)))))
-erlps__format_op__2__p3 [(ErlangTuple [(ErlangAtom "GT"), arg0_0,
-                                       arg1_1, arg2_2]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "GT"), arg0_0,
+                                   arg1_1, arg2_2]),
+                     _]
   =
   let    head_3 = toErl "GT "
   in let head_5 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -526,9 +512,9 @@ erlps__format_op__2__p3 [(ErlangTuple [(ErlangAtom "GT"), arg0_0,
          (ErlangCons head_9
             (ErlangCons head_11
                (ErlangCons head_15 (ErlangCons head_17 ErlangEmptyList)))))
-erlps__format_op__2__p3 [(ErlangTuple [(ErlangAtom "EQ"), arg0_0,
-                                       arg1_1, arg2_2]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "EQ"), arg0_0,
+                                   arg1_1, arg2_2]),
+                     _]
   =
   let    head_3 = toErl "EQ "
   in let head_5 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -542,9 +528,9 @@ erlps__format_op__2__p3 [(ErlangTuple [(ErlangAtom "EQ"), arg0_0,
          (ErlangCons head_9
             (ErlangCons head_11
                (ErlangCons head_15 (ErlangCons head_17 ErlangEmptyList)))))
-erlps__format_op__2__p3 [(ErlangTuple [(ErlangAtom "ELT"),
-                                       arg0_0, arg1_1, arg2_2]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "ELT"), arg0_0,
+                                   arg1_1, arg2_2]),
+                     _]
   =
   let    head_3 = toErl "ELT "
   in let head_5 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -558,9 +544,9 @@ erlps__format_op__2__p3 [(ErlangTuple [(ErlangAtom "ELT"),
          (ErlangCons head_9
             (ErlangCons head_11
                (ErlangCons head_15 (ErlangCons head_17 ErlangEmptyList)))))
-erlps__format_op__2__p3 [(ErlangTuple [(ErlangAtom "EGT"),
-                                       arg0_0, arg1_1, arg2_2]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "EGT"), arg0_0,
+                                   arg1_1, arg2_2]),
+                     _]
   =
   let    head_3 = toErl "EGT "
   in let head_5 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -574,9 +560,9 @@ erlps__format_op__2__p3 [(ErlangTuple [(ErlangAtom "EGT"),
          (ErlangCons head_9
             (ErlangCons head_11
                (ErlangCons head_15 (ErlangCons head_17 ErlangEmptyList)))))
-erlps__format_op__2__p3 [(ErlangTuple [(ErlangAtom "NEQ"),
-                                       arg0_0, arg1_1, arg2_2]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "NEQ"), arg0_0,
+                                   arg1_1, arg2_2]),
+                     _]
   =
   let    head_3 = toErl "NEQ "
   in let head_5 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -590,9 +576,9 @@ erlps__format_op__2__p3 [(ErlangTuple [(ErlangAtom "NEQ"),
          (ErlangCons head_9
             (ErlangCons head_11
                (ErlangCons head_15 (ErlangCons head_17 ErlangEmptyList)))))
-erlps__format_op__2__p3 [(ErlangTuple [(ErlangAtom "AND"),
-                                       arg0_0, arg1_1, arg2_2]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "AND"), arg0_0,
+                                   arg1_1, arg2_2]),
+                     _]
   =
   let    head_3 = toErl "AND "
   in let head_5 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -606,9 +592,9 @@ erlps__format_op__2__p3 [(ErlangTuple [(ErlangAtom "AND"),
          (ErlangCons head_9
             (ErlangCons head_11
                (ErlangCons head_15 (ErlangCons head_17 ErlangEmptyList)))))
-erlps__format_op__2__p3 [(ErlangTuple [(ErlangAtom "OR"), arg0_0,
-                                       arg1_1, arg2_2]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "OR"), arg0_0,
+                                   arg1_1, arg2_2]),
+                     _]
   =
   let    head_3 = toErl "OR "
   in let head_5 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -622,12 +608,9 @@ erlps__format_op__2__p3 [(ErlangTuple [(ErlangAtom "OR"), arg0_0,
          (ErlangCons head_9
             (ErlangCons head_11
                (ErlangCons head_15 (ErlangCons head_17 ErlangEmptyList)))))
-erlps__format_op__2__p3 args = erlps__format_op__2__p4 args
-
-erlps__format_op__2__p4 :: ErlangFun
-erlps__format_op__2__p4 [(ErlangTuple [(ErlangAtom "NOT"),
-                                       arg0_0, arg1_1]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "NOT"), arg0_0,
+                                   arg1_1]),
+                     _]
   =
   let    head_2 = toErl "NOT "
   in let head_4 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -637,9 +620,9 @@ erlps__format_op__2__p4 [(ErlangTuple [(ErlangAtom "NOT"),
     ErlangCons head_2
       (ErlangCons head_4
          (ErlangCons head_8 (ErlangCons head_10 ErlangEmptyList)))
-erlps__format_op__2__p4 [(ErlangTuple [(ErlangAtom "TUPLE"),
-                                       arg0_0, arg1_1]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "TUPLE"), arg0_0,
+                                   arg1_1]),
+                     _]
   =
   let    head_2 = toErl "TUPLE "
   in let head_4 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -649,9 +632,9 @@ erlps__format_op__2__p4 [(ErlangTuple [(ErlangAtom "TUPLE"),
     ErlangCons head_2
       (ErlangCons head_4
          (ErlangCons head_8 (ErlangCons head_10 ErlangEmptyList)))
-erlps__format_op__2__p4 [(ErlangTuple [(ErlangAtom "ELEMENT"),
-                                       arg0_0, arg1_1, arg2_2]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "ELEMENT"),
+                                   arg0_0, arg1_1, arg2_2]),
+                     _]
   =
   let    head_3 = toErl "ELEMENT "
   in let head_5 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -665,9 +648,9 @@ erlps__format_op__2__p4 [(ErlangTuple [(ErlangAtom "ELEMENT"),
          (ErlangCons head_9
             (ErlangCons head_11
                (ErlangCons head_15 (ErlangCons head_17 ErlangEmptyList)))))
-erlps__format_op__2__p4 [(ErlangTuple [(ErlangAtom "SETELEMENT"),
-                                       arg0_0, arg1_1, arg2_2, arg3_3]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "SETELEMENT"),
+                                   arg0_0, arg1_1, arg2_2, arg3_3]),
+                     _]
   =
   let    head_4 = toErl "SETELEMENT "
   in let head_6 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -686,16 +669,16 @@ erlps__format_op__2__p4 [(ErlangTuple [(ErlangAtom "SETELEMENT"),
                   (ErlangCons head_18
                      (ErlangCons head_22
                         (ErlangCons head_24 ErlangEmptyList)))))))
-erlps__format_op__2__p4 [(ErlangTuple [(ErlangAtom "MAP_EMPTY"),
-                                       arg0_0]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "MAP_EMPTY"),
+                                   arg0_0]),
+                     _]
   =
   let    head_1 = toErl "MAP_EMPTY "
   in let head_3 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
   in ErlangCons head_1 (ErlangCons head_3 ErlangEmptyList)
-erlps__format_op__2__p4 [(ErlangTuple [(ErlangAtom "MAP_LOOKUP"),
-                                       arg0_0, arg1_1, arg2_2]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "MAP_LOOKUP"),
+                                   arg0_0, arg1_1, arg2_2]),
+                     _]
   =
   let    head_3 = toErl "MAP_LOOKUP "
   in let head_5 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -709,9 +692,9 @@ erlps__format_op__2__p4 [(ErlangTuple [(ErlangAtom "MAP_LOOKUP"),
          (ErlangCons head_9
             (ErlangCons head_11
                (ErlangCons head_15 (ErlangCons head_17 ErlangEmptyList)))))
-erlps__format_op__2__p4 [(ErlangTuple [(ErlangAtom "MAP_LOOKUPD"),
-                                       arg0_0, arg1_1, arg2_2, arg3_3]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "MAP_LOOKUPD"),
+                                   arg0_0, arg1_1, arg2_2, arg3_3]),
+                     _]
   =
   let    head_4 = toErl "MAP_LOOKUPD "
   in let head_6 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -730,9 +713,9 @@ erlps__format_op__2__p4 [(ErlangTuple [(ErlangAtom "MAP_LOOKUPD"),
                   (ErlangCons head_18
                      (ErlangCons head_22
                         (ErlangCons head_24 ErlangEmptyList)))))))
-erlps__format_op__2__p4 [(ErlangTuple [(ErlangAtom "MAP_UPDATE"),
-                                       arg0_0, arg1_1, arg2_2, arg3_3]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "MAP_UPDATE"),
+                                   arg0_0, arg1_1, arg2_2, arg3_3]),
+                     _]
   =
   let    head_4 = toErl "MAP_UPDATE "
   in let head_6 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -751,9 +734,9 @@ erlps__format_op__2__p4 [(ErlangTuple [(ErlangAtom "MAP_UPDATE"),
                   (ErlangCons head_18
                      (ErlangCons head_22
                         (ErlangCons head_24 ErlangEmptyList)))))))
-erlps__format_op__2__p4 [(ErlangTuple [(ErlangAtom "MAP_DELETE"),
-                                       arg0_0, arg1_1, arg2_2]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "MAP_DELETE"),
+                                   arg0_0, arg1_1, arg2_2]),
+                     _]
   =
   let    head_3 = toErl "MAP_DELETE "
   in let head_5 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -767,9 +750,9 @@ erlps__format_op__2__p4 [(ErlangTuple [(ErlangAtom "MAP_DELETE"),
          (ErlangCons head_9
             (ErlangCons head_11
                (ErlangCons head_15 (ErlangCons head_17 ErlangEmptyList)))))
-erlps__format_op__2__p4 [(ErlangTuple [(ErlangAtom "MAP_MEMBER"),
-                                       arg0_0, arg1_1, arg2_2]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "MAP_MEMBER"),
+                                   arg0_0, arg1_1, arg2_2]),
+                     _]
   =
   let    head_3 = toErl "MAP_MEMBER "
   in let head_5 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -783,12 +766,9 @@ erlps__format_op__2__p4 [(ErlangTuple [(ErlangAtom "MAP_MEMBER"),
          (ErlangCons head_9
             (ErlangCons head_11
                (ErlangCons head_15 (ErlangCons head_17 ErlangEmptyList)))))
-erlps__format_op__2__p4 args = erlps__format_op__2__p5 args
-
-erlps__format_op__2__p5 :: ErlangFun
-erlps__format_op__2__p5 [(ErlangTuple [(ErlangAtom "MAP_FROM_LIST"),
-                                       arg0_0, arg1_1]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "MAP_FROM_LIST"),
+                                   arg0_0, arg1_1]),
+                     _]
   =
   let    head_2 = toErl "MAP_FROM_LIST "
   in let head_4 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -798,9 +778,9 @@ erlps__format_op__2__p5 [(ErlangTuple [(ErlangAtom "MAP_FROM_LIST"),
     ErlangCons head_2
       (ErlangCons head_4
          (ErlangCons head_8 (ErlangCons head_10 ErlangEmptyList)))
-erlps__format_op__2__p5 [(ErlangTuple [(ErlangAtom "MAP_SIZE"),
-                                       arg0_0, arg1_1]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "MAP_SIZE"),
+                                   arg0_0, arg1_1]),
+                     _]
   =
   let    head_2 = toErl "MAP_SIZE "
   in let head_4 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -810,9 +790,9 @@ erlps__format_op__2__p5 [(ErlangTuple [(ErlangAtom "MAP_SIZE"),
     ErlangCons head_2
       (ErlangCons head_4
          (ErlangCons head_8 (ErlangCons head_10 ErlangEmptyList)))
-erlps__format_op__2__p5 [(ErlangTuple [(ErlangAtom "MAP_TO_LIST"),
-                                       arg0_0, arg1_1]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "MAP_TO_LIST"),
+                                   arg0_0, arg1_1]),
+                     _]
   =
   let    head_2 = toErl "MAP_TO_LIST "
   in let head_4 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -822,9 +802,9 @@ erlps__format_op__2__p5 [(ErlangTuple [(ErlangAtom "MAP_TO_LIST"),
     ErlangCons head_2
       (ErlangCons head_4
          (ErlangCons head_8 (ErlangCons head_10 ErlangEmptyList)))
-erlps__format_op__2__p5 [(ErlangTuple [(ErlangAtom "IS_NIL"),
-                                       arg0_0, arg1_1]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "IS_NIL"), arg0_0,
+                                   arg1_1]),
+                     _]
   =
   let    head_2 = toErl "IS_NIL "
   in let head_4 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -834,9 +814,9 @@ erlps__format_op__2__p5 [(ErlangTuple [(ErlangAtom "IS_NIL"),
     ErlangCons head_2
       (ErlangCons head_4
          (ErlangCons head_8 (ErlangCons head_10 ErlangEmptyList)))
-erlps__format_op__2__p5 [(ErlangTuple [(ErlangAtom "CONS"),
-                                       arg0_0, arg1_1, arg2_2]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "CONS"), arg0_0,
+                                   arg1_1, arg2_2]),
+                     _]
   =
   let    head_3 = toErl "CONS "
   in let head_5 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -850,9 +830,9 @@ erlps__format_op__2__p5 [(ErlangTuple [(ErlangAtom "CONS"),
          (ErlangCons head_9
             (ErlangCons head_11
                (ErlangCons head_15 (ErlangCons head_17 ErlangEmptyList)))))
-erlps__format_op__2__p5 [(ErlangTuple [(ErlangAtom "HD"), arg0_0,
-                                       arg1_1]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "HD"), arg0_0,
+                                   arg1_1]),
+                     _]
   =
   let    head_2 = toErl "HD "
   in let head_4 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -862,9 +842,9 @@ erlps__format_op__2__p5 [(ErlangTuple [(ErlangAtom "HD"), arg0_0,
     ErlangCons head_2
       (ErlangCons head_4
          (ErlangCons head_8 (ErlangCons head_10 ErlangEmptyList)))
-erlps__format_op__2__p5 [(ErlangTuple [(ErlangAtom "TL"), arg0_0,
-                                       arg1_1]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "TL"), arg0_0,
+                                   arg1_1]),
+                     _]
   =
   let    head_2 = toErl "TL "
   in let head_4 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -874,9 +854,9 @@ erlps__format_op__2__p5 [(ErlangTuple [(ErlangAtom "TL"), arg0_0,
     ErlangCons head_2
       (ErlangCons head_4
          (ErlangCons head_8 (ErlangCons head_10 ErlangEmptyList)))
-erlps__format_op__2__p5 [(ErlangTuple [(ErlangAtom "LENGTH"),
-                                       arg0_0, arg1_1]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "LENGTH"), arg0_0,
+                                   arg1_1]),
+                     _]
   =
   let    head_2 = toErl "LENGTH "
   in let head_4 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -886,16 +866,15 @@ erlps__format_op__2__p5 [(ErlangTuple [(ErlangAtom "LENGTH"),
     ErlangCons head_2
       (ErlangCons head_4
          (ErlangCons head_8 (ErlangCons head_10 ErlangEmptyList)))
-erlps__format_op__2__p5 [(ErlangTuple [(ErlangAtom "NIL"),
-                                       arg0_0]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "NIL"), arg0_0]),
+                     _]
   =
   let    head_1 = toErl "NIL "
   in let head_3 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
   in ErlangCons head_1 (ErlangCons head_3 ErlangEmptyList)
-erlps__format_op__2__p5 [(ErlangTuple [(ErlangAtom "APPEND"),
-                                       arg0_0, arg1_1, arg2_2]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "APPEND"), arg0_0,
+                                   arg1_1, arg2_2]),
+                     _]
   =
   let    head_3 = toErl "APPEND "
   in let head_5 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -909,12 +888,9 @@ erlps__format_op__2__p5 [(ErlangTuple [(ErlangAtom "APPEND"),
          (ErlangCons head_9
             (ErlangCons head_11
                (ErlangCons head_15 (ErlangCons head_17 ErlangEmptyList)))))
-erlps__format_op__2__p5 args = erlps__format_op__2__p6 args
-
-erlps__format_op__2__p6 :: ErlangFun
-erlps__format_op__2__p6 [(ErlangTuple [(ErlangAtom "STR_JOIN"),
-                                       arg0_0, arg1_1, arg2_2]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "STR_JOIN"),
+                                   arg0_0, arg1_1, arg2_2]),
+                     _]
   =
   let    head_3 = toErl "STR_JOIN "
   in let head_5 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -928,9 +904,9 @@ erlps__format_op__2__p6 [(ErlangTuple [(ErlangAtom "STR_JOIN"),
          (ErlangCons head_9
             (ErlangCons head_11
                (ErlangCons head_15 (ErlangCons head_17 ErlangEmptyList)))))
-erlps__format_op__2__p6 [(ErlangTuple [(ErlangAtom "INT_TO_STR"),
-                                       arg0_0, arg1_1]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "INT_TO_STR"),
+                                   arg0_0, arg1_1]),
+                     _]
   =
   let    head_2 = toErl "INT_TO_STR "
   in let head_4 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -940,9 +916,9 @@ erlps__format_op__2__p6 [(ErlangTuple [(ErlangAtom "INT_TO_STR"),
     ErlangCons head_2
       (ErlangCons head_4
          (ErlangCons head_8 (ErlangCons head_10 ErlangEmptyList)))
-erlps__format_op__2__p6 [(ErlangTuple [(ErlangAtom "ADDR_TO_STR"),
-                                       arg0_0, arg1_1]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "ADDR_TO_STR"),
+                                   arg0_0, arg1_1]),
+                     _]
   =
   let    head_2 = toErl "ADDR_TO_STR "
   in let head_4 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -952,9 +928,9 @@ erlps__format_op__2__p6 [(ErlangTuple [(ErlangAtom "ADDR_TO_STR"),
     ErlangCons head_2
       (ErlangCons head_4
          (ErlangCons head_8 (ErlangCons head_10 ErlangEmptyList)))
-erlps__format_op__2__p6 [(ErlangTuple [(ErlangAtom "STR_REVERSE"),
-                                       arg0_0, arg1_1]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "STR_REVERSE"),
+                                   arg0_0, arg1_1]),
+                     _]
   =
   let    head_2 = toErl "STR_REVERSE "
   in let head_4 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -964,9 +940,9 @@ erlps__format_op__2__p6 [(ErlangTuple [(ErlangAtom "STR_REVERSE"),
     ErlangCons head_2
       (ErlangCons head_4
          (ErlangCons head_8 (ErlangCons head_10 ErlangEmptyList)))
-erlps__format_op__2__p6 [(ErlangTuple [(ErlangAtom "STR_LENGTH"),
-                                       arg0_0, arg1_1]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "STR_LENGTH"),
+                                   arg0_0, arg1_1]),
+                     _]
   =
   let    head_2 = toErl "STR_LENGTH "
   in let head_4 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -976,9 +952,9 @@ erlps__format_op__2__p6 [(ErlangTuple [(ErlangAtom "STR_LENGTH"),
     ErlangCons head_2
       (ErlangCons head_4
          (ErlangCons head_8 (ErlangCons head_10 ErlangEmptyList)))
-erlps__format_op__2__p6 [(ErlangTuple [(ErlangAtom "BYTES_TO_INT"),
-                                       arg0_0, arg1_1]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "BYTES_TO_INT"),
+                                   arg0_0, arg1_1]),
+                     _]
   =
   let    head_2 = toErl "BYTES_TO_INT "
   in let head_4 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -988,9 +964,9 @@ erlps__format_op__2__p6 [(ErlangTuple [(ErlangAtom "BYTES_TO_INT"),
     ErlangCons head_2
       (ErlangCons head_4
          (ErlangCons head_8 (ErlangCons head_10 ErlangEmptyList)))
-erlps__format_op__2__p6 [(ErlangTuple [(ErlangAtom "BYTES_TO_STR"),
-                                       arg0_0, arg1_1]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "BYTES_TO_STR"),
+                                   arg0_0, arg1_1]),
+                     _]
   =
   let    head_2 = toErl "BYTES_TO_STR "
   in let head_4 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -1000,9 +976,9 @@ erlps__format_op__2__p6 [(ErlangTuple [(ErlangAtom "BYTES_TO_STR"),
     ErlangCons head_2
       (ErlangCons head_4
          (ErlangCons head_8 (ErlangCons head_10 ErlangEmptyList)))
-erlps__format_op__2__p6 [(ErlangTuple [(ErlangAtom "BYTES_CONCAT"),
-                                       arg0_0, arg1_1, arg2_2]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "BYTES_CONCAT"),
+                                   arg0_0, arg1_1, arg2_2]),
+                     _]
   =
   let    head_3 = toErl "BYTES_CONCAT "
   in let head_5 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -1016,9 +992,9 @@ erlps__format_op__2__p6 [(ErlangTuple [(ErlangAtom "BYTES_CONCAT"),
          (ErlangCons head_9
             (ErlangCons head_11
                (ErlangCons head_15 (ErlangCons head_17 ErlangEmptyList)))))
-erlps__format_op__2__p6 [(ErlangTuple [(ErlangAtom "BYTES_SPLIT"),
-                                       arg0_0, arg1_1, arg2_2]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "BYTES_SPLIT"),
+                                   arg0_0, arg1_1, arg2_2]),
+                     _]
   =
   let    head_3 = toErl "BYTES_SPLIT "
   in let head_5 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -1032,9 +1008,9 @@ erlps__format_op__2__p6 [(ErlangTuple [(ErlangAtom "BYTES_SPLIT"),
          (ErlangCons head_9
             (ErlangCons head_11
                (ErlangCons head_15 (ErlangCons head_17 ErlangEmptyList)))))
-erlps__format_op__2__p6 [(ErlangTuple [(ErlangAtom "INT_TO_ADDR"),
-                                       arg0_0, arg1_1]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "INT_TO_ADDR"),
+                                   arg0_0, arg1_1]),
+                     _]
   =
   let    head_2 = toErl "INT_TO_ADDR "
   in let head_4 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -1044,12 +1020,9 @@ erlps__format_op__2__p6 [(ErlangTuple [(ErlangAtom "INT_TO_ADDR"),
     ErlangCons head_2
       (ErlangCons head_4
          (ErlangCons head_8 (ErlangCons head_10 ErlangEmptyList)))
-erlps__format_op__2__p6 args = erlps__format_op__2__p7 args
-
-erlps__format_op__2__p7 :: ErlangFun
-erlps__format_op__2__p7 [(ErlangTuple [(ErlangAtom "VARIANT"),
-                                       arg0_0, arg1_1, arg2_2, arg3_3]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "VARIANT"),
+                                   arg0_0, arg1_1, arg2_2, arg3_3]),
+                     _]
   =
   let    head_4 = toErl "VARIANT "
   in let head_6 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -1068,9 +1041,9 @@ erlps__format_op__2__p7 [(ErlangTuple [(ErlangAtom "VARIANT"),
                   (ErlangCons head_18
                      (ErlangCons head_22
                         (ErlangCons head_24 ErlangEmptyList)))))))
-erlps__format_op__2__p7 [(ErlangTuple [(ErlangAtom "VARIANT_TEST"),
-                                       arg0_0, arg1_1, arg2_2]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "VARIANT_TEST"),
+                                   arg0_0, arg1_1, arg2_2]),
+                     _]
   =
   let    head_3 = toErl "VARIANT_TEST "
   in let head_5 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -1084,9 +1057,9 @@ erlps__format_op__2__p7 [(ErlangTuple [(ErlangAtom "VARIANT_TEST"),
          (ErlangCons head_9
             (ErlangCons head_11
                (ErlangCons head_15 (ErlangCons head_17 ErlangEmptyList)))))
-erlps__format_op__2__p7 [(ErlangTuple [(ErlangAtom "VARIANT_ELEMENT"),
-                                       arg0_0, arg1_1, arg2_2]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "VARIANT_ELEMENT"),
+                                   arg0_0, arg1_1, arg2_2]),
+                     _]
   =
   let    head_3 = toErl "VARIANT_ELEMENT "
   in let head_5 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -1100,29 +1073,29 @@ erlps__format_op__2__p7 [(ErlangTuple [(ErlangAtom "VARIANT_ELEMENT"),
          (ErlangCons head_9
             (ErlangCons head_11
                (ErlangCons head_15 (ErlangCons head_17 ErlangEmptyList)))))
-erlps__format_op__2__p7 [(ErlangAtom "BITS_NONEA"), _] =
+erlps__format_op__2 [(ErlangAtom "BITS_NONEA"), _] =
   let head_0 = toErl "BITS_NONEA"
   in ErlangCons head_0 ErlangEmptyList
-erlps__format_op__2__p7 [(ErlangTuple [(ErlangAtom "BITS_NONE"),
-                                       arg0_0]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "BITS_NONE"),
+                                   arg0_0]),
+                     _]
   =
   let    head_1 = toErl "BITS_NONE "
   in let head_3 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
   in ErlangCons head_1 (ErlangCons head_3 ErlangEmptyList)
-erlps__format_op__2__p7 [(ErlangAtom "BITS_ALLA"), _] =
+erlps__format_op__2 [(ErlangAtom "BITS_ALLA"), _] =
   let head_0 = toErl "BITS_ALLA"
   in ErlangCons head_0 ErlangEmptyList
-erlps__format_op__2__p7 [(ErlangTuple [(ErlangAtom "BITS_ALL"),
-                                       arg0_0]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "BITS_ALL"),
+                                   arg0_0]),
+                     _]
   =
   let    head_1 = toErl "BITS_ALL "
   in let head_3 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
   in ErlangCons head_1 (ErlangCons head_3 ErlangEmptyList)
-erlps__format_op__2__p7 [(ErlangTuple [(ErlangAtom "BITS_ALL_N"),
-                                       arg0_0, arg1_1]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "BITS_ALL_N"),
+                                   arg0_0, arg1_1]),
+                     _]
   =
   let    head_2 = toErl "BITS_ALL_N "
   in let head_4 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -1132,9 +1105,9 @@ erlps__format_op__2__p7 [(ErlangTuple [(ErlangAtom "BITS_ALL_N"),
     ErlangCons head_2
       (ErlangCons head_4
          (ErlangCons head_8 (ErlangCons head_10 ErlangEmptyList)))
-erlps__format_op__2__p7 [(ErlangTuple [(ErlangAtom "BITS_SET"),
-                                       arg0_0, arg1_1, arg2_2]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "BITS_SET"),
+                                   arg0_0, arg1_1, arg2_2]),
+                     _]
   =
   let    head_3 = toErl "BITS_SET "
   in let head_5 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -1148,9 +1121,9 @@ erlps__format_op__2__p7 [(ErlangTuple [(ErlangAtom "BITS_SET"),
          (ErlangCons head_9
             (ErlangCons head_11
                (ErlangCons head_15 (ErlangCons head_17 ErlangEmptyList)))))
-erlps__format_op__2__p7 [(ErlangTuple [(ErlangAtom "BITS_CLEAR"),
-                                       arg0_0, arg1_1, arg2_2]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "BITS_CLEAR"),
+                                   arg0_0, arg1_1, arg2_2]),
+                     _]
   =
   let    head_3 = toErl "BITS_CLEAR "
   in let head_5 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -1164,12 +1137,9 @@ erlps__format_op__2__p7 [(ErlangTuple [(ErlangAtom "BITS_CLEAR"),
          (ErlangCons head_9
             (ErlangCons head_11
                (ErlangCons head_15 (ErlangCons head_17 ErlangEmptyList)))))
-erlps__format_op__2__p7 args = erlps__format_op__2__p8 args
-
-erlps__format_op__2__p8 :: ErlangFun
-erlps__format_op__2__p8 [(ErlangTuple [(ErlangAtom "BITS_TEST"),
-                                       arg0_0, arg1_1, arg2_2]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "BITS_TEST"),
+                                   arg0_0, arg1_1, arg2_2]),
+                     _]
   =
   let    head_3 = toErl "BITS_TEST "
   in let head_5 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -1183,9 +1153,9 @@ erlps__format_op__2__p8 [(ErlangTuple [(ErlangAtom "BITS_TEST"),
          (ErlangCons head_9
             (ErlangCons head_11
                (ErlangCons head_15 (ErlangCons head_17 ErlangEmptyList)))))
-erlps__format_op__2__p8 [(ErlangTuple [(ErlangAtom "BITS_SUM"),
-                                       arg0_0, arg1_1]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "BITS_SUM"),
+                                   arg0_0, arg1_1]),
+                     _]
   =
   let    head_2 = toErl "BITS_SUM "
   in let head_4 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -1195,9 +1165,9 @@ erlps__format_op__2__p8 [(ErlangTuple [(ErlangAtom "BITS_SUM"),
     ErlangCons head_2
       (ErlangCons head_4
          (ErlangCons head_8 (ErlangCons head_10 ErlangEmptyList)))
-erlps__format_op__2__p8 [(ErlangTuple [(ErlangAtom "BITS_OR"),
-                                       arg0_0, arg1_1, arg2_2]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "BITS_OR"),
+                                   arg0_0, arg1_1, arg2_2]),
+                     _]
   =
   let    head_3 = toErl "BITS_OR "
   in let head_5 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -1211,9 +1181,9 @@ erlps__format_op__2__p8 [(ErlangTuple [(ErlangAtom "BITS_OR"),
          (ErlangCons head_9
             (ErlangCons head_11
                (ErlangCons head_15 (ErlangCons head_17 ErlangEmptyList)))))
-erlps__format_op__2__p8 [(ErlangTuple [(ErlangAtom "BITS_AND"),
-                                       arg0_0, arg1_1, arg2_2]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "BITS_AND"),
+                                   arg0_0, arg1_1, arg2_2]),
+                     _]
   =
   let    head_3 = toErl "BITS_AND "
   in let head_5 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -1227,9 +1197,9 @@ erlps__format_op__2__p8 [(ErlangTuple [(ErlangAtom "BITS_AND"),
          (ErlangCons head_9
             (ErlangCons head_11
                (ErlangCons head_15 (ErlangCons head_17 ErlangEmptyList)))))
-erlps__format_op__2__p8 [(ErlangTuple [(ErlangAtom "BITS_DIFF"),
-                                       arg0_0, arg1_1, arg2_2]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "BITS_DIFF"),
+                                   arg0_0, arg1_1, arg2_2]),
+                     _]
   =
   let    head_3 = toErl "BITS_DIFF "
   in let head_5 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -1243,30 +1213,30 @@ erlps__format_op__2__p8 [(ErlangTuple [(ErlangAtom "BITS_DIFF"),
          (ErlangCons head_9
             (ErlangCons head_11
                (ErlangCons head_15 (ErlangCons head_17 ErlangEmptyList)))))
-erlps__format_op__2__p8 [(ErlangTuple [(ErlangAtom "BALANCE"),
-                                       arg0_0]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "BALANCE"),
+                                   arg0_0]),
+                     _]
   =
   let    head_1 = toErl "BALANCE "
   in let head_3 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
   in ErlangCons head_1 (ErlangCons head_3 ErlangEmptyList)
-erlps__format_op__2__p8 [(ErlangTuple [(ErlangAtom "ORIGIN"),
-                                       arg0_0]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "ORIGIN"),
+                                   arg0_0]),
+                     _]
   =
   let    head_1 = toErl "ORIGIN "
   in let head_3 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
   in ErlangCons head_1 (ErlangCons head_3 ErlangEmptyList)
-erlps__format_op__2__p8 [(ErlangTuple [(ErlangAtom "CALLER"),
-                                       arg0_0]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "CALLER"),
+                                   arg0_0]),
+                     _]
   =
   let    head_1 = toErl "CALLER "
   in let head_3 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
   in ErlangCons head_1 (ErlangCons head_3 ErlangEmptyList)
-erlps__format_op__2__p8 [(ErlangTuple [(ErlangAtom "BLOCKHASH"),
-                                       arg0_0, arg1_1]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "BLOCKHASH"),
+                                   arg0_0, arg1_1]),
+                     _]
   =
   let    head_2 = toErl "BLOCKHASH "
   in let head_4 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -1276,82 +1246,77 @@ erlps__format_op__2__p8 [(ErlangTuple [(ErlangAtom "BLOCKHASH"),
     ErlangCons head_2
       (ErlangCons head_4
          (ErlangCons head_8 (ErlangCons head_10 ErlangEmptyList)))
-erlps__format_op__2__p8 [(ErlangTuple [(ErlangAtom "BENEFICIARY"),
-                                       arg0_0]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "BENEFICIARY"),
+                                   arg0_0]),
+                     _]
   =
   let    head_1 = toErl "BENEFICIARY "
   in let head_3 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
   in ErlangCons head_1 (ErlangCons head_3 ErlangEmptyList)
-erlps__format_op__2__p8 args = erlps__format_op__2__p9 args
-
-erlps__format_op__2__p9 :: ErlangFun
-erlps__format_op__2__p9 [(ErlangTuple [(ErlangAtom "TIMESTAMP"),
-                                       arg0_0]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "TIMESTAMP"),
+                                   arg0_0]),
+                     _]
   =
   let    head_1 = toErl "TIMESTAMP "
   in let head_3 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
   in ErlangCons head_1 (ErlangCons head_3 ErlangEmptyList)
-erlps__format_op__2__p9 [(ErlangTuple [(ErlangAtom "GENERATION"),
-                                       arg0_0]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "GENERATION"),
+                                   arg0_0]),
+                     _]
   =
   let    head_1 = toErl "GENERATION "
   in let head_3 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
   in ErlangCons head_1 (ErlangCons head_3 ErlangEmptyList)
-erlps__format_op__2__p9 [(ErlangTuple [(ErlangAtom "MICROBLOCK"),
-                                       arg0_0]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "MICROBLOCK"),
+                                   arg0_0]),
+                     _]
   =
   let    head_1 = toErl "MICROBLOCK "
   in let head_3 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
   in ErlangCons head_1 (ErlangCons head_3 ErlangEmptyList)
-erlps__format_op__2__p9 [(ErlangTuple [(ErlangAtom "DIFFICULTY"),
-                                       arg0_0]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "DIFFICULTY"),
+                                   arg0_0]),
+                     _]
   =
   let    head_1 = toErl "DIFFICULTY "
   in let head_3 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
   in ErlangCons head_1 (ErlangCons head_3 ErlangEmptyList)
-erlps__format_op__2__p9 [(ErlangTuple [(ErlangAtom "GASLIMIT"),
-                                       arg0_0]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "GASLIMIT"),
+                                   arg0_0]),
+                     _]
   =
   let    head_1 = toErl "GASLIMIT "
   in let head_3 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
   in ErlangCons head_1 (ErlangCons head_3 ErlangEmptyList)
-erlps__format_op__2__p9 [(ErlangTuple [(ErlangAtom "GAS"),
-                                       arg0_0]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "GAS"), arg0_0]),
+                     _]
   =
   let    head_1 = toErl "GAS "
   in let head_3 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
   in ErlangCons head_1 (ErlangCons head_3 ErlangEmptyList)
-erlps__format_op__2__p9 [(ErlangTuple [(ErlangAtom "ADDRESS"),
-                                       arg0_0]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "ADDRESS"),
+                                   arg0_0]),
+                     _]
   =
   let    head_1 = toErl "ADDRESS "
   in let head_3 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
   in ErlangCons head_1 (ErlangCons head_3 ErlangEmptyList)
-erlps__format_op__2__p9 [(ErlangTuple [(ErlangAtom "GASPRICE"),
-                                       arg0_0]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "GASPRICE"),
+                                   arg0_0]),
+                     _]
   =
   let    head_1 = toErl "GASPRICE "
   in let head_3 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
   in ErlangCons head_1 (ErlangCons head_3 ErlangEmptyList)
-erlps__format_op__2__p9 [(ErlangTuple [(ErlangAtom "LOG0"),
-                                       arg0_0]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "LOG0"), arg0_0]),
+                     _]
   =
   let    head_1 = toErl "LOG0 "
   in let head_3 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
   in ErlangCons head_1 (ErlangCons head_3 ErlangEmptyList)
-erlps__format_op__2__p9 [(ErlangTuple [(ErlangAtom "LOG1"),
-                                       arg0_0, arg1_1]),
-                         _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "LOG1"), arg0_0,
+                                   arg1_1]),
+                     _]
   =
   let    head_2 = toErl "LOG1 "
   in let head_4 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -1361,12 +1326,9 @@ erlps__format_op__2__p9 [(ErlangTuple [(ErlangAtom "LOG1"),
     ErlangCons head_2
       (ErlangCons head_4
          (ErlangCons head_8 (ErlangCons head_10 ErlangEmptyList)))
-erlps__format_op__2__p9 args = erlps__format_op__2__p10 args
-
-erlps__format_op__2__p10 :: ErlangFun
-erlps__format_op__2__p10 [(ErlangTuple [(ErlangAtom "LOG2"),
-                                        arg0_0, arg1_1, arg2_2]),
-                          _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "LOG2"), arg0_0,
+                                   arg1_1, arg2_2]),
+                     _]
   =
   let    head_3 = toErl "LOG2 "
   in let head_5 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -1380,9 +1342,9 @@ erlps__format_op__2__p10 [(ErlangTuple [(ErlangAtom "LOG2"),
          (ErlangCons head_9
             (ErlangCons head_11
                (ErlangCons head_15 (ErlangCons head_17 ErlangEmptyList)))))
-erlps__format_op__2__p10 [(ErlangTuple [(ErlangAtom "LOG3"),
-                                        arg0_0, arg1_1, arg2_2, arg3_3]),
-                          _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "LOG3"), arg0_0,
+                                   arg1_1, arg2_2, arg3_3]),
+                     _]
   =
   let    head_4 = toErl "LOG3 "
   in let head_6 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -1401,10 +1363,9 @@ erlps__format_op__2__p10 [(ErlangTuple [(ErlangAtom "LOG3"),
                   (ErlangCons head_18
                      (ErlangCons head_22
                         (ErlangCons head_24 ErlangEmptyList)))))))
-erlps__format_op__2__p10 [(ErlangTuple [(ErlangAtom "LOG4"),
-                                        arg0_0, arg1_1, arg2_2, arg3_3,
-                                        arg4_4]),
-                          _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "LOG4"), arg0_0,
+                                   arg1_1, arg2_2, arg3_3, arg4_4]),
+                     _]
   =
   let    head_5 = toErl "LOG4 "
   in let head_7 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -1427,9 +1388,9 @@ erlps__format_op__2__p10 [(ErlangTuple [(ErlangAtom "LOG4"),
                         (ErlangCons head_25
                            (ErlangCons head_29
                               (ErlangCons head_31 ErlangEmptyList)))))))))
-erlps__format_op__2__p10 [(ErlangTuple [(ErlangAtom "SPEND"),
-                                        arg0_0, arg1_1]),
-                          _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "SPEND"), arg0_0,
+                                   arg1_1]),
+                     _]
   =
   let    head_2 = toErl "SPEND "
   in let head_4 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -1439,10 +1400,10 @@ erlps__format_op__2__p10 [(ErlangTuple [(ErlangAtom "SPEND"),
     ErlangCons head_2
       (ErlangCons head_4
          (ErlangCons head_8 (ErlangCons head_10 ErlangEmptyList)))
-erlps__format_op__2__p10 [(ErlangTuple [(ErlangAtom "ORACLE_REGISTER"),
-                                        arg0_0, arg1_1, arg2_2, arg3_3, arg4_4,
-                                        arg5_5, arg6_6]),
-                          _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "ORACLE_REGISTER"),
+                                   arg0_0, arg1_1, arg2_2, arg3_3, arg4_4,
+                                   arg5_5, arg6_6]),
+                     _]
   =
   let    head_7 = toErl "ORACLE_REGISTER "
   in let head_9 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -1474,10 +1435,10 @@ erlps__format_op__2__p10 [(ErlangTuple [(ErlangAtom "ORACLE_REGISTER"),
                                        (ErlangCons head_43
                                           (ErlangCons head_45
                                              ErlangEmptyList)))))))))))))
-erlps__format_op__2__p10 [(ErlangTuple [(ErlangAtom "ORACLE_QUERY"),
-                                        arg0_0, arg1_1, arg2_2, arg3_3, arg4_4,
-                                        arg5_5, arg6_6, arg7_7]),
-                          _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "ORACLE_QUERY"),
+                                   arg0_0, arg1_1, arg2_2, arg3_3, arg4_4,
+                                   arg5_5, arg6_6, arg7_7]),
+                     _]
   =
   let    head_8 = toErl "ORACLE_QUERY "
   in let head_10 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -1513,10 +1474,10 @@ erlps__format_op__2__p10 [(ErlangTuple [(ErlangAtom "ORACLE_QUERY"),
                                              (ErlangCons head_50
                                                 (ErlangCons head_52
                                                    ErlangEmptyList)))))))))))))))
-erlps__format_op__2__p10 [(ErlangTuple [(ErlangAtom "ORACLE_RESPOND"),
-                                        arg0_0, arg1_1, arg2_2, arg3_3, arg4_4,
-                                        arg5_5]),
-                          _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "ORACLE_RESPOND"),
+                                   arg0_0, arg1_1, arg2_2, arg3_3, arg4_4,
+                                   arg5_5]),
+                     _]
   =
   let    head_6 = toErl "ORACLE_RESPOND "
   in let head_8 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -1544,9 +1505,9 @@ erlps__format_op__2__p10 [(ErlangTuple [(ErlangAtom "ORACLE_RESPOND"),
                                  (ErlangCons head_36
                                     (ErlangCons head_38
                                        ErlangEmptyList)))))))))))
-erlps__format_op__2__p10 [(ErlangTuple [(ErlangAtom "ORACLE_EXTEND"),
-                                        arg0_0, arg1_1, arg2_2]),
-                          _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "ORACLE_EXTEND"),
+                                   arg0_0, arg1_1, arg2_2]),
+                     _]
   =
   let    head_3 = toErl "ORACLE_EXTEND "
   in let head_5 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -1560,10 +1521,9 @@ erlps__format_op__2__p10 [(ErlangTuple [(ErlangAtom "ORACLE_EXTEND"),
          (ErlangCons head_9
             (ErlangCons head_11
                (ErlangCons head_15 (ErlangCons head_17 ErlangEmptyList)))))
-erlps__format_op__2__p10 [(ErlangTuple [(ErlangAtom "ORACLE_GET_ANSWER"),
-                                        arg0_0, arg1_1, arg2_2, arg3_3,
-                                        arg4_4]),
-                          _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "ORACLE_GET_ANSWER"),
+                                   arg0_0, arg1_1, arg2_2, arg3_3, arg4_4]),
+                     _]
   =
   let    head_5 = toErl "ORACLE_GET_ANSWER "
   in let head_7 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -1586,10 +1546,9 @@ erlps__format_op__2__p10 [(ErlangTuple [(ErlangAtom "ORACLE_GET_ANSWER"),
                         (ErlangCons head_25
                            (ErlangCons head_29
                               (ErlangCons head_31 ErlangEmptyList)))))))))
-erlps__format_op__2__p10 [(ErlangTuple [(ErlangAtom "ORACLE_GET_QUESTION"),
-                                        arg0_0, arg1_1, arg2_2, arg3_3,
-                                        arg4_4]),
-                          _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "ORACLE_GET_QUESTION"),
+                                   arg0_0, arg1_1, arg2_2, arg3_3, arg4_4]),
+                     _]
   =
   let    head_5 = toErl "ORACLE_GET_QUESTION "
   in let head_7 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -1612,12 +1571,9 @@ erlps__format_op__2__p10 [(ErlangTuple [(ErlangAtom "ORACLE_GET_QUESTION"),
                         (ErlangCons head_25
                            (ErlangCons head_29
                               (ErlangCons head_31 ErlangEmptyList)))))))))
-erlps__format_op__2__p10 args = erlps__format_op__2__p11 args
-
-erlps__format_op__2__p11 :: ErlangFun
-erlps__format_op__2__p11 [(ErlangTuple [(ErlangAtom "ORACLE_QUERY_FEE"),
-                                        arg0_0, arg1_1]),
-                          _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "ORACLE_QUERY_FEE"),
+                                   arg0_0, arg1_1]),
+                     _]
   =
   let    head_2 = toErl "ORACLE_QUERY_FEE "
   in let head_4 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -1627,9 +1583,9 @@ erlps__format_op__2__p11 [(ErlangTuple [(ErlangAtom "ORACLE_QUERY_FEE"),
     ErlangCons head_2
       (ErlangCons head_4
          (ErlangCons head_8 (ErlangCons head_10 ErlangEmptyList)))
-erlps__format_op__2__p11 [(ErlangTuple [(ErlangAtom "AENS_RESOLVE"),
-                                        arg0_0, arg1_1, arg2_2, arg3_3]),
-                          _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "AENS_RESOLVE"),
+                                   arg0_0, arg1_1, arg2_2, arg3_3]),
+                     _]
   =
   let    head_4 = toErl "AENS_RESOLVE "
   in let head_6 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -1648,9 +1604,9 @@ erlps__format_op__2__p11 [(ErlangTuple [(ErlangAtom "AENS_RESOLVE"),
                   (ErlangCons head_18
                      (ErlangCons head_22
                         (ErlangCons head_24 ErlangEmptyList)))))))
-erlps__format_op__2__p11 [(ErlangTuple [(ErlangAtom "AENS_PRECLAIM"),
-                                        arg0_0, arg1_1, arg2_2]),
-                          _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "AENS_PRECLAIM"),
+                                   arg0_0, arg1_1, arg2_2]),
+                     _]
   =
   let    head_3 = toErl "AENS_PRECLAIM "
   in let head_5 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -1664,10 +1620,9 @@ erlps__format_op__2__p11 [(ErlangTuple [(ErlangAtom "AENS_PRECLAIM"),
          (ErlangCons head_9
             (ErlangCons head_11
                (ErlangCons head_15 (ErlangCons head_17 ErlangEmptyList)))))
-erlps__format_op__2__p11 [(ErlangTuple [(ErlangAtom "AENS_CLAIM"),
-                                        arg0_0, arg1_1, arg2_2, arg3_3,
-                                        arg4_4]),
-                          _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "AENS_CLAIM"),
+                                   arg0_0, arg1_1, arg2_2, arg3_3, arg4_4]),
+                     _]
   =
   let    head_5 = toErl "AENS_CLAIM "
   in let head_7 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -1690,10 +1645,10 @@ erlps__format_op__2__p11 [(ErlangTuple [(ErlangAtom "AENS_CLAIM"),
                         (ErlangCons head_25
                            (ErlangCons head_29
                               (ErlangCons head_31 ErlangEmptyList)))))))))
-erlps__format_op__2__p11 [(ErlangTuple [(ErlangAtom "AENS_UPDATE"),
-                                        arg0_0, arg1_1, arg2_2, arg3_3, arg4_4,
-                                        arg5_5]),
-                          _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "AENS_UPDATE"),
+                                   arg0_0, arg1_1, arg2_2, arg3_3, arg4_4,
+                                   arg5_5]),
+                     _]
   =
   let    head_6 = toErl "AENS_UPDATE "
   in let head_8 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -1721,9 +1676,9 @@ erlps__format_op__2__p11 [(ErlangTuple [(ErlangAtom "AENS_UPDATE"),
                                  (ErlangCons head_36
                                     (ErlangCons head_38
                                        ErlangEmptyList)))))))))))
-erlps__format_op__2__p11 [(ErlangTuple [(ErlangAtom "AENS_TRANSFER"),
-                                        arg0_0, arg1_1, arg2_2, arg3_3]),
-                          _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "AENS_TRANSFER"),
+                                   arg0_0, arg1_1, arg2_2, arg3_3]),
+                     _]
   =
   let    head_4 = toErl "AENS_TRANSFER "
   in let head_6 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -1742,9 +1697,9 @@ erlps__format_op__2__p11 [(ErlangTuple [(ErlangAtom "AENS_TRANSFER"),
                   (ErlangCons head_18
                      (ErlangCons head_22
                         (ErlangCons head_24 ErlangEmptyList)))))))
-erlps__format_op__2__p11 [(ErlangTuple [(ErlangAtom "AENS_REVOKE"),
-                                        arg0_0, arg1_1, arg2_2]),
-                          _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "AENS_REVOKE"),
+                                   arg0_0, arg1_1, arg2_2]),
+                     _]
   =
   let    head_3 = toErl "AENS_REVOKE "
   in let head_5 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -1758,9 +1713,9 @@ erlps__format_op__2__p11 [(ErlangTuple [(ErlangAtom "AENS_REVOKE"),
          (ErlangCons head_9
             (ErlangCons head_11
                (ErlangCons head_15 (ErlangCons head_17 ErlangEmptyList)))))
-erlps__format_op__2__p11 [(ErlangTuple [(ErlangAtom "BALANCE_OTHER"),
-                                        arg0_0, arg1_1]),
-                          _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "BALANCE_OTHER"),
+                                   arg0_0, arg1_1]),
+                     _]
   =
   let    head_2 = toErl "BALANCE_OTHER "
   in let head_4 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -1770,9 +1725,9 @@ erlps__format_op__2__p11 [(ErlangTuple [(ErlangAtom "BALANCE_OTHER"),
     ErlangCons head_2
       (ErlangCons head_4
          (ErlangCons head_8 (ErlangCons head_10 ErlangEmptyList)))
-erlps__format_op__2__p11 [(ErlangTuple [(ErlangAtom "VERIFY_SIG"),
-                                        arg0_0, arg1_1, arg2_2, arg3_3]),
-                          _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "VERIFY_SIG"),
+                                   arg0_0, arg1_1, arg2_2, arg3_3]),
+                     _]
   =
   let    head_4 = toErl "VERIFY_SIG "
   in let head_6 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -1791,9 +1746,9 @@ erlps__format_op__2__p11 [(ErlangTuple [(ErlangAtom "VERIFY_SIG"),
                   (ErlangCons head_18
                      (ErlangCons head_22
                         (ErlangCons head_24 ErlangEmptyList)))))))
-erlps__format_op__2__p11 [(ErlangTuple [(ErlangAtom "VERIFY_SIG_SECP256K1"),
-                                        arg0_0, arg1_1, arg2_2, arg3_3]),
-                          _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "VERIFY_SIG_SECP256K1"),
+                                   arg0_0, arg1_1, arg2_2, arg3_3]),
+                     _]
   =
   let    head_4 = toErl "VERIFY_SIG_SECP256K1 "
   in let head_6 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -1812,12 +1767,9 @@ erlps__format_op__2__p11 [(ErlangTuple [(ErlangAtom "VERIFY_SIG_SECP256K1"),
                   (ErlangCons head_18
                      (ErlangCons head_22
                         (ErlangCons head_24 ErlangEmptyList)))))))
-erlps__format_op__2__p11 args = erlps__format_op__2__p12 args
-
-erlps__format_op__2__p12 :: ErlangFun
-erlps__format_op__2__p12 [(ErlangTuple [(ErlangAtom "CONTRACT_TO_ADDRESS"),
-                                        arg0_0, arg1_1]),
-                          _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "CONTRACT_TO_ADDRESS"),
+                                   arg0_0, arg1_1]),
+                     _]
   =
   let    head_2 = toErl "CONTRACT_TO_ADDRESS "
   in let head_4 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -1827,16 +1779,16 @@ erlps__format_op__2__p12 [(ErlangTuple [(ErlangAtom "CONTRACT_TO_ADDRESS"),
     ErlangCons head_2
       (ErlangCons head_4
          (ErlangCons head_8 (ErlangCons head_10 ErlangEmptyList)))
-erlps__format_op__2__p12 [(ErlangTuple [(ErlangAtom "AUTH_TX_HASH"),
-                                        arg0_0]),
-                          _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "AUTH_TX_HASH"),
+                                   arg0_0]),
+                     _]
   =
   let    head_1 = toErl "AUTH_TX_HASH "
   in let head_3 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
   in ErlangCons head_1 (ErlangCons head_3 ErlangEmptyList)
-erlps__format_op__2__p12 [(ErlangTuple [(ErlangAtom "ORACLE_CHECK"),
-                                        arg0_0, arg1_1, arg2_2, arg3_3]),
-                          _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "ORACLE_CHECK"),
+                                   arg0_0, arg1_1, arg2_2, arg3_3]),
+                     _]
   =
   let    head_4 = toErl "ORACLE_CHECK "
   in let head_6 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -1855,10 +1807,9 @@ erlps__format_op__2__p12 [(ErlangTuple [(ErlangAtom "ORACLE_CHECK"),
                   (ErlangCons head_18
                      (ErlangCons head_22
                         (ErlangCons head_24 ErlangEmptyList)))))))
-erlps__format_op__2__p12 [(ErlangTuple [(ErlangAtom "ORACLE_CHECK_QUERY"),
-                                        arg0_0, arg1_1, arg2_2, arg3_3,
-                                        arg4_4]),
-                          _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "ORACLE_CHECK_QUERY"),
+                                   arg0_0, arg1_1, arg2_2, arg3_3, arg4_4]),
+                     _]
   =
   let    head_5 = toErl "ORACLE_CHECK_QUERY "
   in let head_7 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -1881,9 +1832,9 @@ erlps__format_op__2__p12 [(ErlangTuple [(ErlangAtom "ORACLE_CHECK_QUERY"),
                         (ErlangCons head_25
                            (ErlangCons head_29
                               (ErlangCons head_31 ErlangEmptyList)))))))))
-erlps__format_op__2__p12 [(ErlangTuple [(ErlangAtom "IS_ORACLE"),
-                                        arg0_0, arg1_1]),
-                          _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "IS_ORACLE"),
+                                   arg0_0, arg1_1]),
+                     _]
   =
   let    head_2 = toErl "IS_ORACLE "
   in let head_4 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -1893,9 +1844,9 @@ erlps__format_op__2__p12 [(ErlangTuple [(ErlangAtom "IS_ORACLE"),
     ErlangCons head_2
       (ErlangCons head_4
          (ErlangCons head_8 (ErlangCons head_10 ErlangEmptyList)))
-erlps__format_op__2__p12 [(ErlangTuple [(ErlangAtom "IS_CONTRACT"),
-                                        arg0_0, arg1_1]),
-                          _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "IS_CONTRACT"),
+                                   arg0_0, arg1_1]),
+                     _]
   =
   let    head_2 = toErl "IS_CONTRACT "
   in let head_4 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -1905,9 +1856,9 @@ erlps__format_op__2__p12 [(ErlangTuple [(ErlangAtom "IS_CONTRACT"),
     ErlangCons head_2
       (ErlangCons head_4
          (ErlangCons head_8 (ErlangCons head_10 ErlangEmptyList)))
-erlps__format_op__2__p12 [(ErlangTuple [(ErlangAtom "IS_PAYABLE"),
-                                        arg0_0, arg1_1]),
-                          _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "IS_PAYABLE"),
+                                   arg0_0, arg1_1]),
+                     _]
   =
   let    head_2 = toErl "IS_PAYABLE "
   in let head_4 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -1917,16 +1868,16 @@ erlps__format_op__2__p12 [(ErlangTuple [(ErlangAtom "IS_PAYABLE"),
     ErlangCons head_2
       (ErlangCons head_4
          (ErlangCons head_8 (ErlangCons head_10 ErlangEmptyList)))
-erlps__format_op__2__p12 [(ErlangTuple [(ErlangAtom "CREATOR"),
-                                        arg0_0]),
-                          _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "CREATOR"),
+                                   arg0_0]),
+                     _]
   =
   let    head_1 = toErl "CREATOR "
   in let head_3 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
   in ErlangCons head_1 (ErlangCons head_3 ErlangEmptyList)
-erlps__format_op__2__p12 [(ErlangTuple [(ErlangAtom "ECVERIFY_SECP256K1"),
-                                        arg0_0, arg1_1, arg2_2, arg3_3]),
-                          _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "ECVERIFY_SECP256K1"),
+                                   arg0_0, arg1_1, arg2_2, arg3_3]),
+                     _]
   =
   let    head_4 = toErl "ECVERIFY_SECP256K1 "
   in let head_6 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -1945,9 +1896,9 @@ erlps__format_op__2__p12 [(ErlangTuple [(ErlangAtom "ECVERIFY_SECP256K1"),
                   (ErlangCons head_18
                      (ErlangCons head_22
                         (ErlangCons head_24 ErlangEmptyList)))))))
-erlps__format_op__2__p12 [(ErlangTuple [(ErlangAtom "ECRECOVER_SECP256K1"),
-                                        arg0_0, arg1_1, arg2_2]),
-                          _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "ECRECOVER_SECP256K1"),
+                                   arg0_0, arg1_1, arg2_2]),
+                     _]
   =
   let    head_3 = toErl "ECRECOVER_SECP256K1 "
   in let head_5 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -1961,12 +1912,9 @@ erlps__format_op__2__p12 [(ErlangTuple [(ErlangAtom "ECRECOVER_SECP256K1"),
          (ErlangCons head_9
             (ErlangCons head_11
                (ErlangCons head_15 (ErlangCons head_17 ErlangEmptyList)))))
-erlps__format_op__2__p12 args = erlps__format_op__2__p13 args
-
-erlps__format_op__2__p13 :: ErlangFun
-erlps__format_op__2__p13 [(ErlangTuple [(ErlangAtom "ADDRESS_TO_CONTRACT"),
-                                        arg0_0, arg1_1]),
-                          _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "ADDRESS_TO_CONTRACT"),
+                                   arg0_0, arg1_1]),
+                     _]
   =
   let    head_2 = toErl "ADDRESS_TO_CONTRACT "
   in let head_4 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -1976,9 +1924,9 @@ erlps__format_op__2__p13 [(ErlangTuple [(ErlangAtom "ADDRESS_TO_CONTRACT"),
     ErlangCons head_2
       (ErlangCons head_4
          (ErlangCons head_8 (ErlangCons head_10 ErlangEmptyList)))
-erlps__format_op__2__p13 [(ErlangTuple [(ErlangAtom "BLS12_381_G1_NEG"),
-                                        arg0_0, arg1_1]),
-                          _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "BLS12_381_G1_NEG"),
+                                   arg0_0, arg1_1]),
+                     _]
   =
   let    head_2 = toErl "BLS12_381_G1_NEG "
   in let head_4 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -1988,9 +1936,9 @@ erlps__format_op__2__p13 [(ErlangTuple [(ErlangAtom "BLS12_381_G1_NEG"),
     ErlangCons head_2
       (ErlangCons head_4
          (ErlangCons head_8 (ErlangCons head_10 ErlangEmptyList)))
-erlps__format_op__2__p13 [(ErlangTuple [(ErlangAtom "BLS12_381_G1_NORM"),
-                                        arg0_0, arg1_1]),
-                          _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "BLS12_381_G1_NORM"),
+                                   arg0_0, arg1_1]),
+                     _]
   =
   let    head_2 = toErl "BLS12_381_G1_NORM "
   in let head_4 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -2000,9 +1948,9 @@ erlps__format_op__2__p13 [(ErlangTuple [(ErlangAtom "BLS12_381_G1_NORM"),
     ErlangCons head_2
       (ErlangCons head_4
          (ErlangCons head_8 (ErlangCons head_10 ErlangEmptyList)))
-erlps__format_op__2__p13 [(ErlangTuple [(ErlangAtom "BLS12_381_G1_VALID"),
-                                        arg0_0, arg1_1]),
-                          _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "BLS12_381_G1_VALID"),
+                                   arg0_0, arg1_1]),
+                     _]
   =
   let    head_2 = toErl "BLS12_381_G1_VALID "
   in let head_4 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -2012,9 +1960,9 @@ erlps__format_op__2__p13 [(ErlangTuple [(ErlangAtom "BLS12_381_G1_VALID"),
     ErlangCons head_2
       (ErlangCons head_4
          (ErlangCons head_8 (ErlangCons head_10 ErlangEmptyList)))
-erlps__format_op__2__p13 [(ErlangTuple [(ErlangAtom "BLS12_381_G1_IS_ZERO"),
-                                        arg0_0, arg1_1]),
-                          _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "BLS12_381_G1_IS_ZERO"),
+                                   arg0_0, arg1_1]),
+                     _]
   =
   let    head_2 = toErl "BLS12_381_G1_IS_ZERO "
   in let head_4 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -2024,9 +1972,9 @@ erlps__format_op__2__p13 [(ErlangTuple [(ErlangAtom "BLS12_381_G1_IS_ZERO"),
     ErlangCons head_2
       (ErlangCons head_4
          (ErlangCons head_8 (ErlangCons head_10 ErlangEmptyList)))
-erlps__format_op__2__p13 [(ErlangTuple [(ErlangAtom "BLS12_381_G1_ADD"),
-                                        arg0_0, arg1_1, arg2_2]),
-                          _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "BLS12_381_G1_ADD"),
+                                   arg0_0, arg1_1, arg2_2]),
+                     _]
   =
   let    head_3 = toErl "BLS12_381_G1_ADD "
   in let head_5 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -2040,9 +1988,9 @@ erlps__format_op__2__p13 [(ErlangTuple [(ErlangAtom "BLS12_381_G1_ADD"),
          (ErlangCons head_9
             (ErlangCons head_11
                (ErlangCons head_15 (ErlangCons head_17 ErlangEmptyList)))))
-erlps__format_op__2__p13 [(ErlangTuple [(ErlangAtom "BLS12_381_G1_MUL"),
-                                        arg0_0, arg1_1, arg2_2]),
-                          _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "BLS12_381_G1_MUL"),
+                                   arg0_0, arg1_1, arg2_2]),
+                     _]
   =
   let    head_3 = toErl "BLS12_381_G1_MUL "
   in let head_5 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -2056,9 +2004,9 @@ erlps__format_op__2__p13 [(ErlangTuple [(ErlangAtom "BLS12_381_G1_MUL"),
          (ErlangCons head_9
             (ErlangCons head_11
                (ErlangCons head_15 (ErlangCons head_17 ErlangEmptyList)))))
-erlps__format_op__2__p13 [(ErlangTuple [(ErlangAtom "BLS12_381_G2_NEG"),
-                                        arg0_0, arg1_1]),
-                          _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "BLS12_381_G2_NEG"),
+                                   arg0_0, arg1_1]),
+                     _]
   =
   let    head_2 = toErl "BLS12_381_G2_NEG "
   in let head_4 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -2068,9 +2016,9 @@ erlps__format_op__2__p13 [(ErlangTuple [(ErlangAtom "BLS12_381_G2_NEG"),
     ErlangCons head_2
       (ErlangCons head_4
          (ErlangCons head_8 (ErlangCons head_10 ErlangEmptyList)))
-erlps__format_op__2__p13 [(ErlangTuple [(ErlangAtom "BLS12_381_G2_NORM"),
-                                        arg0_0, arg1_1]),
-                          _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "BLS12_381_G2_NORM"),
+                                   arg0_0, arg1_1]),
+                     _]
   =
   let    head_2 = toErl "BLS12_381_G2_NORM "
   in let head_4 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -2080,9 +2028,9 @@ erlps__format_op__2__p13 [(ErlangTuple [(ErlangAtom "BLS12_381_G2_NORM"),
     ErlangCons head_2
       (ErlangCons head_4
          (ErlangCons head_8 (ErlangCons head_10 ErlangEmptyList)))
-erlps__format_op__2__p13 [(ErlangTuple [(ErlangAtom "BLS12_381_G2_VALID"),
-                                        arg0_0, arg1_1]),
-                          _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "BLS12_381_G2_VALID"),
+                                   arg0_0, arg1_1]),
+                     _]
   =
   let    head_2 = toErl "BLS12_381_G2_VALID "
   in let head_4 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -2092,12 +2040,9 @@ erlps__format_op__2__p13 [(ErlangTuple [(ErlangAtom "BLS12_381_G2_VALID"),
     ErlangCons head_2
       (ErlangCons head_4
          (ErlangCons head_8 (ErlangCons head_10 ErlangEmptyList)))
-erlps__format_op__2__p13 args = erlps__format_op__2__p14 args
-
-erlps__format_op__2__p14 :: ErlangFun
-erlps__format_op__2__p14 [(ErlangTuple [(ErlangAtom "BLS12_381_G2_IS_ZERO"),
-                                        arg0_0, arg1_1]),
-                          _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "BLS12_381_G2_IS_ZERO"),
+                                   arg0_0, arg1_1]),
+                     _]
   =
   let    head_2 = toErl "BLS12_381_G2_IS_ZERO "
   in let head_4 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -2107,9 +2052,9 @@ erlps__format_op__2__p14 [(ErlangTuple [(ErlangAtom "BLS12_381_G2_IS_ZERO"),
     ErlangCons head_2
       (ErlangCons head_4
          (ErlangCons head_8 (ErlangCons head_10 ErlangEmptyList)))
-erlps__format_op__2__p14 [(ErlangTuple [(ErlangAtom "BLS12_381_G2_ADD"),
-                                        arg0_0, arg1_1, arg2_2]),
-                          _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "BLS12_381_G2_ADD"),
+                                   arg0_0, arg1_1, arg2_2]),
+                     _]
   =
   let    head_3 = toErl "BLS12_381_G2_ADD "
   in let head_5 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -2123,9 +2068,9 @@ erlps__format_op__2__p14 [(ErlangTuple [(ErlangAtom "BLS12_381_G2_ADD"),
          (ErlangCons head_9
             (ErlangCons head_11
                (ErlangCons head_15 (ErlangCons head_17 ErlangEmptyList)))))
-erlps__format_op__2__p14 [(ErlangTuple [(ErlangAtom "BLS12_381_G2_MUL"),
-                                        arg0_0, arg1_1, arg2_2]),
-                          _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "BLS12_381_G2_MUL"),
+                                   arg0_0, arg1_1, arg2_2]),
+                     _]
   =
   let    head_3 = toErl "BLS12_381_G2_MUL "
   in let head_5 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -2139,9 +2084,9 @@ erlps__format_op__2__p14 [(ErlangTuple [(ErlangAtom "BLS12_381_G2_MUL"),
          (ErlangCons head_9
             (ErlangCons head_11
                (ErlangCons head_15 (ErlangCons head_17 ErlangEmptyList)))))
-erlps__format_op__2__p14 [(ErlangTuple [(ErlangAtom "BLS12_381_GT_INV"),
-                                        arg0_0, arg1_1]),
-                          _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "BLS12_381_GT_INV"),
+                                   arg0_0, arg1_1]),
+                     _]
   =
   let    head_2 = toErl "BLS12_381_GT_INV "
   in let head_4 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -2151,9 +2096,9 @@ erlps__format_op__2__p14 [(ErlangTuple [(ErlangAtom "BLS12_381_GT_INV"),
     ErlangCons head_2
       (ErlangCons head_4
          (ErlangCons head_8 (ErlangCons head_10 ErlangEmptyList)))
-erlps__format_op__2__p14 [(ErlangTuple [(ErlangAtom "BLS12_381_GT_ADD"),
-                                        arg0_0, arg1_1, arg2_2]),
-                          _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "BLS12_381_GT_ADD"),
+                                   arg0_0, arg1_1, arg2_2]),
+                     _]
   =
   let    head_3 = toErl "BLS12_381_GT_ADD "
   in let head_5 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -2167,9 +2112,9 @@ erlps__format_op__2__p14 [(ErlangTuple [(ErlangAtom "BLS12_381_GT_ADD"),
          (ErlangCons head_9
             (ErlangCons head_11
                (ErlangCons head_15 (ErlangCons head_17 ErlangEmptyList)))))
-erlps__format_op__2__p14 [(ErlangTuple [(ErlangAtom "BLS12_381_GT_MUL"),
-                                        arg0_0, arg1_1, arg2_2]),
-                          _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "BLS12_381_GT_MUL"),
+                                   arg0_0, arg1_1, arg2_2]),
+                     _]
   =
   let    head_3 = toErl "BLS12_381_GT_MUL "
   in let head_5 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -2183,9 +2128,9 @@ erlps__format_op__2__p14 [(ErlangTuple [(ErlangAtom "BLS12_381_GT_MUL"),
          (ErlangCons head_9
             (ErlangCons head_11
                (ErlangCons head_15 (ErlangCons head_17 ErlangEmptyList)))))
-erlps__format_op__2__p14 [(ErlangTuple [(ErlangAtom "BLS12_381_GT_POW"),
-                                        arg0_0, arg1_1, arg2_2]),
-                          _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "BLS12_381_GT_POW"),
+                                   arg0_0, arg1_1, arg2_2]),
+                     _]
   =
   let    head_3 = toErl "BLS12_381_GT_POW "
   in let head_5 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -2199,9 +2144,9 @@ erlps__format_op__2__p14 [(ErlangTuple [(ErlangAtom "BLS12_381_GT_POW"),
          (ErlangCons head_9
             (ErlangCons head_11
                (ErlangCons head_15 (ErlangCons head_17 ErlangEmptyList)))))
-erlps__format_op__2__p14 [(ErlangTuple [(ErlangAtom "BLS12_381_GT_IS_ONE"),
-                                        arg0_0, arg1_1]),
-                          _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "BLS12_381_GT_IS_ONE"),
+                                   arg0_0, arg1_1]),
+                     _]
   =
   let    head_2 = toErl "BLS12_381_GT_IS_ONE "
   in let head_4 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -2211,9 +2156,9 @@ erlps__format_op__2__p14 [(ErlangTuple [(ErlangAtom "BLS12_381_GT_IS_ONE"),
     ErlangCons head_2
       (ErlangCons head_4
          (ErlangCons head_8 (ErlangCons head_10 ErlangEmptyList)))
-erlps__format_op__2__p14 [(ErlangTuple [(ErlangAtom "BLS12_381_PAIRING"),
-                                        arg0_0, arg1_1, arg2_2]),
-                          _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "BLS12_381_PAIRING"),
+                                   arg0_0, arg1_1, arg2_2]),
+                     _]
   =
   let    head_3 = toErl "BLS12_381_PAIRING "
   in let head_5 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -2227,9 +2172,9 @@ erlps__format_op__2__p14 [(ErlangTuple [(ErlangAtom "BLS12_381_PAIRING"),
          (ErlangCons head_9
             (ErlangCons head_11
                (ErlangCons head_15 (ErlangCons head_17 ErlangEmptyList)))))
-erlps__format_op__2__p14 [(ErlangTuple [(ErlangAtom "BLS12_381_MILLER_LOOP"),
-                                        arg0_0, arg1_1, arg2_2]),
-                          _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "BLS12_381_MILLER_LOOP"),
+                                   arg0_0, arg1_1, arg2_2]),
+                     _]
   =
   let    head_3 = toErl "BLS12_381_MILLER_LOOP "
   in let head_5 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -2243,12 +2188,9 @@ erlps__format_op__2__p14 [(ErlangTuple [(ErlangAtom "BLS12_381_MILLER_LOOP"),
          (ErlangCons head_9
             (ErlangCons head_11
                (ErlangCons head_15 (ErlangCons head_17 ErlangEmptyList)))))
-erlps__format_op__2__p14 args = erlps__format_op__2__p15 args
-
-erlps__format_op__2__p15 :: ErlangFun
-erlps__format_op__2__p15 [(ErlangTuple [(ErlangAtom "BLS12_381_FINAL_EXP"),
-                                        arg0_0, arg1_1]),
-                          _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "BLS12_381_FINAL_EXP"),
+                                   arg0_0, arg1_1]),
+                     _]
   =
   let    head_2 = toErl "BLS12_381_FINAL_EXP "
   in let head_4 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -2258,9 +2200,9 @@ erlps__format_op__2__p15 [(ErlangTuple [(ErlangAtom "BLS12_381_FINAL_EXP"),
     ErlangCons head_2
       (ErlangCons head_4
          (ErlangCons head_8 (ErlangCons head_10 ErlangEmptyList)))
-erlps__format_op__2__p15 [(ErlangTuple [(ErlangAtom "BLS12_381_INT_TO_FR"),
-                                        arg0_0, arg1_1]),
-                          _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "BLS12_381_INT_TO_FR"),
+                                   arg0_0, arg1_1]),
+                     _]
   =
   let    head_2 = toErl "BLS12_381_INT_TO_FR "
   in let head_4 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -2270,9 +2212,9 @@ erlps__format_op__2__p15 [(ErlangTuple [(ErlangAtom "BLS12_381_INT_TO_FR"),
     ErlangCons head_2
       (ErlangCons head_4
          (ErlangCons head_8 (ErlangCons head_10 ErlangEmptyList)))
-erlps__format_op__2__p15 [(ErlangTuple [(ErlangAtom "BLS12_381_INT_TO_FP"),
-                                        arg0_0, arg1_1]),
-                          _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "BLS12_381_INT_TO_FP"),
+                                   arg0_0, arg1_1]),
+                     _]
   =
   let    head_2 = toErl "BLS12_381_INT_TO_FP "
   in let head_4 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -2282,9 +2224,9 @@ erlps__format_op__2__p15 [(ErlangTuple [(ErlangAtom "BLS12_381_INT_TO_FP"),
     ErlangCons head_2
       (ErlangCons head_4
          (ErlangCons head_8 (ErlangCons head_10 ErlangEmptyList)))
-erlps__format_op__2__p15 [(ErlangTuple [(ErlangAtom "BLS12_381_FR_TO_INT"),
-                                        arg0_0, arg1_1]),
-                          _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "BLS12_381_FR_TO_INT"),
+                                   arg0_0, arg1_1]),
+                     _]
   =
   let    head_2 = toErl "BLS12_381_FR_TO_INT "
   in let head_4 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -2294,9 +2236,9 @@ erlps__format_op__2__p15 [(ErlangTuple [(ErlangAtom "BLS12_381_FR_TO_INT"),
     ErlangCons head_2
       (ErlangCons head_4
          (ErlangCons head_8 (ErlangCons head_10 ErlangEmptyList)))
-erlps__format_op__2__p15 [(ErlangTuple [(ErlangAtom "BLS12_381_FP_TO_INT"),
-                                        arg0_0, arg1_1]),
-                          _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "BLS12_381_FP_TO_INT"),
+                                   arg0_0, arg1_1]),
+                     _]
   =
   let    head_2 = toErl "BLS12_381_FP_TO_INT "
   in let head_4 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -2306,9 +2248,9 @@ erlps__format_op__2__p15 [(ErlangTuple [(ErlangAtom "BLS12_381_FP_TO_INT"),
     ErlangCons head_2
       (ErlangCons head_4
          (ErlangCons head_8 (ErlangCons head_10 ErlangEmptyList)))
-erlps__format_op__2__p15 [(ErlangTuple [(ErlangAtom "AENS_LOOKUP"),
-                                        arg0_0, arg1_1]),
-                          _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "AENS_LOOKUP"),
+                                   arg0_0, arg1_1]),
+                     _]
   =
   let    head_2 = toErl "AENS_LOOKUP "
   in let head_4 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -2318,9 +2260,9 @@ erlps__format_op__2__p15 [(ErlangTuple [(ErlangAtom "AENS_LOOKUP"),
     ErlangCons head_2
       (ErlangCons head_4
          (ErlangCons head_8 (ErlangCons head_10 ErlangEmptyList)))
-erlps__format_op__2__p15 [(ErlangTuple [(ErlangAtom "ORACLE_EXPIRY"),
-                                        arg0_0, arg1_1]),
-                          _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "ORACLE_EXPIRY"),
+                                   arg0_0, arg1_1]),
+                     _]
   =
   let    head_2 = toErl "ORACLE_EXPIRY "
   in let head_4 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -2330,16 +2272,16 @@ erlps__format_op__2__p15 [(ErlangTuple [(ErlangAtom "ORACLE_EXPIRY"),
     ErlangCons head_2
       (ErlangCons head_4
          (ErlangCons head_8 (ErlangCons head_10 ErlangEmptyList)))
-erlps__format_op__2__p15 [(ErlangTuple [(ErlangAtom "AUTH_TX"),
-                                        arg0_0]),
-                          _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "AUTH_TX"),
+                                   arg0_0]),
+                     _]
   =
   let    head_1 = toErl "AUTH_TX "
   in let head_3 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
   in ErlangCons head_1 (ErlangCons head_3 ErlangEmptyList)
-erlps__format_op__2__p15 [(ErlangTuple [(ErlangAtom "STR_TO_LIST"),
-                                        arg0_0, arg1_1]),
-                          _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "STR_TO_LIST"),
+                                   arg0_0, arg1_1]),
+                     _]
   =
   let    head_2 = toErl "STR_TO_LIST "
   in let head_4 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -2349,9 +2291,9 @@ erlps__format_op__2__p15 [(ErlangTuple [(ErlangAtom "STR_TO_LIST"),
     ErlangCons head_2
       (ErlangCons head_4
          (ErlangCons head_8 (ErlangCons head_10 ErlangEmptyList)))
-erlps__format_op__2__p15 [(ErlangTuple [(ErlangAtom "STR_FROM_LIST"),
-                                        arg0_0, arg1_1]),
-                          _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "STR_FROM_LIST"),
+                                   arg0_0, arg1_1]),
+                     _]
   =
   let    head_2 = toErl "STR_FROM_LIST "
   in let head_4 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -2361,12 +2303,9 @@ erlps__format_op__2__p15 [(ErlangTuple [(ErlangAtom "STR_FROM_LIST"),
     ErlangCons head_2
       (ErlangCons head_4
          (ErlangCons head_8 (ErlangCons head_10 ErlangEmptyList)))
-erlps__format_op__2__p15 args = erlps__format_op__2__p16 args
-
-erlps__format_op__2__p16 :: ErlangFun
-erlps__format_op__2__p16 [(ErlangTuple [(ErlangAtom "STR_TO_UPPER"),
-                                        arg0_0, arg1_1]),
-                          _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "STR_TO_UPPER"),
+                                   arg0_0, arg1_1]),
+                     _]
   =
   let    head_2 = toErl "STR_TO_UPPER "
   in let head_4 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -2376,9 +2315,9 @@ erlps__format_op__2__p16 [(ErlangTuple [(ErlangAtom "STR_TO_UPPER"),
     ErlangCons head_2
       (ErlangCons head_4
          (ErlangCons head_8 (ErlangCons head_10 ErlangEmptyList)))
-erlps__format_op__2__p16 [(ErlangTuple [(ErlangAtom "STR_TO_LOWER"),
-                                        arg0_0, arg1_1]),
-                          _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "STR_TO_LOWER"),
+                                   arg0_0, arg1_1]),
+                     _]
   =
   let    head_2 = toErl "STR_TO_LOWER "
   in let head_4 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -2388,9 +2327,9 @@ erlps__format_op__2__p16 [(ErlangTuple [(ErlangAtom "STR_TO_LOWER"),
     ErlangCons head_2
       (ErlangCons head_4
          (ErlangCons head_8 (ErlangCons head_10 ErlangEmptyList)))
-erlps__format_op__2__p16 [(ErlangTuple [(ErlangAtom "CHAR_TO_INT"),
-                                        arg0_0, arg1_1]),
-                          _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "CHAR_TO_INT"),
+                                   arg0_0, arg1_1]),
+                     _]
   =
   let    head_2 = toErl "CHAR_TO_INT "
   in let head_4 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -2400,9 +2339,9 @@ erlps__format_op__2__p16 [(ErlangTuple [(ErlangAtom "CHAR_TO_INT"),
     ErlangCons head_2
       (ErlangCons head_4
          (ErlangCons head_8 (ErlangCons head_10 ErlangEmptyList)))
-erlps__format_op__2__p16 [(ErlangTuple [(ErlangAtom "CHAR_FROM_INT"),
-                                        arg0_0, arg1_1]),
-                          _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "CHAR_FROM_INT"),
+                                   arg0_0, arg1_1]),
+                     _]
   =
   let    head_2 = toErl "CHAR_FROM_INT "
   in let head_4 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -2412,10 +2351,10 @@ erlps__format_op__2__p16 [(ErlangTuple [(ErlangAtom "CHAR_FROM_INT"),
     ErlangCons head_2
       (ErlangCons head_4
          (ErlangCons head_8 (ErlangCons head_10 ErlangEmptyList)))
-erlps__format_op__2__p16 [(ErlangTuple [(ErlangAtom "CALL_PGR"),
-                                        arg0_0, arg1_1, arg2_2, arg3_3, arg4_4,
-                                        arg5_5, arg6_6]),
-                          _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "CALL_PGR"),
+                                   arg0_0, arg1_1, arg2_2, arg3_3, arg4_4,
+                                   arg5_5, arg6_6]),
+                     _]
   =
   let    head_7 = toErl "CALL_PGR "
   in let head_9 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
@@ -2447,33 +2386,31 @@ erlps__format_op__2__p16 [(ErlangTuple [(ErlangAtom "CALL_PGR"),
                                        (ErlangCons head_43
                                           (ErlangCons head_45
                                              ErlangEmptyList)))))))))))))
-erlps__format_op__2__p16 [(ErlangAtom "DEACTIVATE"), _] =
+erlps__format_op__2 [(ErlangAtom "DEACTIVATE"), _] =
   let head_0 = toErl "DEACTIVATE"
   in ErlangCons head_0 ErlangEmptyList
-erlps__format_op__2__p16 [(ErlangTuple [(ErlangAtom "ABORT"),
-                                        arg0_0]),
-                          _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "ABORT"),
+                                   arg0_0]),
+                     _]
   =
   let    head_1 = toErl "ABORT "
   in let head_3 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
   in ErlangCons head_1 (ErlangCons head_3 ErlangEmptyList)
-erlps__format_op__2__p16 [(ErlangTuple [(ErlangAtom "EXIT"),
-                                        arg0_0]),
-                          _]
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "EXIT"), arg0_0]),
+                     _]
   =
   let    head_1 = toErl "EXIT "
   in let head_3 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
   in ErlangCons head_1 (ErlangCons head_3 ErlangEmptyList)
-erlps__format_op__2__p16 [(ErlangAtom "NOP"), _] =
+erlps__format_op__2 [(ErlangAtom "NOP"), _] =
   let head_0 = toErl "NOP"
   in ErlangCons head_0 ErlangEmptyList
-erlps__format_op__2__p16 [op_0, _symbols_1] =
+erlps__format_op__2 [op_0, _symbols_1] =
   let arg_2 = toErl ";; Bad Op: ~w\n"
   in
     BIF.do_remote_fun_call "Io.Lib" "erlps__format__2"
       [arg_2, ErlangCons op_0 ErlangEmptyList]
-erlps__format_op__2__p16 [arg_6, arg_7] =
-  EXC.function_clause unit
-erlps__format_op__2__p16 args =
+erlps__format_op__2 [arg_6, arg_7] = EXC.function_clause unit
+erlps__format_op__2 args =
   EXC.badarity (ErlangFun 2 (\ _ -> ErlangAtom "purs_tco_sucks"))
     args

@@ -181,7 +181,7 @@ erlps__check_roundtrip__1 [file_0] =
                     (let
                        lambda_24 [] =
                          case code2_20 of
-                           __x_27 | (__x_27 == code1_18) -> ErlangAtom "ok"
+                           __x_27 | __x_27 == code1_18 -> ErlangAtom "ok"
                            __v_28 ->
                              let   
                                head_32 =
@@ -225,7 +225,7 @@ erlps__check_roundtrip__1 [file_0] =
                     (let
                        lambda_53 [] =
                          case code3_22 of
-                           __x_56 | (__x_56 == code1_18) -> ErlangAtom "ok"
+                           __x_56 | __x_56 == code1_18 -> ErlangAtom "ok"
                            __v_57 ->
                              let   
                                head_61 =

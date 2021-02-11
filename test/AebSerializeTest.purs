@@ -39,7 +39,7 @@ erlps__serialize_integer_test__0 [] =
                               , (BIN.Ok (ErlangInt num_5) bin_4) <-
                                   (BIN.chopInt binSeg_2 size_3 1 BIN.Big
                                      BIN.Unsigned)
-                              , ((ErlangInt num_5) == (toErl 0))
+                              , (ErlangInt num_5) == (toErl 0)
                               , BIN.empty bin_4 ->
         let    arg_8 = toErl 1
         in let
@@ -56,7 +56,7 @@ erlps__serialize_integer_test__0 [] =
                                     , (BIN.Ok (ErlangInt num_12) bin_11) <-
                                         (BIN.chopInt binSeg_9 size_10 1 BIN.Big
                                            BIN.Unsigned)
-                                    , ((ErlangInt num_12) == (toErl 2))
+                                    , (ErlangInt num_12) == (toErl 2)
                                     , BIN.empty bin_11 ->
               let    arg_15 = toErl 63
               in let
@@ -73,7 +73,7 @@ erlps__serialize_integer_test__0 [] =
                                            , (BIN.Ok (ErlangInt num_19) bin_18) <-
                                                (BIN.chopInt binSeg_16 size_17 1
                                                   BIN.Big BIN.Unsigned)
-                                           , ((ErlangInt num_19) == (toErl 126))
+                                           , (ErlangInt num_19) == (toErl 126)
                                            , BIN.empty bin_18 ->
                     let    arg_22 = toErl 64
                     in let
@@ -92,15 +92,15 @@ erlps__serialize_integer_test__0 [] =
                                                      (BIN.chopInt binSeg_23
                                                         size_24 1 BIN.Big
                                                         BIN.Unsigned)
-                                                 , ((ErlangInt num_26) ==
-                                                      (toErl 111))
+                                                 , (ErlangInt num_26) ==
+                                                     (toErl 111)
                                                  , (ErlangInt size_27) <-
                                                      (toErl 8)
                                                  , (BIN.Ok (ErlangInt num_29) bin_28) <-
                                                      (BIN.chopInt bin_25 size_27
                                                         1 BIN.Big BIN.Unsigned)
-                                                 , ((ErlangInt num_29) ==
-                                                      (toErl 0))
+                                                 , (ErlangInt num_29) ==
+                                                     (toErl 0)
                                                  , BIN.empty bin_28 ->
                           let    lop_33 = toErl 65535
                           in let rop_34 = toErl 64
@@ -122,32 +122,32 @@ erlps__serialize_integer_test__0 [] =
                                                               binSeg_35 size_36
                                                               1 BIN.Big
                                                               BIN.Unsigned)
-                                                       , ((ErlangInt num_38) ==
-                                                            (toErl 111))
+                                                       , (ErlangInt num_38) ==
+                                                           (toErl 111)
                                                        , (ErlangInt size_39) <-
                                                            (toErl 8)
                                                        , (BIN.Ok (ErlangInt num_41) bin_40) <-
                                                            (BIN.chopInt bin_37
                                                               size_39 1 BIN.Big
                                                               BIN.Unsigned)
-                                                       , ((ErlangInt num_41) ==
-                                                            (toErl 130))
+                                                       , (ErlangInt num_41) ==
+                                                           (toErl 130)
                                                        , (ErlangInt size_42) <-
                                                            (toErl 8)
                                                        , (BIN.Ok (ErlangInt num_44) bin_43) <-
                                                            (BIN.chopInt bin_40
                                                               size_42 1 BIN.Big
                                                               BIN.Unsigned)
-                                                       , ((ErlangInt num_44) ==
-                                                            (toErl 255))
+                                                       , (ErlangInt num_44) ==
+                                                           (toErl 255)
                                                        , (ErlangInt size_45) <-
                                                            (toErl 8)
                                                        , (BIN.Ok (ErlangInt num_47) bin_46) <-
                                                            (BIN.chopInt bin_43
                                                               size_45 1 BIN.Big
                                                               BIN.Unsigned)
-                                                       , ((ErlangInt num_47) ==
-                                                            (toErl 255))
+                                                       , (ErlangInt num_47) ==
+                                                           (toErl 255)
                                                        , BIN.empty bin_46 ->
                                 let    lop_53 = toErl 1
                                 in let rop_54 = toErl 1024
@@ -174,9 +174,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_58 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_60) ==
-                                                                  (toErl 111))
+                                                             , (ErlangInt
+                                                                  num_60) ==
+                                                                 (toErl 111)
                                                              , (ErlangInt size_61) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_63) bin_62) <-
@@ -185,9 +185,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_61 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_63) ==
-                                                                  (toErl 184))
+                                                             , (ErlangInt
+                                                                  num_63) ==
+                                                                 (toErl 184)
                                                              , (ErlangInt size_64) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_66) bin_65) <-
@@ -196,9 +196,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_64 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_66) ==
-                                                                  (toErl 129))
+                                                             , (ErlangInt
+                                                                  num_66) ==
+                                                                 (toErl 129)
                                                              , (ErlangInt size_67) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_69) bin_68) <-
@@ -207,9 +207,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_67 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_69) ==
-                                                                  (toErl 1))
+                                                             , (ErlangInt
+                                                                  num_69) ==
+                                                                 (toErl 1)
                                                              , (ErlangInt size_70) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_72) bin_71) <-
@@ -218,9 +218,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_70 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_72) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_72) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_73) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_75) bin_74) <-
@@ -229,9 +229,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_73 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_75) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_75) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_76) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_78) bin_77) <-
@@ -240,9 +240,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_76 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_78) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_78) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_79) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_81) bin_80) <-
@@ -251,9 +251,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_79 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_81) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_81) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_82) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_84) bin_83) <-
@@ -262,9 +262,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_82 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_84) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_84) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_85) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_87) bin_86) <-
@@ -273,9 +273,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_85 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_87) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_87) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_88) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_90) bin_89) <-
@@ -284,9 +284,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_88 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_90) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_90) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_91) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_93) bin_92) <-
@@ -295,9 +295,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_91 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_93) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_93) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_94) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_96) bin_95) <-
@@ -306,9 +306,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_94 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_96) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_96) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_97) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_99) bin_98) <-
@@ -317,9 +317,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_97 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_99) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_99) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_100) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_102) bin_101) <-
@@ -328,9 +328,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_100 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_102) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_102) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_103) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_105) bin_104) <-
@@ -339,9 +339,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_103 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_105) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_105) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_106) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_108) bin_107) <-
@@ -350,9 +350,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_106 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_108) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_108) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_109) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_111) bin_110) <-
@@ -361,9 +361,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_109 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_111) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_111) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_112) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_114) bin_113) <-
@@ -372,9 +372,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_112 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_114) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_114) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_115) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_117) bin_116) <-
@@ -383,9 +383,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_115 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_117) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_117) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_118) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_120) bin_119) <-
@@ -394,9 +394,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_118 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_120) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_120) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_121) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_123) bin_122) <-
@@ -405,9 +405,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_121 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_123) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_123) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_124) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_126) bin_125) <-
@@ -416,9 +416,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_124 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_126) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_126) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_127) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_129) bin_128) <-
@@ -427,9 +427,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_127 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_129) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_129) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_130) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_132) bin_131) <-
@@ -438,9 +438,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_130 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_132) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_132) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_133) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_135) bin_134) <-
@@ -449,9 +449,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_133 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_135) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_135) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_136) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_138) bin_137) <-
@@ -460,9 +460,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_136 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_138) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_138) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_139) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_141) bin_140) <-
@@ -471,9 +471,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_139 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_141) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_141) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_142) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_144) bin_143) <-
@@ -482,9 +482,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_142 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_144) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_144) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_145) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_147) bin_146) <-
@@ -493,9 +493,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_145 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_147) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_147) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_148) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_150) bin_149) <-
@@ -504,9 +504,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_148 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_150) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_150) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_151) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_153) bin_152) <-
@@ -515,9 +515,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_151 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_153) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_153) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_154) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_156) bin_155) <-
@@ -526,9 +526,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_154 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_156) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_156) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_157) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_159) bin_158) <-
@@ -537,9 +537,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_157 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_159) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_159) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_160) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_162) bin_161) <-
@@ -548,9 +548,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_160 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_162) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_162) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_163) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_165) bin_164) <-
@@ -559,9 +559,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_163 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_165) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_165) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_166) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_168) bin_167) <-
@@ -570,9 +570,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_166 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_168) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_168) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_169) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_171) bin_170) <-
@@ -581,9 +581,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_169 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_171) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_171) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_172) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_174) bin_173) <-
@@ -592,9 +592,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_172 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_174) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_174) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_175) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_177) bin_176) <-
@@ -603,9 +603,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_175 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_177) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_177) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_178) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_180) bin_179) <-
@@ -614,9 +614,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_178 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_180) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_180) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_181) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_183) bin_182) <-
@@ -625,9 +625,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_181 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_183) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_183) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_184) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_186) bin_185) <-
@@ -636,9 +636,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_184 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_186) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_186) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_187) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_189) bin_188) <-
@@ -647,9 +647,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_187 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_189) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_189) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_190) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_192) bin_191) <-
@@ -658,9 +658,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_190 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_192) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_192) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_193) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_195) bin_194) <-
@@ -669,9 +669,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_193 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_195) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_195) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_196) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_198) bin_197) <-
@@ -680,9 +680,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_196 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_198) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_198) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_199) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_201) bin_200) <-
@@ -691,9 +691,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_199 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_201) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_201) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_202) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_204) bin_203) <-
@@ -702,9 +702,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_202 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_204) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_204) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_205) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_207) bin_206) <-
@@ -713,9 +713,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_205 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_207) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_207) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_208) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_210) bin_209) <-
@@ -724,9 +724,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_208 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_210) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_210) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_211) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_213) bin_212) <-
@@ -735,9 +735,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_211 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_213) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_213) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_214) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_216) bin_215) <-
@@ -746,9 +746,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_214 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_216) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_216) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_217) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_219) bin_218) <-
@@ -757,9 +757,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_217 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_219) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_219) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_220) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_222) bin_221) <-
@@ -768,9 +768,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_220 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_222) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_222) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_223) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_225) bin_224) <-
@@ -779,9 +779,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_223 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_225) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_225) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_226) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_228) bin_227) <-
@@ -790,9 +790,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_226 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_228) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_228) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_229) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_231) bin_230) <-
@@ -801,9 +801,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_229 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_231) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_231) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_232) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_234) bin_233) <-
@@ -812,9 +812,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_232 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_234) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_234) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_235) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_237) bin_236) <-
@@ -823,9 +823,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_235 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_237) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_237) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_238) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_240) bin_239) <-
@@ -834,9 +834,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_238 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_240) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_240) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_241) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_243) bin_242) <-
@@ -845,9 +845,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_241 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_243) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_243) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_244) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_246) bin_245) <-
@@ -856,9 +856,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_244 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_246) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_246) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_247) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_249) bin_248) <-
@@ -867,9 +867,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_247 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_249) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_249) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_250) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_252) bin_251) <-
@@ -878,9 +878,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_250 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_252) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_252) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_253) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_255) bin_254) <-
@@ -889,9 +889,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_253 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_255) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_255) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_256) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_258) bin_257) <-
@@ -900,9 +900,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_256 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_258) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_258) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_259) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_261) bin_260) <-
@@ -911,9 +911,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_259 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_261) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_261) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_262) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_264) bin_263) <-
@@ -922,9 +922,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_262 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_264) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_264) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_265) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_267) bin_266) <-
@@ -933,9 +933,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_265 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_267) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_267) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_268) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_270) bin_269) <-
@@ -944,9 +944,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_268 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_270) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_270) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_271) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_273) bin_272) <-
@@ -955,9 +955,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_271 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_273) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_273) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_274) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_276) bin_275) <-
@@ -966,9 +966,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_274 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_276) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_276) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_277) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_279) bin_278) <-
@@ -977,9 +977,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_277 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_279) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_279) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_280) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_282) bin_281) <-
@@ -988,9 +988,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_280 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_282) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_282) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_283) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_285) bin_284) <-
@@ -999,9 +999,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_283 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_285) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_285) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_286) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_288) bin_287) <-
@@ -1010,9 +1010,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_286 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_288) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_288) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_289) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_291) bin_290) <-
@@ -1021,9 +1021,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_289 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_291) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_291) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_292) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_294) bin_293) <-
@@ -1032,9 +1032,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_292 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_294) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_294) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_295) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_297) bin_296) <-
@@ -1043,9 +1043,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_295 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_297) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_297) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_298) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_300) bin_299) <-
@@ -1054,9 +1054,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_298 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_300) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_300) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_301) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_303) bin_302) <-
@@ -1065,9 +1065,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_301 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_303) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_303) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_304) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_306) bin_305) <-
@@ -1076,9 +1076,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_304 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_306) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_306) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_307) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_309) bin_308) <-
@@ -1087,9 +1087,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_307 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_309) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_309) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_310) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_312) bin_311) <-
@@ -1098,9 +1098,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_310 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_312) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_312) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_313) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_315) bin_314) <-
@@ -1109,9 +1109,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_313 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_315) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_315) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_316) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_318) bin_317) <-
@@ -1120,9 +1120,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_316 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_318) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_318) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_319) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_321) bin_320) <-
@@ -1131,9 +1131,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_319 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_321) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_321) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_322) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_324) bin_323) <-
@@ -1142,9 +1142,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_322 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_324) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_324) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_325) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_327) bin_326) <-
@@ -1153,9 +1153,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_325 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_327) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_327) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_328) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_330) bin_329) <-
@@ -1164,9 +1164,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_328 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_330) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_330) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_331) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_333) bin_332) <-
@@ -1175,9 +1175,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_331 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_333) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_333) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_334) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_336) bin_335) <-
@@ -1186,9 +1186,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_334 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_336) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_336) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_337) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_339) bin_338) <-
@@ -1197,9 +1197,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_337 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_339) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_339) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_340) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_342) bin_341) <-
@@ -1208,9 +1208,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_340 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_342) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_342) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_343) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_345) bin_344) <-
@@ -1219,9 +1219,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_343 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_345) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_345) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_346) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_348) bin_347) <-
@@ -1230,9 +1230,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_346 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_348) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_348) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_349) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_351) bin_350) <-
@@ -1241,9 +1241,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_349 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_351) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_351) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_352) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_354) bin_353) <-
@@ -1252,9 +1252,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_352 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_354) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_354) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_355) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_357) bin_356) <-
@@ -1263,9 +1263,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_355 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_357) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_357) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_358) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_360) bin_359) <-
@@ -1274,9 +1274,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_358 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_360) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_360) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_361) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_363) bin_362) <-
@@ -1285,9 +1285,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_361 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_363) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_363) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_364) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_366) bin_365) <-
@@ -1296,9 +1296,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_364 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_366) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_366) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_367) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_369) bin_368) <-
@@ -1307,9 +1307,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_367 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_369) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_369) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_370) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_372) bin_371) <-
@@ -1318,9 +1318,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_370 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_372) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_372) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_373) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_375) bin_374) <-
@@ -1329,9 +1329,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_373 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_375) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_375) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_376) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_378) bin_377) <-
@@ -1340,9 +1340,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_376 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_378) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_378) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_379) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_381) bin_380) <-
@@ -1351,9 +1351,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_379 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_381) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_381) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_382) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_384) bin_383) <-
@@ -1362,9 +1362,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_382 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_384) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_384) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_385) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_387) bin_386) <-
@@ -1373,9 +1373,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_385 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_387) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_387) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_388) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_390) bin_389) <-
@@ -1384,9 +1384,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_388 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_390) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_390) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_391) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_393) bin_392) <-
@@ -1395,9 +1395,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_391 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_393) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_393) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_394) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_396) bin_395) <-
@@ -1406,9 +1406,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_394 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_396) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_396) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_397) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_399) bin_398) <-
@@ -1417,9 +1417,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_397 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_399) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_399) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_400) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_402) bin_401) <-
@@ -1428,9 +1428,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_400 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_402) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_402) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_403) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_405) bin_404) <-
@@ -1439,9 +1439,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_403 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_405) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_405) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_406) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_408) bin_407) <-
@@ -1450,9 +1450,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_406 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_408) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_408) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_409) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_411) bin_410) <-
@@ -1461,9 +1461,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_409 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_411) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_411) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_412) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_414) bin_413) <-
@@ -1472,9 +1472,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_412 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_414) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_414) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_415) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_417) bin_416) <-
@@ -1483,9 +1483,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_415 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_417) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_417) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_418) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_420) bin_419) <-
@@ -1494,9 +1494,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_418 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_420) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_420) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_421) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_423) bin_422) <-
@@ -1505,9 +1505,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_421 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_423) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_423) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_424) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_426) bin_425) <-
@@ -1516,9 +1516,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_424 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_426) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_426) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_427) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_429) bin_428) <-
@@ -1527,9 +1527,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_427 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_429) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_429) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_430) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_432) bin_431) <-
@@ -1538,9 +1538,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_430 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_432) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_432) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_433) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_435) bin_434) <-
@@ -1549,9 +1549,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_433 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_435) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_435) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_436) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_438) bin_437) <-
@@ -1560,9 +1560,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_436 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_438) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_438) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_439) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_441) bin_440) <-
@@ -1571,9 +1571,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_439 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_441) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_441) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_442) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_444) bin_443) <-
@@ -1582,9 +1582,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_442 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_444) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_444) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_445) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_447) bin_446) <-
@@ -1593,9 +1593,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_445 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_447) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_447) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_448) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_450) bin_449) <-
@@ -1604,9 +1604,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_448 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_450) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_450) ==
+                                                                 (toErl 0)
                                                              , (ErlangInt size_451) <-
                                                                  (toErl 8)
                                                              , (BIN.Ok (ErlangInt num_453) bin_452) <-
@@ -1615,9 +1615,9 @@ erlps__serialize_integer_test__0 [] =
                                                                     size_451 1
                                                                     BIN.Big
                                                                     BIN.Unsigned)
-                                                             , ((ErlangInt
-                                                                   num_453) ==
-                                                                  (toErl 0))
+                                                             , (ErlangInt
+                                                                  num_453) ==
+                                                                 (toErl 0)
                                                              , BIN.empty
                                                                  bin_452 ->
                                       match_final_49_56
@@ -1665,7 +1665,7 @@ erlps__serialize_deserialize_test___0 [] =
                                      "erlps__deserialize__1" [arg_16]
                                in
                                  case case_15 of
-                                   __x_18 | (__x_18 == lc_2) -> ErlangAtom "ok"
+                                   __x_18 | __x_18 == lc_2 -> ErlangAtom "ok"
                                    __v_19 ->
                                      let   
                                        head_23 =

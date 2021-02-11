@@ -78,8 +78,8 @@ erlps__decode_calldata__2 [funname_0, calldata_1] =
          in BIF.erlang__tuple_to_list__1 [arg_5])
       (\ of_9 ->
          case of_9 of
-           (ErlangCons functionid_12 (ErlangCons fateargs_13 (ErlangEmptyList))) | (functionid_12 ==
-                                                                                      functionid_4) ->
+           (ErlangCons functionid_12 (ErlangCons fateargs_13 (ErlangEmptyList))) | functionid_12 ==
+                                                                                     functionid_4 ->
              let    arg_17 = toErl 2
              in let arg_16 = BIF.erlang__element__2 [arg_17, fateargs_13]
              in let tup_el_15 = BIF.erlang__tuple_to_list__1 [arg_16]

@@ -23,10 +23,10 @@ import Partial.Unsafe (unsafePartial)
 
 erlps__is_local_primop_op__1 :: ErlangFun
 erlps__is_local_primop_op__1 [op_0]
-  | ((weakGt op_0 (toErl 299)) && (weakLt op_0 (toErl 400))) =
+  | (weakGt op_0 (toErl 299)) && (weakLt op_0 (toErl 400)) =
   ErlangAtom "true"
 erlps__is_local_primop_op__1 [op_0]
-  | ((weakGt op_0 (toErl 399)) && (weakLt op_0 (toErl 500))) =
+  | (weakGt op_0 (toErl 399)) && (weakLt op_0 (toErl 500)) =
   ErlangAtom "true"
 erlps__is_local_primop_op__1 [op_0] | isEInt op_0 =
   ErlangAtom "false"
@@ -51,28 +51,28 @@ erlps__op_needs_type_check__1 args =
 
 erlps__op_has_dynamic_type__1 :: ErlangFun
 erlps__op_has_dynamic_type__1 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 101)) =
+  | (ErlangInt num_0) == (toErl 101) =
   ErlangAtom "true"
 erlps__op_has_dynamic_type__1 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 102)) =
+  | (ErlangInt num_0) == (toErl 102) =
   ErlangAtom "true"
 erlps__op_has_dynamic_type__1 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 105)) =
+  | (ErlangInt num_0) == (toErl 105) =
   ErlangAtom "true"
 erlps__op_has_dynamic_type__1 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 104)) =
+  | (ErlangInt num_0) == (toErl 104) =
   ErlangAtom "true"
 erlps__op_has_dynamic_type__1 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 301)) =
+  | (ErlangInt num_0) == (toErl 301) =
   ErlangAtom "true"
 erlps__op_has_dynamic_type__1 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 302)) =
+  | (ErlangInt num_0) == (toErl 302) =
   ErlangAtom "true"
 erlps__op_has_dynamic_type__1 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 305)) =
+  | (ErlangInt num_0) == (toErl 305) =
   ErlangAtom "true"
 erlps__op_has_dynamic_type__1 [(ErlangInt num_0)]
-  | ((ErlangInt num_0) == (toErl 200)) =
+  | (ErlangInt num_0) == (toErl 200) =
   ErlangAtom "true"
 erlps__op_has_dynamic_type__1 [_] = ErlangAtom "false"
 erlps__op_has_dynamic_type__1 [arg_0] = EXC.function_clause unit

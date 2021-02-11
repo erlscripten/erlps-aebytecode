@@ -29,9 +29,9 @@ erlps__format_integer_test__0 [] =
       BIF.do_remote_fun_call "Aeb.Fate.Data" "erlps__format__1" [arg_1]
   in
     case match_final_0_2 of
-      (ErlangCons (ErlangInt num_3) (ErlangEmptyList)) | ((ErlangInt
-                                                             num_3) ==
-                                                            (toErl 48)) ->
+      (ErlangCons (ErlangInt num_3) (ErlangEmptyList)) | (ErlangInt
+                                                            num_3) ==
+                                                           (toErl 48) ->
         match_final_0_2
       _ -> EXC.badmatch match_final_0_2
 erlps__format_integer_test__0 args =

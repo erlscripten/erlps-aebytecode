@@ -103,11 +103,11 @@ erlps__check_numbering__2 [n_0, (ErlangCons t_1 rest_2)] =
   in let opcode_5 = BIF.erlang__element__2 [arg_3, t_1]
   in
     case opcode_5 of
-      n_7 | (n_7 == n_0) ->
+      n_7 | n_7 == n_0 ->
         let    rop_10 = toErl 1
         in let arg_8 = BIF.erlang__op_plus [n_0, rop_10]
         in erlps__check_numbering__2 [arg_8, rest_2]
-      (ErlangInt num_12) | ((ErlangInt num_12) == (toErl 250)) ->
+      (ErlangInt num_12) | (ErlangInt num_12) == (toErl 250) ->
         let    lop_14 = toErl 250
         in let rop_15 = toErl 1
         in let arg_13 = BIF.erlang__op_plus [lop_14, rop_15]
@@ -4094,115 +4094,115 @@ erlps__insert_tokens_in_template__2 [(ErlangBinary binSeg_0),
   | (ErlangInt size_1) <- (toErl 8)
   , (BIN.Ok (ErlangInt num_3) bin_2) <-
       (BIN.chopInt binSeg_0 size_1 1 BIN.Big BIN.Unsigned)
-  , ((ErlangInt num_3) == (toErl 37))
+  , (ErlangInt num_3) == (toErl 37)
   , (ErlangInt size_4) <- (toErl 8)
   , (BIN.Ok (ErlangInt num_6) bin_5) <-
       (BIN.chopInt bin_2 size_4 1 BIN.Big BIN.Unsigned)
-  , ((ErlangInt num_6) == (toErl 37))
+  , (ErlangInt num_6) == (toErl 37)
   , (ErlangInt size_7) <- (toErl 8)
   , (BIN.Ok (ErlangInt num_9) bin_8) <-
       (BIN.chopInt bin_5 size_7 1 BIN.Big BIN.Unsigned)
-  , ((ErlangInt num_9) == (toErl 32))
+  , (ErlangInt num_9) == (toErl 32)
   , (ErlangInt size_10) <- (toErl 8)
   , (BIN.Ok (ErlangInt num_12) bin_11) <-
       (BIN.chopInt bin_8 size_10 1 BIN.Big BIN.Unsigned)
-  , ((ErlangInt num_12) == (toErl 35))
+  , (ErlangInt num_12) == (toErl 35)
   , (ErlangInt size_13) <- (toErl 8)
   , (BIN.Ok (ErlangInt num_15) bin_14) <-
       (BIN.chopInt bin_11 size_13 1 BIN.Big BIN.Unsigned)
-  , ((ErlangInt num_15) == (toErl 35))
+  , (ErlangInt num_15) == (toErl 35)
   , (ErlangInt size_16) <- (toErl 8)
   , (BIN.Ok (ErlangInt num_18) bin_17) <-
       (BIN.chopInt bin_14 size_16 1 BIN.Big BIN.Unsigned)
-  , ((ErlangInt num_18) == (toErl 35))
+  , (ErlangInt num_18) == (toErl 35)
   , (ErlangInt size_19) <- (toErl 8)
   , (BIN.Ok (ErlangInt num_21) bin_20) <-
       (BIN.chopInt bin_17 size_19 1 BIN.Big BIN.Unsigned)
-  , ((ErlangInt num_21) == (toErl 82))
+  , (ErlangInt num_21) == (toErl 82)
   , (ErlangInt size_22) <- (toErl 8)
   , (BIN.Ok (ErlangInt num_24) bin_23) <-
       (BIN.chopInt bin_20 size_22 1 BIN.Big BIN.Unsigned)
-  , ((ErlangInt num_24) == (toErl 69))
+  , (ErlangInt num_24) == (toErl 69)
   , (ErlangInt size_25) <- (toErl 8)
   , (BIN.Ok (ErlangInt num_27) bin_26) <-
       (BIN.chopInt bin_23 size_25 1 BIN.Big BIN.Unsigned)
-  , ((ErlangInt num_27) == (toErl 80))
+  , (ErlangInt num_27) == (toErl 80)
   , (ErlangInt size_28) <- (toErl 8)
   , (BIN.Ok (ErlangInt num_30) bin_29) <-
       (BIN.chopInt bin_26 size_28 1 BIN.Big BIN.Unsigned)
-  , ((ErlangInt num_30) == (toErl 76))
+  , (ErlangInt num_30) == (toErl 76)
   , (ErlangInt size_31) <- (toErl 8)
   , (BIN.Ok (ErlangInt num_33) bin_32) <-
       (BIN.chopInt bin_29 size_31 1 BIN.Big BIN.Unsigned)
-  , ((ErlangInt num_33) == (toErl 65))
+  , (ErlangInt num_33) == (toErl 65)
   , (ErlangInt size_34) <- (toErl 8)
   , (BIN.Ok (ErlangInt num_36) bin_35) <-
       (BIN.chopInt bin_32 size_34 1 BIN.Big BIN.Unsigned)
-  , ((ErlangInt num_36) == (toErl 67))
+  , (ErlangInt num_36) == (toErl 67)
   , (ErlangInt size_37) <- (toErl 8)
   , (BIN.Ok (ErlangInt num_39) bin_38) <-
       (BIN.chopInt bin_35 size_37 1 BIN.Big BIN.Unsigned)
-  , ((ErlangInt num_39) == (toErl 69))
+  , (ErlangInt num_39) == (toErl 69)
   , (ErlangInt size_40) <- (toErl 8)
   , (BIN.Ok (ErlangInt num_42) bin_41) <-
       (BIN.chopInt bin_38 size_40 1 BIN.Big BIN.Unsigned)
-  , ((ErlangInt num_42) == (toErl 87))
+  , (ErlangInt num_42) == (toErl 87)
   , (ErlangInt size_43) <- (toErl 8)
   , (BIN.Ok (ErlangInt num_45) bin_44) <-
       (BIN.chopInt bin_41 size_43 1 BIN.Big BIN.Unsigned)
-  , ((ErlangInt num_45) == (toErl 73))
+  , (ErlangInt num_45) == (toErl 73)
   , (ErlangInt size_46) <- (toErl 8)
   , (BIN.Ok (ErlangInt num_48) bin_47) <-
       (BIN.chopInt bin_44 size_46 1 BIN.Big BIN.Unsigned)
-  , ((ErlangInt num_48) == (toErl 84))
+  , (ErlangInt num_48) == (toErl 84)
   , (ErlangInt size_49) <- (toErl 8)
   , (BIN.Ok (ErlangInt num_51) bin_50) <-
       (BIN.chopInt bin_47 size_49 1 BIN.Big BIN.Unsigned)
-  , ((ErlangInt num_51) == (toErl 72))
+  , (ErlangInt num_51) == (toErl 72)
   , (ErlangInt size_52) <- (toErl 8)
   , (BIN.Ok (ErlangInt num_54) bin_53) <-
       (BIN.chopInt bin_50 size_52 1 BIN.Big BIN.Unsigned)
-  , ((ErlangInt num_54) == (toErl 79))
+  , (ErlangInt num_54) == (toErl 79)
   , (ErlangInt size_55) <- (toErl 8)
   , (BIN.Ok (ErlangInt num_57) bin_56) <-
       (BIN.chopInt bin_53 size_55 1 BIN.Big BIN.Unsigned)
-  , ((ErlangInt num_57) == (toErl 80))
+  , (ErlangInt num_57) == (toErl 80)
   , (ErlangInt size_58) <- (toErl 8)
   , (BIN.Ok (ErlangInt num_60) bin_59) <-
       (BIN.chopInt bin_56 size_58 1 BIN.Big BIN.Unsigned)
-  , ((ErlangInt num_60) == (toErl 84))
+  , (ErlangInt num_60) == (toErl 84)
   , (ErlangInt size_61) <- (toErl 8)
   , (BIN.Ok (ErlangInt num_63) bin_62) <-
       (BIN.chopInt bin_59 size_61 1 BIN.Big BIN.Unsigned)
-  , ((ErlangInt num_63) == (toErl 79))
+  , (ErlangInt num_63) == (toErl 79)
   , (ErlangInt size_64) <- (toErl 8)
   , (BIN.Ok (ErlangInt num_66) bin_65) <-
       (BIN.chopInt bin_62 size_64 1 BIN.Big BIN.Unsigned)
-  , ((ErlangInt num_66) == (toErl 75))
+  , (ErlangInt num_66) == (toErl 75)
   , (ErlangInt size_67) <- (toErl 8)
   , (BIN.Ok (ErlangInt num_69) bin_68) <-
       (BIN.chopInt bin_65 size_67 1 BIN.Big BIN.Unsigned)
-  , ((ErlangInt num_69) == (toErl 69))
+  , (ErlangInt num_69) == (toErl 69)
   , (ErlangInt size_70) <- (toErl 8)
   , (BIN.Ok (ErlangInt num_72) bin_71) <-
       (BIN.chopInt bin_68 size_70 1 BIN.Big BIN.Unsigned)
-  , ((ErlangInt num_72) == (toErl 78))
+  , (ErlangInt num_72) == (toErl 78)
   , (ErlangInt size_73) <- (toErl 8)
   , (BIN.Ok (ErlangInt num_75) bin_74) <-
       (BIN.chopInt bin_71 size_73 1 BIN.Big BIN.Unsigned)
-  , ((ErlangInt num_75) == (toErl 83))
+  , (ErlangInt num_75) == (toErl 83)
   , (ErlangInt size_76) <- (toErl 8)
   , (BIN.Ok (ErlangInt num_78) bin_77) <-
       (BIN.chopInt bin_74 size_76 1 BIN.Big BIN.Unsigned)
-  , ((ErlangInt num_78) == (toErl 35))
+  , (ErlangInt num_78) == (toErl 35)
   , (ErlangInt size_79) <- (toErl 8)
   , (BIN.Ok (ErlangInt num_81) bin_80) <-
       (BIN.chopInt bin_77 size_79 1 BIN.Big BIN.Unsigned)
-  , ((ErlangInt num_81) == (toErl 35))
+  , (ErlangInt num_81) == (toErl 35)
   , (ErlangInt size_82) <- (toErl 8)
   , (BIN.Ok (ErlangInt num_84) bin_83) <-
       (BIN.chopInt bin_80 size_82 1 BIN.Big BIN.Unsigned)
-  , ((ErlangInt num_84) == (toErl 35))
+  , (ErlangInt num_84) == (toErl 35)
   , (ErlangInt size_85) <- (BIN.size bin_83)
   , (BIN.Ok rest_87 bin_86) <- (BIN.chopBin bin_83 size_85 8)
   , BIN.empty bin_86 =
@@ -4212,103 +4212,103 @@ erlps__insert_tokens_in_template__2 [(ErlangBinary binSeg_0),
   | (ErlangInt size_1) <- (toErl 8)
   , (BIN.Ok (ErlangInt num_3) bin_2) <-
       (BIN.chopInt binSeg_0 size_1 1 BIN.Big BIN.Unsigned)
-  , ((ErlangInt num_3) == (toErl 37))
+  , (ErlangInt num_3) == (toErl 37)
   , (ErlangInt size_4) <- (toErl 8)
   , (BIN.Ok (ErlangInt num_6) bin_5) <-
       (BIN.chopInt bin_2 size_4 1 BIN.Big BIN.Unsigned)
-  , ((ErlangInt num_6) == (toErl 37))
+  , (ErlangInt num_6) == (toErl 37)
   , (ErlangInt size_7) <- (toErl 8)
   , (BIN.Ok (ErlangInt num_9) bin_8) <-
       (BIN.chopInt bin_5 size_7 1 BIN.Big BIN.Unsigned)
-  , ((ErlangInt num_9) == (toErl 37))
+  , (ErlangInt num_9) == (toErl 37)
   , (ErlangInt size_10) <- (toErl 8)
   , (BIN.Ok (ErlangInt num_12) bin_11) <-
       (BIN.chopInt bin_8 size_10 1 BIN.Big BIN.Unsigned)
-  , ((ErlangInt num_12) == (toErl 32))
+  , (ErlangInt num_12) == (toErl 32)
   , (ErlangInt size_13) <- (toErl 8)
   , (BIN.Ok (ErlangInt num_15) bin_14) <-
       (BIN.chopInt bin_11 size_13 1 BIN.Big BIN.Unsigned)
-  , ((ErlangInt num_15) == (toErl 35))
+  , (ErlangInt num_15) == (toErl 35)
   , (ErlangInt size_16) <- (toErl 8)
   , (BIN.Ok (ErlangInt num_18) bin_17) <-
       (BIN.chopInt bin_14 size_16 1 BIN.Big BIN.Unsigned)
-  , ((ErlangInt num_18) == (toErl 35))
+  , (ErlangInt num_18) == (toErl 35)
   , (ErlangInt size_19) <- (toErl 8)
   , (BIN.Ok (ErlangInt num_21) bin_20) <-
       (BIN.chopInt bin_17 size_19 1 BIN.Big BIN.Unsigned)
-  , ((ErlangInt num_21) == (toErl 35))
+  , (ErlangInt num_21) == (toErl 35)
   , (ErlangInt size_22) <- (toErl 8)
   , (BIN.Ok (ErlangInt num_24) bin_23) <-
       (BIN.chopInt bin_20 size_22 1 BIN.Big BIN.Unsigned)
-  , ((ErlangInt num_24) == (toErl 82))
+  , (ErlangInt num_24) == (toErl 82)
   , (ErlangInt size_25) <- (toErl 8)
   , (BIN.Ok (ErlangInt num_27) bin_26) <-
       (BIN.chopInt bin_23 size_25 1 BIN.Big BIN.Unsigned)
-  , ((ErlangInt num_27) == (toErl 69))
+  , (ErlangInt num_27) == (toErl 69)
   , (ErlangInt size_28) <- (toErl 8)
   , (BIN.Ok (ErlangInt num_30) bin_29) <-
       (BIN.chopInt bin_26 size_28 1 BIN.Big BIN.Unsigned)
-  , ((ErlangInt num_30) == (toErl 80))
+  , (ErlangInt num_30) == (toErl 80)
   , (ErlangInt size_31) <- (toErl 8)
   , (BIN.Ok (ErlangInt num_33) bin_32) <-
       (BIN.chopInt bin_29 size_31 1 BIN.Big BIN.Unsigned)
-  , ((ErlangInt num_33) == (toErl 76))
+  , (ErlangInt num_33) == (toErl 76)
   , (ErlangInt size_34) <- (toErl 8)
   , (BIN.Ok (ErlangInt num_36) bin_35) <-
       (BIN.chopInt bin_32 size_34 1 BIN.Big BIN.Unsigned)
-  , ((ErlangInt num_36) == (toErl 65))
+  , (ErlangInt num_36) == (toErl 65)
   , (ErlangInt size_37) <- (toErl 8)
   , (BIN.Ok (ErlangInt num_39) bin_38) <-
       (BIN.chopInt bin_35 size_37 1 BIN.Big BIN.Unsigned)
-  , ((ErlangInt num_39) == (toErl 67))
+  , (ErlangInt num_39) == (toErl 67)
   , (ErlangInt size_40) <- (toErl 8)
   , (BIN.Ok (ErlangInt num_42) bin_41) <-
       (BIN.chopInt bin_38 size_40 1 BIN.Big BIN.Unsigned)
-  , ((ErlangInt num_42) == (toErl 69))
+  , (ErlangInt num_42) == (toErl 69)
   , (ErlangInt size_43) <- (toErl 8)
   , (BIN.Ok (ErlangInt num_45) bin_44) <-
       (BIN.chopInt bin_41 size_43 1 BIN.Big BIN.Unsigned)
-  , ((ErlangInt num_45) == (toErl 87))
+  , (ErlangInt num_45) == (toErl 87)
   , (ErlangInt size_46) <- (toErl 8)
   , (BIN.Ok (ErlangInt num_48) bin_47) <-
       (BIN.chopInt bin_44 size_46 1 BIN.Big BIN.Unsigned)
-  , ((ErlangInt num_48) == (toErl 73))
+  , (ErlangInt num_48) == (toErl 73)
   , (ErlangInt size_49) <- (toErl 8)
   , (BIN.Ok (ErlangInt num_51) bin_50) <-
       (BIN.chopInt bin_47 size_49 1 BIN.Big BIN.Unsigned)
-  , ((ErlangInt num_51) == (toErl 84))
+  , (ErlangInt num_51) == (toErl 84)
   , (ErlangInt size_52) <- (toErl 8)
   , (BIN.Ok (ErlangInt num_54) bin_53) <-
       (BIN.chopInt bin_50 size_52 1 BIN.Big BIN.Unsigned)
-  , ((ErlangInt num_54) == (toErl 72))
+  , (ErlangInt num_54) == (toErl 72)
   , (ErlangInt size_55) <- (toErl 8)
   , (BIN.Ok (ErlangInt num_57) bin_56) <-
       (BIN.chopInt bin_53 size_55 1 BIN.Big BIN.Unsigned)
-  , ((ErlangInt num_57) == (toErl 78))
+  , (ErlangInt num_57) == (toErl 78)
   , (ErlangInt size_58) <- (toErl 8)
   , (BIN.Ok (ErlangInt num_60) bin_59) <-
       (BIN.chopInt bin_56 size_58 1 BIN.Big BIN.Unsigned)
-  , ((ErlangInt num_60) == (toErl 79))
+  , (ErlangInt num_60) == (toErl 79)
   , (ErlangInt size_61) <- (toErl 8)
   , (BIN.Ok (ErlangInt num_63) bin_62) <-
       (BIN.chopInt bin_59 size_61 1 BIN.Big BIN.Unsigned)
-  , ((ErlangInt num_63) == (toErl 84))
+  , (ErlangInt num_63) == (toErl 84)
   , (ErlangInt size_64) <- (toErl 8)
   , (BIN.Ok (ErlangInt num_66) bin_65) <-
       (BIN.chopInt bin_62 size_64 1 BIN.Big BIN.Unsigned)
-  , ((ErlangInt num_66) == (toErl 69))
+  , (ErlangInt num_66) == (toErl 69)
   , (ErlangInt size_67) <- (toErl 8)
   , (BIN.Ok (ErlangInt num_69) bin_68) <-
       (BIN.chopInt bin_65 size_67 1 BIN.Big BIN.Unsigned)
-  , ((ErlangInt num_69) == (toErl 35))
+  , (ErlangInt num_69) == (toErl 35)
   , (ErlangInt size_70) <- (toErl 8)
   , (BIN.Ok (ErlangInt num_72) bin_71) <-
       (BIN.chopInt bin_68 size_70 1 BIN.Big BIN.Unsigned)
-  , ((ErlangInt num_72) == (toErl 35))
+  , (ErlangInt num_72) == (toErl 35)
   , (ErlangInt size_73) <- (toErl 8)
   , (BIN.Ok (ErlangInt num_75) bin_74) <-
       (BIN.chopInt bin_71 size_73 1 BIN.Big BIN.Unsigned)
-  , ((ErlangInt num_75) == (toErl 35))
+  , (ErlangInt num_75) == (toErl 35)
   , (ErlangInt size_76) <- (BIN.size bin_74)
   , (BIN.Ok rest_78 bin_77) <- (BIN.chopBin bin_74 size_76 8)
   , BIN.empty bin_77 =
@@ -4721,35 +4721,35 @@ erlps__imm_arg__0 [] =
       BIF.do_remote_fun_call "Rand" "erlps__uniform__1" [arg_1]
   in
     case case_0 of
-      (ErlangInt num_2) | ((ErlangInt num_2) == (toErl 1)) ->
+      (ErlangInt num_2) | (ErlangInt num_2) == (toErl 1) ->
         erlps__gen_int__0 []
-      (ErlangInt num_3) | ((ErlangInt num_3) == (toErl 2)) ->
+      (ErlangInt num_3) | (ErlangInt num_3) == (toErl 2) ->
         erlps__gen_int__0 []
-      (ErlangInt num_4) | ((ErlangInt num_4) == (toErl 3)) ->
+      (ErlangInt num_4) | (ErlangInt num_4) == (toErl 3) ->
         erlps__gen_int__0 []
-      (ErlangInt num_5) | ((ErlangInt num_5) == (toErl 4)) ->
+      (ErlangInt num_5) | (ErlangInt num_5) == (toErl 4) ->
         erlps__gen_int__0 []
-      (ErlangInt num_6) | ((ErlangInt num_6) == (toErl 5)) ->
+      (ErlangInt num_6) | (ErlangInt num_6) == (toErl 5) ->
         erlps__gen_int__0 []
-      (ErlangInt num_7) | ((ErlangInt num_7) == (toErl 6)) ->
+      (ErlangInt num_7) | (ErlangInt num_7) == (toErl 6) ->
         erlps__gen_int__0 []
-      (ErlangInt num_8) | ((ErlangInt num_8) == (toErl 7)) ->
+      (ErlangInt num_8) | (ErlangInt num_8) == (toErl 7) ->
         erlps__gen_int__0 []
-      (ErlangInt num_9) | ((ErlangInt num_9) == (toErl 8)) ->
+      (ErlangInt num_9) | (ErlangInt num_9) == (toErl 8) ->
         erlps__gen_address__0 []
-      (ErlangInt num_10) | ((ErlangInt num_10) == (toErl 9)) ->
+      (ErlangInt num_10) | (ErlangInt num_10) == (toErl 9) ->
         erlps__gen_boolean__0 []
-      (ErlangInt num_11) | ((ErlangInt num_11) == (toErl 10)) ->
+      (ErlangInt num_11) | (ErlangInt num_11) == (toErl 10) ->
         erlps__gen_string__0 []
-      (ErlangInt num_12) | ((ErlangInt num_12) == (toErl 11)) ->
+      (ErlangInt num_12) | (ErlangInt num_12) == (toErl 11) ->
         erlps__gen_map__0 []
-      (ErlangInt num_13) | ((ErlangInt num_13) == (toErl 12)) ->
+      (ErlangInt num_13) | (ErlangInt num_13) == (toErl 12) ->
         erlps__gen_list__0 []
-      (ErlangInt num_14) | ((ErlangInt num_14) == (toErl 13)) ->
+      (ErlangInt num_14) | (ErlangInt num_14) == (toErl 13) ->
         erlps__gen_bits__0 []
-      (ErlangInt num_15) | ((ErlangInt num_15) == (toErl 14)) ->
+      (ErlangInt num_15) | (ErlangInt num_15) == (toErl 14) ->
         erlps__gen_tuple__0 []
-      (ErlangInt num_16) | ((ErlangInt num_16) == (toErl 15)) ->
+      (ErlangInt num_16) | (ErlangInt num_16) == (toErl 15) ->
         erlps__gen_variant__0 []
       something_else -> EXC.case_clause something_else
 erlps__imm_arg__0 args =
@@ -4764,35 +4764,35 @@ erlps__gen_key__0 [] =
       BIF.do_remote_fun_call "Rand" "erlps__uniform__1" [arg_1]
   in
     case case_0 of
-      (ErlangInt num_2) | ((ErlangInt num_2) == (toErl 1)) ->
+      (ErlangInt num_2) | (ErlangInt num_2) == (toErl 1) ->
         erlps__gen_int__0 []
-      (ErlangInt num_3) | ((ErlangInt num_3) == (toErl 2)) ->
+      (ErlangInt num_3) | (ErlangInt num_3) == (toErl 2) ->
         erlps__gen_int__0 []
-      (ErlangInt num_4) | ((ErlangInt num_4) == (toErl 3)) ->
+      (ErlangInt num_4) | (ErlangInt num_4) == (toErl 3) ->
         erlps__gen_int__0 []
-      (ErlangInt num_5) | ((ErlangInt num_5) == (toErl 4)) ->
+      (ErlangInt num_5) | (ErlangInt num_5) == (toErl 4) ->
         erlps__gen_int__0 []
-      (ErlangInt num_6) | ((ErlangInt num_6) == (toErl 5)) ->
+      (ErlangInt num_6) | (ErlangInt num_6) == (toErl 5) ->
         erlps__gen_int__0 []
-      (ErlangInt num_7) | ((ErlangInt num_7) == (toErl 6)) ->
+      (ErlangInt num_7) | (ErlangInt num_7) == (toErl 6) ->
         erlps__gen_int__0 []
-      (ErlangInt num_8) | ((ErlangInt num_8) == (toErl 7)) ->
+      (ErlangInt num_8) | (ErlangInt num_8) == (toErl 7) ->
         erlps__gen_int__0 []
-      (ErlangInt num_9) | ((ErlangInt num_9) == (toErl 8)) ->
+      (ErlangInt num_9) | (ErlangInt num_9) == (toErl 8) ->
         erlps__gen_address__0 []
-      (ErlangInt num_10) | ((ErlangInt num_10) == (toErl 9)) ->
+      (ErlangInt num_10) | (ErlangInt num_10) == (toErl 9) ->
         erlps__gen_boolean__0 []
-      (ErlangInt num_11) | ((ErlangInt num_11) == (toErl 10)) ->
+      (ErlangInt num_11) | (ErlangInt num_11) == (toErl 10) ->
         erlps__gen_string__0 []
-      (ErlangInt num_12) | ((ErlangInt num_12) == (toErl 11)) ->
+      (ErlangInt num_12) | (ErlangInt num_12) == (toErl 11) ->
         erlps__gen_string__0 []
-      (ErlangInt num_13) | ((ErlangInt num_13) == (toErl 12)) ->
+      (ErlangInt num_13) | (ErlangInt num_13) == (toErl 12) ->
         erlps__gen_list__0 []
-      (ErlangInt num_14) | ((ErlangInt num_14) == (toErl 13)) ->
+      (ErlangInt num_14) | (ErlangInt num_14) == (toErl 13) ->
         erlps__gen_bits__0 []
-      (ErlangInt num_15) | ((ErlangInt num_15) == (toErl 14)) ->
+      (ErlangInt num_15) | (ErlangInt num_15) == (toErl 14) ->
         erlps__gen_tuple__0 []
-      (ErlangInt num_16) | ((ErlangInt num_16) == (toErl 15)) ->
+      (ErlangInt num_16) | (ErlangInt num_16) == (toErl 15) ->
         erlps__gen_variant__0 []
       something_else -> EXC.case_clause something_else
 erlps__gen_key__0 args =
@@ -4889,9 +4889,8 @@ erlps__gen_list__0 [] =
       BIF.do_remote_fun_call "Rand" "erlps__uniform__1" [arg_1]
   in
     case case_0 of
-      (ErlangInt num_2) | ((ErlangInt num_2) == (toErl 1)) ->
-        toErl "[]"
-      (ErlangInt num_3) | ((ErlangInt num_3) == (toErl 2)) ->
+      (ErlangInt num_2) | (ErlangInt num_2) == (toErl 1) -> toErl "[]"
+      (ErlangInt num_3) | (ErlangInt num_3) == (toErl 2) ->
         let    lop_4 = toErl "["
         in let arg_7 = toErl ", "
         in let arg_8 = erlps__gen_list_elements__0 []
@@ -4901,13 +4900,13 @@ erlps__gen_list__0 [] =
         in let rop_9 = toErl " ]"
         in let rop_5 = BIF.erlang__op_append [lop_6, rop_9]
         in BIF.erlang__op_append [lop_4, rop_5]
-      (ErlangInt num_10) | ((ErlangInt num_10) == (toErl 3)) ->
+      (ErlangInt num_10) | (ErlangInt num_10) == (toErl 3) ->
         let    lop_11 = toErl "[ "
         in let lop_13 = erlps__imm_arg__0 []
         in let rop_14 = toErl " ]"
         in let rop_12 = BIF.erlang__op_append [lop_13, rop_14]
         in BIF.erlang__op_append [lop_11, rop_12]
-      (ErlangInt num_15) | ((ErlangInt num_15) == (toErl 4)) ->
+      (ErlangInt num_15) | (ErlangInt num_15) == (toErl 4) ->
         let    lop_16 = toErl "[ "
         in let lop_18 = erlps__imm_arg__0 []
         in let lop_20 = toErl ", "
@@ -4930,13 +4929,13 @@ erlps__gen_list_elements__0 [] =
       BIF.do_remote_fun_call "Rand" "erlps__uniform__1" [arg_1]
   in
     case case_0 of
-      (ErlangInt num_2) | ((ErlangInt num_2) == (toErl 1)) ->
+      (ErlangInt num_2) | (ErlangInt num_2) == (toErl 1) ->
         let    head_3 = erlps__imm_arg__0 []
         in let tail_4 = erlps__gen_list_elements__0 []
         in ErlangCons head_3 tail_4
-      (ErlangInt num_5) | ((ErlangInt num_5) == (toErl 2)) ->
+      (ErlangInt num_5) | (ErlangInt num_5) == (toErl 2) ->
         ErlangEmptyList
-      (ErlangInt num_6) | ((ErlangInt num_6) == (toErl 3)) ->
+      (ErlangInt num_6) | (ErlangInt num_6) == (toErl 3) ->
         let head_7 = erlps__imm_arg__0 []
         in ErlangCons head_7 ErlangEmptyList
       something_else -> EXC.case_clause something_else
@@ -4966,11 +4965,10 @@ erlps__gen_tuple__0 [] =
       BIF.do_remote_fun_call "Rand" "erlps__uniform__1" [arg_1]
   in
     case case_0 of
-      (ErlangInt num_2) | ((ErlangInt num_2) == (toErl 1)) ->
-        toErl "()"
-      (ErlangInt num_3) | ((ErlangInt num_3) == (toErl 2)) ->
+      (ErlangInt num_2) | (ErlangInt num_2) == (toErl 1) -> toErl "()"
+      (ErlangInt num_3) | (ErlangInt num_3) == (toErl 2) ->
         toErl "(42)"
-      (ErlangInt num_4) | ((ErlangInt num_4) == (toErl 3)) ->
+      (ErlangInt num_4) | (ErlangInt num_4) == (toErl 3) ->
         let    lop_5 = toErl "("
         in let lop_7 = erlps__imm_arg__0 []
         in let rop_8 = toErl ")"
@@ -4989,15 +4987,15 @@ erlps__gen_variant__0 [] =
       BIF.do_remote_fun_call "Rand" "erlps__uniform__1" [arg_1]
   in
     case case_0 of
-      (ErlangInt num_2) | ((ErlangInt num_2) == (toErl 1)) ->
+      (ErlangInt num_2) | (ErlangInt num_2) == (toErl 1) ->
         toErl "(| 5 | 2 | (1, \"foo\", ()) |)"
-      (ErlangInt num_3) | ((ErlangInt num_3) == (toErl 2)) ->
+      (ErlangInt num_3) | (ErlangInt num_3) == (toErl 2) ->
         let    lop_4 = toErl "(| 2 | 1 | ( "
         in let lop_6 = erlps__imm_arg__0 []
         in let rop_7 = toErl " ) |)"
         in let rop_5 = BIF.erlang__op_append [lop_6, rop_7]
         in BIF.erlang__op_append [lop_4, rop_5]
-      (ErlangInt num_8) | ((ErlangInt num_8) == (toErl 3)) ->
+      (ErlangInt num_8) | (ErlangInt num_8) == (toErl 3) ->
         let    lop_9 = toErl "(| 2 | 0 | ( "
         in let lop_11 = erlps__imm_arg__0 []
         in let lop_13 = toErl ", "
