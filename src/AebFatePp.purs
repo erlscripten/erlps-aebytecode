@@ -2386,6 +2386,86 @@ erlps__format_op__2 [(ErlangTuple [(ErlangAtom "CALL_PGR"),
                                        (ErlangCons head_43
                                           (ErlangCons head_45
                                              ErlangEmptyList)))))))))))))
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "CREATE"), arg0_0,
+                                   arg1_1, arg2_2]),
+                     _]
+  =
+  let    head_3 = toErl "CREATE "
+  in let head_5 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
+  in let head_9 = toErl " "
+  in let head_11 = erlps__format_arg__2 [ErlangAtom "a", arg1_1]
+  in let head_15 = toErl " "
+  in let head_17 = erlps__format_arg__2 [ErlangAtom "a", arg2_2]
+  in
+    ErlangCons head_3
+      (ErlangCons head_5
+         (ErlangCons head_9
+            (ErlangCons head_11
+               (ErlangCons head_15 (ErlangCons head_17 ErlangEmptyList)))))
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "CLONE"), arg0_0,
+                                   arg1_1, arg2_2, arg3_3]),
+                     _]
+  =
+  let    head_4 = toErl "CLONE "
+  in let head_6 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
+  in let head_10 = toErl " "
+  in let head_12 = erlps__format_arg__2 [ErlangAtom "a", arg1_1]
+  in let head_16 = toErl " "
+  in let head_18 = erlps__format_arg__2 [ErlangAtom "a", arg2_2]
+  in let head_22 = toErl " "
+  in let head_24 = erlps__format_arg__2 [ErlangAtom "a", arg3_3]
+  in
+    ErlangCons head_4
+      (ErlangCons head_6
+         (ErlangCons head_10
+            (ErlangCons head_12
+               (ErlangCons head_16
+                  (ErlangCons head_18
+                     (ErlangCons head_22
+                        (ErlangCons head_24 ErlangEmptyList)))))))
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "CLONE_G"),
+                                   arg0_0, arg1_1, arg2_2, arg3_3, arg4_4]),
+                     _]
+  =
+  let    head_5 = toErl "CLONE_G "
+  in let head_7 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
+  in let head_11 = toErl " "
+  in let head_13 = erlps__format_arg__2 [ErlangAtom "a", arg1_1]
+  in let head_17 = toErl " "
+  in let head_19 = erlps__format_arg__2 [ErlangAtom "a", arg2_2]
+  in let head_23 = toErl " "
+  in let head_25 = erlps__format_arg__2 [ErlangAtom "a", arg3_3]
+  in let head_29 = toErl " "
+  in let head_31 = erlps__format_arg__2 [ErlangAtom "a", arg4_4]
+  in
+    ErlangCons head_5
+      (ErlangCons head_7
+         (ErlangCons head_11
+            (ErlangCons head_13
+               (ErlangCons head_17
+                  (ErlangCons head_19
+                     (ErlangCons head_23
+                        (ErlangCons head_25
+                           (ErlangCons head_29
+                              (ErlangCons head_31 ErlangEmptyList)))))))))
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "BYTECODE_HASH"),
+                                   arg0_0, arg1_1]),
+                     _]
+  =
+  let    head_2 = toErl "BYTECODE_HASH "
+  in let head_4 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
+  in let head_8 = toErl " "
+  in let head_10 = erlps__format_arg__2 [ErlangAtom "a", arg1_1]
+  in
+    ErlangCons head_2
+      (ErlangCons head_4
+         (ErlangCons head_8 (ErlangCons head_10 ErlangEmptyList)))
+erlps__format_op__2 [(ErlangTuple [(ErlangAtom "FEE"), arg0_0]),
+                     _]
+  =
+  let    head_1 = toErl "FEE "
+  in let head_3 = erlps__format_arg__2 [ErlangAtom "a", arg0_0]
+  in ErlangCons head_1 (ErlangCons head_3 ErlangEmptyList)
 erlps__format_op__2 [(ErlangAtom "DEACTIVATE"), _] =
   let head_0 = toErl "DEACTIVATE"
   in ErlangCons head_0 ErlangEmptyList

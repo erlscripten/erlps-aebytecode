@@ -514,6 +514,21 @@ erlps__mnemonic__1 [(ErlangInt num_0)]
   | (ErlangInt num_0) == (toErl 162) =
   ErlangAtom "CALL_PGR"
 erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 163) =
+  ErlangAtom "CREATE"
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 164) =
+  ErlangAtom "CLONE"
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 165) =
+  ErlangAtom "CLONE_G"
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 166) =
+  ErlangAtom "BYTECODE_HASH"
+erlps__mnemonic__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 167) =
+  ErlangAtom "FEE"
+erlps__mnemonic__1 [(ErlangInt num_0)]
   | (ErlangInt num_0) == (toErl 250) =
   ErlangAtom "DEACTIVATE"
 erlps__mnemonic__1 [(ErlangInt num_0)]
@@ -711,6 +726,11 @@ erlps__m_to_op__1 [(ErlangAtom "STR_TO_LOWER")] = toErl 159
 erlps__m_to_op__1 [(ErlangAtom "CHAR_TO_INT")] = toErl 160
 erlps__m_to_op__1 [(ErlangAtom "CHAR_FROM_INT")] = toErl 161
 erlps__m_to_op__1 [(ErlangAtom "CALL_PGR")] = toErl 162
+erlps__m_to_op__1 [(ErlangAtom "CREATE")] = toErl 163
+erlps__m_to_op__1 [(ErlangAtom "CLONE")] = toErl 164
+erlps__m_to_op__1 [(ErlangAtom "CLONE_G")] = toErl 165
+erlps__m_to_op__1 [(ErlangAtom "BYTECODE_HASH")] = toErl 166
+erlps__m_to_op__1 [(ErlangAtom "FEE")] = toErl 167
 erlps__m_to_op__1 [(ErlangAtom "DEACTIVATE")] = toErl 250
 erlps__m_to_op__1 [(ErlangAtom "ABORT")] = toErl 251
 erlps__m_to_op__1 [(ErlangAtom "EXIT")] = toErl 252
@@ -1213,6 +1233,21 @@ erlps__args__1 [(ErlangInt num_0)]
 erlps__args__1 [(ErlangInt num_0)]
   | (ErlangInt num_0) == (toErl 162) =
   toErl 7
+erlps__args__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 163) =
+  toErl 3
+erlps__args__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 164) =
+  toErl 4
+erlps__args__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 165) =
+  toErl 5
+erlps__args__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 166) =
+  toErl 2
+erlps__args__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 167) =
+  toErl 1
 erlps__args__1 [(ErlangInt num_0)]
   | (ErlangInt num_0) == (toErl 250) =
   toErl 0
@@ -1724,6 +1759,21 @@ erlps__end_bb__1 [(ErlangInt num_0)]
   | (ErlangInt num_0) == (toErl 162) =
   ErlangAtom "true"
 erlps__end_bb__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 163) =
+  ErlangAtom "true"
+erlps__end_bb__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 164) =
+  ErlangAtom "true"
+erlps__end_bb__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 165) =
+  ErlangAtom "true"
+erlps__end_bb__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 166) =
+  ErlangAtom "false"
+erlps__end_bb__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 167) =
+  ErlangAtom "false"
+erlps__end_bb__1 [(ErlangInt num_0)]
   | (ErlangInt num_0) == (toErl 250) =
   ErlangAtom "false"
 erlps__end_bb__1 [(ErlangInt num_0)]
@@ -2231,6 +2281,21 @@ erlps__in_auth__1 [(ErlangInt num_0)]
 erlps__in_auth__1 [(ErlangInt num_0)]
   | (ErlangInt num_0) == (toErl 162) =
   ErlangAtom "false"
+erlps__in_auth__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 163) =
+  ErlangAtom "false"
+erlps__in_auth__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 164) =
+  ErlangAtom "false"
+erlps__in_auth__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 165) =
+  ErlangAtom "false"
+erlps__in_auth__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 166) =
+  ErlangAtom "true"
+erlps__in_auth__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 167) =
+  ErlangAtom "true"
 erlps__in_auth__1 [(ErlangInt num_0)]
   | (ErlangInt num_0) == (toErl 250) =
   ErlangAtom "true"
@@ -2740,6 +2805,21 @@ erlps__allowed_offchain__1 [(ErlangInt num_0)]
   | (ErlangInt num_0) == (toErl 162) =
   ErlangAtom "true"
 erlps__allowed_offchain__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 163) =
+  ErlangAtom "true"
+erlps__allowed_offchain__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 164) =
+  ErlangAtom "true"
+erlps__allowed_offchain__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 165) =
+  ErlangAtom "true"
+erlps__allowed_offchain__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 166) =
+  ErlangAtom "true"
+erlps__allowed_offchain__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 167) =
+  ErlangAtom "true"
+erlps__allowed_offchain__1 [(ErlangInt num_0)]
   | (ErlangInt num_0) == (toErl 250) =
   ErlangAtom "true"
 erlps__allowed_offchain__1 [(ErlangInt num_0)]
@@ -3018,7 +3098,13 @@ erlps__gas_cost__1 [(ErlangInt num_0)]
   toErl 10
 erlps__gas_cost__1 [(ErlangInt num_0)]
   | (ErlangInt num_0) == (toErl 86) =
-  toErl 10
+  let    tup_el_2 = toErl 5
+  in let tup_el_3 = toErl 1000
+  in let head_1 = ErlangTuple [tup_el_2, tup_el_3]
+  in let tup_el_6 = toErl 4
+  in let tup_el_7 = toErl 10
+  in let head_5 = ErlangTuple [tup_el_6, tup_el_7]
+  in ErlangCons head_1 (ErlangCons head_5 ErlangEmptyList)
 erlps__gas_cost__1 [(ErlangInt num_0)]
   | (ErlangInt num_0) == (toErl 87) =
   toErl 10
@@ -3063,49 +3149,139 @@ erlps__gas_cost__1 [(ErlangInt num_0)]
   toErl 1400
 erlps__gas_cost__1 [(ErlangInt num_0)]
   | (ErlangInt num_0) == (toErl 101) =
-  toErl 100
+  let    tup_el_2 = toErl 5
+  in let tup_el_3 = toErl 5000
+  in let head_1 = ErlangTuple [tup_el_2, tup_el_3]
+  in let tup_el_6 = toErl 4
+  in let tup_el_7 = toErl 100
+  in let head_5 = ErlangTuple [tup_el_6, tup_el_7]
+  in ErlangCons head_1 (ErlangCons head_5 ErlangEmptyList)
 erlps__gas_cost__1 [(ErlangInt num_0)]
   | (ErlangInt num_0) == (toErl 102) =
-  toErl 100
+  let    tup_el_2 = toErl 5
+  in let tup_el_3 = toErl 10000
+  in let head_1 = ErlangTuple [tup_el_2, tup_el_3]
+  in let tup_el_6 = toErl 4
+  in let tup_el_7 = toErl 100
+  in let head_5 = ErlangTuple [tup_el_6, tup_el_7]
+  in ErlangCons head_1 (ErlangCons head_5 ErlangEmptyList)
 erlps__gas_cost__1 [(ErlangInt num_0)]
   | (ErlangInt num_0) == (toErl 103) =
-  toErl 100
+  let    tup_el_2 = toErl 5
+  in let tup_el_3 = toErl 10000
+  in let head_1 = ErlangTuple [tup_el_2, tup_el_3]
+  in let tup_el_6 = toErl 4
+  in let tup_el_7 = toErl 100
+  in let head_5 = ErlangTuple [tup_el_6, tup_el_7]
+  in ErlangCons head_1 (ErlangCons head_5 ErlangEmptyList)
 erlps__gas_cost__1 [(ErlangInt num_0)]
   | (ErlangInt num_0) == (toErl 104) =
-  toErl 100
+  let    tup_el_2 = toErl 5
+  in let tup_el_3 = toErl 10000
+  in let head_1 = ErlangTuple [tup_el_2, tup_el_3]
+  in let tup_el_6 = toErl 4
+  in let tup_el_7 = toErl 100
+  in let head_5 = ErlangTuple [tup_el_6, tup_el_7]
+  in ErlangCons head_1 (ErlangCons head_5 ErlangEmptyList)
 erlps__gas_cost__1 [(ErlangInt num_0)]
   | (ErlangInt num_0) == (toErl 105) =
-  toErl 100
+  let    tup_el_2 = toErl 5
+  in let tup_el_3 = toErl 10000
+  in let head_1 = ErlangTuple [tup_el_2, tup_el_3]
+  in let tup_el_6 = toErl 4
+  in let tup_el_7 = toErl 100
+  in let head_5 = ErlangTuple [tup_el_6, tup_el_7]
+  in ErlangCons head_1 (ErlangCons head_5 ErlangEmptyList)
 erlps__gas_cost__1 [(ErlangInt num_0)]
   | (ErlangInt num_0) == (toErl 106) =
-  toErl 100
+  let    tup_el_2 = toErl 5
+  in let tup_el_3 = toErl 2000
+  in let head_1 = ErlangTuple [tup_el_2, tup_el_3]
+  in let tup_el_6 = toErl 4
+  in let tup_el_7 = toErl 100
+  in let head_5 = ErlangTuple [tup_el_6, tup_el_7]
+  in ErlangCons head_1 (ErlangCons head_5 ErlangEmptyList)
 erlps__gas_cost__1 [(ErlangInt num_0)]
   | (ErlangInt num_0) == (toErl 107) =
-  toErl 100
+  let    tup_el_2 = toErl 5
+  in let tup_el_3 = toErl 2000
+  in let head_1 = ErlangTuple [tup_el_2, tup_el_3]
+  in let tup_el_6 = toErl 4
+  in let tup_el_7 = toErl 100
+  in let head_5 = ErlangTuple [tup_el_6, tup_el_7]
+  in ErlangCons head_1 (ErlangCons head_5 ErlangEmptyList)
 erlps__gas_cost__1 [(ErlangInt num_0)]
   | (ErlangInt num_0) == (toErl 108) =
-  toErl 100
+  let    tup_el_2 = toErl 5
+  in let tup_el_3 = toErl 2000
+  in let head_1 = ErlangTuple [tup_el_2, tup_el_3]
+  in let tup_el_6 = toErl 4
+  in let tup_el_7 = toErl 100
+  in let head_5 = ErlangTuple [tup_el_6, tup_el_7]
+  in ErlangCons head_1 (ErlangCons head_5 ErlangEmptyList)
 erlps__gas_cost__1 [(ErlangInt num_0)]
   | (ErlangInt num_0) == (toErl 109) =
-  toErl 100
+  let    tup_el_2 = toErl 5
+  in let tup_el_3 = toErl 2000
+  in let head_1 = ErlangTuple [tup_el_2, tup_el_3]
+  in let tup_el_6 = toErl 4
+  in let tup_el_7 = toErl 100
+  in let head_5 = ErlangTuple [tup_el_6, tup_el_7]
+  in ErlangCons head_1 (ErlangCons head_5 ErlangEmptyList)
 erlps__gas_cost__1 [(ErlangInt num_0)]
   | (ErlangInt num_0) == (toErl 110) =
-  toErl 100
+  let    tup_el_2 = toErl 5
+  in let tup_el_3 = toErl 10000
+  in let head_1 = ErlangTuple [tup_el_2, tup_el_3]
+  in let tup_el_6 = toErl 4
+  in let tup_el_7 = toErl 100
+  in let head_5 = ErlangTuple [tup_el_6, tup_el_7]
+  in ErlangCons head_1 (ErlangCons head_5 ErlangEmptyList)
 erlps__gas_cost__1 [(ErlangInt num_0)]
   | (ErlangInt num_0) == (toErl 111) =
-  toErl 100
+  let    tup_el_2 = toErl 5
+  in let tup_el_3 = toErl 10000
+  in let head_1 = ErlangTuple [tup_el_2, tup_el_3]
+  in let tup_el_6 = toErl 4
+  in let tup_el_7 = toErl 100
+  in let head_5 = ErlangTuple [tup_el_6, tup_el_7]
+  in ErlangCons head_1 (ErlangCons head_5 ErlangEmptyList)
 erlps__gas_cost__1 [(ErlangInt num_0)]
   | (ErlangInt num_0) == (toErl 112) =
-  toErl 100
+  let    tup_el_2 = toErl 5
+  in let tup_el_3 = toErl 10000
+  in let head_1 = ErlangTuple [tup_el_2, tup_el_3]
+  in let tup_el_6 = toErl 4
+  in let tup_el_7 = toErl 100
+  in let head_5 = ErlangTuple [tup_el_6, tup_el_7]
+  in ErlangCons head_1 (ErlangCons head_5 ErlangEmptyList)
 erlps__gas_cost__1 [(ErlangInt num_0)]
   | (ErlangInt num_0) == (toErl 113) =
-  toErl 100
+  let    tup_el_2 = toErl 5
+  in let tup_el_3 = toErl 10000
+  in let head_1 = ErlangTuple [tup_el_2, tup_el_3]
+  in let tup_el_6 = toErl 4
+  in let tup_el_7 = toErl 100
+  in let head_5 = ErlangTuple [tup_el_6, tup_el_7]
+  in ErlangCons head_1 (ErlangCons head_5 ErlangEmptyList)
 erlps__gas_cost__1 [(ErlangInt num_0)]
   | (ErlangInt num_0) == (toErl 114) =
-  toErl 100
+  let    tup_el_2 = toErl 5
+  in let tup_el_3 = toErl 10000
+  in let head_1 = ErlangTuple [tup_el_2, tup_el_3]
+  in let tup_el_6 = toErl 4
+  in let tup_el_7 = toErl 100
+  in let head_5 = ErlangTuple [tup_el_6, tup_el_7]
+  in ErlangCons head_1 (ErlangCons head_5 ErlangEmptyList)
 erlps__gas_cost__1 [(ErlangInt num_0)]
   | (ErlangInt num_0) == (toErl 115) =
-  toErl 50
+  let    tup_el_2 = toErl 5
+  in let tup_el_3 = toErl 2000
+  in let head_1 = ErlangTuple [tup_el_2, tup_el_3]
+  in let tup_el_6 = toErl 4
+  in let tup_el_7 = toErl 50
+  in let head_5 = ErlangTuple [tup_el_6, tup_el_7]
+  in ErlangCons head_1 (ErlangCons head_5 ErlangEmptyList)
 erlps__gas_cost__1 [(ErlangInt num_0)]
   | (ErlangInt num_0) == (toErl 116) =
   toErl 1300
@@ -3219,10 +3395,10 @@ erlps__gas_cost__1 [(ErlangInt num_0)]
   toErl 30
 erlps__gas_cost__1 [(ErlangInt num_0)]
   | (ErlangInt num_0) == (toErl 153) =
-  toErl 100
+  toErl 2000
 erlps__gas_cost__1 [(ErlangInt num_0)]
   | (ErlangInt num_0) == (toErl 154) =
-  toErl 100
+  toErl 2000
 erlps__gas_cost__1 [(ErlangInt num_0)]
   | (ErlangInt num_0) == (toErl 155) =
   toErl 100
@@ -3247,6 +3423,21 @@ erlps__gas_cost__1 [(ErlangInt num_0)]
 erlps__gas_cost__1 [(ErlangInt num_0)]
   | (ErlangInt num_0) == (toErl 162) =
   toErl 100
+erlps__gas_cost__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 163) =
+  toErl 10000
+erlps__gas_cost__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 164) =
+  toErl 5000
+erlps__gas_cost__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 165) =
+  toErl 5000
+erlps__gas_cost__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 166) =
+  toErl 100
+erlps__gas_cost__1 [(ErlangInt num_0)]
+  | (ErlangInt num_0) == (toErl 167) =
+  toErl 10
 erlps__gas_cost__1 [(ErlangInt num_0)]
   | (ErlangInt num_0) == (toErl 250) =
   toErl 10

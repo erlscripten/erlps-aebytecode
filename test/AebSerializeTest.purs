@@ -2483,6 +2483,180 @@ erlps__sources__0 [] =
                     (ErlangCons head_394
                        (ErlangCons head_396 ErlangEmptyList))))),
          arg_398, arg_399]
+  in let bin_el_413 = toErl 248
+  in let bin_el_414 = toErl 81
+  in let bin_el_415 = toErl 70
+  in let bin_el_416 = toErl 3
+  in let bin_el_417 = toErl 160
+  in let bin_el_418 = toErl 31
+  in let bin_el_419 = toErl 234
+  in let bin_el_420 = toErl 193
+  in let bin_el_421 = toErl 211
+  in let bin_el_422 = toErl 173
+  in let bin_el_423 = toErl 203
+  in let bin_el_424 = toErl 107
+  in let bin_el_425 = toErl 112
+  in let bin_el_426 = toErl 209
+  in let bin_el_427 = toErl 176
+  in let bin_el_428 = toErl 17
+  in let bin_el_429 = toErl 175
+  in let bin_el_430 = toErl 12
+  in let bin_el_431 = toErl 61
+  in let bin_el_432 = toErl 232
+  in let bin_el_433 = toErl 187
+  in let bin_el_434 = toErl 136
+  in let bin_el_435 = toErl 65
+  in let bin_el_436 = toErl 200
+  in let bin_el_437 = toErl 142
+  in let bin_el_438 = toErl 124
+  in let bin_el_439 = toErl 92
+  in let bin_el_440 = toErl 176
+  in let bin_el_441 = toErl 28
+  in let bin_el_442 = toErl 229
+  in let bin_el_443 = toErl 3
+  in let bin_el_444 = toErl 146
+  in let bin_el_445 = toErl 10
+  in let bin_el_446 = toErl 209
+  in let bin_el_447 = toErl 137
+  in let bin_el_448 = toErl 245
+  in let bin_el_449 = toErl 214
+  in let bin_el_450 = toErl 192
+  in let bin_el_451 = toErl 165
+  in let bin_el_452 = toErl 148
+  in let bin_el_453 = toErl 254
+  in let bin_el_454 = toErl 68
+  in let bin_el_455 = toErl 214
+  in let bin_el_456 = toErl 68
+  in let bin_el_457 = toErl 31
+  in let bin_el_458 = toErl 0
+  in let bin_el_459 = toErl 55
+  in let bin_el_460 = toErl 0
+  in let bin_el_461 = toErl 55
+  in let bin_el_462 = toErl 0
+  in let bin_el_463 = toErl 26
+  in let bin_el_464 = toErl 14
+  in let bin_el_465 = toErl 130
+  in let bin_el_466 = toErl 111
+  in let bin_el_467 = toErl 130
+  in let bin_el_468 = toErl 8
+  in let bin_el_469 = toErl 25
+  in let bin_el_470 = toErl 1
+  in let bin_el_471 = toErl 3
+  in let bin_el_472 = toErl 63
+  in let bin_el_473 = toErl 140
+  in let bin_el_474 = toErl 47
+  in let bin_el_475 = toErl 1
+  in let bin_el_476 = toErl 17
+  in let bin_el_477 = toErl 68
+  in let bin_el_478 = toErl 214
+  in let bin_el_479 = toErl 68
+  in let bin_el_480 = toErl 31
+  in let bin_el_481 = toErl 17
+  in let bin_el_482 = toErl 105
+  in let bin_el_483 = toErl 110
+  in let bin_el_484 = toErl 105
+  in let bin_el_485 = toErl 116
+  in let bin_el_486 = toErl 130
+  in let bin_el_487 = toErl 47
+  in let bin_el_488 = toErl 0
+  in let bin_el_489 = toErl 133
+  in let bin_el_490 = toErl 52
+  in let bin_el_491 = toErl 46
+  in let bin_el_492 = toErl 51
+  in let bin_el_493 = toErl 46
+  in let bin_el_494 = toErl 48
+  in let bin_el_495 = toErl 0
+  in let
+    arg_412 =
+      ErlangBinary
+        (BIN.concat
+           [BIN.fromInt bin_el_413 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_414 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_415 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_416 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_417 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_418 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_419 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_420 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_421 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_422 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_423 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_424 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_425 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_426 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_427 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_428 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_429 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_430 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_431 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_432 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_433 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_434 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_435 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_436 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_437 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_438 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_439 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_440 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_441 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_442 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_443 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_444 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_445 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_446 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_447 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_448 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_449 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_450 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_451 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_452 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_453 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_454 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_455 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_456 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_457 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_458 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_459 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_460 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_461 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_462 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_463 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_464 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_465 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_466 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_467 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_468 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_469 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_470 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_471 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_472 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_473 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_474 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_475 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_476 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_477 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_478 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_479 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_480 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_481 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_482 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_483 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_484 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_485 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_486 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_487 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_488 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_489 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_490 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_491 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_492 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_493 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_494 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_495 (toErl 8) 1 BIN.Big])
+  in let
+    head_411 =
+      BIF.do_remote_fun_call "Aeb.Fate.Data"
+        "erlps__make_contract_bytearray__1" [arg_412]
   in
     ErlangCons head_13
       (ErlangCons head_16
@@ -2532,7 +2706,9 @@ erlps__sources__0 [] =
                                                                                                       head_374
                                                                                                       (ErlangCons
                                                                                                          head_384
-                                                                                                         ErlangEmptyList)))))))))))))))))))))))))))))))))
+                                                                                                         (ErlangCons
+                                                                                                            head_411
+                                                                                                            ErlangEmptyList))))))))))))))))))))))))))))))))))
 erlps__sources__0 args =
   EXC.badarity (ErlangFun 0 (\ _ -> ErlangAtom "purs_tco_sucks"))
     args

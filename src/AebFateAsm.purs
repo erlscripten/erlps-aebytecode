@@ -587,6 +587,18 @@ erlps__to_bytecode__5 [(ErlangCons (ErlangTuple [(ErlangAtom "bytes"),
   in
     erlps__to_bytecode__5
       [rest_2, address_3, env_4, ErlangCons head_11 code_5, opts_6]
+erlps__to_bytecode__5 [(ErlangCons (ErlangTuple [(ErlangAtom "contract_bytearray"),
+                                                 _line_0, fatecode_1]) rest_2),
+                       address_3, env_4, code_5, opts_6]
+  =
+  let   
+    tup_el_13 =
+      BIF.do_remote_fun_call "Aeb.Fate.Data"
+        "erlps__make_contract_bytearray__1" [fatecode_1]
+  in let head_11 = ErlangTuple [ErlangAtom "immediate", tup_el_13]
+  in
+    erlps__to_bytecode__5
+      [rest_2, address_3, env_4, ErlangCons head_11 code_5, opts_6]
 erlps__to_bytecode__5 [(ErlangCons (ErlangTuple [(ErlangAtom "id"),
                                                  _line_0, id_1]) rest_2),
                        address_3, env_4, code_5, opts_6]

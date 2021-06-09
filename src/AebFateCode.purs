@@ -223,10 +223,10 @@ erlps__strip_init_function__1 :: ErlangFun
 erlps__strip_init_function__1 [fcode_2@(ErlangTuple [(ErlangAtom "fcode"),
                                                      funs_0, syms_1, _])]
   =
-  let    bin_el_4 = toErl 105
-  in let bin_el_5 = toErl 110
-  in let bin_el_6 = toErl 105
-  in let bin_el_7 = toErl 116
+  let    bin_el_4 = toErl 68
+  in let bin_el_5 = toErl 214
+  in let bin_el_6 = toErl 68
+  in let bin_el_7 = toErl 31
   in let
     arg_3 =
       ErlangBinary
@@ -235,17 +235,28 @@ erlps__strip_init_function__1 [fcode_2@(ErlangTuple [(ErlangAtom "fcode"),
             BIN.fromInt bin_el_5 (toErl 8) 1 BIN.Big,
             BIN.fromInt bin_el_6 (toErl 8) 1 BIN.Big,
             BIN.fromInt bin_el_7 (toErl 8) 1 BIN.Big])
-  in let id_8 = erlps__symbol_identifier__1 [arg_3]
-  in let funs1_11 = BIF.maps__remove__2 [id_8, funs_0]
-  in let syms1_14 = BIF.maps__remove__2 [id_8, syms_1]
+  in let funs1_9 = BIF.maps__remove__2 [arg_3, funs_0]
+  in let bin_el_11 = toErl 68
+  in let bin_el_12 = toErl 214
+  in let bin_el_13 = toErl 68
+  in let bin_el_14 = toErl 31
+  in let
+    arg_10 =
+      ErlangBinary
+        (BIN.concat
+           [BIN.fromInt bin_el_11 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_12 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_13 (toErl 8) 1 BIN.Big,
+            BIN.fromInt bin_el_14 (toErl 8) 1 BIN.Big])
+  in let syms1_16 = BIF.maps__remove__2 [arg_10, syms_1]
   in
     case fcode_2 of
-      (ErlangTuple [(ErlangAtom "fcode"), functions_18, symbols_19,
-                    annotations_20]) ->
+      (ErlangTuple [(ErlangAtom "fcode"), functions_20, symbols_21,
+                    annotations_22]) ->
         ErlangTuple
-          [ErlangAtom "fcode", funs1_11, syms1_14, annotations_20]
+          [ErlangAtom "fcode", funs1_9, syms1_16, annotations_22]
       _ -> EXC.badrecord (ErlangAtom "fcode")
-erlps__strip_init_function__1 [arg_21] = EXC.function_clause unit
+erlps__strip_init_function__1 [arg_23] = EXC.function_clause unit
 erlps__strip_init_function__1 args =
   EXC.badarity (ErlangFun 1 (\ _ -> ErlangAtom "purs_tco_sucks"))
     args

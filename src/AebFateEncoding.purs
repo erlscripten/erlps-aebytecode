@@ -398,7 +398,19 @@ erlps__serialize__1 [(ErlangTuple [(ErlangAtom "typerep"), t_0])]
   =
   let arg_1 = erlps__serialize_type__1 [t_0]
   in BIF.erlang__iolist_to_binary__1 [arg_1]
-erlps__serialize__1 [arg_3] = EXC.function_clause unit
+erlps__serialize__1 [(ErlangTuple [(ErlangAtom "contract_bytearray"),
+                                   b_0])]
+  =
+  let    bin_el_1 = toErl 143
+  in let arg_3 = BIF.erlang__byte_size__1 [b_0]
+  in let bin_el_2 = erlps__serialize_integer__1 [arg_3]
+  in
+    ErlangBinary
+      (BIN.concat
+         [BIN.fromInt bin_el_1 (toErl 8) 1 BIN.Big,
+          BIN.binPrefix bin_el_2 (BIN.packedSize bin_el_2) 8,
+          BIN.binPrefix b_0 (BIN.packedSize b_0) 8])
+erlps__serialize__1 [arg_6] = EXC.function_clause unit
 erlps__serialize__1 args =
   EXC.badarity (ErlangFun 1 (\ _ -> ErlangAtom "purs_tco_sucks"))
     args
@@ -499,7 +511,10 @@ erlps__serialize_type__1 [(ErlangTuple [(ErlangAtom "variant"),
               listofvariants_0
         in ErlangCons head_3 (ErlangCons size_2 tail_6)
       _ -> EXC.if_clause unit
-erlps__serialize_type__1 [arg_12] = EXC.function_clause unit
+erlps__serialize_type__1 [(ErlangAtom "contract_bytearray")] =
+  let head_0 = toErl 167
+  in ErlangCons head_0 ErlangEmptyList
+erlps__serialize_type__1 [arg_2] = EXC.function_clause unit
 erlps__serialize_type__1 args =
   EXC.badarity (ErlangFun 1 (\ _ -> ErlangAtom "purs_tco_sucks"))
     args
@@ -689,7 +704,16 @@ erlps__deserialize_type__1 [(ErlangBinary binSeg_0)]
         let tup_el_16 = ErlangTuple [ErlangAtom "variant", variants_13]
         in ErlangTuple [tup_el_16, rest2_14]
       _ -> EXC.badmatch matchExpr_15
-erlps__deserialize_type__1 [arg_20] = EXC.function_clause unit
+erlps__deserialize_type__1 [(ErlangBinary binSeg_0)]
+  | (ErlangInt size_1) <- (toErl 8)
+  , (BIN.Ok (ErlangInt num_3) bin_2) <-
+      (BIN.chopInt binSeg_0 size_1 1 BIN.Big BIN.Unsigned)
+  , (ErlangInt num_3) == (toErl 167)
+  , (ErlangInt size_4) <- (BIN.size bin_2)
+  , (BIN.Ok rest_6 bin_5) <- (BIN.chopBin bin_2 size_4 8)
+  , BIN.empty bin_5 =
+  ErlangTuple [ErlangAtom "contract_bytearray", rest_6]
+erlps__deserialize_type__1 [arg_9] = EXC.function_clause unit
 erlps__deserialize_type__1 args =
   EXC.badarity (ErlangFun 1 (\ _ -> ErlangAtom "purs_tco_sucks"))
     args
@@ -1060,6 +1084,44 @@ erlps__deserialize2__1 [(ErlangBinary binSeg_0)]
               in let arg_26 = BIF.erlang__op_neg [op_arg_27]
               in let rest3_31 = BIF.binary__part__3 [rest2_9, arg_24, arg_26]
               in ErlangTuple [string_22, rest3_31]
+            _ -> EXC.badmatch matchExpr_15
+      _ -> EXC.badmatch matchExpr_10
+erlps__deserialize2__1 [(ErlangBinary binSeg_0)]
+  | (ErlangInt size_1) <- (toErl 8)
+  , (BIN.Ok (ErlangInt num_3) bin_2) <-
+      (BIN.chopInt binSeg_0 size_1 1 BIN.Big BIN.Unsigned)
+  , (ErlangInt num_3) == (toErl 143)
+  , (ErlangInt size_4) <- (BIN.size bin_2)
+  , (BIN.Ok rest_6 bin_5) <- (BIN.chopBin bin_2 size_4 8)
+  , BIN.empty bin_5 =
+  let matchExpr_10 = erlps__deserialize_one__1 [rest_6]
+  in
+    case matchExpr_10 of
+      (ErlangTuple [size_8, rest2_9]) ->
+        let    lop_11 = BIF.erlang__is_integer__1 [size_8]
+        in let
+          matchExpr_15 =
+            case lop_11 of
+              (ErlangAtom "false") -> ErlangAtom "false"
+              (ErlangAtom "true") ->
+                let rop_14 = toErl 0
+                in BIF.erlang__op_greaterEq [size_8, rop_14]
+              _ -> EXC.badarg1 lop_11
+        in
+          case matchExpr_15 of
+            (ErlangAtom "true") ->
+              let    arg_17 = toErl 0
+              in let
+                fatecode_19 = BIF.binary__part__3 [rest2_9, arg_17, size_8]
+              in let arg_21 = BIF.erlang__byte_size__1 [rest2_9]
+              in let lop_25 = BIF.erlang__byte_size__1 [rest2_9]
+              in let op_arg_24 = BIF.erlang__op_minus [lop_25, size_8]
+              in let arg_23 = BIF.erlang__op_neg [op_arg_24]
+              in let rest3_28 = BIF.binary__part__3 [rest2_9, arg_21, arg_23]
+              in let
+                tup_el_29 =
+                  ErlangTuple [ErlangAtom "contract_bytearray", fatecode_19]
+              in ErlangTuple [tup_el_29, rest3_28]
             _ -> EXC.badmatch matchExpr_15
       _ -> EXC.badmatch matchExpr_10
 erlps__deserialize2__1 [(ErlangBinary binSeg_0)]
@@ -1518,14 +1580,32 @@ erlps__deserialize2__1 [bin_4@(ErlangBinary binSeg_0)]
                                                                               ErlangAtom
                                                                                 "true"
                                                                             (ErlangAtom "false") ->
-                                                                              let
-                                                                                rop_47 =
+                                                                              let   
+                                                                                rop_48 =
                                                                                   toErl
                                                                                     135
+                                                                              in let
+                                                                                lop_46 =
+                                                                                  BIF.erlang__op_exactEq
+                                                                                    [typetag_3,
+                                                                                     rop_48]
                                                                               in
-                                                                                BIF.erlang__op_exactEq
-                                                                                  [typetag_3,
-                                                                                   rop_47]
+                                                                                case lop_46 of
+                                                                                  (ErlangAtom "true") ->
+                                                                                    ErlangAtom
+                                                                                      "true"
+                                                                                  (ErlangAtom "false") ->
+                                                                                    let
+                                                                                      rop_50 =
+                                                                                        toErl
+                                                                                          167
+                                                                                    in
+                                                                                      BIF.erlang__op_exactEq
+                                                                                        [typetag_3,
+                                                                                         rop_50]
+                                                                                  _ ->
+                                                                                    EXC.badarg1
+                                                                                      lop_46
                                                                             _ ->
                                                                               EXC.badarg1
                                                                                 lop_43
@@ -1551,7 +1631,7 @@ erlps__deserialize2__1 [bin_4@(ErlangBinary binSeg_0)]
         let tup_el_9 = ErlangTuple [ErlangAtom "typerep", type_6]
         in ErlangTuple [tup_el_9, rest_7]
       _ -> EXC.badmatch matchExpr_8
-erlps__deserialize2__1 [arg_48] = EXC.function_clause unit
+erlps__deserialize2__1 [arg_51] = EXC.function_clause unit
 erlps__deserialize2__1 args =
   EXC.badarity (ErlangFun 1 (\ _ -> ErlangAtom "purs_tco_sucks"))
     args

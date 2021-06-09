@@ -121,6 +121,7 @@ erlps__sources__0 [] =
   in let head_20 = toErl "immediates"
   in let head_22 = toErl "names"
   in let head_24 = toErl "oracles"
+  in let head_26 = toErl "meta"
   in
     ErlangCons head_0
       (ErlangCons head_2
@@ -135,7 +136,8 @@ erlps__sources__0 [] =
                                  (ErlangCons head_20
                                     (ErlangCons head_22
                                        (ErlangCons head_24
-                                          ErlangEmptyList))))))))))))
+                                          (ErlangCons head_26
+                                             ErlangEmptyList)))))))))))))
 erlps__sources__0 args =
   EXC.badarity (ErlangFun 0 (\ _ -> ErlangAtom "purs_tco_sucks"))
     args

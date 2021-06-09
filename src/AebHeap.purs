@@ -316,6 +316,33 @@ erlps__to_binary1__2 [data_0, address_1]
            [BIN.fromInt bin_el_6 (toErl 256) 1 BIN.Big,
             BIN.binPrefix bin_el_8 (BIN.packedSize bin_el_8) 8])
   in ErlangTuple [address_1, tup_el_5]
+erlps__to_binary1__2 [(ErlangTuple [(ErlangAtom "contract_bytearray"),
+                                    fatecode_0]),
+                      address_1]
+  | (ErlangAtom "true") ==
+      (falsifyErrors (\ _ -> BIF.erlang__is_binary__1 [fatecode_0])) =
+  let   
+    words_3 =
+      BIF.do_remote_fun_call "Aeb.Memory" "erlps__binary_to_words__1"
+        [fatecode_0]
+  in let bin_el_6 = BIF.erlang__size__1 [fatecode_0]
+  in let
+    bin_el_8 =
+      BIN.concatErl
+        (flmap
+           (\ lc_11 ->
+              let
+                lcRet_12 =
+                  ErlangBinary (BIN.fromInt lc_11 (toErl 256) 1 BIN.Big)
+              in ErlangCons lcRet_12 ErlangEmptyList)
+           words_3)
+  in let
+    tup_el_5 =
+      ErlangBinary
+        (BIN.concat
+           [BIN.fromInt bin_el_6 (toErl 256) 1 BIN.Big,
+            BIN.binPrefix bin_el_8 (BIN.packedSize bin_el_8) 8])
+  in ErlangTuple [address_1, tup_el_5]
 erlps__to_binary1__2 [(ErlangAtom "none"), address_0] =
   let    tup_el_3 = toErl 0
   in let
@@ -343,6 +370,12 @@ erlps__to_binary1__2 [(ErlangAtom "string"), address_0] =
   in erlps__to_binary1__2 [arg_1, address_0]
 erlps__to_binary1__2 [(ErlangAtom "typerep"), address_0] =
   let    tup_el_2 = toErl 5
+  in let arg_1 = ErlangTuple [tup_el_2]
+  in erlps__to_binary1__2 [arg_1, address_0]
+erlps__to_binary1__2 [(ErlangAtom "contract_bytearray"),
+                      address_0]
+  =
+  let    tup_el_2 = toErl 8
   in let arg_1 = ErlangTuple [tup_el_2]
   in erlps__to_binary1__2 [arg_1, address_0]
 erlps__to_binary1__2 [(ErlangAtom "function"), address_0] =
@@ -869,8 +902,29 @@ erlps__from_binary__4 [visited_0, (ErlangAtom "typerep"), heap_1,
         in ErlangTuple [ErlangAtom "map", tup_el_63, tup_el_66]
       (ErlangInt num_70) | (ErlangInt num_70) == (toErl 7) ->
         ErlangAtom "function"
+      (ErlangInt num_71) | (ErlangInt num_71) == (toErl 8) ->
+        ErlangAtom "contract_bytearray"
       something_else -> EXC.case_clause something_else
-erlps__from_binary__4 [arg_71, arg_72, arg_73, arg_74] =
+erlps__from_binary__4 [_, (ErlangAtom "contract_bytearray"),
+                       heap_0, v_1]
+  =
+  let    fatecodesize_4 = erlps__heap_word__2 [heap_0, v_1]
+  in let lop_5 = toErl 8
+  in let rop_8 = toErl 32
+  in let rop_6 = BIF.erlang__op_plus [v_1, rop_8]
+  in let bitaddr_9 = BIF.erlang__op_mult [lop_5, rop_6]
+  in
+    case heap_0 of
+      (ErlangBinary binSeg_10) | (ErlangInt size_11) <- (bitaddr_9)
+                               , (BIN.Ok _ bin_12) <-
+                                   (BIN.chopInt binSeg_10 size_11 1 BIN.Big
+                                      BIN.Unsigned)
+                               , (ErlangInt size_13) <- (fatecodesize_4)
+                               , (BIN.Ok bytes_15 bin_14) <-
+                                   (BIN.chopBin bin_12 size_13 8) ->
+        ErlangTuple [ErlangAtom "contract_bytearray", bytes_15]
+      _ -> EXC.badmatch heap_0
+erlps__from_binary__4 [arg_19, arg_20, arg_21, arg_22] =
   EXC.function_clause unit
 erlps__from_binary__4 args =
   EXC.badarity (ErlangFun 4 (\ _ -> ErlangAtom "purs_tco_sucks"))

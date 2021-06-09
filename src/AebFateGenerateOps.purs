@@ -1397,256 +1397,274 @@ erlps__ops_defs__0 [] =
          ErlangCons (ErlangAtom "a") ErlangEmptyList, ErlangAtom "caller",
          tup_el_1638, ErlangAtom "address", tup_el_1640]
   in let tup_el_1644 = toErl 86
-  in let tup_el_1648 = toErl 10
-  in let tup_el_1655 = ErlangTuple [ErlangAtom "integer"]
-  in let tup_el_1658 = toErl "Arg0 := The blockhash at height."
+  in let tup_el_1650 = toErl 5
+  in let tup_el_1651 = toErl 1000
+  in let head_1649 = ErlangTuple [tup_el_1650, tup_el_1651]
+  in let tup_el_1654 = toErl 4
+  in let tup_el_1655 = toErl 10
+  in let head_1653 = ErlangTuple [tup_el_1654, tup_el_1655]
+  in let tup_el_1663 = ErlangTuple [ErlangAtom "integer"]
+  in let tup_el_1666 = toErl "Arg0 := The blockhash at height."
   in let
     head_1642 =
       ErlangTuple
         [ErlangAtom "BLOCKHASH", tup_el_1644, ErlangAtom "false",
-         ErlangAtom "true", ErlangAtom "true", tup_el_1648,
+         ErlangAtom "true", ErlangAtom "true",
+         ErlangCons head_1649 (ErlangCons head_1653 ErlangEmptyList),
          ErlangCons (ErlangAtom "a")
            (ErlangCons (ErlangAtom "a") ErlangEmptyList),
-         ErlangAtom "blockhash", tup_el_1655, ErlangAtom "hash",
-         tup_el_1658]
-  in let tup_el_1662 = toErl 87
-  in let tup_el_1666 = toErl 10
-  in let tup_el_1671 = ErlangTuple []
+         ErlangAtom "blockhash", tup_el_1663, ErlangAtom "variant",
+         tup_el_1666]
+  in let tup_el_1670 = toErl 87
+  in let tup_el_1674 = toErl 10
+  in let tup_el_1679 = ErlangTuple []
   in let
-    tup_el_1673 =
+    tup_el_1681 =
       toErl "Arg0 := The address of the current beneficiary."
   in let
-    head_1660 =
+    head_1668 =
       ErlangTuple
-        [ErlangAtom "BENEFICIARY", tup_el_1662, ErlangAtom "false",
-         ErlangAtom "true", ErlangAtom "true", tup_el_1666,
+        [ErlangAtom "BENEFICIARY", tup_el_1670, ErlangAtom "false",
+         ErlangAtom "true", ErlangAtom "true", tup_el_1674,
          ErlangCons (ErlangAtom "a") ErlangEmptyList,
-         ErlangAtom "beneficiary", tup_el_1671, ErlangAtom "address",
-         tup_el_1673]
-  in let tup_el_1677 = toErl 88
-  in let tup_el_1681 = toErl 10
-  in let tup_el_1686 = ErlangTuple []
+         ErlangAtom "beneficiary", tup_el_1679, ErlangAtom "address",
+         tup_el_1681]
+  in let tup_el_1685 = toErl 88
+  in let tup_el_1689 = toErl 10
+  in let tup_el_1694 = ErlangTuple []
   in let
-    tup_el_1688 =
+    tup_el_1696 =
       toErl
         "Arg0 := The current timestamp. Unrelaiable, don\'t use for anything."
   in let
-    head_1675 =
+    head_1683 =
       ErlangTuple
-        [ErlangAtom "TIMESTAMP", tup_el_1677, ErlangAtom "false",
-         ErlangAtom "true", ErlangAtom "true", tup_el_1681,
+        [ErlangAtom "TIMESTAMP", tup_el_1685, ErlangAtom "false",
+         ErlangAtom "true", ErlangAtom "true", tup_el_1689,
          ErlangCons (ErlangAtom "a") ErlangEmptyList,
-         ErlangAtom "timestamp", tup_el_1686, ErlangAtom "integer",
-         tup_el_1688]
-  in let tup_el_1692 = toErl 89
-  in let tup_el_1696 = toErl 10
-  in let tup_el_1701 = ErlangTuple []
+         ErlangAtom "timestamp", tup_el_1694, ErlangAtom "integer",
+         tup_el_1696]
+  in let tup_el_1700 = toErl 89
+  in let tup_el_1704 = toErl 10
+  in let tup_el_1709 = ErlangTuple []
   in let
-    tup_el_1703 =
+    tup_el_1711 =
       toErl "Arg0 := The block height of the cureent generation."
   in let
-    head_1690 =
+    head_1698 =
       ErlangTuple
-        [ErlangAtom "GENERATION", tup_el_1692, ErlangAtom "false",
-         ErlangAtom "true", ErlangAtom "true", tup_el_1696,
+        [ErlangAtom "GENERATION", tup_el_1700, ErlangAtom "false",
+         ErlangAtom "true", ErlangAtom "true", tup_el_1704,
          ErlangCons (ErlangAtom "a") ErlangEmptyList,
-         ErlangAtom "generation", tup_el_1701, ErlangAtom "integer",
-         tup_el_1703]
-  in let tup_el_1707 = toErl 90
-  in let tup_el_1711 = toErl 10
-  in let tup_el_1716 = ErlangTuple []
+         ErlangAtom "generation", tup_el_1709, ErlangAtom "integer",
+         tup_el_1711]
+  in let tup_el_1715 = toErl 90
+  in let tup_el_1719 = toErl 10
+  in let tup_el_1724 = ErlangTuple []
   in let
-    tup_el_1718 = toErl "Arg0 := The current micro block number."
+    tup_el_1726 = toErl "Arg0 := The current micro block number."
   in let
-    head_1705 =
+    head_1713 =
       ErlangTuple
-        [ErlangAtom "MICROBLOCK", tup_el_1707, ErlangAtom "false",
-         ErlangAtom "true", ErlangAtom "true", tup_el_1711,
+        [ErlangAtom "MICROBLOCK", tup_el_1715, ErlangAtom "false",
+         ErlangAtom "true", ErlangAtom "true", tup_el_1719,
          ErlangCons (ErlangAtom "a") ErlangEmptyList,
-         ErlangAtom "microblock", tup_el_1716, ErlangAtom "integer",
-         tup_el_1718]
-  in let tup_el_1722 = toErl 91
-  in let tup_el_1726 = toErl 10
-  in let tup_el_1731 = ErlangTuple []
-  in let tup_el_1733 = toErl "Arg0 := The current difficulty."
+         ErlangAtom "microblock", tup_el_1724, ErlangAtom "integer",
+         tup_el_1726]
+  in let tup_el_1730 = toErl 91
+  in let tup_el_1734 = toErl 10
+  in let tup_el_1739 = ErlangTuple []
+  in let tup_el_1741 = toErl "Arg0 := The current difficulty."
   in let
-    head_1720 =
+    head_1728 =
       ErlangTuple
-        [ErlangAtom "DIFFICULTY", tup_el_1722, ErlangAtom "false",
-         ErlangAtom "true", ErlangAtom "true", tup_el_1726,
+        [ErlangAtom "DIFFICULTY", tup_el_1730, ErlangAtom "false",
+         ErlangAtom "true", ErlangAtom "true", tup_el_1734,
          ErlangCons (ErlangAtom "a") ErlangEmptyList,
-         ErlangAtom "difficulty", tup_el_1731, ErlangAtom "integer",
-         tup_el_1733]
-  in let tup_el_1737 = toErl 92
-  in let tup_el_1741 = toErl 10
-  in let tup_el_1746 = ErlangTuple []
-  in let tup_el_1748 = toErl "Arg0 := The current gaslimit."
+         ErlangAtom "difficulty", tup_el_1739, ErlangAtom "integer",
+         tup_el_1741]
+  in let tup_el_1745 = toErl 92
+  in let tup_el_1749 = toErl 10
+  in let tup_el_1754 = ErlangTuple []
+  in let tup_el_1756 = toErl "Arg0 := The current gaslimit."
   in let
-    head_1735 =
+    head_1743 =
       ErlangTuple
-        [ErlangAtom "GASLIMIT", tup_el_1737, ErlangAtom "false",
-         ErlangAtom "true", ErlangAtom "true", tup_el_1741,
+        [ErlangAtom "GASLIMIT", tup_el_1745, ErlangAtom "false",
+         ErlangAtom "true", ErlangAtom "true", tup_el_1749,
          ErlangCons (ErlangAtom "a") ErlangEmptyList,
-         ErlangAtom "gaslimit", tup_el_1746, ErlangAtom "integer",
-         tup_el_1748]
-  in let tup_el_1752 = toErl 93
-  in let tup_el_1756 = toErl 10
-  in let tup_el_1761 = ErlangTuple []
-  in let tup_el_1763 = toErl "Arg0 := The amount of gas left."
+         ErlangAtom "gaslimit", tup_el_1754, ErlangAtom "integer",
+         tup_el_1756]
+  in let tup_el_1760 = toErl 93
+  in let tup_el_1764 = toErl 10
+  in let tup_el_1769 = ErlangTuple []
+  in let tup_el_1771 = toErl "Arg0 := The amount of gas left."
   in let
-    head_1750 =
+    head_1758 =
       ErlangTuple
-        [ErlangAtom "GAS", tup_el_1752, ErlangAtom "false",
-         ErlangAtom "true", ErlangAtom "true", tup_el_1756,
+        [ErlangAtom "GAS", tup_el_1760, ErlangAtom "false",
+         ErlangAtom "true", ErlangAtom "true", tup_el_1764,
          ErlangCons (ErlangAtom "a") ErlangEmptyList, ErlangAtom "gas",
-         tup_el_1761, ErlangAtom "integer", tup_el_1763]
-  in let tup_el_1767 = toErl 94
-  in let tup_el_1771 = toErl 10
-  in let tup_el_1776 = ErlangTuple []
+         tup_el_1769, ErlangAtom "integer", tup_el_1771]
+  in let tup_el_1775 = toErl 94
+  in let tup_el_1779 = toErl 10
+  in let tup_el_1784 = ErlangTuple []
   in let
-    tup_el_1778 = toErl "Arg0 := The current contract address."
+    tup_el_1786 = toErl "Arg0 := The current contract address."
   in let
-    head_1765 =
+    head_1773 =
       ErlangTuple
-        [ErlangAtom "ADDRESS", tup_el_1767, ErlangAtom "false",
-         ErlangAtom "true", ErlangAtom "true", tup_el_1771,
+        [ErlangAtom "ADDRESS", tup_el_1775, ErlangAtom "false",
+         ErlangAtom "true", ErlangAtom "true", tup_el_1779,
          ErlangCons (ErlangAtom "a") ErlangEmptyList,
-         ErlangAtom "address", tup_el_1776, ErlangAtom "address",
-         tup_el_1778]
-  in let tup_el_1782 = toErl 95
-  in let tup_el_1786 = toErl 10
-  in let tup_el_1791 = ErlangTuple []
-  in let tup_el_1793 = toErl "Arg0 := The current gas price."
+         ErlangAtom "address", tup_el_1784, ErlangAtom "address",
+         tup_el_1786]
+  in let tup_el_1790 = toErl 95
+  in let tup_el_1794 = toErl 10
+  in let tup_el_1799 = ErlangTuple []
+  in let tup_el_1801 = toErl "Arg0 := The current gas price."
   in let
-    head_1780 =
+    head_1788 =
       ErlangTuple
-        [ErlangAtom "GASPRICE", tup_el_1782, ErlangAtom "false",
-         ErlangAtom "true", ErlangAtom "true", tup_el_1786,
+        [ErlangAtom "GASPRICE", tup_el_1790, ErlangAtom "false",
+         ErlangAtom "true", ErlangAtom "true", tup_el_1794,
          ErlangCons (ErlangAtom "a") ErlangEmptyList,
-         ErlangAtom "gasprice", tup_el_1791, ErlangAtom "integer",
-         tup_el_1793]
-  in let tup_el_1797 = toErl 96
-  in let tup_el_1801 = toErl 1000
-  in let tup_el_1806 = ErlangTuple [ErlangAtom "string"]
+         ErlangAtom "gasprice", tup_el_1799, ErlangAtom "integer",
+         tup_el_1801]
+  in let tup_el_1805 = toErl 96
+  in let tup_el_1809 = toErl 1000
+  in let tup_el_1814 = ErlangTuple [ErlangAtom "string"]
   in let
-    tup_el_1809 = toErl "Create a log message in the call object."
+    tup_el_1817 = toErl "Create a log message in the call object."
   in let
-    head_1795 =
+    head_1803 =
       ErlangTuple
-        [ErlangAtom "LOG0", tup_el_1797, ErlangAtom "false",
-         ErlangAtom "true", ErlangAtom "true", tup_el_1801,
+        [ErlangAtom "LOG0", tup_el_1805, ErlangAtom "false",
+         ErlangAtom "true", ErlangAtom "true", tup_el_1809,
          ErlangCons (ErlangAtom "a") ErlangEmptyList, ErlangAtom "log",
-         tup_el_1806, ErlangAtom "none", tup_el_1809]
-  in let tup_el_1813 = toErl 97
-  in let tup_el_1817 = toErl 1100
+         tup_el_1814, ErlangAtom "none", tup_el_1817]
+  in let tup_el_1821 = toErl 97
+  in let tup_el_1825 = toErl 1100
   in let
-    tup_el_1824 =
+    tup_el_1832 =
       ErlangTuple [ErlangAtom "integer", ErlangAtom "string"]
   in let
-    tup_el_1828 =
+    tup_el_1836 =
       toErl "Create a log message with one topic in the call object."
   in let
-    head_1811 =
+    head_1819 =
       ErlangTuple
-        [ErlangAtom "LOG1", tup_el_1813, ErlangAtom "false",
-         ErlangAtom "true", ErlangAtom "true", tup_el_1817,
+        [ErlangAtom "LOG1", tup_el_1821, ErlangAtom "false",
+         ErlangAtom "true", ErlangAtom "true", tup_el_1825,
          ErlangCons (ErlangAtom "a")
            (ErlangCons (ErlangAtom "a") ErlangEmptyList),
-         ErlangAtom "log", tup_el_1824, ErlangAtom "none", tup_el_1828]
-  in let tup_el_1832 = toErl 98
-  in let tup_el_1836 = toErl 1200
+         ErlangAtom "log", tup_el_1832, ErlangAtom "none", tup_el_1836]
+  in let tup_el_1840 = toErl 98
+  in let tup_el_1844 = toErl 1200
   in let
-    tup_el_1845 =
+    tup_el_1853 =
       ErlangTuple
         [ErlangAtom "integer", ErlangAtom "integer", ErlangAtom "string"]
   in let
-    tup_el_1850 =
+    tup_el_1858 =
       toErl "Create a log message with two topics in the call object."
   in let
-    head_1830 =
+    head_1838 =
       ErlangTuple
-        [ErlangAtom "LOG2", tup_el_1832, ErlangAtom "false",
-         ErlangAtom "true", ErlangAtom "true", tup_el_1836,
+        [ErlangAtom "LOG2", tup_el_1840, ErlangAtom "false",
+         ErlangAtom "true", ErlangAtom "true", tup_el_1844,
          ErlangCons (ErlangAtom "a")
            (ErlangCons (ErlangAtom "a")
               (ErlangCons (ErlangAtom "a") ErlangEmptyList)),
-         ErlangAtom "log", tup_el_1845, ErlangAtom "none", tup_el_1850]
-  in let tup_el_1854 = toErl 99
-  in let tup_el_1858 = toErl 1300
+         ErlangAtom "log", tup_el_1853, ErlangAtom "none", tup_el_1858]
+  in let tup_el_1862 = toErl 99
+  in let tup_el_1866 = toErl 1300
   in let
-    tup_el_1869 =
+    tup_el_1877 =
       ErlangTuple
         [ErlangAtom "integer", ErlangAtom "integer",
          ErlangAtom "integer", ErlangAtom "string"]
   in let
-    tup_el_1875 =
+    tup_el_1883 =
       toErl
         "Create a log message with three topics in the call object."
   in let
-    head_1852 =
+    head_1860 =
       ErlangTuple
-        [ErlangAtom "LOG3", tup_el_1854, ErlangAtom "false",
-         ErlangAtom "true", ErlangAtom "true", tup_el_1858,
+        [ErlangAtom "LOG3", tup_el_1862, ErlangAtom "false",
+         ErlangAtom "true", ErlangAtom "true", tup_el_1866,
          ErlangCons (ErlangAtom "a")
            (ErlangCons (ErlangAtom "a")
               (ErlangCons (ErlangAtom "a")
                  (ErlangCons (ErlangAtom "a") ErlangEmptyList))),
-         ErlangAtom "log", tup_el_1869, ErlangAtom "none", tup_el_1875]
-  in let tup_el_1879 = toErl 100
-  in let tup_el_1883 = toErl 1400
+         ErlangAtom "log", tup_el_1877, ErlangAtom "none", tup_el_1883]
+  in let tup_el_1887 = toErl 100
+  in let tup_el_1891 = toErl 1400
   in let
-    tup_el_1896 =
+    tup_el_1904 =
       ErlangTuple
         [ErlangAtom "integer", ErlangAtom "integer",
          ErlangAtom "integer", ErlangAtom "integer", ErlangAtom "string"]
   in let
-    tup_el_1903 =
+    tup_el_1911 =
       toErl "Create a log message with four topics in the call object."
   in let
-    head_1877 =
+    head_1885 =
       ErlangTuple
-        [ErlangAtom "LOG4", tup_el_1879, ErlangAtom "false",
-         ErlangAtom "true", ErlangAtom "true", tup_el_1883,
+        [ErlangAtom "LOG4", tup_el_1887, ErlangAtom "false",
+         ErlangAtom "true", ErlangAtom "true", tup_el_1891,
          ErlangCons (ErlangAtom "a")
            (ErlangCons (ErlangAtom "a")
               (ErlangCons (ErlangAtom "a")
                  (ErlangCons (ErlangAtom "a")
                     (ErlangCons (ErlangAtom "a") ErlangEmptyList)))),
-         ErlangAtom "log", tup_el_1896, ErlangAtom "none", tup_el_1903]
-  in let tup_el_1907 = toErl 101
-  in let tup_el_1911 = toErl 100
+         ErlangAtom "log", tup_el_1904, ErlangAtom "none", tup_el_1911]
+  in let tup_el_1915 = toErl 101
+  in let tup_el_1921 = toErl 5
+  in let tup_el_1922 = toErl 5000
+  in let head_1920 = ErlangTuple [tup_el_1921, tup_el_1922]
+  in let tup_el_1925 = toErl 4
+  in let tup_el_1926 = toErl 100
+  in let head_1924 = ErlangTuple [tup_el_1925, tup_el_1926]
   in let
-    tup_el_1918 =
+    tup_el_1934 =
       ErlangTuple [ErlangAtom "address", ErlangAtom "integer"]
   in let
-    tup_el_1922 =
+    tup_el_1938 =
       toErl
         "Transfer Arg1 tokens to account Arg0. (If the contract account has at least that many tokens."
   in let
-    head_1905 =
+    head_1913 =
       ErlangTuple
-        [ErlangAtom "SPEND", tup_el_1907, ErlangAtom "false",
-         ErlangAtom "false", ErlangAtom "true", tup_el_1911,
+        [ErlangAtom "SPEND", tup_el_1915, ErlangAtom "false",
+         ErlangAtom "false", ErlangAtom "true",
+         ErlangCons head_1920 (ErlangCons head_1924 ErlangEmptyList),
          ErlangCons (ErlangAtom "a")
            (ErlangCons (ErlangAtom "a") ErlangEmptyList),
-         ErlangAtom "spend", tup_el_1918, ErlangAtom "none", tup_el_1922]
-  in let tup_el_1926 = toErl 102
-  in let tup_el_1930 = toErl 100
+         ErlangAtom "spend", tup_el_1934, ErlangAtom "none", tup_el_1938]
+  in let tup_el_1942 = toErl 102
+  in let tup_el_1948 = toErl 5
+  in let tup_el_1949 = toErl 10000
+  in let head_1947 = ErlangTuple [tup_el_1948, tup_el_1949]
+  in let tup_el_1952 = toErl 4
+  in let tup_el_1953 = toErl 100
+  in let head_1951 = ErlangTuple [tup_el_1952, tup_el_1953]
   in let
-    tup_el_1947 =
+    tup_el_1971 =
       ErlangTuple
         [ErlangAtom "signature", ErlangAtom "address",
          ErlangAtom "integer", ErlangAtom "variant", ErlangAtom "typerep",
          ErlangAtom "typerep"]
   in let
-    tup_el_1955 =
+    tup_el_1979 =
       toErl
         "Arg0 := New oracle with address Arg2, query fee Arg3, TTL Arg4, query type Arg5 and response type Arg6. Arg0 contains delegation signature."
   in let
-    head_1924 =
+    head_1940 =
       ErlangTuple
-        [ErlangAtom "ORACLE_REGISTER", tup_el_1926, ErlangAtom "false",
-         ErlangAtom "false", ErlangAtom "false", tup_el_1930,
+        [ErlangAtom "ORACLE_REGISTER", tup_el_1942, ErlangAtom "false",
+         ErlangAtom "false", ErlangAtom "false",
+         ErlangCons head_1947 (ErlangCons head_1951 ErlangEmptyList),
          ErlangCons (ErlangAtom "a")
            (ErlangCons (ErlangAtom "a")
               (ErlangCons (ErlangAtom "a")
@@ -1654,25 +1672,31 @@ erlps__ops_defs__0 [] =
                     (ErlangCons (ErlangAtom "a")
                        (ErlangCons (ErlangAtom "a")
                           (ErlangCons (ErlangAtom "a") ErlangEmptyList)))))),
-         ErlangAtom "oracle_register", tup_el_1947, ErlangAtom "oracle",
-         tup_el_1955]
-  in let tup_el_1959 = toErl 103
-  in let tup_el_1963 = toErl 100
+         ErlangAtom "oracle_register", tup_el_1971, ErlangAtom "oracle",
+         tup_el_1979]
+  in let tup_el_1983 = toErl 103
+  in let tup_el_1989 = toErl 5
+  in let tup_el_1990 = toErl 10000
+  in let head_1988 = ErlangTuple [tup_el_1989, tup_el_1990]
+  in let tup_el_1993 = toErl 4
+  in let tup_el_1994 = toErl 100
+  in let head_1992 = ErlangTuple [tup_el_1993, tup_el_1994]
   in let
-    tup_el_1982 =
+    tup_el_2014 =
       ErlangTuple
         [ErlangAtom "oracle", ErlangAtom "any", ErlangAtom "integer",
          ErlangAtom "variant", ErlangAtom "variant", ErlangAtom "typerep",
          ErlangAtom "typerep"]
   in let
-    tup_el_1991 =
+    tup_el_2023 =
       toErl
         "Arg0 := New oracle query for oracle Arg1, question in Arg2, query fee in Arg3, query TTL in Arg4, response TTL in Arg5. Typereps for checking oracle type is in Arg6 and Arg7."
   in let
-    head_1957 =
+    head_1981 =
       ErlangTuple
-        [ErlangAtom "ORACLE_QUERY", tup_el_1959, ErlangAtom "false",
-         ErlangAtom "false", ErlangAtom "false", tup_el_1963,
+        [ErlangAtom "ORACLE_QUERY", tup_el_1983, ErlangAtom "false",
+         ErlangAtom "false", ErlangAtom "false",
+         ErlangCons head_1988 (ErlangCons head_1992 ErlangEmptyList),
          ErlangCons (ErlangAtom "a")
            (ErlangCons (ErlangAtom "a")
               (ErlangCons (ErlangAtom "a")
@@ -1682,1043 +1706,1114 @@ erlps__ops_defs__0 [] =
                           (ErlangCons (ErlangAtom "a")
                              (ErlangCons (ErlangAtom "a")
                                 ErlangEmptyList))))))),
-         ErlangAtom "oracle_query", tup_el_1982,
-         ErlangAtom "oracle_query", tup_el_1991]
-  in let tup_el_1995 = toErl 104
-  in let tup_el_1999 = toErl 100
+         ErlangAtom "oracle_query", tup_el_2014,
+         ErlangAtom "oracle_query", tup_el_2023]
+  in let tup_el_2027 = toErl 104
+  in let tup_el_2033 = toErl 5
+  in let tup_el_2034 = toErl 10000
+  in let head_2032 = ErlangTuple [tup_el_2033, tup_el_2034]
+  in let tup_el_2037 = toErl 4
+  in let tup_el_2038 = toErl 100
+  in let head_2036 = ErlangTuple [tup_el_2037, tup_el_2038]
   in let
-    tup_el_2014 =
+    tup_el_2054 =
       ErlangTuple
         [ErlangAtom "signature", ErlangAtom "oracle",
          ErlangAtom "oracle_query", ErlangAtom "any",
          ErlangAtom "typerep", ErlangAtom "typerep"]
   in let
-    tup_el_2022 =
+    tup_el_2062 =
       toErl
         "Respond as oracle Arg1 to query in Arg2 with response Arg3. Arg0 contains delegation signature. Typereps for checking oracle type is in Arg4 and Arg5."
   in let
-    head_1993 =
+    head_2025 =
       ErlangTuple
-        [ErlangAtom "ORACLE_RESPOND", tup_el_1995, ErlangAtom "false",
-         ErlangAtom "false", ErlangAtom "false", tup_el_1999,
+        [ErlangAtom "ORACLE_RESPOND", tup_el_2027, ErlangAtom "false",
+         ErlangAtom "false", ErlangAtom "false",
+         ErlangCons head_2032 (ErlangCons head_2036 ErlangEmptyList),
          ErlangCons (ErlangAtom "a")
            (ErlangCons (ErlangAtom "a")
               (ErlangCons (ErlangAtom "a")
                  (ErlangCons (ErlangAtom "a")
                     (ErlangCons (ErlangAtom "a")
                        (ErlangCons (ErlangAtom "a") ErlangEmptyList))))),
-         ErlangAtom "oracle_respond", tup_el_2014, ErlangAtom "none",
-         tup_el_2022]
-  in let tup_el_2026 = toErl 105
-  in let tup_el_2030 = toErl 100
+         ErlangAtom "oracle_respond", tup_el_2054, ErlangAtom "none",
+         tup_el_2062]
+  in let tup_el_2066 = toErl 105
+  in let tup_el_2072 = toErl 5
+  in let tup_el_2073 = toErl 10000
+  in let head_2071 = ErlangTuple [tup_el_2072, tup_el_2073]
+  in let tup_el_2076 = toErl 4
+  in let tup_el_2077 = toErl 100
+  in let head_2075 = ErlangTuple [tup_el_2076, tup_el_2077]
   in let
-    tup_el_2039 =
+    tup_el_2087 =
       ErlangTuple
         [ErlangAtom "signature", ErlangAtom "oracle",
          ErlangAtom "variant"]
   in let
-    tup_el_2044 =
+    tup_el_2092 =
       toErl
         "Extend oracle in Arg1 with TTL in Arg2. Arg0 contains delegation signature."
   in let
-    head_2024 =
+    head_2064 =
       ErlangTuple
-        [ErlangAtom "ORACLE_EXTEND", tup_el_2026, ErlangAtom "false",
-         ErlangAtom "false", ErlangAtom "false", tup_el_2030,
+        [ErlangAtom "ORACLE_EXTEND", tup_el_2066, ErlangAtom "false",
+         ErlangAtom "false", ErlangAtom "false",
+         ErlangCons head_2071 (ErlangCons head_2075 ErlangEmptyList),
          ErlangCons (ErlangAtom "a")
            (ErlangCons (ErlangAtom "a")
               (ErlangCons (ErlangAtom "a") ErlangEmptyList)),
-         ErlangAtom "oracle_extend", tup_el_2039, ErlangAtom "none",
-         tup_el_2044]
-  in let tup_el_2048 = toErl 106
-  in let tup_el_2052 = toErl 100
+         ErlangAtom "oracle_extend", tup_el_2087, ErlangAtom "none",
+         tup_el_2092]
+  in let tup_el_2096 = toErl 106
+  in let tup_el_2102 = toErl 5
+  in let tup_el_2103 = toErl 2000
+  in let head_2101 = ErlangTuple [tup_el_2102, tup_el_2103]
+  in let tup_el_2106 = toErl 4
+  in let tup_el_2107 = toErl 100
+  in let head_2105 = ErlangTuple [tup_el_2106, tup_el_2107]
   in let
-    tup_el_2065 =
+    tup_el_2121 =
       ErlangTuple
         [ErlangAtom "oracle", ErlangAtom "oracle_query",
          ErlangAtom "typerep", ErlangAtom "typerep"]
   in let
-    tup_el_2071 =
+    tup_el_2127 =
       toErl
         "Arg0 := option variant with answer (if any) from oracle query in Arg1 given by oracle Arg0. Typereps for checking oracle type is in Arg3 and Arg4."
   in let
-    head_2046 =
+    head_2094 =
       ErlangTuple
-        [ErlangAtom "ORACLE_GET_ANSWER", tup_el_2048, ErlangAtom "false",
-         ErlangAtom "false", ErlangAtom "true", tup_el_2052,
+        [ErlangAtom "ORACLE_GET_ANSWER", tup_el_2096, ErlangAtom "false",
+         ErlangAtom "false", ErlangAtom "true",
+         ErlangCons head_2101 (ErlangCons head_2105 ErlangEmptyList),
          ErlangCons (ErlangAtom "a")
            (ErlangCons (ErlangAtom "a")
               (ErlangCons (ErlangAtom "a")
                  (ErlangCons (ErlangAtom "a")
                     (ErlangCons (ErlangAtom "a") ErlangEmptyList)))),
-         ErlangAtom "oracle_get_answer", tup_el_2065, ErlangAtom "any",
-         tup_el_2071]
-  in let tup_el_2075 = toErl 107
-  in let tup_el_2079 = toErl 100
+         ErlangAtom "oracle_get_answer", tup_el_2121, ErlangAtom "any",
+         tup_el_2127]
+  in let tup_el_2131 = toErl 107
+  in let tup_el_2137 = toErl 5
+  in let tup_el_2138 = toErl 2000
+  in let head_2136 = ErlangTuple [tup_el_2137, tup_el_2138]
+  in let tup_el_2141 = toErl 4
+  in let tup_el_2142 = toErl 100
+  in let head_2140 = ErlangTuple [tup_el_2141, tup_el_2142]
   in let
-    tup_el_2092 =
+    tup_el_2156 =
       ErlangTuple
         [ErlangAtom "oracle", ErlangAtom "oracle_query",
          ErlangAtom "typerep", ErlangAtom "typerep"]
   in let
-    tup_el_2098 =
+    tup_el_2162 =
       toErl
         "Arg0 := question in oracle query Arg2 given to oracle Arg1. Typereps for checking oracle type is in Arg3 and Arg4."
   in let
-    head_2073 =
+    head_2129 =
       ErlangTuple
-        [ErlangAtom "ORACLE_GET_QUESTION", tup_el_2075,
+        [ErlangAtom "ORACLE_GET_QUESTION", tup_el_2131,
          ErlangAtom "false", ErlangAtom "false", ErlangAtom "true",
-         tup_el_2079,
+         ErlangCons head_2136 (ErlangCons head_2140 ErlangEmptyList),
          ErlangCons (ErlangAtom "a")
            (ErlangCons (ErlangAtom "a")
               (ErlangCons (ErlangAtom "a")
                  (ErlangCons (ErlangAtom "a")
                     (ErlangCons (ErlangAtom "a") ErlangEmptyList)))),
-         ErlangAtom "oracle_get_question", tup_el_2092, ErlangAtom "any",
-         tup_el_2098]
-  in let tup_el_2102 = toErl 108
-  in let tup_el_2106 = toErl 100
-  in let tup_el_2113 = ErlangTuple [ErlangAtom "oracle"]
-  in let tup_el_2116 = toErl "Arg0 := query fee for oracle Arg1"
+         ErlangAtom "oracle_get_question", tup_el_2156, ErlangAtom "any",
+         tup_el_2162]
+  in let tup_el_2166 = toErl 108
+  in let tup_el_2172 = toErl 5
+  in let tup_el_2173 = toErl 2000
+  in let head_2171 = ErlangTuple [tup_el_2172, tup_el_2173]
+  in let tup_el_2176 = toErl 4
+  in let tup_el_2177 = toErl 100
+  in let head_2175 = ErlangTuple [tup_el_2176, tup_el_2177]
+  in let tup_el_2185 = ErlangTuple [ErlangAtom "oracle"]
+  in let tup_el_2188 = toErl "Arg0 := query fee for oracle Arg1"
   in let
-    head_2100 =
+    head_2164 =
       ErlangTuple
-        [ErlangAtom "ORACLE_QUERY_FEE", tup_el_2102, ErlangAtom "false",
-         ErlangAtom "false", ErlangAtom "true", tup_el_2106,
+        [ErlangAtom "ORACLE_QUERY_FEE", tup_el_2166, ErlangAtom "false",
+         ErlangAtom "false", ErlangAtom "true",
+         ErlangCons head_2171 (ErlangCons head_2175 ErlangEmptyList),
          ErlangCons (ErlangAtom "a")
            (ErlangCons (ErlangAtom "a") ErlangEmptyList),
-         ErlangAtom "oracle_query_fee", tup_el_2113, ErlangAtom "integer",
-         tup_el_2116]
-  in let tup_el_2120 = toErl 109
-  in let tup_el_2124 = toErl 100
+         ErlangAtom "oracle_query_fee", tup_el_2185, ErlangAtom "integer",
+         tup_el_2188]
+  in let tup_el_2192 = toErl 109
+  in let tup_el_2198 = toErl 5
+  in let tup_el_2199 = toErl 2000
+  in let head_2197 = ErlangTuple [tup_el_2198, tup_el_2199]
+  in let tup_el_2202 = toErl 4
+  in let tup_el_2203 = toErl 100
+  in let head_2201 = ErlangTuple [tup_el_2202, tup_el_2203]
   in let
-    tup_el_2135 =
+    tup_el_2215 =
       ErlangTuple
         [ErlangAtom "string", ErlangAtom "string", ErlangAtom "typerep"]
   in let
-    tup_el_2140 =
+    tup_el_2220 =
       toErl
         "Resolve name in Arg0 with tag Arg1. Arg2 describes the type parameter of the resolved name."
   in let
-    head_2118 =
+    head_2190 =
       ErlangTuple
-        [ErlangAtom "AENS_RESOLVE", tup_el_2120, ErlangAtom "false",
-         ErlangAtom "false", ErlangAtom "true", tup_el_2124,
+        [ErlangAtom "AENS_RESOLVE", tup_el_2192, ErlangAtom "false",
+         ErlangAtom "false", ErlangAtom "true",
+         ErlangCons head_2197 (ErlangCons head_2201 ErlangEmptyList),
          ErlangCons (ErlangAtom "a")
            (ErlangCons (ErlangAtom "a")
               (ErlangCons (ErlangAtom "a")
                  (ErlangCons (ErlangAtom "a") ErlangEmptyList))),
-         ErlangAtom "aens_resolve", tup_el_2135, ErlangAtom "variant",
-         tup_el_2140]
-  in let tup_el_2144 = toErl 110
-  in let tup_el_2148 = toErl 100
+         ErlangAtom "aens_resolve", tup_el_2215, ErlangAtom "variant",
+         tup_el_2220]
+  in let tup_el_2224 = toErl 110
+  in let tup_el_2230 = toErl 5
+  in let tup_el_2231 = toErl 10000
+  in let head_2229 = ErlangTuple [tup_el_2230, tup_el_2231]
+  in let tup_el_2234 = toErl 4
+  in let tup_el_2235 = toErl 100
+  in let head_2233 = ErlangTuple [tup_el_2234, tup_el_2235]
   in let
-    tup_el_2157 =
+    tup_el_2245 =
       ErlangTuple
         [ErlangAtom "signature", ErlangAtom "address", ErlangAtom "hash"]
   in let
-    tup_el_2162 =
+    tup_el_2250 =
       toErl
         "Preclaim the hash in Arg2 for address in Arg1. Arg0 contains delegation signature."
   in let
-    head_2142 =
+    head_2222 =
       ErlangTuple
-        [ErlangAtom "AENS_PRECLAIM", tup_el_2144, ErlangAtom "false",
-         ErlangAtom "false", ErlangAtom "false", tup_el_2148,
+        [ErlangAtom "AENS_PRECLAIM", tup_el_2224, ErlangAtom "false",
+         ErlangAtom "false", ErlangAtom "false",
+         ErlangCons head_2229 (ErlangCons head_2233 ErlangEmptyList),
          ErlangCons (ErlangAtom "a")
            (ErlangCons (ErlangAtom "a")
               (ErlangCons (ErlangAtom "a") ErlangEmptyList)),
-         ErlangAtom "aens_preclaim", tup_el_2157, ErlangAtom "none",
-         tup_el_2162]
-  in let tup_el_2166 = toErl 111
-  in let tup_el_2170 = toErl 100
+         ErlangAtom "aens_preclaim", tup_el_2245, ErlangAtom "none",
+         tup_el_2250]
+  in let tup_el_2254 = toErl 111
+  in let tup_el_2260 = toErl 5
+  in let tup_el_2261 = toErl 10000
+  in let head_2259 = ErlangTuple [tup_el_2260, tup_el_2261]
+  in let tup_el_2264 = toErl 4
+  in let tup_el_2265 = toErl 100
+  in let head_2263 = ErlangTuple [tup_el_2264, tup_el_2265]
   in let
-    tup_el_2183 =
+    tup_el_2279 =
       ErlangTuple
         [ErlangAtom "signature", ErlangAtom "address",
          ErlangAtom "string", ErlangAtom "integer", ErlangAtom "integer"]
   in let
-    tup_el_2190 =
+    tup_el_2286 =
       toErl
         "Attempt to claim the name in Arg2 for address in Arg1 at a price in Arg4. Arg3 contains the salt used to hash the preclaim. Arg0 contains delegation signature."
   in let
-    head_2164 =
+    head_2252 =
       ErlangTuple
-        [ErlangAtom "AENS_CLAIM", tup_el_2166, ErlangAtom "false",
-         ErlangAtom "false", ErlangAtom "false", tup_el_2170,
+        [ErlangAtom "AENS_CLAIM", tup_el_2254, ErlangAtom "false",
+         ErlangAtom "false", ErlangAtom "false",
+         ErlangCons head_2259 (ErlangCons head_2263 ErlangEmptyList),
          ErlangCons (ErlangAtom "a")
            (ErlangCons (ErlangAtom "a")
               (ErlangCons (ErlangAtom "a")
                  (ErlangCons (ErlangAtom "a")
                     (ErlangCons (ErlangAtom "a") ErlangEmptyList)))),
-         ErlangAtom "aens_claim", tup_el_2183, ErlangAtom "none",
-         tup_el_2190]
-  in let tup_el_2194 = toErl 112
-  in let tup_el_2198 = toErl 100
+         ErlangAtom "aens_claim", tup_el_2279, ErlangAtom "none",
+         tup_el_2286]
+  in let tup_el_2290 = toErl 112
+  in let tup_el_2296 = toErl 5
+  in let tup_el_2297 = toErl 10000
+  in let head_2295 = ErlangTuple [tup_el_2296, tup_el_2297]
+  in let tup_el_2300 = toErl 4
+  in let tup_el_2301 = toErl 100
+  in let head_2299 = ErlangTuple [tup_el_2300, tup_el_2301]
   in let
-    tup_el_2213 =
+    tup_el_2317 =
       ErlangTuple
         [ErlangAtom "signature", ErlangAtom "address",
          ErlangAtom "string", ErlangAtom "variant", ErlangAtom "variant",
          ErlangAtom "variant"]
   in let
-    tup_el_2221 =
+    tup_el_2325 =
       toErl
         "Updates name in Arg2 for address in Arg1. Arg3 contains optional ttl (of type Chain.ttl), Arg4 contains optional client_ttl (of type int), Arg5 contains optional pointers (of type map(string, pointee))"
   in let
-    head_2192 =
+    head_2288 =
       ErlangTuple
-        [ErlangAtom "AENS_UPDATE", tup_el_2194, ErlangAtom "false",
-         ErlangAtom "false", ErlangAtom "false", tup_el_2198,
+        [ErlangAtom "AENS_UPDATE", tup_el_2290, ErlangAtom "false",
+         ErlangAtom "false", ErlangAtom "false",
+         ErlangCons head_2295 (ErlangCons head_2299 ErlangEmptyList),
          ErlangCons (ErlangAtom "a")
            (ErlangCons (ErlangAtom "a")
               (ErlangCons (ErlangAtom "a")
                  (ErlangCons (ErlangAtom "a")
                     (ErlangCons (ErlangAtom "a")
                        (ErlangCons (ErlangAtom "a") ErlangEmptyList))))),
-         ErlangAtom "aens_update", tup_el_2213, ErlangAtom "none",
-         tup_el_2221]
-  in let tup_el_2225 = toErl 113
-  in let tup_el_2229 = toErl 100
+         ErlangAtom "aens_update", tup_el_2317, ErlangAtom "none",
+         tup_el_2325]
+  in let tup_el_2329 = toErl 113
+  in let tup_el_2335 = toErl 5
+  in let tup_el_2336 = toErl 10000
+  in let head_2334 = ErlangTuple [tup_el_2335, tup_el_2336]
+  in let tup_el_2339 = toErl 4
+  in let tup_el_2340 = toErl 100
+  in let head_2338 = ErlangTuple [tup_el_2339, tup_el_2340]
   in let
-    tup_el_2240 =
+    tup_el_2352 =
       ErlangTuple
         [ErlangAtom "signature", ErlangAtom "address",
          ErlangAtom "address", ErlangAtom "string"]
   in let
-    tup_el_2246 =
+    tup_el_2358 =
       toErl
         "Transfer ownership of name Arg3 from account Arg1 to Arg2. Arg0 contains delegation signature."
   in let
-    head_2223 =
+    head_2327 =
       ErlangTuple
-        [ErlangAtom "AENS_TRANSFER", tup_el_2225, ErlangAtom "false",
-         ErlangAtom "false", ErlangAtom "false", tup_el_2229,
+        [ErlangAtom "AENS_TRANSFER", tup_el_2329, ErlangAtom "false",
+         ErlangAtom "false", ErlangAtom "false",
+         ErlangCons head_2334 (ErlangCons head_2338 ErlangEmptyList),
          ErlangCons (ErlangAtom "a")
            (ErlangCons (ErlangAtom "a")
               (ErlangCons (ErlangAtom "a")
                  (ErlangCons (ErlangAtom "a") ErlangEmptyList))),
-         ErlangAtom "aens_transfer", tup_el_2240, ErlangAtom "none",
-         tup_el_2246]
-  in let tup_el_2250 = toErl 114
-  in let tup_el_2254 = toErl 100
+         ErlangAtom "aens_transfer", tup_el_2352, ErlangAtom "none",
+         tup_el_2358]
+  in let tup_el_2362 = toErl 114
+  in let tup_el_2368 = toErl 5
+  in let tup_el_2369 = toErl 10000
+  in let head_2367 = ErlangTuple [tup_el_2368, tup_el_2369]
+  in let tup_el_2372 = toErl 4
+  in let tup_el_2373 = toErl 100
+  in let head_2371 = ErlangTuple [tup_el_2372, tup_el_2373]
   in let
-    tup_el_2263 =
+    tup_el_2383 =
       ErlangTuple
         [ErlangAtom "signature", ErlangAtom "address",
          ErlangAtom "string"]
   in let
-    tup_el_2268 =
+    tup_el_2388 =
       toErl
         "Revoke the name in Arg2 from owner Arg1. Arg0 contains delegation signature."
   in let
-    head_2248 =
+    head_2360 =
       ErlangTuple
-        [ErlangAtom "AENS_REVOKE", tup_el_2250, ErlangAtom "false",
-         ErlangAtom "false", ErlangAtom "false", tup_el_2254,
+        [ErlangAtom "AENS_REVOKE", tup_el_2362, ErlangAtom "false",
+         ErlangAtom "false", ErlangAtom "false",
+         ErlangCons head_2367 (ErlangCons head_2371 ErlangEmptyList),
          ErlangCons (ErlangAtom "a")
            (ErlangCons (ErlangAtom "a")
               (ErlangCons (ErlangAtom "a") ErlangEmptyList)),
-         ErlangAtom "aens_revoke", tup_el_2263, ErlangAtom "none",
-         tup_el_2268]
-  in let tup_el_2272 = toErl 115
-  in let tup_el_2276 = toErl 50
-  in let tup_el_2283 = ErlangTuple [ErlangAtom "address"]
-  in let tup_el_2286 = toErl "Arg0 := The balance of address Arg1."
+         ErlangAtom "aens_revoke", tup_el_2383, ErlangAtom "none",
+         tup_el_2388]
+  in let tup_el_2392 = toErl 115
+  in let tup_el_2398 = toErl 5
+  in let tup_el_2399 = toErl 2000
+  in let head_2397 = ErlangTuple [tup_el_2398, tup_el_2399]
+  in let tup_el_2402 = toErl 4
+  in let tup_el_2403 = toErl 50
+  in let head_2401 = ErlangTuple [tup_el_2402, tup_el_2403]
+  in let tup_el_2411 = ErlangTuple [ErlangAtom "address"]
+  in let tup_el_2414 = toErl "Arg0 := The balance of address Arg1."
   in let
-    head_2270 =
+    head_2390 =
       ErlangTuple
-        [ErlangAtom "BALANCE_OTHER", tup_el_2272, ErlangAtom "false",
-         ErlangAtom "true", ErlangAtom "true", tup_el_2276,
+        [ErlangAtom "BALANCE_OTHER", tup_el_2392, ErlangAtom "false",
+         ErlangAtom "true", ErlangAtom "true",
+         ErlangCons head_2397 (ErlangCons head_2401 ErlangEmptyList),
          ErlangCons (ErlangAtom "a")
            (ErlangCons (ErlangAtom "a") ErlangEmptyList),
-         ErlangAtom "balance_other", tup_el_2283, ErlangAtom "integer",
-         tup_el_2286]
-  in let tup_el_2290 = toErl 116
-  in let tup_el_2294 = toErl 1300
+         ErlangAtom "balance_other", tup_el_2411, ErlangAtom "integer",
+         tup_el_2414]
+  in let tup_el_2418 = toErl 116
+  in let tup_el_2422 = toErl 1300
   in let
-    tup_el_2305 =
+    tup_el_2433 =
       ErlangTuple
         [ErlangAtom "bytes", ErlangAtom "address", ErlangAtom "bytes"]
   in let
-    tup_el_2310 = toErl "Arg0 := verify_sig(Hash, PubKey, Signature)"
+    tup_el_2438 = toErl "Arg0 := verify_sig(Hash, PubKey, Signature)"
   in let
-    head_2288 =
+    head_2416 =
       ErlangTuple
-        [ErlangAtom "VERIFY_SIG", tup_el_2290, ErlangAtom "false",
-         ErlangAtom "true", ErlangAtom "true", tup_el_2294,
+        [ErlangAtom "VERIFY_SIG", tup_el_2418, ErlangAtom "false",
+         ErlangAtom "true", ErlangAtom "true", tup_el_2422,
          ErlangCons (ErlangAtom "a")
            (ErlangCons (ErlangAtom "a")
               (ErlangCons (ErlangAtom "a")
                  (ErlangCons (ErlangAtom "a") ErlangEmptyList))),
-         ErlangAtom "verify_sig", tup_el_2305, ErlangAtom "boolean",
-         tup_el_2310]
-  in let tup_el_2314 = toErl 117
-  in let tup_el_2318 = toErl 1300
+         ErlangAtom "verify_sig", tup_el_2433, ErlangAtom "boolean",
+         tup_el_2438]
+  in let tup_el_2442 = toErl 117
+  in let tup_el_2446 = toErl 1300
   in let
-    tup_el_2329 =
+    tup_el_2457 =
       ErlangTuple
         [ErlangAtom "bytes", ErlangAtom "bytes", ErlangAtom "bytes"]
   in let
-    tup_el_2334 =
+    tup_el_2462 =
       toErl "Arg0 := verify_sig_secp256k1(Hash, PubKey, Signature)"
   in let
-    head_2312 =
+    head_2440 =
       ErlangTuple
-        [ErlangAtom "VERIFY_SIG_SECP256K1", tup_el_2314,
+        [ErlangAtom "VERIFY_SIG_SECP256K1", tup_el_2442,
          ErlangAtom "false", ErlangAtom "true", ErlangAtom "true",
-         tup_el_2318,
+         tup_el_2446,
          ErlangCons (ErlangAtom "a")
            (ErlangCons (ErlangAtom "a")
               (ErlangCons (ErlangAtom "a")
                  (ErlangCons (ErlangAtom "a") ErlangEmptyList))),
-         ErlangAtom "verify_sig_secp256k1", tup_el_2329,
-         ErlangAtom "boolean", tup_el_2334]
-  in let tup_el_2338 = toErl 118
-  in let tup_el_2342 = toErl 10
-  in let tup_el_2349 = ErlangTuple [ErlangAtom "contract"]
+         ErlangAtom "verify_sig_secp256k1", tup_el_2457,
+         ErlangAtom "boolean", tup_el_2462]
+  in let tup_el_2466 = toErl 118
+  in let tup_el_2470 = toErl 10
+  in let tup_el_2477 = ErlangTuple [ErlangAtom "contract"]
   in let
-    tup_el_2352 = toErl "Arg0 := Arg1 - A no-op type conversion"
+    tup_el_2480 = toErl "Arg0 := Arg1 - A no-op type conversion"
   in let
-    head_2336 =
+    head_2464 =
       ErlangTuple
-        [ErlangAtom "CONTRACT_TO_ADDRESS", tup_el_2338,
+        [ErlangAtom "CONTRACT_TO_ADDRESS", tup_el_2466,
          ErlangAtom "false", ErlangAtom "true", ErlangAtom "true",
-         tup_el_2342,
+         tup_el_2470,
          ErlangCons (ErlangAtom "a")
            (ErlangCons (ErlangAtom "a") ErlangEmptyList),
-         ErlangAtom "contract_to_address", tup_el_2349,
-         ErlangAtom "address", tup_el_2352]
-  in let tup_el_2356 = toErl 119
-  in let tup_el_2360 = toErl 10
-  in let tup_el_2365 = ErlangTuple []
+         ErlangAtom "contract_to_address", tup_el_2477,
+         ErlangAtom "address", tup_el_2480]
+  in let tup_el_2484 = toErl 119
+  in let tup_el_2488 = toErl 10
+  in let tup_el_2493 = ErlangTuple []
   in let
-    tup_el_2367 =
+    tup_el_2495 =
       toErl
         "If in GA authentication context return Some(TxHash) otherwise None."
   in let
-    head_2354 =
+    head_2482 =
       ErlangTuple
-        [ErlangAtom "AUTH_TX_HASH", tup_el_2356, ErlangAtom "false",
-         ErlangAtom "true", ErlangAtom "true", tup_el_2360,
+        [ErlangAtom "AUTH_TX_HASH", tup_el_2484, ErlangAtom "false",
+         ErlangAtom "true", ErlangAtom "true", tup_el_2488,
          ErlangCons (ErlangAtom "a") ErlangEmptyList,
-         ErlangAtom "auth_tx_hash", tup_el_2365, ErlangAtom "variant",
-         tup_el_2367]
-  in let tup_el_2371 = toErl 120
-  in let tup_el_2375 = toErl 100
+         ErlangAtom "auth_tx_hash", tup_el_2493, ErlangAtom "variant",
+         tup_el_2495]
+  in let tup_el_2499 = toErl 120
+  in let tup_el_2503 = toErl 100
   in let
-    tup_el_2386 =
+    tup_el_2514 =
       ErlangTuple
         [ErlangAtom "oracle", ErlangAtom "typerep", ErlangAtom "typerep"]
   in let
-    tup_el_2391 =
+    tup_el_2519 =
       toErl
         "Arg0 := is Arg1 an oracle with the given query (Arg2) and response (Arg3) types"
   in let
-    head_2369 =
+    head_2497 =
       ErlangTuple
-        [ErlangAtom "ORACLE_CHECK", tup_el_2371, ErlangAtom "false",
-         ErlangAtom "false", ErlangAtom "true", tup_el_2375,
+        [ErlangAtom "ORACLE_CHECK", tup_el_2499, ErlangAtom "false",
+         ErlangAtom "false", ErlangAtom "true", tup_el_2503,
          ErlangCons (ErlangAtom "a")
            (ErlangCons (ErlangAtom "a")
               (ErlangCons (ErlangAtom "a")
                  (ErlangCons (ErlangAtom "a") ErlangEmptyList))),
-         ErlangAtom "oracle_check", tup_el_2386, ErlangAtom "bool",
-         tup_el_2391]
-  in let tup_el_2395 = toErl 121
-  in let tup_el_2399 = toErl 100
+         ErlangAtom "oracle_check", tup_el_2514, ErlangAtom "bool",
+         tup_el_2519]
+  in let tup_el_2523 = toErl 121
+  in let tup_el_2527 = toErl 100
   in let
-    tup_el_2412 =
+    tup_el_2540 =
       ErlangTuple
         [ErlangAtom "oracle", ErlangAtom "oracle_query",
          ErlangAtom "typerep", ErlangAtom "typerep"]
   in let
-    tup_el_2418 =
+    tup_el_2546 =
       toErl
         "Arg0 := is Arg2 a query for the oracle Arg1 with the given types (Arg3, Arg4)"
   in let
-    head_2393 =
+    head_2521 =
       ErlangTuple
-        [ErlangAtom "ORACLE_CHECK_QUERY", tup_el_2395,
+        [ErlangAtom "ORACLE_CHECK_QUERY", tup_el_2523,
          ErlangAtom "false", ErlangAtom "false", ErlangAtom "true",
-         tup_el_2399,
+         tup_el_2527,
          ErlangCons (ErlangAtom "a")
            (ErlangCons (ErlangAtom "a")
               (ErlangCons (ErlangAtom "a")
                  (ErlangCons (ErlangAtom "a")
                     (ErlangCons (ErlangAtom "a") ErlangEmptyList)))),
-         ErlangAtom "oracle_check_query", tup_el_2412, ErlangAtom "bool",
-         tup_el_2418]
-  in let tup_el_2422 = toErl 122
-  in let tup_el_2426 = toErl 100
-  in let tup_el_2433 = ErlangTuple [ErlangAtom "address"]
-  in let tup_el_2436 = toErl "Arg0 := is Arg1 an oracle"
+         ErlangAtom "oracle_check_query", tup_el_2540, ErlangAtom "bool",
+         tup_el_2546]
+  in let tup_el_2550 = toErl 122
+  in let tup_el_2554 = toErl 100
+  in let tup_el_2561 = ErlangTuple [ErlangAtom "address"]
+  in let tup_el_2564 = toErl "Arg0 := is Arg1 an oracle"
   in let
-    head_2420 =
+    head_2548 =
       ErlangTuple
-        [ErlangAtom "IS_ORACLE", tup_el_2422, ErlangAtom "false",
-         ErlangAtom "false", ErlangAtom "true", tup_el_2426,
+        [ErlangAtom "IS_ORACLE", tup_el_2550, ErlangAtom "false",
+         ErlangAtom "false", ErlangAtom "true", tup_el_2554,
          ErlangCons (ErlangAtom "a")
            (ErlangCons (ErlangAtom "a") ErlangEmptyList),
-         ErlangAtom "is_oracle", tup_el_2433, ErlangAtom "bool",
-         tup_el_2436]
-  in let tup_el_2440 = toErl 123
-  in let tup_el_2444 = toErl 100
-  in let tup_el_2451 = ErlangTuple [ErlangAtom "address"]
-  in let tup_el_2454 = toErl "Arg0 := is Arg1 a contract"
+         ErlangAtom "is_oracle", tup_el_2561, ErlangAtom "bool",
+         tup_el_2564]
+  in let tup_el_2568 = toErl 123
+  in let tup_el_2572 = toErl 100
+  in let tup_el_2579 = ErlangTuple [ErlangAtom "address"]
+  in let tup_el_2582 = toErl "Arg0 := is Arg1 a contract"
   in let
-    head_2438 =
+    head_2566 =
       ErlangTuple
-        [ErlangAtom "IS_CONTRACT", tup_el_2440, ErlangAtom "false",
-         ErlangAtom "false", ErlangAtom "true", tup_el_2444,
+        [ErlangAtom "IS_CONTRACT", tup_el_2568, ErlangAtom "false",
+         ErlangAtom "false", ErlangAtom "true", tup_el_2572,
          ErlangCons (ErlangAtom "a")
            (ErlangCons (ErlangAtom "a") ErlangEmptyList),
-         ErlangAtom "is_contract", tup_el_2451, ErlangAtom "bool",
-         tup_el_2454]
-  in let tup_el_2458 = toErl 124
-  in let tup_el_2462 = toErl 100
-  in let tup_el_2469 = ErlangTuple [ErlangAtom "address"]
-  in let tup_el_2472 = toErl "Arg0 := is Arg1 a payable address"
+         ErlangAtom "is_contract", tup_el_2579, ErlangAtom "bool",
+         tup_el_2582]
+  in let tup_el_2586 = toErl 124
+  in let tup_el_2590 = toErl 100
+  in let tup_el_2597 = ErlangTuple [ErlangAtom "address"]
+  in let tup_el_2600 = toErl "Arg0 := is Arg1 a payable address"
   in let
-    head_2456 =
+    head_2584 =
       ErlangTuple
-        [ErlangAtom "IS_PAYABLE", tup_el_2458, ErlangAtom "false",
-         ErlangAtom "false", ErlangAtom "true", tup_el_2462,
+        [ErlangAtom "IS_PAYABLE", tup_el_2586, ErlangAtom "false",
+         ErlangAtom "false", ErlangAtom "true", tup_el_2590,
          ErlangCons (ErlangAtom "a")
            (ErlangCons (ErlangAtom "a") ErlangEmptyList),
-         ErlangAtom "is_payable", tup_el_2469, ErlangAtom "bool",
-         tup_el_2472]
-  in let tup_el_2476 = toErl 125
-  in let tup_el_2480 = toErl 10
-  in let tup_el_2485 = ErlangTuple []
-  in let tup_el_2487 = toErl "Arg0 := contract creator"
+         ErlangAtom "is_payable", tup_el_2597, ErlangAtom "bool",
+         tup_el_2600]
+  in let tup_el_2604 = toErl 125
+  in let tup_el_2608 = toErl 10
+  in let tup_el_2613 = ErlangTuple []
+  in let tup_el_2615 = toErl "Arg0 := contract creator"
   in let
-    head_2474 =
+    head_2602 =
       ErlangTuple
-        [ErlangAtom "CREATOR", tup_el_2476, ErlangAtom "false",
-         ErlangAtom "true", ErlangAtom "true", tup_el_2480,
+        [ErlangAtom "CREATOR", tup_el_2604, ErlangAtom "false",
+         ErlangAtom "true", ErlangAtom "true", tup_el_2608,
          ErlangCons (ErlangAtom "a") ErlangEmptyList,
-         ErlangAtom "contract_creator", tup_el_2485, ErlangAtom "address",
-         tup_el_2487]
-  in let tup_el_2491 = toErl 126
-  in let tup_el_2495 = toErl 1300
+         ErlangAtom "contract_creator", tup_el_2613, ErlangAtom "address",
+         tup_el_2615]
+  in let tup_el_2619 = toErl 126
+  in let tup_el_2623 = toErl 1300
   in let
-    tup_el_2506 =
+    tup_el_2634 =
       ErlangTuple
         [ErlangAtom "bytes", ErlangAtom "bytes", ErlangAtom "bytes"]
   in let
-    tup_el_2511 =
+    tup_el_2639 =
       toErl "Arg0 := ecverify_secp256k1(Hash, Addr, Signature)"
   in let
-    head_2489 =
+    head_2617 =
       ErlangTuple
-        [ErlangAtom "ECVERIFY_SECP256K1", tup_el_2491,
+        [ErlangAtom "ECVERIFY_SECP256K1", tup_el_2619,
          ErlangAtom "false", ErlangAtom "true", ErlangAtom "true",
-         tup_el_2495,
+         tup_el_2623,
          ErlangCons (ErlangAtom "a")
            (ErlangCons (ErlangAtom "a")
               (ErlangCons (ErlangAtom "a")
                  (ErlangCons (ErlangAtom "a") ErlangEmptyList))),
-         ErlangAtom "ecverify_secp256k1", tup_el_2506, ErlangAtom "bytes",
-         tup_el_2511]
-  in let tup_el_2515 = toErl 127
-  in let tup_el_2519 = toErl 1300
+         ErlangAtom "ecverify_secp256k1", tup_el_2634, ErlangAtom "bytes",
+         tup_el_2639]
+  in let tup_el_2643 = toErl 127
+  in let tup_el_2647 = toErl 1300
   in let
-    tup_el_2528 =
+    tup_el_2656 =
       ErlangTuple [ErlangAtom "bytes", ErlangAtom "bytes"]
   in let
-    tup_el_2532 =
+    tup_el_2660 =
       toErl "Arg0 := ecrecover_secp256k1(Hash, Signature)"
   in let
-    head_2513 =
+    head_2641 =
       ErlangTuple
-        [ErlangAtom "ECRECOVER_SECP256K1", tup_el_2515,
+        [ErlangAtom "ECRECOVER_SECP256K1", tup_el_2643,
          ErlangAtom "false", ErlangAtom "true", ErlangAtom "true",
-         tup_el_2519,
+         tup_el_2647,
          ErlangCons (ErlangAtom "a")
            (ErlangCons (ErlangAtom "a")
               (ErlangCons (ErlangAtom "a") ErlangEmptyList)),
-         ErlangAtom "ecrecover_secp256k1", tup_el_2528,
-         ErlangAtom "bytes", tup_el_2532]
-  in let tup_el_2536 = toErl 128
-  in let tup_el_2540 = toErl 10
-  in let tup_el_2547 = ErlangTuple [ErlangAtom "address"]
+         ErlangAtom "ecrecover_secp256k1", tup_el_2656,
+         ErlangAtom "bytes", tup_el_2660]
+  in let tup_el_2664 = toErl 128
+  in let tup_el_2668 = toErl 10
+  in let tup_el_2675 = ErlangTuple [ErlangAtom "address"]
   in let
-    tup_el_2550 = toErl "Arg0 := Arg1 - A no-op type conversion"
+    tup_el_2678 = toErl "Arg0 := Arg1 - A no-op type conversion"
   in let
-    head_2534 =
+    head_2662 =
       ErlangTuple
-        [ErlangAtom "ADDRESS_TO_CONTRACT", tup_el_2536,
+        [ErlangAtom "ADDRESS_TO_CONTRACT", tup_el_2664,
          ErlangAtom "false", ErlangAtom "true", ErlangAtom "true",
-         tup_el_2540,
+         tup_el_2668,
          ErlangCons (ErlangAtom "a")
            (ErlangCons (ErlangAtom "a") ErlangEmptyList),
-         ErlangAtom "address_to_contract", tup_el_2547,
-         ErlangAtom "contract", tup_el_2550]
-  in let tup_el_2554 = toErl 129
-  in let tup_el_2558 = toErl 100
-  in let tup_el_2565 = ErlangTuple [ErlangAtom "tuple"]
+         ErlangAtom "address_to_contract", tup_el_2675,
+         ErlangAtom "contract", tup_el_2678]
+  in let tup_el_2682 = toErl 129
+  in let tup_el_2686 = toErl 100
+  in let tup_el_2693 = ErlangTuple [ErlangAtom "tuple"]
   in let
-    tup_el_2568 =
+    tup_el_2696 =
       toErl "Arg0 := BLS12_381.g1_neg(Arg1) - Negate a G1-value"
   in let
-    head_2552 =
+    head_2680 =
       ErlangTuple
-        [ErlangAtom "BLS12_381_G1_NEG", tup_el_2554, ErlangAtom "false",
-         ErlangAtom "true", ErlangAtom "true", tup_el_2558,
+        [ErlangAtom "BLS12_381_G1_NEG", tup_el_2682, ErlangAtom "false",
+         ErlangAtom "true", ErlangAtom "true", tup_el_2686,
          ErlangCons (ErlangAtom "a")
            (ErlangCons (ErlangAtom "a") ErlangEmptyList),
-         ErlangAtom "bls12_381_g1_neg", tup_el_2565, ErlangAtom "tuple",
-         tup_el_2568]
-  in let tup_el_2572 = toErl 130
-  in let tup_el_2576 = toErl 100
-  in let tup_el_2583 = ErlangTuple [ErlangAtom "tuple"]
+         ErlangAtom "bls12_381_g1_neg", tup_el_2693, ErlangAtom "tuple",
+         tup_el_2696]
+  in let tup_el_2700 = toErl 130
+  in let tup_el_2704 = toErl 100
+  in let tup_el_2711 = ErlangTuple [ErlangAtom "tuple"]
   in let
-    tup_el_2586 =
+    tup_el_2714 =
       toErl
         "Arg0 := BLS12_381.g1_normalize(Arg1) - Normalize a G1-value"
   in let
-    head_2570 =
+    head_2698 =
       ErlangTuple
-        [ErlangAtom "BLS12_381_G1_NORM", tup_el_2572, ErlangAtom "false",
-         ErlangAtom "true", ErlangAtom "true", tup_el_2576,
+        [ErlangAtom "BLS12_381_G1_NORM", tup_el_2700, ErlangAtom "false",
+         ErlangAtom "true", ErlangAtom "true", tup_el_2704,
          ErlangCons (ErlangAtom "a")
            (ErlangCons (ErlangAtom "a") ErlangEmptyList),
-         ErlangAtom "bls12_381_g1_norm", tup_el_2583, ErlangAtom "tuple",
-         tup_el_2586]
-  in let tup_el_2590 = toErl 131
-  in let tup_el_2594 = toErl 2000
-  in let tup_el_2601 = ErlangTuple [ErlangAtom "tuple"]
+         ErlangAtom "bls12_381_g1_norm", tup_el_2711, ErlangAtom "tuple",
+         tup_el_2714]
+  in let tup_el_2718 = toErl 131
+  in let tup_el_2722 = toErl 2000
+  in let tup_el_2729 = ErlangTuple [ErlangAtom "tuple"]
   in let
-    tup_el_2604 =
+    tup_el_2732 =
       toErl
         "Arg0 := BLS12_381.g1_valid(Arg1) - Check if G1-value is a valid group member"
   in let
-    head_2588 =
+    head_2716 =
       ErlangTuple
-        [ErlangAtom "BLS12_381_G1_VALID", tup_el_2590,
+        [ErlangAtom "BLS12_381_G1_VALID", tup_el_2718,
          ErlangAtom "false", ErlangAtom "true", ErlangAtom "true",
-         tup_el_2594,
+         tup_el_2722,
          ErlangCons (ErlangAtom "a")
            (ErlangCons (ErlangAtom "a") ErlangEmptyList),
-         ErlangAtom "bls12_381_g1_valid", tup_el_2601, ErlangAtom "bool",
-         tup_el_2604]
-  in let tup_el_2608 = toErl 132
-  in let tup_el_2612 = toErl 30
-  in let tup_el_2619 = ErlangTuple [ErlangAtom "tuple"]
+         ErlangAtom "bls12_381_g1_valid", tup_el_2729, ErlangAtom "bool",
+         tup_el_2732]
+  in let tup_el_2736 = toErl 132
+  in let tup_el_2740 = toErl 30
+  in let tup_el_2747 = ErlangTuple [ErlangAtom "tuple"]
   in let
-    tup_el_2622 =
+    tup_el_2750 =
       toErl
         "Arg0 := BLS12_381.g1_is_zero(Arg1) - Check if G1-value is zero"
   in let
-    head_2606 =
+    head_2734 =
       ErlangTuple
-        [ErlangAtom "BLS12_381_G1_IS_ZERO", tup_el_2608,
+        [ErlangAtom "BLS12_381_G1_IS_ZERO", tup_el_2736,
          ErlangAtom "false", ErlangAtom "true", ErlangAtom "true",
-         tup_el_2612,
+         tup_el_2740,
          ErlangCons (ErlangAtom "a")
            (ErlangCons (ErlangAtom "a") ErlangEmptyList),
-         ErlangAtom "bls12_381_g1_is_zero", tup_el_2619,
-         ErlangAtom "bool", tup_el_2622]
-  in let tup_el_2626 = toErl 133
-  in let tup_el_2630 = toErl 100
+         ErlangAtom "bls12_381_g1_is_zero", tup_el_2747,
+         ErlangAtom "bool", tup_el_2750]
+  in let tup_el_2754 = toErl 133
+  in let tup_el_2758 = toErl 100
   in let
-    tup_el_2639 =
+    tup_el_2767 =
       ErlangTuple [ErlangAtom "tuple", ErlangAtom "tuple"]
   in let
-    tup_el_2643 =
+    tup_el_2771 =
       toErl "Arg0 := BLS12_381.g1_add(Arg1, Arg2) - Add two G1-values"
   in let
-    head_2624 =
+    head_2752 =
       ErlangTuple
-        [ErlangAtom "BLS12_381_G1_ADD", tup_el_2626, ErlangAtom "false",
-         ErlangAtom "true", ErlangAtom "true", tup_el_2630,
+        [ErlangAtom "BLS12_381_G1_ADD", tup_el_2754, ErlangAtom "false",
+         ErlangAtom "true", ErlangAtom "true", tup_el_2758,
          ErlangCons (ErlangAtom "a")
            (ErlangCons (ErlangAtom "a")
               (ErlangCons (ErlangAtom "a") ErlangEmptyList)),
-         ErlangAtom "bls12_381_g1_add", tup_el_2639, ErlangAtom "tuple",
-         tup_el_2643]
-  in let tup_el_2647 = toErl 134
-  in let tup_el_2651 = toErl 1000
+         ErlangAtom "bls12_381_g1_add", tup_el_2767, ErlangAtom "tuple",
+         tup_el_2771]
+  in let tup_el_2775 = toErl 134
+  in let tup_el_2779 = toErl 1000
   in let
-    tup_el_2660 =
+    tup_el_2788 =
       ErlangTuple [ErlangAtom "tuple", ErlangAtom "tuple"]
   in let
-    tup_el_2664 =
+    tup_el_2792 =
       toErl
         "Arg0 := BLS12_381.g1_mul(Arg1, Arg2) - Scalar multiplication for a G1-value (Arg1), and an Fr-value"
   in let
-    head_2645 =
+    head_2773 =
       ErlangTuple
-        [ErlangAtom "BLS12_381_G1_MUL", tup_el_2647, ErlangAtom "false",
-         ErlangAtom "true", ErlangAtom "true", tup_el_2651,
+        [ErlangAtom "BLS12_381_G1_MUL", tup_el_2775, ErlangAtom "false",
+         ErlangAtom "true", ErlangAtom "true", tup_el_2779,
          ErlangCons (ErlangAtom "a")
            (ErlangCons (ErlangAtom "a")
               (ErlangCons (ErlangAtom "a") ErlangEmptyList)),
-         ErlangAtom "bls12_381_g1_mul", tup_el_2660, ErlangAtom "tuple",
-         tup_el_2664]
-  in let tup_el_2668 = toErl 135
-  in let tup_el_2672 = toErl 100
-  in let tup_el_2679 = ErlangTuple [ErlangAtom "tuple"]
+         ErlangAtom "bls12_381_g1_mul", tup_el_2788, ErlangAtom "tuple",
+         tup_el_2792]
+  in let tup_el_2796 = toErl 135
+  in let tup_el_2800 = toErl 100
+  in let tup_el_2807 = ErlangTuple [ErlangAtom "tuple"]
   in let
-    tup_el_2682 =
+    tup_el_2810 =
       toErl "Arg0 := BLS12_381.g2_neg(Arg1) - Negate a G2-value"
   in let
-    head_2666 =
+    head_2794 =
       ErlangTuple
-        [ErlangAtom "BLS12_381_G2_NEG", tup_el_2668, ErlangAtom "false",
-         ErlangAtom "true", ErlangAtom "true", tup_el_2672,
+        [ErlangAtom "BLS12_381_G2_NEG", tup_el_2796, ErlangAtom "false",
+         ErlangAtom "true", ErlangAtom "true", tup_el_2800,
          ErlangCons (ErlangAtom "a")
            (ErlangCons (ErlangAtom "a") ErlangEmptyList),
-         ErlangAtom "bls12_381_g2_neg", tup_el_2679, ErlangAtom "tuple",
-         tup_el_2682]
-  in let tup_el_2686 = toErl 136
-  in let tup_el_2690 = toErl 100
-  in let tup_el_2697 = ErlangTuple [ErlangAtom "tuple"]
+         ErlangAtom "bls12_381_g2_neg", tup_el_2807, ErlangAtom "tuple",
+         tup_el_2810]
+  in let tup_el_2814 = toErl 136
+  in let tup_el_2818 = toErl 100
+  in let tup_el_2825 = ErlangTuple [ErlangAtom "tuple"]
   in let
-    tup_el_2700 =
+    tup_el_2828 =
       toErl
         "Arg0 := BLS12_381.g2_normalize(Arg1) - Normalize a G2-value"
   in let
-    head_2684 =
+    head_2812 =
       ErlangTuple
-        [ErlangAtom "BLS12_381_G2_NORM", tup_el_2686, ErlangAtom "false",
-         ErlangAtom "true", ErlangAtom "true", tup_el_2690,
+        [ErlangAtom "BLS12_381_G2_NORM", tup_el_2814, ErlangAtom "false",
+         ErlangAtom "true", ErlangAtom "true", tup_el_2818,
          ErlangCons (ErlangAtom "a")
            (ErlangCons (ErlangAtom "a") ErlangEmptyList),
-         ErlangAtom "bls12_381_g2_norm", tup_el_2697, ErlangAtom "tuple",
-         tup_el_2700]
-  in let tup_el_2704 = toErl 137
-  in let tup_el_2708 = toErl 2000
-  in let tup_el_2715 = ErlangTuple [ErlangAtom "tuple"]
+         ErlangAtom "bls12_381_g2_norm", tup_el_2825, ErlangAtom "tuple",
+         tup_el_2828]
+  in let tup_el_2832 = toErl 137
+  in let tup_el_2836 = toErl 2000
+  in let tup_el_2843 = ErlangTuple [ErlangAtom "tuple"]
   in let
-    tup_el_2718 =
+    tup_el_2846 =
       toErl
         "Arg0 := BLS12_381.g2_valid(Arg1) - Check if G2-value is a valid group member"
   in let
-    head_2702 =
+    head_2830 =
       ErlangTuple
-        [ErlangAtom "BLS12_381_G2_VALID", tup_el_2704,
+        [ErlangAtom "BLS12_381_G2_VALID", tup_el_2832,
          ErlangAtom "false", ErlangAtom "true", ErlangAtom "true",
-         tup_el_2708,
+         tup_el_2836,
          ErlangCons (ErlangAtom "a")
            (ErlangCons (ErlangAtom "a") ErlangEmptyList),
-         ErlangAtom "bls12_381_g2_valid", tup_el_2715, ErlangAtom "bool",
-         tup_el_2718]
-  in let tup_el_2722 = toErl 138
-  in let tup_el_2726 = toErl 30
-  in let tup_el_2733 = ErlangTuple [ErlangAtom "tuple"]
+         ErlangAtom "bls12_381_g2_valid", tup_el_2843, ErlangAtom "bool",
+         tup_el_2846]
+  in let tup_el_2850 = toErl 138
+  in let tup_el_2854 = toErl 30
+  in let tup_el_2861 = ErlangTuple [ErlangAtom "tuple"]
   in let
-    tup_el_2736 =
+    tup_el_2864 =
       toErl
         "Arg0 := BLS12_381.g2_is_zero(Arg1) - Check if G2-value is zero"
   in let
-    head_2720 =
+    head_2848 =
       ErlangTuple
-        [ErlangAtom "BLS12_381_G2_IS_ZERO", tup_el_2722,
+        [ErlangAtom "BLS12_381_G2_IS_ZERO", tup_el_2850,
          ErlangAtom "false", ErlangAtom "true", ErlangAtom "true",
-         tup_el_2726,
+         tup_el_2854,
          ErlangCons (ErlangAtom "a")
            (ErlangCons (ErlangAtom "a") ErlangEmptyList),
-         ErlangAtom "bls12_381_g2_is_zero", tup_el_2733,
-         ErlangAtom "bool", tup_el_2736]
-  in let tup_el_2740 = toErl 139
-  in let tup_el_2744 = toErl 100
+         ErlangAtom "bls12_381_g2_is_zero", tup_el_2861,
+         ErlangAtom "bool", tup_el_2864]
+  in let tup_el_2868 = toErl 139
+  in let tup_el_2872 = toErl 100
   in let
-    tup_el_2753 =
+    tup_el_2881 =
       ErlangTuple [ErlangAtom "tuple", ErlangAtom "tuple"]
   in let
-    tup_el_2757 =
+    tup_el_2885 =
       toErl "Arg0 := BLS12_381.g2_add(Arg1, Arg2) - Add two G2-values"
   in let
-    head_2738 =
+    head_2866 =
       ErlangTuple
-        [ErlangAtom "BLS12_381_G2_ADD", tup_el_2740, ErlangAtom "false",
-         ErlangAtom "true", ErlangAtom "true", tup_el_2744,
+        [ErlangAtom "BLS12_381_G2_ADD", tup_el_2868, ErlangAtom "false",
+         ErlangAtom "true", ErlangAtom "true", tup_el_2872,
          ErlangCons (ErlangAtom "a")
            (ErlangCons (ErlangAtom "a")
               (ErlangCons (ErlangAtom "a") ErlangEmptyList)),
-         ErlangAtom "bls12_381_g2_add", tup_el_2753, ErlangAtom "tuple",
-         tup_el_2757]
-  in let tup_el_2761 = toErl 140
-  in let tup_el_2765 = toErl 1000
+         ErlangAtom "bls12_381_g2_add", tup_el_2881, ErlangAtom "tuple",
+         tup_el_2885]
+  in let tup_el_2889 = toErl 140
+  in let tup_el_2893 = toErl 1000
   in let
-    tup_el_2774 =
+    tup_el_2902 =
       ErlangTuple [ErlangAtom "tuple", ErlangAtom "tuple"]
   in let
-    tup_el_2778 =
+    tup_el_2906 =
       toErl
         "Arg0 := BLS12_381.g2_mul(Arg1, Arg2) - Scalar multiplication for a G2-value (Arg2), and an Fr-value"
   in let
-    head_2759 =
+    head_2887 =
       ErlangTuple
-        [ErlangAtom "BLS12_381_G2_MUL", tup_el_2761, ErlangAtom "false",
-         ErlangAtom "true", ErlangAtom "true", tup_el_2765,
+        [ErlangAtom "BLS12_381_G2_MUL", tup_el_2889, ErlangAtom "false",
+         ErlangAtom "true", ErlangAtom "true", tup_el_2893,
          ErlangCons (ErlangAtom "a")
            (ErlangCons (ErlangAtom "a")
               (ErlangCons (ErlangAtom "a") ErlangEmptyList)),
-         ErlangAtom "bls12_381_g2_mul", tup_el_2774, ErlangAtom "tuple",
-         tup_el_2778]
-  in let tup_el_2782 = toErl 141
-  in let tup_el_2786 = toErl 100
-  in let tup_el_2793 = ErlangTuple [ErlangAtom "tuple"]
+         ErlangAtom "bls12_381_g2_mul", tup_el_2902, ErlangAtom "tuple",
+         tup_el_2906]
+  in let tup_el_2910 = toErl 141
+  in let tup_el_2914 = toErl 100
+  in let tup_el_2921 = ErlangTuple [ErlangAtom "tuple"]
   in let
-    tup_el_2796 =
+    tup_el_2924 =
       toErl "Arg0 := BLS12_381.gt_inv(Arg1) - Invert a GT-value"
   in let
-    head_2780 =
+    head_2908 =
       ErlangTuple
-        [ErlangAtom "BLS12_381_GT_INV", tup_el_2782, ErlangAtom "false",
-         ErlangAtom "true", ErlangAtom "true", tup_el_2786,
+        [ErlangAtom "BLS12_381_GT_INV", tup_el_2910, ErlangAtom "false",
+         ErlangAtom "true", ErlangAtom "true", tup_el_2914,
          ErlangCons (ErlangAtom "a")
            (ErlangCons (ErlangAtom "a") ErlangEmptyList),
-         ErlangAtom "bls12_381_gt_inv", tup_el_2793, ErlangAtom "tuple",
-         tup_el_2796]
-  in let tup_el_2800 = toErl 142
-  in let tup_el_2804 = toErl 100
+         ErlangAtom "bls12_381_gt_inv", tup_el_2921, ErlangAtom "tuple",
+         tup_el_2924]
+  in let tup_el_2928 = toErl 142
+  in let tup_el_2932 = toErl 100
   in let
-    tup_el_2813 =
+    tup_el_2941 =
       ErlangTuple [ErlangAtom "tuple", ErlangAtom "tuple"]
   in let
-    tup_el_2817 =
+    tup_el_2945 =
       toErl "Arg0 := BLS12_381.gt_add(Arg1, Arg2) - Add two GT-values"
   in let
-    head_2798 =
+    head_2926 =
       ErlangTuple
-        [ErlangAtom "BLS12_381_GT_ADD", tup_el_2800, ErlangAtom "false",
-         ErlangAtom "true", ErlangAtom "true", tup_el_2804,
+        [ErlangAtom "BLS12_381_GT_ADD", tup_el_2928, ErlangAtom "false",
+         ErlangAtom "true", ErlangAtom "true", tup_el_2932,
          ErlangCons (ErlangAtom "a")
            (ErlangCons (ErlangAtom "a")
               (ErlangCons (ErlangAtom "a") ErlangEmptyList)),
-         ErlangAtom "bls12_381_gt_add", tup_el_2813, ErlangAtom "tuple",
-         tup_el_2817]
-  in let tup_el_2821 = toErl 143
-  in let tup_el_2825 = toErl 100
+         ErlangAtom "bls12_381_gt_add", tup_el_2941, ErlangAtom "tuple",
+         tup_el_2945]
+  in let tup_el_2949 = toErl 143
+  in let tup_el_2953 = toErl 100
   in let
-    tup_el_2834 =
+    tup_el_2962 =
       ErlangTuple [ErlangAtom "tuple", ErlangAtom "tuple"]
   in let
-    tup_el_2838 =
+    tup_el_2966 =
       toErl
         "Arg0 := BLS12_381.gt_mul(Arg1, Arg2) - Multiply two GT-values"
   in let
-    head_2819 =
+    head_2947 =
       ErlangTuple
-        [ErlangAtom "BLS12_381_GT_MUL", tup_el_2821, ErlangAtom "false",
-         ErlangAtom "true", ErlangAtom "true", tup_el_2825,
+        [ErlangAtom "BLS12_381_GT_MUL", tup_el_2949, ErlangAtom "false",
+         ErlangAtom "true", ErlangAtom "true", tup_el_2953,
          ErlangCons (ErlangAtom "a")
            (ErlangCons (ErlangAtom "a")
               (ErlangCons (ErlangAtom "a") ErlangEmptyList)),
-         ErlangAtom "bls12_381_gt_mul", tup_el_2834, ErlangAtom "tuple",
-         tup_el_2838]
-  in let tup_el_2842 = toErl 144
-  in let tup_el_2846 = toErl 2000
+         ErlangAtom "bls12_381_gt_mul", tup_el_2962, ErlangAtom "tuple",
+         tup_el_2966]
+  in let tup_el_2970 = toErl 144
+  in let tup_el_2974 = toErl 2000
   in let
-    tup_el_2855 =
+    tup_el_2983 =
       ErlangTuple [ErlangAtom "tuple", ErlangAtom "tuple"]
   in let
-    tup_el_2859 =
+    tup_el_2987 =
       toErl
         "Arg0 := BLS12_381.gt_pow(Arg1, Arg2) - Scalar exponentiation for a GT-value (Arg2), and an Fr-value"
   in let
-    head_2840 =
+    head_2968 =
       ErlangTuple
-        [ErlangAtom "BLS12_381_GT_POW", tup_el_2842, ErlangAtom "false",
-         ErlangAtom "true", ErlangAtom "true", tup_el_2846,
+        [ErlangAtom "BLS12_381_GT_POW", tup_el_2970, ErlangAtom "false",
+         ErlangAtom "true", ErlangAtom "true", tup_el_2974,
          ErlangCons (ErlangAtom "a")
            (ErlangCons (ErlangAtom "a")
               (ErlangCons (ErlangAtom "a") ErlangEmptyList)),
-         ErlangAtom "bls12_381_gt_pow", tup_el_2855, ErlangAtom "tuple",
-         tup_el_2859]
-  in let tup_el_2863 = toErl 145
-  in let tup_el_2867 = toErl 30
-  in let tup_el_2874 = ErlangTuple [ErlangAtom "tuple"]
+         ErlangAtom "bls12_381_gt_pow", tup_el_2983, ErlangAtom "tuple",
+         tup_el_2987]
+  in let tup_el_2991 = toErl 145
+  in let tup_el_2995 = toErl 30
+  in let tup_el_3002 = ErlangTuple [ErlangAtom "tuple"]
   in let
-    tup_el_2877 =
+    tup_el_3005 =
       toErl
         "Arg0 := BLS12_381.gt_is_one(Arg1) - Check if a GT value is \"one\""
   in let
-    head_2861 =
+    head_2989 =
       ErlangTuple
-        [ErlangAtom "BLS12_381_GT_IS_ONE", tup_el_2863,
+        [ErlangAtom "BLS12_381_GT_IS_ONE", tup_el_2991,
          ErlangAtom "false", ErlangAtom "true", ErlangAtom "true",
-         tup_el_2867,
+         tup_el_2995,
          ErlangCons (ErlangAtom "a")
            (ErlangCons (ErlangAtom "a") ErlangEmptyList),
-         ErlangAtom "bls12_381_gt_is_one", tup_el_2874, ErlangAtom "bool",
-         tup_el_2877]
-  in let tup_el_2881 = toErl 146
-  in let tup_el_2885 = toErl 12000
+         ErlangAtom "bls12_381_gt_is_one", tup_el_3002, ErlangAtom "bool",
+         tup_el_3005]
+  in let tup_el_3009 = toErl 146
+  in let tup_el_3013 = toErl 12000
   in let
-    tup_el_2894 =
+    tup_el_3022 =
       ErlangTuple [ErlangAtom "tuple", ErlangAtom "tuple"]
   in let
-    tup_el_2898 =
+    tup_el_3026 =
       toErl
         "Arg0 := BLS12_381.pairing(Arg1, Arg2) - Find the pairing of a G1-value (Arg1) and a G2-value (Arg2)"
   in let
-    head_2879 =
+    head_3007 =
       ErlangTuple
-        [ErlangAtom "BLS12_381_PAIRING", tup_el_2881, ErlangAtom "false",
-         ErlangAtom "true", ErlangAtom "true", tup_el_2885,
+        [ErlangAtom "BLS12_381_PAIRING", tup_el_3009, ErlangAtom "false",
+         ErlangAtom "true", ErlangAtom "true", tup_el_3013,
          ErlangCons (ErlangAtom "a")
            (ErlangCons (ErlangAtom "a")
               (ErlangCons (ErlangAtom "a") ErlangEmptyList)),
-         ErlangAtom "bls12_381_pairing", tup_el_2894, ErlangAtom "tuple",
-         tup_el_2898]
-  in let tup_el_2902 = toErl 147
-  in let tup_el_2906 = toErl 5000
+         ErlangAtom "bls12_381_pairing", tup_el_3022, ErlangAtom "tuple",
+         tup_el_3026]
+  in let tup_el_3030 = toErl 147
+  in let tup_el_3034 = toErl 5000
   in let
-    tup_el_2915 =
+    tup_el_3043 =
       ErlangTuple [ErlangAtom "tuple", ErlangAtom "tuple"]
   in let
-    tup_el_2919 =
+    tup_el_3047 =
       toErl
         "Arg0 := BLS12_381.miller_loop(Arg1, Arg2) - Do the Miller-loop step of pairing for a G1-value (Arg1) and a G2-value (Arg2)"
   in let
-    head_2900 =
+    head_3028 =
       ErlangTuple
-        [ErlangAtom "BLS12_381_MILLER_LOOP", tup_el_2902,
+        [ErlangAtom "BLS12_381_MILLER_LOOP", tup_el_3030,
          ErlangAtom "false", ErlangAtom "true", ErlangAtom "true",
-         tup_el_2906,
+         tup_el_3034,
          ErlangCons (ErlangAtom "a")
            (ErlangCons (ErlangAtom "a")
               (ErlangCons (ErlangAtom "a") ErlangEmptyList)),
-         ErlangAtom "bls12_381_miller_loop", tup_el_2915,
-         ErlangAtom "tuple", tup_el_2919]
-  in let tup_el_2923 = toErl 148
-  in let tup_el_2927 = toErl 7000
-  in let tup_el_2934 = ErlangTuple [ErlangAtom "tuple"]
+         ErlangAtom "bls12_381_miller_loop", tup_el_3043,
+         ErlangAtom "tuple", tup_el_3047]
+  in let tup_el_3051 = toErl 148
+  in let tup_el_3055 = toErl 7000
+  in let tup_el_3062 = ErlangTuple [ErlangAtom "tuple"]
   in let
-    tup_el_2937 =
+    tup_el_3065 =
       toErl
         "Arg0 := BLS12_381.final_exp(Arg1) - Do the final exponentiation in pairing"
   in let
-    head_2921 =
+    head_3049 =
       ErlangTuple
-        [ErlangAtom "BLS12_381_FINAL_EXP", tup_el_2923,
+        [ErlangAtom "BLS12_381_FINAL_EXP", tup_el_3051,
          ErlangAtom "false", ErlangAtom "true", ErlangAtom "true",
-         tup_el_2927,
+         tup_el_3055,
          ErlangCons (ErlangAtom "a")
            (ErlangCons (ErlangAtom "a") ErlangEmptyList),
-         ErlangAtom "bls12_381_final_exp", tup_el_2934,
-         ErlangAtom "tuple", tup_el_2937]
-  in let tup_el_2941 = toErl 149
-  in let tup_el_2945 = toErl 30
-  in let tup_el_2952 = ErlangTuple [ErlangAtom "tuple"]
+         ErlangAtom "bls12_381_final_exp", tup_el_3062,
+         ErlangAtom "tuple", tup_el_3065]
+  in let tup_el_3069 = toErl 149
+  in let tup_el_3073 = toErl 30
+  in let tup_el_3080 = ErlangTuple [ErlangAtom "tuple"]
   in let
-    tup_el_2955 =
+    tup_el_3083 =
       toErl
         "Arg0 := to_montgomery(Arg1) - Convert (Big)integer to montgomery representation (32 bytes)"
   in let
-    head_2939 =
+    head_3067 =
       ErlangTuple
-        [ErlangAtom "BLS12_381_INT_TO_FR", tup_el_2941,
+        [ErlangAtom "BLS12_381_INT_TO_FR", tup_el_3069,
          ErlangAtom "false", ErlangAtom "true", ErlangAtom "true",
-         tup_el_2945,
+         tup_el_3073,
          ErlangCons (ErlangAtom "a")
            (ErlangCons (ErlangAtom "a") ErlangEmptyList),
-         ErlangAtom "bls12_381_int_to_fr", tup_el_2952,
-         ErlangAtom "tuple", tup_el_2955]
-  in let tup_el_2959 = toErl 150
-  in let tup_el_2963 = toErl 30
-  in let tup_el_2970 = ErlangTuple [ErlangAtom "tuple"]
+         ErlangAtom "bls12_381_int_to_fr", tup_el_3080,
+         ErlangAtom "tuple", tup_el_3083]
+  in let tup_el_3087 = toErl 150
+  in let tup_el_3091 = toErl 30
+  in let tup_el_3098 = ErlangTuple [ErlangAtom "tuple"]
   in let
-    tup_el_2973 =
+    tup_el_3101 =
       toErl
         "Arg0 := to_montgomery(Arg1) - Convert (Big)integer to montgomery representation (48 bytes)"
   in let
-    head_2957 =
+    head_3085 =
       ErlangTuple
-        [ErlangAtom "BLS12_381_INT_TO_FP", tup_el_2959,
+        [ErlangAtom "BLS12_381_INT_TO_FP", tup_el_3087,
          ErlangAtom "false", ErlangAtom "true", ErlangAtom "true",
-         tup_el_2963,
+         tup_el_3091,
          ErlangCons (ErlangAtom "a")
            (ErlangCons (ErlangAtom "a") ErlangEmptyList),
-         ErlangAtom "bls12_381_int_to_fp", tup_el_2970,
-         ErlangAtom "tuple", tup_el_2973]
-  in let tup_el_2977 = toErl 151
-  in let tup_el_2981 = toErl 30
-  in let tup_el_2988 = ErlangTuple [ErlangAtom "tuple"]
+         ErlangAtom "bls12_381_int_to_fp", tup_el_3098,
+         ErlangAtom "tuple", tup_el_3101]
+  in let tup_el_3105 = toErl 151
+  in let tup_el_3109 = toErl 30
+  in let tup_el_3116 = ErlangTuple [ErlangAtom "tuple"]
   in let
-    tup_el_2991 =
+    tup_el_3119 =
       toErl
         "Arg0 := from_montgomery(Arg1) - Convert montgomery representation (32 bytes) to integer"
   in let
-    head_2975 =
+    head_3103 =
       ErlangTuple
-        [ErlangAtom "BLS12_381_FR_TO_INT", tup_el_2977,
+        [ErlangAtom "BLS12_381_FR_TO_INT", tup_el_3105,
          ErlangAtom "false", ErlangAtom "true", ErlangAtom "true",
-         tup_el_2981,
+         tup_el_3109,
          ErlangCons (ErlangAtom "a")
            (ErlangCons (ErlangAtom "a") ErlangEmptyList),
-         ErlangAtom "bls12_381_fr_to_int", tup_el_2988,
-         ErlangAtom "tuple", tup_el_2991]
-  in let tup_el_2995 = toErl 152
-  in let tup_el_2999 = toErl 30
-  in let tup_el_3006 = ErlangTuple [ErlangAtom "tuple"]
+         ErlangAtom "bls12_381_fr_to_int", tup_el_3116,
+         ErlangAtom "tuple", tup_el_3119]
+  in let tup_el_3123 = toErl 152
+  in let tup_el_3127 = toErl 30
+  in let tup_el_3134 = ErlangTuple [ErlangAtom "tuple"]
   in let
-    tup_el_3009 =
+    tup_el_3137 =
       toErl
         "Arg0 := from_montgomery(Arg1) - Convert montgomery representation (48 bytes) to integer"
   in let
-    head_2993 =
+    head_3121 =
       ErlangTuple
-        [ErlangAtom "BLS12_381_FP_TO_INT", tup_el_2995,
+        [ErlangAtom "BLS12_381_FP_TO_INT", tup_el_3123,
          ErlangAtom "false", ErlangAtom "true", ErlangAtom "true",
-         tup_el_2999,
+         tup_el_3127,
          ErlangCons (ErlangAtom "a")
            (ErlangCons (ErlangAtom "a") ErlangEmptyList),
-         ErlangAtom "bls12_381_fp_to_int", tup_el_3006,
-         ErlangAtom "tuple", tup_el_3009]
-  in let tup_el_3013 = toErl 153
-  in let tup_el_3017 = toErl 100
-  in let tup_el_3024 = ErlangTuple [ErlangAtom "string"]
+         ErlangAtom "bls12_381_fp_to_int", tup_el_3134,
+         ErlangAtom "tuple", tup_el_3137]
+  in let tup_el_3141 = toErl 153
+  in let tup_el_3145 = toErl 2000
+  in let tup_el_3152 = ErlangTuple [ErlangAtom "string"]
   in let
-    tup_el_3027 =
+    tup_el_3155 =
       toErl "Lookup the name of Arg0. Returns option(AENS.name)"
   in let
-    head_3011 =
+    head_3139 =
       ErlangTuple
-        [ErlangAtom "AENS_LOOKUP", tup_el_3013, ErlangAtom "false",
-         ErlangAtom "false", ErlangAtom "true", tup_el_3017,
+        [ErlangAtom "AENS_LOOKUP", tup_el_3141, ErlangAtom "false",
+         ErlangAtom "false", ErlangAtom "true", tup_el_3145,
          ErlangCons (ErlangAtom "a")
            (ErlangCons (ErlangAtom "a") ErlangEmptyList),
-         ErlangAtom "aens_lookup", tup_el_3024, ErlangAtom "variant",
-         tup_el_3027]
-  in let tup_el_3031 = toErl 154
-  in let tup_el_3035 = toErl 100
-  in let tup_el_3042 = ErlangTuple [ErlangAtom "oracle"]
-  in let tup_el_3045 = toErl "Arg0 := expiry block for oracle Arg1"
+         ErlangAtom "aens_lookup", tup_el_3152, ErlangAtom "variant",
+         tup_el_3155]
+  in let tup_el_3159 = toErl 154
+  in let tup_el_3163 = toErl 2000
+  in let tup_el_3170 = ErlangTuple [ErlangAtom "oracle"]
+  in let tup_el_3173 = toErl "Arg0 := expiry block for oracle Arg1"
   in let
-    head_3029 =
+    head_3157 =
       ErlangTuple
-        [ErlangAtom "ORACLE_EXPIRY", tup_el_3031, ErlangAtom "false",
-         ErlangAtom "false", ErlangAtom "true", tup_el_3035,
+        [ErlangAtom "ORACLE_EXPIRY", tup_el_3159, ErlangAtom "false",
+         ErlangAtom "false", ErlangAtom "true", tup_el_3163,
          ErlangCons (ErlangAtom "a")
            (ErlangCons (ErlangAtom "a") ErlangEmptyList),
-         ErlangAtom "oracle_expiry", tup_el_3042, ErlangAtom "int",
-         tup_el_3045]
-  in let tup_el_3049 = toErl 155
-  in let tup_el_3053 = toErl 100
-  in let tup_el_3058 = ErlangTuple []
+         ErlangAtom "oracle_expiry", tup_el_3170, ErlangAtom "int",
+         tup_el_3173]
+  in let tup_el_3177 = toErl 155
+  in let tup_el_3181 = toErl 100
+  in let tup_el_3186 = ErlangTuple []
   in let
-    tup_el_3060 =
+    tup_el_3188 =
       toErl
         "If in GA authentication context return Some(Tx) otherwise None."
   in let
-    head_3047 =
+    head_3175 =
       ErlangTuple
-        [ErlangAtom "AUTH_TX", tup_el_3049, ErlangAtom "false",
-         ErlangAtom "true", ErlangAtom "true", tup_el_3053,
+        [ErlangAtom "AUTH_TX", tup_el_3177, ErlangAtom "false",
+         ErlangAtom "true", ErlangAtom "true", tup_el_3181,
          ErlangCons (ErlangAtom "a") ErlangEmptyList,
-         ErlangAtom "auth_tx", tup_el_3058, ErlangAtom "variant",
-         tup_el_3060]
-  in let tup_el_3064 = toErl 156
-  in let tup_el_3068 = toErl 100
-  in let tup_el_3075 = ErlangTuple [ErlangAtom "string"]
+         ErlangAtom "auth_tx", tup_el_3186, ErlangAtom "variant",
+         tup_el_3188]
+  in let tup_el_3192 = toErl 156
+  in let tup_el_3196 = toErl 100
+  in let tup_el_3203 = ErlangTuple [ErlangAtom "string"]
   in let
-    tup_el_3078 =
+    tup_el_3206 =
       toErl "Arg0 := string converted to list of characters"
   in let
-    head_3062 =
+    head_3190 =
       ErlangTuple
-        [ErlangAtom "STR_TO_LIST", tup_el_3064, ErlangAtom "false",
-         ErlangAtom "true", ErlangAtom "true", tup_el_3068,
+        [ErlangAtom "STR_TO_LIST", tup_el_3192, ErlangAtom "false",
+         ErlangAtom "true", ErlangAtom "true", tup_el_3196,
          ErlangCons (ErlangAtom "a")
            (ErlangCons (ErlangAtom "a") ErlangEmptyList),
-         ErlangAtom "str_to_list", tup_el_3075, ErlangAtom "list",
-         tup_el_3078]
-  in let tup_el_3082 = toErl 157
-  in let tup_el_3086 = toErl 100
-  in let tup_el_3093 = ErlangTuple [ErlangAtom "list"]
+         ErlangAtom "str_to_list", tup_el_3203, ErlangAtom "list",
+         tup_el_3206]
+  in let tup_el_3210 = toErl 157
+  in let tup_el_3214 = toErl 100
+  in let tup_el_3221 = ErlangTuple [ErlangAtom "list"]
   in let
-    tup_el_3096 =
+    tup_el_3224 =
       toErl "Arg0 := string converted from list of characters"
   in let
-    head_3080 =
+    head_3208 =
       ErlangTuple
-        [ErlangAtom "STR_FROM_LIST", tup_el_3082, ErlangAtom "false",
-         ErlangAtom "true", ErlangAtom "true", tup_el_3086,
+        [ErlangAtom "STR_FROM_LIST", tup_el_3210, ErlangAtom "false",
+         ErlangAtom "true", ErlangAtom "true", tup_el_3214,
          ErlangCons (ErlangAtom "a")
            (ErlangCons (ErlangAtom "a") ErlangEmptyList),
-         ErlangAtom "str_from_list", tup_el_3093, ErlangAtom "string",
-         tup_el_3096]
-  in let tup_el_3100 = toErl 158
-  in let tup_el_3104 = toErl 100
-  in let tup_el_3111 = ErlangTuple [ErlangAtom "string"]
-  in let tup_el_3114 = toErl "Arg0 := to_upper(string)"
+         ErlangAtom "str_from_list", tup_el_3221, ErlangAtom "string",
+         tup_el_3224]
+  in let tup_el_3228 = toErl 158
+  in let tup_el_3232 = toErl 100
+  in let tup_el_3239 = ErlangTuple [ErlangAtom "string"]
+  in let tup_el_3242 = toErl "Arg0 := to_upper(string)"
   in let
-    head_3098 =
+    head_3226 =
       ErlangTuple
-        [ErlangAtom "STR_TO_UPPER", tup_el_3100, ErlangAtom "false",
-         ErlangAtom "true", ErlangAtom "true", tup_el_3104,
+        [ErlangAtom "STR_TO_UPPER", tup_el_3228, ErlangAtom "false",
+         ErlangAtom "true", ErlangAtom "true", tup_el_3232,
          ErlangCons (ErlangAtom "a")
            (ErlangCons (ErlangAtom "a") ErlangEmptyList),
-         ErlangAtom "str_to_upper", tup_el_3111, ErlangAtom "string",
-         tup_el_3114]
-  in let tup_el_3118 = toErl 159
-  in let tup_el_3122 = toErl 100
-  in let tup_el_3129 = ErlangTuple [ErlangAtom "string"]
-  in let tup_el_3132 = toErl "Arg0 := to_lower(string)"
+         ErlangAtom "str_to_upper", tup_el_3239, ErlangAtom "string",
+         tup_el_3242]
+  in let tup_el_3246 = toErl 159
+  in let tup_el_3250 = toErl 100
+  in let tup_el_3257 = ErlangTuple [ErlangAtom "string"]
+  in let tup_el_3260 = toErl "Arg0 := to_lower(string)"
   in let
-    head_3116 =
+    head_3244 =
       ErlangTuple
-        [ErlangAtom "STR_TO_LOWER", tup_el_3118, ErlangAtom "false",
-         ErlangAtom "true", ErlangAtom "true", tup_el_3122,
+        [ErlangAtom "STR_TO_LOWER", tup_el_3246, ErlangAtom "false",
+         ErlangAtom "true", ErlangAtom "true", tup_el_3250,
          ErlangCons (ErlangAtom "a")
            (ErlangCons (ErlangAtom "a") ErlangEmptyList),
-         ErlangAtom "str_to_lower", tup_el_3129, ErlangAtom "string",
-         tup_el_3132]
-  in let tup_el_3136 = toErl 160
-  in let tup_el_3140 = toErl 10
-  in let tup_el_3147 = ErlangTuple [ErlangAtom "char"]
+         ErlangAtom "str_to_lower", tup_el_3257, ErlangAtom "string",
+         tup_el_3260]
+  in let tup_el_3264 = toErl 160
+  in let tup_el_3268 = toErl 10
+  in let tup_el_3275 = ErlangTuple [ErlangAtom "char"]
   in let
-    tup_el_3150 =
+    tup_el_3278 =
       toErl "Arg0 := integer representation of UTF-8 character"
   in let
-    head_3134 =
+    head_3262 =
       ErlangTuple
-        [ErlangAtom "CHAR_TO_INT", tup_el_3136, ErlangAtom "false",
-         ErlangAtom "true", ErlangAtom "true", tup_el_3140,
+        [ErlangAtom "CHAR_TO_INT", tup_el_3264, ErlangAtom "false",
+         ErlangAtom "true", ErlangAtom "true", tup_el_3268,
          ErlangCons (ErlangAtom "a")
            (ErlangCons (ErlangAtom "a") ErlangEmptyList),
-         ErlangAtom "char_to_int", tup_el_3147, ErlangAtom "int",
-         tup_el_3150]
-  in let tup_el_3154 = toErl 161
-  in let tup_el_3158 = toErl 10
-  in let tup_el_3165 = ErlangTuple [ErlangAtom "int"]
+         ErlangAtom "char_to_int", tup_el_3275, ErlangAtom "int",
+         tup_el_3278]
+  in let tup_el_3282 = toErl 161
+  in let tup_el_3286 = toErl 10
+  in let tup_el_3293 = ErlangTuple [ErlangAtom "int"]
   in let
-    tup_el_3168 =
+    tup_el_3296 =
       toErl
         "Arg0 := Some(UTF-8 character) from integer if valid, None if not valid."
   in let
-    head_3152 =
+    head_3280 =
       ErlangTuple
-        [ErlangAtom "CHAR_FROM_INT", tup_el_3154, ErlangAtom "false",
-         ErlangAtom "true", ErlangAtom "true", tup_el_3158,
+        [ErlangAtom "CHAR_FROM_INT", tup_el_3282, ErlangAtom "false",
+         ErlangAtom "true", ErlangAtom "true", tup_el_3286,
          ErlangCons (ErlangAtom "a")
            (ErlangCons (ErlangAtom "a") ErlangEmptyList),
-         ErlangAtom "char_from_int", tup_el_3165, ErlangAtom "variant",
-         tup_el_3168]
-  in let tup_el_3172 = toErl 162
-  in let tup_el_3176 = toErl 100
+         ErlangAtom "char_from_int", tup_el_3293, ErlangAtom "variant",
+         tup_el_3296]
+  in let tup_el_3300 = toErl 162
+  in let tup_el_3304 = toErl 100
   in let
-    tup_el_3193 =
+    tup_el_3321 =
       ErlangTuple
         [ErlangAtom "contract", ErlangAtom "string",
          ErlangAtom "typerep", ErlangAtom "typerep", ErlangAtom "integer",
          ErlangAtom "integer", ErlangAtom "bool"]
   in let
-    tup_el_3202 =
+    tup_el_3330 =
       toErl
         "Potentially protected remote call. Arg5 is protected flag, otherwise as CALL_GR."
   in let
-    head_3170 =
+    head_3298 =
       ErlangTuple
-        [ErlangAtom "CALL_PGR", tup_el_3172, ErlangAtom "true",
-         ErlangAtom "false", ErlangAtom "true", tup_el_3176,
+        [ErlangAtom "CALL_PGR", tup_el_3300, ErlangAtom "true",
+         ErlangAtom "false", ErlangAtom "true", tup_el_3304,
          ErlangCons (ErlangAtom "a")
            (ErlangCons (ErlangAtom "is")
               (ErlangCons (ErlangAtom "a")
@@ -2726,59 +2821,151 @@ erlps__ops_defs__0 [] =
                     (ErlangCons (ErlangAtom "a")
                        (ErlangCons (ErlangAtom "a")
                           (ErlangCons (ErlangAtom "a") ErlangEmptyList)))))),
-         ErlangAtom "call_pgr", tup_el_3193, ErlangAtom "variant",
-         tup_el_3202]
-  in let tup_el_3206 = toErl 250
-  in let tup_el_3210 = toErl 10
-  in let tup_el_3213 = ErlangTuple []
+         ErlangAtom "call_pgr", tup_el_3321, ErlangAtom "variant",
+         tup_el_3330]
+  in let tup_el_3334 = toErl 163
+  in let tup_el_3338 = toErl 10000
   in let
-    tup_el_3215 = toErl "Mark the current contract for deactivation."
-  in let
-    head_3204 =
+    tup_el_3347 =
       ErlangTuple
-        [ErlangAtom "DEACTIVATE", tup_el_3206, ErlangAtom "false",
-         ErlangAtom "true", ErlangAtom "true", tup_el_3210,
-         ErlangEmptyList, ErlangAtom "deactivate", tup_el_3213,
-         ErlangAtom "none", tup_el_3215]
-  in let tup_el_3219 = toErl 251
-  in let tup_el_3223 = toErl 10
-  in let tup_el_3228 = ErlangTuple [ErlangAtom "string"]
+        [ErlangAtom "contract_bytearray", ErlangAtom "typerep",
+         ErlangAtom "integer"]
   in let
-    tup_el_3231 =
+    tup_el_3352 =
+      toErl
+        "Deploys a contract with a bytecode Arg1 and value Arg3. The `init` arguments should be placed on the stack and match the type in Arg2. Writes contract address to stack top."
+  in let
+    head_3332 =
+      ErlangTuple
+        [ErlangAtom "CREATE", tup_el_3334, ErlangAtom "true",
+         ErlangAtom "false", ErlangAtom "true", tup_el_3338,
+         ErlangCons (ErlangAtom "a")
+           (ErlangCons (ErlangAtom "a")
+              (ErlangCons (ErlangAtom "a") ErlangEmptyList)),
+         ErlangAtom "create", tup_el_3347, ErlangAtom "contract",
+         tup_el_3352]
+  in let tup_el_3356 = toErl 164
+  in let tup_el_3360 = toErl 5000
+  in let
+    tup_el_3371 =
+      ErlangTuple
+        [ErlangAtom "contract", ErlangAtom "typerep",
+         ErlangAtom "integer", ErlangAtom "bool"]
+  in let
+    tup_el_3377 =
+      toErl
+        "Clones the contract under Arg1 and deploys it with value of Arg3. The `init` arguments should be placed on the stack and match the type in Arg2. Writes contract (or `None` on fail when protected) to stack top."
+  in let
+    head_3354 =
+      ErlangTuple
+        [ErlangAtom "CLONE", tup_el_3356, ErlangAtom "true",
+         ErlangAtom "false", ErlangAtom "true", tup_el_3360,
+         ErlangCons (ErlangAtom "a")
+           (ErlangCons (ErlangAtom "a")
+              (ErlangCons (ErlangAtom "a")
+                 (ErlangCons (ErlangAtom "a") ErlangEmptyList))),
+         ErlangAtom "clone", tup_el_3371, ErlangAtom "any", tup_el_3377]
+  in let tup_el_3381 = toErl 165
+  in let tup_el_3385 = toErl 5000
+  in let
+    tup_el_3398 =
+      ErlangTuple
+        [ErlangAtom "contract", ErlangAtom "typerep",
+         ErlangAtom "integer", ErlangAtom "integer", ErlangAtom "bool"]
+  in let
+    tup_el_3405 =
+      toErl
+        "Like `CLONE` but additionally limits gas of `init` call to Arg3"
+  in let
+    head_3379 =
+      ErlangTuple
+        [ErlangAtom "CLONE_G", tup_el_3381, ErlangAtom "true",
+         ErlangAtom "false", ErlangAtom "true", tup_el_3385,
+         ErlangCons (ErlangAtom "a")
+           (ErlangCons (ErlangAtom "a")
+              (ErlangCons (ErlangAtom "a")
+                 (ErlangCons (ErlangAtom "a")
+                    (ErlangCons (ErlangAtom "a") ErlangEmptyList)))),
+         ErlangAtom "clone_g", tup_el_3398, ErlangAtom "any", tup_el_3405]
+  in let tup_el_3409 = toErl 166
+  in let tup_el_3413 = toErl 100
+  in let tup_el_3420 = ErlangTuple [ErlangAtom "contract"]
+  in let
+    tup_el_3423 =
+      toErl
+        "Arg0 := hash of the deserialized contract\'s bytecode under address given in Arg1 (or `None` on fail)."
+  in let
+    head_3407 =
+      ErlangTuple
+        [ErlangAtom "BYTECODE_HASH", tup_el_3409, ErlangAtom "false",
+         ErlangAtom "true", ErlangAtom "true", tup_el_3413,
+         ErlangCons (ErlangAtom "a")
+           (ErlangCons (ErlangAtom "a") ErlangEmptyList),
+         ErlangAtom "bytecode_hash", tup_el_3420, ErlangAtom "variant",
+         tup_el_3423]
+  in let tup_el_3427 = toErl 167
+  in let tup_el_3431 = toErl 10
+  in let tup_el_3436 = ErlangTuple []
+  in let
+    tup_el_3438 = toErl "Arg0 := The fee for the current call tx."
+  in let
+    head_3425 =
+      ErlangTuple
+        [ErlangAtom "FEE", tup_el_3427, ErlangAtom "false",
+         ErlangAtom "true", ErlangAtom "true", tup_el_3431,
+         ErlangCons (ErlangAtom "a") ErlangEmptyList, ErlangAtom "fee",
+         tup_el_3436, ErlangAtom "integer", tup_el_3438]
+  in let tup_el_3442 = toErl 250
+  in let tup_el_3446 = toErl 10
+  in let tup_el_3449 = ErlangTuple []
+  in let
+    tup_el_3451 = toErl "Mark the current contract for deactivation."
+  in let
+    head_3440 =
+      ErlangTuple
+        [ErlangAtom "DEACTIVATE", tup_el_3442, ErlangAtom "false",
+         ErlangAtom "true", ErlangAtom "true", tup_el_3446,
+         ErlangEmptyList, ErlangAtom "deactivate", tup_el_3449,
+         ErlangAtom "none", tup_el_3451]
+  in let tup_el_3455 = toErl 251
+  in let tup_el_3459 = toErl 10
+  in let tup_el_3464 = ErlangTuple [ErlangAtom "string"]
+  in let
+    tup_el_3467 =
       toErl
         "Abort execution (dont use all gas) with error message in Arg0."
   in let
-    head_3217 =
+    head_3453 =
       ErlangTuple
-        [ErlangAtom "ABORT", tup_el_3219, ErlangAtom "true",
-         ErlangAtom "true", ErlangAtom "true", tup_el_3223,
+        [ErlangAtom "ABORT", tup_el_3455, ErlangAtom "true",
+         ErlangAtom "true", ErlangAtom "true", tup_el_3459,
          ErlangCons (ErlangAtom "a") ErlangEmptyList, ErlangAtom "abort",
-         tup_el_3228, ErlangAtom "none", tup_el_3231]
-  in let tup_el_3235 = toErl 252
-  in let tup_el_3239 = toErl 10
-  in let tup_el_3244 = ErlangTuple [ErlangAtom "string"]
+         tup_el_3464, ErlangAtom "none", tup_el_3467]
+  in let tup_el_3471 = toErl 252
+  in let tup_el_3475 = toErl 10
+  in let tup_el_3480 = ErlangTuple [ErlangAtom "string"]
   in let
-    tup_el_3247 =
+    tup_el_3483 =
       toErl
         "Abort execution (use upp all gas) with error message in Arg0."
   in let
-    head_3233 =
+    head_3469 =
       ErlangTuple
-        [ErlangAtom "EXIT", tup_el_3235, ErlangAtom "true",
-         ErlangAtom "true", ErlangAtom "true", tup_el_3239,
+        [ErlangAtom "EXIT", tup_el_3471, ErlangAtom "true",
+         ErlangAtom "true", ErlangAtom "true", tup_el_3475,
          ErlangCons (ErlangAtom "a") ErlangEmptyList, ErlangAtom "exit",
-         tup_el_3244, ErlangAtom "none", tup_el_3247]
-  in let tup_el_3251 = toErl 253
-  in let tup_el_3255 = toErl 1
-  in let tup_el_3258 = ErlangTuple []
-  in let tup_el_3260 = toErl "The no op. does nothing."
+         tup_el_3480, ErlangAtom "none", tup_el_3483]
+  in let tup_el_3487 = toErl 253
+  in let tup_el_3491 = toErl 1
+  in let tup_el_3494 = ErlangTuple []
+  in let tup_el_3496 = toErl "The no op. does nothing."
   in let
-    head_3249 =
+    head_3485 =
       ErlangTuple
-        [ErlangAtom "NOP", tup_el_3251, ErlangAtom "false",
-         ErlangAtom "true", ErlangAtom "true", tup_el_3255,
-         ErlangEmptyList, ErlangAtom "nop", tup_el_3258,
-         ErlangAtom "none", tup_el_3260]
+        [ErlangAtom "NOP", tup_el_3487, ErlangAtom "false",
+         ErlangAtom "true", ErlangAtom "true", tup_el_3491,
+         ErlangEmptyList, ErlangAtom "nop", tup_el_3494,
+         ErlangAtom "none", tup_el_3496]
   in
     ErlangCons head_0
       (ErlangCons head_13
@@ -2935,166 +3122,176 @@ erlps__ops_defs__0 [] =
                                                                                                                                                                                                                                                                      (ErlangCons
                                                                                                                                                                                                                                                                         head_1642
                                                                                                                                                                                                                                                                         (ErlangCons
-                                                                                                                                                                                                                                                                           head_1660
+                                                                                                                                                                                                                                                                           head_1668
                                                                                                                                                                                                                                                                            (ErlangCons
-                                                                                                                                                                                                                                                                              head_1675
+                                                                                                                                                                                                                                                                              head_1683
                                                                                                                                                                                                                                                                               (ErlangCons
-                                                                                                                                                                                                                                                                                 head_1690
+                                                                                                                                                                                                                                                                                 head_1698
                                                                                                                                                                                                                                                                                  (ErlangCons
-                                                                                                                                                                                                                                                                                    head_1705
+                                                                                                                                                                                                                                                                                    head_1713
                                                                                                                                                                                                                                                                                     (ErlangCons
-                                                                                                                                                                                                                                                                                       head_1720
+                                                                                                                                                                                                                                                                                       head_1728
                                                                                                                                                                                                                                                                                        (ErlangCons
-                                                                                                                                                                                                                                                                                          head_1735
+                                                                                                                                                                                                                                                                                          head_1743
                                                                                                                                                                                                                                                                                           (ErlangCons
-                                                                                                                                                                                                                                                                                             head_1750
+                                                                                                                                                                                                                                                                                             head_1758
                                                                                                                                                                                                                                                                                              (ErlangCons
-                                                                                                                                                                                                                                                                                                head_1765
+                                                                                                                                                                                                                                                                                                head_1773
                                                                                                                                                                                                                                                                                                 (ErlangCons
-                                                                                                                                                                                                                                                                                                   head_1780
+                                                                                                                                                                                                                                                                                                   head_1788
                                                                                                                                                                                                                                                                                                    (ErlangCons
-                                                                                                                                                                                                                                                                                                      head_1795
+                                                                                                                                                                                                                                                                                                      head_1803
                                                                                                                                                                                                                                                                                                       (ErlangCons
-                                                                                                                                                                                                                                                                                                         head_1811
+                                                                                                                                                                                                                                                                                                         head_1819
                                                                                                                                                                                                                                                                                                          (ErlangCons
-                                                                                                                                                                                                                                                                                                            head_1830
+                                                                                                                                                                                                                                                                                                            head_1838
                                                                                                                                                                                                                                                                                                             (ErlangCons
-                                                                                                                                                                                                                                                                                                               head_1852
+                                                                                                                                                                                                                                                                                                               head_1860
                                                                                                                                                                                                                                                                                                                (ErlangCons
-                                                                                                                                                                                                                                                                                                                  head_1877
+                                                                                                                                                                                                                                                                                                                  head_1885
                                                                                                                                                                                                                                                                                                                   (ErlangCons
-                                                                                                                                                                                                                                                                                                                     head_1905
+                                                                                                                                                                                                                                                                                                                     head_1913
                                                                                                                                                                                                                                                                                                                      (ErlangCons
-                                                                                                                                                                                                                                                                                                                        head_1924
+                                                                                                                                                                                                                                                                                                                        head_1940
                                                                                                                                                                                                                                                                                                                         (ErlangCons
-                                                                                                                                                                                                                                                                                                                           head_1957
+                                                                                                                                                                                                                                                                                                                           head_1981
                                                                                                                                                                                                                                                                                                                            (ErlangCons
-                                                                                                                                                                                                                                                                                                                              head_1993
+                                                                                                                                                                                                                                                                                                                              head_2025
                                                                                                                                                                                                                                                                                                                               (ErlangCons
-                                                                                                                                                                                                                                                                                                                                 head_2024
+                                                                                                                                                                                                                                                                                                                                 head_2064
                                                                                                                                                                                                                                                                                                                                  (ErlangCons
-                                                                                                                                                                                                                                                                                                                                    head_2046
+                                                                                                                                                                                                                                                                                                                                    head_2094
                                                                                                                                                                                                                                                                                                                                     (ErlangCons
-                                                                                                                                                                                                                                                                                                                                       head_2073
+                                                                                                                                                                                                                                                                                                                                       head_2129
                                                                                                                                                                                                                                                                                                                                        (ErlangCons
-                                                                                                                                                                                                                                                                                                                                          head_2100
+                                                                                                                                                                                                                                                                                                                                          head_2164
                                                                                                                                                                                                                                                                                                                                           (ErlangCons
-                                                                                                                                                                                                                                                                                                                                             head_2118
+                                                                                                                                                                                                                                                                                                                                             head_2190
                                                                                                                                                                                                                                                                                                                                              (ErlangCons
-                                                                                                                                                                                                                                                                                                                                                head_2142
+                                                                                                                                                                                                                                                                                                                                                head_2222
                                                                                                                                                                                                                                                                                                                                                 (ErlangCons
-                                                                                                                                                                                                                                                                                                                                                   head_2164
+                                                                                                                                                                                                                                                                                                                                                   head_2252
                                                                                                                                                                                                                                                                                                                                                    (ErlangCons
-                                                                                                                                                                                                                                                                                                                                                      head_2192
+                                                                                                                                                                                                                                                                                                                                                      head_2288
                                                                                                                                                                                                                                                                                                                                                       (ErlangCons
-                                                                                                                                                                                                                                                                                                                                                         head_2223
+                                                                                                                                                                                                                                                                                                                                                         head_2327
                                                                                                                                                                                                                                                                                                                                                          (ErlangCons
-                                                                                                                                                                                                                                                                                                                                                            head_2248
+                                                                                                                                                                                                                                                                                                                                                            head_2360
                                                                                                                                                                                                                                                                                                                                                             (ErlangCons
-                                                                                                                                                                                                                                                                                                                                                               head_2270
+                                                                                                                                                                                                                                                                                                                                                               head_2390
                                                                                                                                                                                                                                                                                                                                                                (ErlangCons
-                                                                                                                                                                                                                                                                                                                                                                  head_2288
+                                                                                                                                                                                                                                                                                                                                                                  head_2416
                                                                                                                                                                                                                                                                                                                                                                   (ErlangCons
-                                                                                                                                                                                                                                                                                                                                                                     head_2312
+                                                                                                                                                                                                                                                                                                                                                                     head_2440
                                                                                                                                                                                                                                                                                                                                                                      (ErlangCons
-                                                                                                                                                                                                                                                                                                                                                                        head_2336
+                                                                                                                                                                                                                                                                                                                                                                        head_2464
                                                                                                                                                                                                                                                                                                                                                                         (ErlangCons
-                                                                                                                                                                                                                                                                                                                                                                           head_2354
+                                                                                                                                                                                                                                                                                                                                                                           head_2482
                                                                                                                                                                                                                                                                                                                                                                            (ErlangCons
-                                                                                                                                                                                                                                                                                                                                                                              head_2369
+                                                                                                                                                                                                                                                                                                                                                                              head_2497
                                                                                                                                                                                                                                                                                                                                                                               (ErlangCons
-                                                                                                                                                                                                                                                                                                                                                                                 head_2393
+                                                                                                                                                                                                                                                                                                                                                                                 head_2521
                                                                                                                                                                                                                                                                                                                                                                                  (ErlangCons
-                                                                                                                                                                                                                                                                                                                                                                                    head_2420
+                                                                                                                                                                                                                                                                                                                                                                                    head_2548
                                                                                                                                                                                                                                                                                                                                                                                     (ErlangCons
-                                                                                                                                                                                                                                                                                                                                                                                       head_2438
+                                                                                                                                                                                                                                                                                                                                                                                       head_2566
                                                                                                                                                                                                                                                                                                                                                                                        (ErlangCons
-                                                                                                                                                                                                                                                                                                                                                                                          head_2456
+                                                                                                                                                                                                                                                                                                                                                                                          head_2584
                                                                                                                                                                                                                                                                                                                                                                                           (ErlangCons
-                                                                                                                                                                                                                                                                                                                                                                                             head_2474
+                                                                                                                                                                                                                                                                                                                                                                                             head_2602
                                                                                                                                                                                                                                                                                                                                                                                              (ErlangCons
-                                                                                                                                                                                                                                                                                                                                                                                                head_2489
+                                                                                                                                                                                                                                                                                                                                                                                                head_2617
                                                                                                                                                                                                                                                                                                                                                                                                 (ErlangCons
-                                                                                                                                                                                                                                                                                                                                                                                                   head_2513
+                                                                                                                                                                                                                                                                                                                                                                                                   head_2641
                                                                                                                                                                                                                                                                                                                                                                                                    (ErlangCons
-                                                                                                                                                                                                                                                                                                                                                                                                      head_2534
+                                                                                                                                                                                                                                                                                                                                                                                                      head_2662
                                                                                                                                                                                                                                                                                                                                                                                                       (ErlangCons
-                                                                                                                                                                                                                                                                                                                                                                                                         head_2552
+                                                                                                                                                                                                                                                                                                                                                                                                         head_2680
                                                                                                                                                                                                                                                                                                                                                                                                          (ErlangCons
-                                                                                                                                                                                                                                                                                                                                                                                                            head_2570
+                                                                                                                                                                                                                                                                                                                                                                                                            head_2698
                                                                                                                                                                                                                                                                                                                                                                                                             (ErlangCons
-                                                                                                                                                                                                                                                                                                                                                                                                               head_2588
+                                                                                                                                                                                                                                                                                                                                                                                                               head_2716
                                                                                                                                                                                                                                                                                                                                                                                                                (ErlangCons
-                                                                                                                                                                                                                                                                                                                                                                                                                  head_2606
+                                                                                                                                                                                                                                                                                                                                                                                                                  head_2734
                                                                                                                                                                                                                                                                                                                                                                                                                   (ErlangCons
-                                                                                                                                                                                                                                                                                                                                                                                                                     head_2624
+                                                                                                                                                                                                                                                                                                                                                                                                                     head_2752
                                                                                                                                                                                                                                                                                                                                                                                                                      (ErlangCons
-                                                                                                                                                                                                                                                                                                                                                                                                                        head_2645
+                                                                                                                                                                                                                                                                                                                                                                                                                        head_2773
                                                                                                                                                                                                                                                                                                                                                                                                                         (ErlangCons
-                                                                                                                                                                                                                                                                                                                                                                                                                           head_2666
+                                                                                                                                                                                                                                                                                                                                                                                                                           head_2794
                                                                                                                                                                                                                                                                                                                                                                                                                            (ErlangCons
-                                                                                                                                                                                                                                                                                                                                                                                                                              head_2684
+                                                                                                                                                                                                                                                                                                                                                                                                                              head_2812
                                                                                                                                                                                                                                                                                                                                                                                                                               (ErlangCons
-                                                                                                                                                                                                                                                                                                                                                                                                                                 head_2702
+                                                                                                                                                                                                                                                                                                                                                                                                                                 head_2830
                                                                                                                                                                                                                                                                                                                                                                                                                                  (ErlangCons
-                                                                                                                                                                                                                                                                                                                                                                                                                                    head_2720
+                                                                                                                                                                                                                                                                                                                                                                                                                                    head_2848
                                                                                                                                                                                                                                                                                                                                                                                                                                     (ErlangCons
-                                                                                                                                                                                                                                                                                                                                                                                                                                       head_2738
+                                                                                                                                                                                                                                                                                                                                                                                                                                       head_2866
                                                                                                                                                                                                                                                                                                                                                                                                                                        (ErlangCons
-                                                                                                                                                                                                                                                                                                                                                                                                                                          head_2759
+                                                                                                                                                                                                                                                                                                                                                                                                                                          head_2887
                                                                                                                                                                                                                                                                                                                                                                                                                                           (ErlangCons
-                                                                                                                                                                                                                                                                                                                                                                                                                                             head_2780
+                                                                                                                                                                                                                                                                                                                                                                                                                                             head_2908
                                                                                                                                                                                                                                                                                                                                                                                                                                              (ErlangCons
-                                                                                                                                                                                                                                                                                                                                                                                                                                                head_2798
+                                                                                                                                                                                                                                                                                                                                                                                                                                                head_2926
                                                                                                                                                                                                                                                                                                                                                                                                                                                 (ErlangCons
-                                                                                                                                                                                                                                                                                                                                                                                                                                                   head_2819
+                                                                                                                                                                                                                                                                                                                                                                                                                                                   head_2947
                                                                                                                                                                                                                                                                                                                                                                                                                                                    (ErlangCons
-                                                                                                                                                                                                                                                                                                                                                                                                                                                      head_2840
+                                                                                                                                                                                                                                                                                                                                                                                                                                                      head_2968
                                                                                                                                                                                                                                                                                                                                                                                                                                                       (ErlangCons
-                                                                                                                                                                                                                                                                                                                                                                                                                                                         head_2861
+                                                                                                                                                                                                                                                                                                                                                                                                                                                         head_2989
                                                                                                                                                                                                                                                                                                                                                                                                                                                          (ErlangCons
-                                                                                                                                                                                                                                                                                                                                                                                                                                                            head_2879
+                                                                                                                                                                                                                                                                                                                                                                                                                                                            head_3007
                                                                                                                                                                                                                                                                                                                                                                                                                                                             (ErlangCons
-                                                                                                                                                                                                                                                                                                                                                                                                                                                               head_2900
+                                                                                                                                                                                                                                                                                                                                                                                                                                                               head_3028
                                                                                                                                                                                                                                                                                                                                                                                                                                                                (ErlangCons
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                  head_2921
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                  head_3049
                                                                                                                                                                                                                                                                                                                                                                                                                                                                   (ErlangCons
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                     head_2939
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                     head_3067
                                                                                                                                                                                                                                                                                                                                                                                                                                                                      (ErlangCons
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                        head_2957
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                        head_3085
                                                                                                                                                                                                                                                                                                                                                                                                                                                                         (ErlangCons
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                           head_2975
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                           head_3103
                                                                                                                                                                                                                                                                                                                                                                                                                                                                            (ErlangCons
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                              head_2993
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                              head_3121
                                                                                                                                                                                                                                                                                                                                                                                                                                                                               (ErlangCons
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 head_3011
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 head_3139
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  (ErlangCons
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    head_3029
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    head_3157
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     (ErlangCons
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       head_3047
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       head_3175
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        (ErlangCons
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          head_3062
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          head_3190
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           (ErlangCons
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             head_3080
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             head_3208
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              (ErlangCons
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                head_3098
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                head_3226
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 (ErlangCons
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   head_3116
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   head_3244
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    (ErlangCons
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      head_3134
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      head_3262
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       (ErlangCons
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         head_3152
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         head_3280
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          (ErlangCons
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            head_3170
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            head_3298
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             (ErlangCons
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               head_3204
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               head_3332
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                (ErlangCons
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  head_3217
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  head_3354
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   (ErlangCons
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     head_3233
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     head_3379
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      (ErlangCons
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        head_3249
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ErlangEmptyList))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        head_3407
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        (ErlangCons
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           head_3425
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           (ErlangCons
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              head_3440
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              (ErlangCons
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 head_3453
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 (ErlangCons
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    head_3469
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    (ErlangCons
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       head_3485
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ErlangEmptyList)))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
 erlps__ops_defs__0 args =
   EXC.badarity (ErlangFun 0 (\ _ -> ErlangAtom "purs_tco_sucks"))
     args
